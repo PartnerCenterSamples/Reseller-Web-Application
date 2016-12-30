@@ -4,7 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Microsoft.Store.PartnerCenter.CustomerPortal.App_Start
+namespace Microsoft.Store.PartnerCenter.CustomerPortal
 {
     using System.Web.Http.Filters;
     using System.Web.Mvc;

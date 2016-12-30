@@ -132,7 +132,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.privateBlobContainer == null)
             {
                 CloudBlobClient blobClient = this.storageAccount.CreateCloudBlobClient();
-                this.privateBlobContainer = blobClient.GetContainerReference(AzureStorageService.PrivatePortalAssetsBlobContainerName);
+                this.privateBlobContainer = blobClient.GetContainerReference(PrivatePortalAssetsBlobContainerName);
             }
 
             await this.privateBlobContainer.CreateIfNotExistsAsync();
@@ -148,7 +148,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.publicBlobContainer == null)
             {
                 CloudBlobClient blobClient = this.storageAccount.CreateCloudBlobClient();
-                this.publicBlobContainer = blobClient.GetContainerReference(AzureStorageService.PublicPortalAssetsBlobContainerName);                
+                this.publicBlobContainer = blobClient.GetContainerReference(PublicPortalAssetsBlobContainerName);                
             }
 
             if (!await this.publicBlobContainer.ExistsAsync())
@@ -173,7 +173,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.partnerCenterCustomersTable == null)
             {                
                 CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.partnerCenterCustomersTable = tableClient.GetTableReference(AzureStorageService.CustomersTableName);
+                this.partnerCenterCustomersTable = tableClient.GetTableReference(CustomersTableName);
             }
 
             // someone can delete the table externally
@@ -190,7 +190,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.customerSubscriptionsTable == null)
             {
                 CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.customerSubscriptionsTable = tableClient.GetTableReference(AzureStorageService.CustomerSubscriptionsTableName);
+                this.customerSubscriptionsTable = tableClient.GetTableReference(CustomerSubscriptionsTableName);
             }
 
             // someone can delete the table externally
@@ -207,7 +207,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.customerPurchasesTable == null)
             {
                 CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.customerPurchasesTable = tableClient.GetTableReference(AzureStorageService.CustomerPurchasesTableName);
+                this.customerPurchasesTable = tableClient.GetTableReference(CustomerPurchasesTableName);
             }
 
             // someone can delete the table externally

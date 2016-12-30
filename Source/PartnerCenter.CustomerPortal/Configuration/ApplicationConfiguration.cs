@@ -70,34 +70,26 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
         private const string WebPortalConfigurationManagerKey = "WebPortalConfigurationManager";
 
         /// <summary>
+        /// The Application Insights instrumentation key.
+        /// </summary>
+        private const string WebPortalAppInsightsInstrumentationKey = "webPortal.appInsightsInstrumentationKey";
+
+        /// <summary>
         /// A lazy reference to client configuration.
         /// </summary>
         private static Lazy<IDictionary<string, dynamic>> clientConfiguration = new Lazy<IDictionary<string, dynamic>>(
-            () => ApplicationConfiguration.WebPortalConfigurationManager.GenerateConfigurationDictionary().Result);
-        
+            () => WebPortalConfigurationManager.GenerateConfigurationDictionary().Result);
+
         /// <summary>
         /// Gets the web portal configuration file path.
         /// </summary>
-        public static string WebPortalConfigurationFilePath
-        {
-            get
-            {
-                return Path.Combine(
-                    HttpRuntime.AppDomainAppPath,
-                    WebConfigurationManager.AppSettings[ApplicationConfiguration.WebPortalConfigurationFilePathKey]);
-            } 
-        }
+        public static string WebPortalConfigurationFilePath => Path.Combine(
+            HttpRuntime.AppDomainAppPath, WebConfigurationManager.AppSettings[WebPortalConfigurationFilePathKey]);
 
         /// <summary>
         /// Gets the client configuration.
         /// </summary>
-        public static IDictionary<string, dynamic> ClientConfiguration
-        {
-            get
-            {
-                return clientConfiguration.Value;
-            }
-        }
+        public static IDictionary<string, dynamic> ClientConfiguration => clientConfiguration.Value;
 
         /// <summary>
         /// Gets or sets the web portal configuration manager instance.
@@ -106,102 +98,58 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
         {
             get
             {
-                return HttpContext.Current.Application[ApplicationConfiguration.WebPortalConfigurationManagerKey] as WebPortalConfigurationManager;
+                return HttpContext.Current.Application[WebPortalConfigurationManagerKey] as WebPortalConfigurationManager;
             }
 
             set
             {
-                HttpContext.Current.Application[ApplicationConfiguration.WebPortalConfigurationManagerKey] = value;
+                HttpContext.Current.Application[WebPortalConfigurationManagerKey] = value;
             }
         }
-        
+
         /// <summary>
         /// Gets the Azure Active Directory endpoint used by the web portal.
         /// </summary>
-        public static string ActiveDirectoryEndPoint
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.ActiveDirectoryEndPointKey];
-            }
-        }
+        public static string ActiveDirectoryEndPoint => ConfigurationManager.AppSettings[ActiveDirectoryEndPointKey];
 
         /// <summary>
         /// Gets the Azure Active Directory Graph endpoint used by the web portal.
         /// </summary>
-        public static string ActiveDirectoryGraphEndPoint
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.ActiveDirectoryGraphEndPointKey];
-            }
-        }
+        public static string ActiveDirectoryGraphEndPoint => ConfigurationManager.AppSettings[ActiveDirectoryGraphEndPointKey];
 
         /// <summary>
         /// Gets the Azure Active Directory client ID of the web portal.
         /// </summary>
-        public static string ActiveDirectoryClientID
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.WebPortalADClientIDKey];
-            }
-        }
+        public static string ActiveDirectoryClientId => ConfigurationManager.AppSettings[WebPortalADClientIDKey];
 
         /// <summary>
         /// Gets the Azure Active Directory client secret of the web portal.
         /// </summary>
-        public static string ActiveDirectoryClientSecret
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.WebPortalADClientSecretKey];
-            }
-        }
+        public static string ActiveDirectoryClientSecret => ConfigurationManager.AppSettings[WebPortalADClientSecretKey];
 
         /// <summary>
         /// Gets the Azure Active Directory ID of the web portal.
         /// </summary>
-        public static string ActiveDirectoryTenantId
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.WebPortalAadTenantID];
-            }
-        }
+        public static string ActiveDirectoryTenantId => ConfigurationManager.AppSettings[WebPortalAadTenantID];
+
+        /// <summary>
+        /// Gets the instrumentation key for Application Insights.
+        /// </summary>
+        public static string AppInsightsInstrumentationKey => ConfigurationManager.AppSettings[WebPortalAppInsightsInstrumentationKey];
 
         /// <summary>
         /// Gets the Azure storage connection string.
         /// </summary>
-        public static string AzureStorageConnectionString
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.AzureStorageConnectionStringKey];
-            }
-        }
+        public static string AzureStorageConnectionString => ConfigurationManager.AppSettings[AzureStorageConnectionStringKey];
 
         /// <summary>
         /// Gets the Azure Azure storage endpoint suffix.
         /// </summary>
-        public static string AzureStorageConnectionEndpointSuffix
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.AzureStorageConnectionEndpointSuffixKey];
-            }
-        }
+        public static string AzureStorageConnectionEndpointSuffix => ConfigurationManager.AppSettings[AzureStorageConnectionEndpointSuffixKey];
 
         /// <summary>
-        /// Gets the default web portal locale.
         /// Gets the cache connection string.
         /// </summary>
-        public static string CacheConnectionString
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.CacheConnectionStringKey];
-            }
-        }
+        public static string CacheConnectionString => ConfigurationManager.AppSettings[CacheConnectionStringKey];
     }
 }

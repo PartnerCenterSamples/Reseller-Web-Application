@@ -43,7 +43,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
             app.UseOpenIdConnectAuthentication(
                 new OpenIdConnectAuthenticationOptions
                 {
-                    ClientId = ApplicationConfiguration.ActiveDirectoryClientID,
+                    ClientId = ApplicationConfiguration.ActiveDirectoryClientId,
                     Authority = ApplicationConfiguration.ActiveDirectoryEndPoint + "common",
                     TokenValidationParameters = new System.IdentityModel.Tokens.TokenValidationParameters
                     {
@@ -59,14 +59,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                             string signedInUserObjectId = context.AuthenticationTicket.Identity.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier").Value;
 
                             // login to the user AD tenant
-                            ClientCredential webPortalcredentials = new ClientCredential(ApplicationConfiguration.ActiveDirectoryClientID, ApplicationConfiguration.ActiveDirectoryClientSecret);
+                            ClientCredential webPortalcredentials = new ClientCredential(ApplicationConfiguration.ActiveDirectoryClientId, ApplicationConfiguration.ActiveDirectoryClientSecret);
                             AuthenticationContext userAuthContext = new AuthenticationContext(ApplicationConfiguration.ActiveDirectoryEndPoint + userTenantId);
-                            AuthenticationResult userAuthResult = userAuthContext.AcquireTokenByAuthorizationCode(
+                            AuthenticationResult userAuthResult = userAuthContext.AcquireTokenByAuthorizationCodeAsync(
                                 context.Code,
                                 new Uri(
                                     HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path)),
                                     webPortalcredentials,
-                                    ApplicationConfiguration.ActiveDirectoryGraphEndPoint);
+                                    ApplicationConfiguration.ActiveDirectoryGraphEndPoint).Result;
 
                             // acquire a graph token to manage the user tenant
                             Uri serviceRoot = new Uri(new Uri(ApplicationConfiguration.ActiveDirectoryGraphEndPoint), userTenantId);
@@ -127,6 +127,16 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                                     throw new AuthorizationException(System.Net.HttpStatusCode.Unauthorized, Resources.NonAdminUnauthorizedMessage);
                                 }
                             }
+                        },
+                        RedirectToIdentityProvider = (context) =>
+                        {
+                            // This ensures that the address used for sign in and sign out is picked up dynamically from the request
+                            // this allows you to deploy your app (to Azure Web Sites, for example) without having to change settings
+                            // Remember that the base URL of the address used here must be provisioned in Azure AD beforehand.
+                            string appBaseUrl = context.Request.Scheme + "://" + context.Request.Host + context.Request.PathBase;
+                            context.ProtocolMessage.RedirectUri = appBaseUrl + "/";
+                            context.ProtocolMessage.PostLogoutRedirectUri = appBaseUrl;
+                            return Task.FromResult(0);
                         },
                         AuthenticationFailed = (context) =>
                         {

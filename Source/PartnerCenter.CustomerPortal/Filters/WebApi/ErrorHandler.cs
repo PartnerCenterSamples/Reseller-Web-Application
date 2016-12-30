@@ -13,6 +13,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
     using System.Net.Http;
     using System.Web;
     using System.Web.Http.Filters;
+    using BusinessLogic;
     using BusinessLogic.Exceptions;
     using Exceptions;
     using Newtonsoft.Json;
@@ -31,11 +32,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
             dynamic errorResponsePayload = new ExpandoObject();
             HttpStatusCode errorResponseCode = HttpStatusCode.InternalServerError;
 
+            ApplicationDomain.Instance.Telemetry.TrackException(context.Exception);
+
             PartnerDomainException partnerDomainException = context.Exception as PartnerDomainException;
 
             if (partnerDomainException != null)
             {
-                Trace.TraceError("ErrorHandler: Intercepted PartnerDomainException: {0}.", context.Exception.ToString());
+                Trace.TraceError("ErrorHandler: Intercepted PartnerDomainException: {0}.", context.Exception);
 
                 switch (partnerDomainException.ErrorCode)
                 {

@@ -13,12 +13,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
     using System.Web.Http;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using App_Start;
     using BusinessLogic;
     using Configuration;
     using Configuration.Bundling;
     using Configuration.Manager;
-
+ 
     /// <summary>
     /// The web application.
     /// </summary>
@@ -42,6 +41,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
             {
                 throw new ConfigurationErrorsException("WebPortalConfigurationPath setting not found in web.config");
             }
+
+            ApplicationInsights.Extensibility.TelemetryConfiguration.Active.InstrumentationKey =
+                ApplicationConfiguration.AppInsightsInstrumentationKey;
 
             // create the web portal configuration manager
             IWebPortalConfigurationFactory webPortalConfigFactory = new WebPortalConfigurationFactory();
