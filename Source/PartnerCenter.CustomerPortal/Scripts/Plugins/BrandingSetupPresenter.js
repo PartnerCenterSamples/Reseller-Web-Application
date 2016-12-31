@@ -25,7 +25,8 @@ Microsoft.WebPortal.BrandingSetupPresenter = function (webPortal, feature, brand
             Phone: ko.observable("")
         },
         HeaderImage: ko.observable(""),
-        PrivacyAgreement: ko.observable("")
+        PrivacyAgreement: ko.observable(""),
+        InstrumentationKey: ko.observable("")
     }
 }
 
@@ -111,7 +112,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype.onHeaderImageUpdated = func
     /// </summary>
     /// <param name="self">A reference to our presenter.</param>
     /// <param name="event">The change event.</param>
-    
+
     if (event.target.files.length >= 0) {
         self.viewModel.HeaderImage(event.target.files[0].name);
     }
@@ -149,16 +150,17 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype.onSaveBranding = function (
 
     formData.append("HeaderImage", this.viewModel.HeaderImage());
     formData.append("PrivacyAgreement", this.viewModel.PrivacyAgreement());
-    
+    formData.append("InstrumentationKey", this.viewModel.InstrumentationKey());
+
     var saveBrandingServerCall = this.webPortal.ServerCallManager.create(this.feature,
         function () {
             return $.ajax({
                 type: "POST",
-                url: 'api/AdminConsole/Branding',
+                url: "api/AdminConsole/Branding",
                 data: formData,
-                dataType: 'json',
+                dataType: "json",
                 contentType: false,
-                processData: false,
+                processData: false
             });
         },
         "Save Branding");
@@ -189,8 +191,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype.onSaveBranding = function (
             self.existingBrandingConfiguration = updatedBrandingInformation;
             self._updateViewModel();
 
-            if (!self.restartPortalAction)
-            {
+            if (!self.restartPortalAction) {
                 // enable the user to restart the portal to see their changes
                 self.restartPortalAction = new Microsoft.WebPortal.Services.Action("reload-portal", self.webPortal.Resources.Strings.Plugins.PortalBranding.ReloadPortalButtonCaption, function (menuItem) {
                     window.location.reload(true);
@@ -237,15 +238,15 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype.onSaveBranding = function (
                         brandingSaveNotification.dismiss();
                     })
                 ]);
-                
+
                 // re-calculate the action enabled status
                 self.viewModel.OrganizationName.notifySubscribers();
             } else {
                 self.webPortal.Helpers.displayRetryCancelErrorNotification(brandingSaveNotification,
-                self.webPortal.Resources.Strings.Plugins.PortalBranding.BrandingUpdateErrorMessage,
-                self.webPortal.Resources.Strings.Plugins.PortalBranding.BrandingUpdateProgressMessage, saveBranding, function () {
-                    self.viewModel.OrganizationName.notifySubscribers();
-                });
+                    self.webPortal.Resources.Strings.Plugins.PortalBranding.BrandingUpdateErrorMessage,
+                    self.webPortal.Resources.Strings.Plugins.PortalBranding.BrandingUpdateProgressMessage, saveBranding, function () {
+                        self.viewModel.OrganizationName.notifySubscribers();
+                    });
             }
         });
     }
@@ -298,6 +299,10 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._updateViewModel = function
         this.existingBrandingConfiguration.PrivacyAgreement = "";
     }
 
+    if (!this.existingBrandingConfiguration.InstrumentationKey) {
+        this.existingBrandingConfiguration.InstrumentationKey = "";
+    }
+
     this.viewModel.OrganizationName(this.existingBrandingConfiguration.OrganizationName);
     this.viewModel.OrganizationLogo(this.existingBrandingConfiguration.OrganizationLogo);
     this.viewModel.ContactUs.Email(this.existingBrandingConfiguration.ContactUs.Email);
@@ -306,6 +311,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._updateViewModel = function
     this.viewModel.ContactSales.Phone(this.existingBrandingConfiguration.ContactSales.Phone);
     this.viewModel.HeaderImage(this.existingBrandingConfiguration.HeaderImage);
     this.viewModel.PrivacyAgreement(this.existingBrandingConfiguration.PrivacyAgreement);
+    this.viewModel.InstrumentationKey(this.existingBrandingConfiguration.InstrumentationKey);
 }
 
 
@@ -337,13 +343,14 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._setupActions = function ()
         var isFormUpdated = this.viewModel.OrganizationName() != this.existingBrandingConfiguration.OrganizationName |
             this.viewModel.OrganizationLogo() != this.existingBrandingConfiguration.OrganizationLogo |
             this.viewModel.HeaderImage() != this.existingBrandingConfiguration.HeaderImage |
-            this.viewModel.PrivacyAgreement() != this.existingBrandingConfiguration.PrivacyAgreement;
+            this.viewModel.PrivacyAgreement() != this.existingBrandingConfiguration.PrivacyAgreement | 
+            this.viewModel.InstrumentationKey() != this.existingBrandingConfiguration.InstrumentationKey;
 
         isFormUpdated = isFormUpdated | this.viewModel.ContactUs.Email() != this.existingBrandingConfiguration.ContactUs.Email |
-                this.viewModel.ContactUs.Phone() != this.existingBrandingConfiguration.ContactUs.Phone;
+            this.viewModel.ContactUs.Phone() != this.existingBrandingConfiguration.ContactUs.Phone;
 
         isFormUpdated = isFormUpdated | this.viewModel.ContactSales.Email() != this.existingBrandingConfiguration.ContactSales.Email |
-                this.viewModel.ContactSales.Phone() != this.existingBrandingConfiguration.ContactSales.Phone;
+            this.viewModel.ContactSales.Phone() != this.existingBrandingConfiguration.ContactSales.Phone;
 
         this.saveBrandingAction.enabled(isFormUpdated);
         this.resetBrandingAction.enabled(isFormUpdated);

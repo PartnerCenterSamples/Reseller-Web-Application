@@ -218,6 +218,7 @@
     <Compile Include="BusinessLogic\AzureStorageService.cs" />
     <Compile Include="BusinessLogic\CachingService.cs" />
     <Compile Include="BusinessLogic\Commerce\OrderNormalizer.cs" />
+    <Compile Include="BusinessLogic\TelemetryService.cs" />
     <Compile Include="Controllers\CustomerAccountController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PartnerOfferController.cs" />

@@ -42,9 +42,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                 throw new ConfigurationErrorsException("WebPortalConfigurationPath setting not found in web.config");
             }
 
-            ApplicationInsights.Extensibility.TelemetryConfiguration.Active.InstrumentationKey =
-                ApplicationConfiguration.AppInsightsInstrumentationKey;
-
             // create the web portal configuration manager
             IWebPortalConfigurationFactory webPortalConfigFactory = new WebPortalConfigurationFactory();
             ApplicationConfiguration.WebPortalConfigurationManager = webPortalConfigFactory.Create(portalConfigurationPath);

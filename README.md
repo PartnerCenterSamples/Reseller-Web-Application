@@ -15,6 +15,9 @@ Customers can then use the portal to view the offers available, purchase the qua
 Customers can log back in and view their subscriptions, purchase extra seats or renew about to expire subscriptions.
 </p>
 
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Visualize](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FPartnerCenterSamples%2FReseller-Web-Application%2Fmaster%2Fazuredeploy.param.json)
+
 <h2>Running the portal</h2>
 Clone the portal and perform the following steps:
 <ol>

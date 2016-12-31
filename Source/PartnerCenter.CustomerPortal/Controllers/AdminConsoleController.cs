@@ -142,6 +142,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 }
             }
 
+            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request.Form["InstrumentationKey"]))
+            {
+                brandingConfiguration.InstrumentationKey = HttpContext.Current.Request.Form["InstrumentationKey"];
+            }
+
             return await ApplicationDomain.Instance.PortalBranding.UpdateAsync(brandingConfiguration);
         }
 

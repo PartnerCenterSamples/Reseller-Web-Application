@@ -1159,6 +1159,24 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Instrumentation key:.
+        /// </summary>
+        public static string InstrumentationKeyFieldHeader {
+            get {
+                return ResourceManager.GetString("InstrumentationKeyFieldHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can specify an Application Insight&apos;s instrumentation key here in order to capture telemetry data from the portal..
+        /// </summary>
+        public static string InstrumentationKeyFieldSubText {
+            get {
+                return ResourceManager.GetString("InstrumentationKeyFieldSubText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please specify a valid address.
         /// </summary>
         public static string InvalidAddress {

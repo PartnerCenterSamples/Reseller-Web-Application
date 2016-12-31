@@ -13,7 +13,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
     using Customers;
     using Offers;
     using PartnerCenter.Extensions;
-    using Telemetry;
 
     /// <summary>
     /// The application domain holds key domain objects needed across the application.
@@ -90,7 +89,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <summary>
         /// Gets the portal telemetry service.
         /// </summary>
-        public ITelemetryProvider Telemetry { get; private set; }
+        public TelemetryService TelemetryService { get; private set; }
 
         /// <summary>
         /// Initializes the application domain objects.
@@ -113,18 +112,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 Instance.PortalLocalization = new PortalLocalization(Instance);
                 Instance.CustomerSubscriptionsRepository = new CustomerSubscriptionsRepository(Instance);
                 Instance.CustomerPurchasesRepository = new CustomerPurchasesRepository(Instance);
-
-                if (string.IsNullOrEmpty(ApplicationConfiguration.AppInsightsInstrumentationKey))
-                {
-                    Instance.Telemetry = new EmptyTelemetryProvider();
-                }
-                else
-                {
-                    Instance.Telemetry = new ApplicationInsightsTelemetryProvider(
-                        ApplicationConfiguration.AppInsightsInstrumentationKey);
-                }
+                Instance.TelemetryService = new TelemetryService(Instance);
 
                 await Instance.PortalLocalization.InitializeAsync();
+                await Instance.TelemetryService.InitializeAsync();
             }
         }
 

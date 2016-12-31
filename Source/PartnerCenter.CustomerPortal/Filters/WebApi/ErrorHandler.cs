@@ -32,7 +32,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
             dynamic errorResponsePayload = new ExpandoObject();
             HttpStatusCode errorResponseCode = HttpStatusCode.InternalServerError;
 
-            ApplicationDomain.Instance.Telemetry.TrackException(context.Exception);
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackException(context.Exception);
 
             PartnerDomainException partnerDomainException = context.Exception as PartnerDomainException;
 

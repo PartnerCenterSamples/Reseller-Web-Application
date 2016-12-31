@@ -70,11 +70,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
         private const string WebPortalConfigurationManagerKey = "WebPortalConfigurationManager";
 
         /// <summary>
-        /// The Application Insights instrumentation key.
-        /// </summary>
-        private const string WebPortalAppInsightsInstrumentationKey = "webPortal.appInsightsInstrumentationKey";
-
-        /// <summary>
         /// A lazy reference to client configuration.
         /// </summary>
         private static Lazy<IDictionary<string, dynamic>> clientConfiguration = new Lazy<IDictionary<string, dynamic>>(
@@ -131,11 +126,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
         /// Gets the Azure Active Directory ID of the web portal.
         /// </summary>
         public static string ActiveDirectoryTenantId => ConfigurationManager.AppSettings[WebPortalAadTenantID];
-
-        /// <summary>
-        /// Gets the instrumentation key for Application Insights.
-        /// </summary>
-        public static string AppInsightsInstrumentationKey => ConfigurationManager.AppSettings[WebPortalAppInsightsInstrumentationKey];
 
         /// <summary>
         /// Gets the Azure storage connection string.

@@ -11,7 +11,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Telemetry
     using ApplicationInsights;
 
     /// <summary>
-    /// Records telemetry data using Application Insights.
+    /// Provides the ability to capture telemetry data using Application Insights.
     /// </summary>
     public class ApplicationInsightsTelemetryProvider : ITelemetryProvider
     {
@@ -23,10 +23,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Telemetry
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationInsightsTelemetryProvider" /> class.
         /// </summary>
-        /// <param name="instrumentationKey">The instrumentation key.</param>
-        public ApplicationInsightsTelemetryProvider(string instrumentationKey)
+        public ApplicationInsightsTelemetryProvider()
         {
-            instrumentationKey.AssertNotEmpty(nameof(instrumentationKey));
             this.telemetry = new TelemetryClient();
         }
 
