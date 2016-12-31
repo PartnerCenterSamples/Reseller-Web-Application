@@ -35,11 +35,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<AdminConsoleViewModel> GetAdminConsoleStatus()
         {
-            AdminConsoleViewModel adminConsoleViewModel = new AdminConsoleViewModel();
-
-            adminConsoleViewModel.IsOffersConfigured = await ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync();
-            adminConsoleViewModel.IsBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync();
-            adminConsoleViewModel.IsPaymentConfigured = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync();
+            AdminConsoleViewModel adminConsoleViewModel = new AdminConsoleViewModel
+            {
+                IsOffersConfigured = await ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync(),
+                IsBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync(),
+                IsPaymentConfigured = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync()
+            };
 
             return adminConsoleViewModel;
         }
@@ -227,9 +228,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("Payment")]
         [HttpPut]
         public async Task<PaymentConfiguration> UpdatePaymentConfiguration(PaymentConfiguration paymentConfiguration)
-        {           
+        {
             // validate the payment configuration before saving. 
-            PayPalGateway.ValidateConfiguration(paymentConfiguration);            
+            PayPalGateway.ValidateConfiguration(paymentConfiguration);
 
             // create a web experience profile using the branding for the web store. 
             BrandingConfiguration brandConfig = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync();

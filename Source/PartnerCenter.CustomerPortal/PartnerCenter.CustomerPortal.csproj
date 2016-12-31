@@ -222,6 +222,7 @@
     <Compile Include="Controllers\CustomerAccountController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PartnerOfferController.cs" />
+    <Compile Include="Filters\Mvc\AiHandleErrorAttribute.cs" />
     <Compile Include="Filters\Mvc\Authorize.cs" />
     <Compile Include="Filters\AuthorizationPolicy.cs" />
     <Compile Include="Filters\UserRole.cs" />

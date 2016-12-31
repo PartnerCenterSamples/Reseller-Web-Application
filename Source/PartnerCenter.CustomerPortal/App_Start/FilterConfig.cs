@@ -22,6 +22,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
         public static void RegisterGlobalMvcFilters(GlobalFilterCollection filters)
         {
             filters.Add(new AuthenticationFilter());
+            filters.Add(new AiHandleErrorAttribute());
         }
 
         /// <summary>

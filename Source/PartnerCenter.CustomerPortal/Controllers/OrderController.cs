@@ -8,7 +8,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 {
     using System;
     using System.Collections.Generic;
-    using System.Globalization;    
+    using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web.Http;
@@ -19,7 +19,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using Filters;
     using Filters.WebApi;
     using Models;
-    using Newtonsoft.Json;    
+    using Newtonsoft.Json;
 
     /// <summary>
     /// Manages customer orders.
@@ -36,7 +36,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpPost]
         [Route("Prepare")]
         public async Task<string> PrepareOrderForAuthenticatedCustomer([FromBody]OrderViewModel orderDetails)
-        {            
+        {
+            var startTime = DateTime.Now;
+
             if (!ModelState.IsValid)
             {
                 var errorList = (from item in ModelState.Values
@@ -66,12 +68,21 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     orderDetails = await orderNormalizer.NormalizeRenewSubscriptionOrderAsync();
                     break;
             }
-            
+
             // prepare the redirect url so that client can redirect to PayPal.             
             string redirectUrl = string.Format(CultureInfo.InvariantCulture, "{0}/#ProcessOrder?ret=true", Request.RequestUri.GetLeftPart(UriPartial.Authority));
 
             // execute to paypal and get paypal action URI. 
-            PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, operationDescription);            
+            PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, operationDescription);
+
+            // Capture the request for the customer summary for analysis.
+            var eventProperties = new Dictionary<string, string> { { "CustomerId", orderDetails.CustomerId }, { "OperationType", orderDetails.OperationType.ToString() } };
+
+            // Track the event measurements for analysis.
+            var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds } };
+
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/prepare", eventProperties, eventMetrics);
+
             return await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
         }
 
@@ -86,6 +97,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("Process")]
         public async Task<TransactionResult> ProcessOrderForAuthenticatedCustomer(string paymentId, string payerId)
         {
+            var startTime = DateTime.Now;
+
             // extract order information and create paypal payload.
             string clientCustomerId = this.Principal.PartnerCenterCustomerId;
 
@@ -96,20 +109,28 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             // use payment gateway to extract order information. 
             OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync();
             CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, clientCustomerId, paymentGateway);
-                        
+
             TransactionResult transactionResult = null;
             switch (orderToProcess.OperationType)
             {
-                case CommerceOperationType.Renewal:                    
+                case CommerceOperationType.Renewal:
                     transactionResult = await commerceOperation.RenewSubscriptionAsync(orderToProcess);
                     break;
                 case CommerceOperationType.AdditionalSeatsPurchase:
                     transactionResult = await commerceOperation.PurchaseAdditionalSeatsAsync(orderToProcess);
                     break;
-                case CommerceOperationType.NewPurchase:                    
+                case CommerceOperationType.NewPurchase:
                     transactionResult = await commerceOperation.PurchaseAsync(orderToProcess);
                     break;
             }
+
+            // Capture the request for the customer summary for analysis.
+            var eventProperties = new Dictionary<string, string> { { "CustomerId", orderToProcess.CustomerId }, { "OperationType", orderToProcess.OperationType.ToString() }, { "PayerId", payerId }, { "PaymentId", paymentId } };
+
+            // Track the event measurements for analysis.
+            var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds } };
+
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/process", eventProperties, eventMetrics);
 
             return await Task.FromResult(transactionResult);
         }
@@ -123,7 +144,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpPost]
         [Route("NewCustomerPrepareOrder")]
         public async Task<string> PrepareOrderForUnAuthenticatedCustomer([FromBody]OrderViewModel orderDetails)
-        {            
+        {
+            var startTime = DateTime.Now;
+
             if (!ModelState.IsValid)
             {
                 var errorList = (from item in ModelState.Values
@@ -134,7 +157,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             }
 
             // Validate & Normalize the order information.
-            OrderNormalizer orderNormalizer = new OrderNormalizer(ApplicationDomain.Instance, orderDetails);            
+            OrderNormalizer orderNormalizer = new OrderNormalizer(ApplicationDomain.Instance, orderDetails);
             orderDetails = await orderNormalizer.NormalizePurchaseSubscriptionOrderAsync();
 
             // prepare the redirect url so that client can redirect to PayPal.             
@@ -142,6 +165,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             // execute to paypal and get paypal action URI. 
             PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, Resources.NewPurchaseOperationCaption);
+
+            // Track the event measurements for analysis.
+            var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds } };
+
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/NewCustomerPrepareOrder", null, eventMetrics);
+
             return await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
         }
 
@@ -157,6 +186,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("NewCustomerProcessOrder")]
         public async Task<SubscriptionsSummary> ProcessOrderForUnAuthenticatedCustomer(string customerId, string paymentId, string payerId)
         {
+            var startTime = DateTime.Now;
+
             customerId.AssertNotEmpty(nameof(customerId));
 
             paymentId.AssertNotEmpty(nameof(paymentId));
@@ -167,6 +198,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync();
             CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, customerId, paymentGateway);
             await commerceOperation.PurchaseAsync(orderToProcess);
+
+            // Capture the request for the customer summary for analysis.
+            var eventProperties = new Dictionary<string, string> { { "CustomerId", orderToProcess.CustomerId }, { "PayerId", payerId }, { "PaymentId", paymentId } };
+
+            // Track the event measurements for analysis.
+            var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds } };
+
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/NewCustomerProcessOrder", eventProperties, eventMetrics);
 
             return await this.GetSubscriptionSummaryAsync(customerId);
         }
@@ -190,6 +229,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         /// <returns>Subscription Summary.</returns>
         private async Task<SubscriptionsSummary> GetSubscriptionSummaryAsync(string customerId)
         {
+            var startTime = DateTime.Now;
             var customerSubscriptionsTask = ApplicationDomain.Instance.CustomerSubscriptionsRepository.RetrieveAsync(customerId);
             var customerSubscriptionsHistoryTask = ApplicationDomain.Instance.CustomerPurchasesRepository.RetrieveAsync(customerId);
             var allPartnerOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveAsync();
@@ -243,7 +283,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     subscriptionTotal += orderTotal;
                 }
 
-                var partnerOfferItem = allPartnerOffers.Where(offer => offer.Id == subscription.PartnerOfferId).FirstOrDefault();
+                var partnerOfferItem = allPartnerOffers.FirstOrDefault(offer => offer.Id == subscription.PartnerOfferId);
                 string subscriptionTitle = partnerOfferItem.Title;
                 string portalOfferId = partnerOfferItem.Id;
                 decimal portalOfferPrice = partnerOfferItem.Price;
@@ -256,7 +296,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 // TODO :: Handle Microsoft offer being pulled back due to EOL. 
 
                 // Temporarily mark this partnerOffer item as inactive and dont allow store front customer to manage this subscription. 
-                var alignedMicrosoftOffer = currentMicrosoftOffers.Where(offer => offer.Offer.Id == partnerOfferItem.MicrosoftOfferId).FirstOrDefault();
+                var alignedMicrosoftOffer = currentMicrosoftOffers.FirstOrDefault(offer => offer.Offer.Id == partnerOfferItem.MicrosoftOfferId);
                 if (alignedMicrosoftOffer == null)
                 {
                     partnerOfferItem.IsInactive = true;
@@ -293,6 +333,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 // Increment the summary total. 
                 summaryTotal += subscriptionTotal;
             }
+
+            // Capture the request for the customer summary for analysis.
+            var eventProperties = new Dictionary<string, string> { { "CustomerId", customerId } };
+
+            // Track the event measurements for analysis.
+            var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds }, { "NumberOfSubscriptions", customerSubscriptionsView.Count } };
+
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("GetSubscriptionSummaryAsync", eventProperties, eventMetrics);
 
             // Sort List of subscriptions based on portal offer name. 
             return new SubscriptionsSummary()

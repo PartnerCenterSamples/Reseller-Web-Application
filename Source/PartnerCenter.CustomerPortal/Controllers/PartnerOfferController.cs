@@ -6,6 +6,8 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web.Http;
@@ -26,6 +28,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<OfferCatalogViewModel> GetOffersCatalog()
         {
+            var startTime = DateTime.Now;
             var isBrandingConfigured = ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync();
             var isOffersConfigured = ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync();
             var isPaymentConfigured = ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync();
@@ -35,8 +38,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             await Task.WhenAll(isBrandingConfigured, isOffersConfigured, isPaymentConfigured);
 
-            var offerCatalogViewModel = new OfferCatalogViewModel();
-            offerCatalogViewModel.IsPortalConfigured = isBrandingConfigured.Result && isOffersConfigured.Result && isPaymentConfigured.Result;
+            var offerCatalogViewModel = new OfferCatalogViewModel
+            {
+                IsPortalConfigured =
+                    isBrandingConfigured.Result && isOffersConfigured.Result && isPaymentConfigured.Result
+            };
 
             if (offerCatalogViewModel.IsPortalConfigured)
             {
@@ -48,13 +54,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 foreach (var offer in partnerOffers)
                 {
                     // TODO :: Handle Microsoft offer being pulled back due to EOL. 
-                    var microsoftOfferItem = microsoftOffers.Where(msOffer => msOffer.Offer.Id == offer.MicrosoftOfferId).FirstOrDefault();
+                    var microsoftOfferItem = microsoftOffers.FirstOrDefault(msOffer => msOffer.Offer.Id == offer.MicrosoftOfferId);
 
                     // temporarily remove the partner offer from catalog display if the corresponding Microsoft offer does not exist. 
                     if (microsoftOfferItem != null)
                     {
                         offer.Thumbnail = microsoftOfferItem.ThumbnailUri;
-                    }                    
+                    }
                     else
                     {
                         // temporary fix - remove the items from the collection by marking it as Inactive.
@@ -64,6 +70,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
                 offerCatalogViewModel.Offers = partnerOffers.Where(offer => offer.IsInactive == false);
             }
+
+            // Capture the request for the customer summary for analysis.
+            var eventProperties = new Dictionary<string, string> { { "IsPortalConfigured", offerCatalogViewModel.IsPortalConfigured.ToString() } };
+
+            // Track the event measurements for analysis.
+            var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds }, { "NumberOfOffers", offerCatalogViewModel.Offers.Count() } };
+
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/partnerOffers", eventProperties, eventMetrics);
 
             return offerCatalogViewModel;
         }
