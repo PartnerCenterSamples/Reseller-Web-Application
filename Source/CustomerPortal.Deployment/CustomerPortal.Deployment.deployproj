@@ -30,6 +30,7 @@
     <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>

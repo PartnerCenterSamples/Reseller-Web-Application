@@ -98,6 +98,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 
             // invalidate the cache, we do not update it to avoid race condition between web instances
             await this.ApplicationDomain.CachingService.ClearAsync(PortalBranding.PortalBrandingCacheKey);
+           
+            // re-initialize the telemetry service because the configuration might have changed.
+            await this.ApplicationDomain.TelemetryService.InitializeAsync();
 
             return updatedBrandingConfiguration;
         }

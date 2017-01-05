@@ -1591,11 +1591,47 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Id must be a valid GUID.
+        ///   Looks up a localized string similar to The selected images are too large. Please specify smaller images or upload one by one.
         /// </summary>
-        public static string IdMustBeAValidGUID {
+        public static string ImagesTooLarge {
             get {
-                return ResourceManager.GetString("IdMustBeAValidGUID", resourceCulture);
+                return ResourceManager.GetString("ImagesTooLarge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instrumentation key:.
+        /// </summary>
+        public static string InstrumentationKeyFieldHeader {
+            get {
+                return ResourceManager.GetString("InstrumentationKeyFieldHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can specify an Application Insight&apos;s instrumentation key here in order to capture telemetry data from the portal..
+        /// </summary>
+        public static string InstrumentationKeyFieldSubText {
+            get {
+                return ResourceManager.GetString("InstrumentationKeyFieldSubText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please specify a valid address.
+        /// </summary>
+        public static string InvalidAddress {
+            get {
+                return ResourceManager.GetString("InvalidAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid contact sales email address.
+        /// </summary>
+        public static string InvalidContactSalesEmailAddress {
+            get {
+                return ResourceManager.GetString("InvalidContactSalesEmailAddress", resourceCulture);
             }
         }
         
@@ -1605,60 +1641,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         public static string InvalidContactSalesPhone {
             get {
                 return ResourceManager.GetString("InvalidContactSalesPhone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid contact sales phone.
-        /// </summary>
-        public static string InvalidContactSalesPhoneExceptionMessage {
-            get {
-                return ResourceManager.GetString("InvalidContactSalesPhoneExceptionMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid contact sales email address.
-        /// </summary>
-        public static string InvalidContactSalesEmailAddress {
-            get {
-                return ResourceManager.GetString("InvalidContactSalesEmailAddress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid contact sales email address.
-        /// </summary>
-        public static string InvalidContactSalesEmailAddress {
-            get {
-                return ResourceManager.GetString("InvalidContactSalesEmailAddress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please enter a valid contact sales phone.
-        /// </summary>
-        public static string InvalidContactUsEmailAddress {
-            get {
-                return ResourceManager.GetString("InvalidContactUsEmailAddress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid contact sales phone.
-        /// </summary>
-        public static string InvalidContactSalesPhoneExceptionMessage {
-            get {
-                return ResourceManager.GetString("InvalidContactSalesPhoneExceptionMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid contact us email address.
-        /// </summary>
-        public static string InvalidContactUsEmailAddress {
-            get {
-                return ResourceManager.GetString("InvalidContactUsEmailAddress", resourceCulture);
             }
         }
         
@@ -1780,78 +1762,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provide an image file type for the header image.
-        /// </summary>
-        public static string InvalidHeaderImageMessage {
-            get {
-                return ResourceManager.GetString("InvalidHeaderImageMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid header image Uri. Please make sure the Uri is valid..
-        /// </summary>
-        public static string InvalidHeaderImageUri {
-            get {
-                return ResourceManager.GetString("InvalidHeaderImageUri", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid header image URI uploaded.
-        /// </summary>
-        public static string InvalidHeaderImageUriMessage {
-            get {
-                return ResourceManager.GetString("InvalidHeaderImageUriMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There was a problem in one of the fields you entered: .
-        /// </summary>
-        public static string InvalidInput {
-            get {
-                return ResourceManager.GetString("InvalidInput", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please correct the invalid input :.
-        /// </summary>
-        public static string InvalidInputErrorPrefix {
-            get {
-                return ResourceManager.GetString("InvalidInputErrorPrefix", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to One or more fields are invalid. Please correct them and then submit..
-        /// </summary>
-        public static string InvalidInputInFormCaption {
-            get {
-                return ResourceManager.GetString("InvalidInputInFormCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid operation being performed..
-        /// </summary>
-        public static string InvalidOperationForOrderMessage {
-            get {
-                return ResourceManager.GetString("InvalidOperationForOrderMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Provide an image file type for the organization logo.
-        /// </summary>
-        public static string InvalidOrganizationLogoFileTypeMessage {
-            get {
-                return ResourceManager.GetString("InvalidOrganizationLogoFileTypeMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Invalid organization logo Uri. Please make sure the Uri is valid..
         /// </summary>
         public static string InvalidOrganizationLogoUri {
@@ -1879,6 +1789,24 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Portal configuration seems to be invalid.
+        /// </summary>
+        public static string InvalidPortalConfiguration {
+            get {
+                return ResourceManager.GetString("InvalidPortalConfiguration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid privacy Uri. Please make sure the Uri is valid..
+        /// </summary>
+        public static string InvalidPrivacyAgreementUri {
+            get {
+                return ResourceManager.GetString("InvalidPrivacyAgreementUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid privacy agreement URI uploaded.
         /// </summary>
         public static string InvalidPrivacyUriMessage {
@@ -1888,29 +1816,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Payment mode is not supported.
+        ///   Looks up a localized string similar to Last.
         /// </summary>
-        public static string InvalidPaymentModeErrorMessage {
+        public static string Last {
             get {
-                return ResourceManager.GetString("InvalidPaymentModeErrorMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid privacy agreement URI uploaded.
-        /// </summary>
-        public static string InvalidPrivacyUriMessage {
-            get {
-                return ResourceManager.GetString("InvalidPrivacyUriMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Created Date.
-        /// </summary>
-        public static string LicenseCreatedDateCaption {
-            get {
-                return ResourceManager.GetString("LicenseCreatedDateCaption", resourceCulture);
+                return ResourceManager.GetString("Last", resourceCulture);
             }
         }
         
@@ -2016,9 +1926,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         /// <summary>
         ///   Looks up a localized string similar to Could not retrieve Microsoft offers.
         /// </summary>
-        public static string MicrosoftOfferIdMustBeSet {
+        public static string MicrosoftOfferRetrievalErrorMessage {
             get {
-                return ResourceManager.GetString("MicrosoftOfferIdMustBeSet", resourceCulture);
+                return ResourceManager.GetString("MicrosoftOfferRetrievalErrorMessage", resourceCulture);
             }
         }
         
@@ -2574,14 +2484,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         /// <summary>
         ///   Looks up a localized string similar to PayPal.com.
         /// </summary>
-        public static string PayPalUnableToProcessPayment {
+        public static string PayPalWebsiteCaption {
             get {
-                return ResourceManager.GetString("PayPalUnableToProcessPayment", resourceCulture);
+                return ResourceManager.GetString("PayPalWebsiteCaption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PayPal.com.
+        ///   Looks up a localized string similar to Phone number.
         /// </summary>
         public static string PhoneHeaderCaption {
             get {

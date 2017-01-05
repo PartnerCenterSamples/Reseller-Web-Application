@@ -1167,4 +1167,10 @@
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentation key:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>You can specify an Application Insight's instrumentation key here in order to capture telemetry data from the portal.</value>
+  </data>
 </root>

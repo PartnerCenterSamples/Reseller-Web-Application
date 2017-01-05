@@ -35,11 +35,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<AdminConsoleViewModel> GetAdminConsoleStatus()
         {
-            AdminConsoleViewModel adminConsoleViewModel = new AdminConsoleViewModel();
-
-            adminConsoleViewModel.IsOffersConfigured = await ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync();
-            adminConsoleViewModel.IsBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync();
-            adminConsoleViewModel.IsPaymentConfigured = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync();
+            AdminConsoleViewModel adminConsoleViewModel = new AdminConsoleViewModel
+            {
+                IsOffersConfigured = await ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync(),
+                IsBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync(),
+                IsPaymentConfigured = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync()
+            };
 
             return adminConsoleViewModel;
         }
@@ -66,12 +67,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             BrandingConfiguration brandingConfiguration = new BrandingConfiguration()
             {
                 OrganizationName = HttpContext.Current.Request.Form["OrganizationName"],
-                ContactUs = new ContactUsInformation()
+                ContactUs = new ContactUsInformation
                 {
                     Email = HttpContext.Current.Request.Form["ContactUsEmail"],
                     Phone = HttpContext.Current.Request.Form["ContactUsPhone"],
                 },
-                ContactSales = new ContactUsInformation()
+                ContactSales = new ContactUsInformation
                 {
                     Email = HttpContext.Current.Request.Form["ContactSalesEmail"],
                     Phone = HttpContext.Current.Request.Form["ContactSalesPhone"],
@@ -140,6 +141,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 {
                     throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.InvalidPrivacyUriMessage, invalidUri).AddDetail("Field", "PrivacyAgreement");
                 }
+            }
+
+            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request.Form["InstrumentationKey"]))
+            {
+                brandingConfiguration.InstrumentationKey = HttpContext.Current.Request.Form["InstrumentationKey"];
             }
 
             var updatedBrandingConfiguration = await ApplicationDomain.Instance.PortalBranding.UpdateAsync(brandingConfiguration);
@@ -232,7 +238,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("Payment")]
         [HttpPut]
         public async Task<PaymentConfiguration> UpdatePaymentConfiguration(PaymentConfiguration paymentConfiguration)
-        {           
+        {
             // validate the payment configuration before saving. 
             PayPalGateway.ValidateConfiguration(paymentConfiguration);
 

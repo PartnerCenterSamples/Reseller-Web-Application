@@ -4,7 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Microsoft.Store.PartnerCenter.CustomerPortal.App_Start
+namespace Microsoft.Store.PartnerCenter.CustomerPortal
 {
     using System.Web.Http.Filters;
     using System.Web.Mvc;
@@ -22,6 +22,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.App_Start
         public static void RegisterGlobalMvcFilters(GlobalFilterCollection filters)
         {
             filters.Add(new AuthenticationFilter());
+            filters.Add(new AiHandleErrorAttribute());
         }
 
         /// <summary>

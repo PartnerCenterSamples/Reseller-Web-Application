@@ -13,7 +13,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
     using System.Web.Http;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using App_Start;
     using BusinessLogic;
     using Configuration;
     using Configuration.Bundling;
