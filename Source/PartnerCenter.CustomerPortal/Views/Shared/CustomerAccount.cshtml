@@ -5,44 +5,51 @@
     </div>
     <!-- /ko -->
     <!-- ko if: viewModel.IsSet() -->
-    <div class="Padded">
-        <div class="row"></div>
-        <div class="row">
-            <label class="section">@Resources.ContactInformation</label>
-        </div>
-        <div class="row section-divider"></div>
-        <div class="row">
-            <div class="titleCell medium-text">
-                <label>@Resources.CustomerPrimaryContactCaption</label>
+    <div class="subscriptions-content">
+        <div class="Padded">
+            <div class="row">
+                <label class="section">@Resources.LicenseBasedSubscriptionsCaption</label>
             </div>
-
-            <div class="left-float medium-text">
-                <!-- ko foreach: viewModel.ContactInformation -->
-                <label class="medium-text" data-bind="text: $data"></label><br />
-                <!-- /ko -->
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="titleCell medium-text">
-                <label>@Resources.CustomerOrganizationNameCaption</label>
-            </div>
-
-            <div class="left-float medium-text ">
-                <label data-bind="text: viewModel.CompanyName"></label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="titleCell medium-text ">
-                <label>@Resources.Address</label>
-            </div>
-
-            <div class="left-float medium-text ">
-                <!-- ko foreach: viewModel.Address -->
-                <label class="medium-text" data-bind="text: $data"></label><br />
-                <!-- /ko -->
-            </div>
+            <div class="row section-divider"></div>
+            <table class="subscriptions-table" cellspacing="1" cellpadding="5">
+                <tbody>
+                    <tr class="medium-text">
+                        <td>
+                            <label>@Resources.LicenseNameCaption</label>                            
+                        </td>
+                        <td>
+                            <label>@Resources.LicenseQuantityCaption</label>                                                        
+                        </td>
+                        <td>
+                            <label>@Resources.LicenseStatusCaption</label>                                                        
+                        </td>
+                        <td class="right-aligned">
+                            <label>@Resources.LicenseCreatedDateCaption</label>                                                        
+                        </td>
+                    </tr>
+                    <!-- ko foreach: viewModel.Licenses -->
+                    <tr class="SubscriptionRow">
+                        <td>
+                            <label class="abovemedium-text" data-bind="text: $data.OfferName"></label>
+                        </td>
+                        <td class="left-aligned">
+                            <label data-bind="text: $data.Quantity"></label>
+                        </td>
+                        <td>
+                            <label data-bind="text: $data.Status"></label>
+                        </td>
+                        <td class="right-aligned">
+                            <label data-bind="text: $data.CreationDate"></label>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" class="border-divider"></td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
     </div>
     <div class="subscriptions-content">

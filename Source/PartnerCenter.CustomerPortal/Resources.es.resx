@@ -267,9 +267,6 @@
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Por favor, introduzca un prefijo de dominio válido</value>
   </data>
-  <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>Introduzca un número de teléfono válido</value>
-  </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
     <value>ID de suscripción:</value>
   </data>
@@ -990,12 +987,6 @@
   <data name="PaymentDisplayName" xml:space="preserve">
     <value>Configuración de pagos</value>
   </data>
-  <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>Mis suscripciones</value>
-  </data>
-  <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>Mi cuenta</value>
-  </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
     <value>Ir a la página de inicio</value>
   </data>
@@ -1166,5 +1157,17 @@
   </data>
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Estado</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Mis pedidos</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Mis suscripciones</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Suscripciones de licencias basado en</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Órdenes de</value>
   </data>
 </root>

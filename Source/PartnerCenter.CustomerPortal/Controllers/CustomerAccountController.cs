@@ -41,8 +41,25 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         {
             string clientCustomerId = this.Principal.PartnerCenterCustomerId;
 
-            Customer thisCustomer; 
-            thisCustomer = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(clientCustomerId).GetAsync();
+            CultureInfo responseCulture = new CultureInfo(ApplicationDomain.Instance.PortalLocalization.Locale);
+            var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
+            var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
+
+            List<CustomerLicensesModel> allSubscriptionsOfCustomer = new List<CustomerLicensesModel>();
+            foreach (var item in customerAllSubscriptions.Items)
+            {
+                if (item.BillingType == BillingType.License)
+                {                   
+                    allSubscriptionsOfCustomer.Add(new CustomerLicensesModel()
+                    {
+                        Id = item.Id,
+                        OfferName = item.OfferName,
+                        Quantity = item.Quantity.ToString("G", responseCulture),
+                        Status = this.GetStatusType(item.Status), 
+                        CreationDate = item.CreationDate.ToString("d", responseCulture)
+                    });
+                }                    
+            }
 
             CultureInfo responseCulture = new CultureInfo(ApplicationDomain.Instance.PortalLocalization.Locale);
             var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
@@ -61,19 +78,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             return new CustomerViewModel
             {
-                MicrosoftId = thisCustomer.Id,
-                AddressLine1 = thisCustomer.BillingProfile.DefaultAddress.AddressLine1,
-                AddressLine2 = thisCustomer.BillingProfile.DefaultAddress.AddressLine2,
-                City = thisCustomer.BillingProfile.DefaultAddress.City,
-                State = thisCustomer.BillingProfile.DefaultAddress.State,
-                ZipCode = thisCustomer.BillingProfile.DefaultAddress.PostalCode,
-                Country = thisCustomer.BillingProfile.DefaultAddress.Country,
-                Phone = thisCustomer.BillingProfile.DefaultAddress.PhoneNumber,
-                Language = thisCustomer.BillingProfile.Language,
-                FirstName = thisCustomer.BillingProfile.DefaultAddress.FirstName,
-                LastName = thisCustomer.BillingProfile.DefaultAddress.LastName,
-                Email = thisCustomer.BillingProfile.Email,
-                CompanyName = thisCustomer.BillingProfile.CompanyName,
                 Licenses = allSubscriptionsOfCustomer.OrderBy(items => items.OfferName)
             };
         }

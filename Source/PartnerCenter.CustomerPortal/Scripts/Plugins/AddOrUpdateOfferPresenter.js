@@ -244,6 +244,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
         self.saveOfferAction.enabled(false);
 
         saveOfferServerCall.execute().done(function (updatedOfferInformation) {
+            self.viewModel.Price(updatedOfferInformation.Price); // display reconciled price from server. 
             offerSaveNotification.type(Microsoft.WebPortal.Services.Notification.NotificationType.Success);
             offerSaveNotification.message(self.webPortal.Resources.Strings.Plugins.AddOrUpdateOffer.OfferSaveSuccessMessage);
             offerSaveNotification.buttons([

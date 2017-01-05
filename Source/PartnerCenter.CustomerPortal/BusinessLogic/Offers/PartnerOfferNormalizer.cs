@@ -44,6 +44,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.OfferPriceShouldBeMoreThanZero).AddDetail("Field", "Price");
             }
 
+            // flatten the offer price based on locale decimal settings. 
+            partnerOffer.Price = Math.Round(partnerOffer.Price, Resources.Culture.NumberFormat.CurrencyDecimalDigits, MidpointRounding.AwayFromZero);             
+
             partnerOffer.Features = PartnerOfferNormalizer.CleanupEmptyEntries(partnerOffer.Features);
             partnerOffer.Summary = PartnerOfferNormalizer.CleanupEmptyEntries(partnerOffer.Summary);
         }

@@ -210,6 +210,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             APIContext apiContext = await this.GetAPIContextAsync();
             decimal paymentTotal = 0;
 
+            // PayPal wouldnt manage decimal points for few countries (example Hungary & Japan). 
+            string moneyFixedPointFormat = (Resources.Culture.NumberFormat.CurrencyDecimalDigits == 0) ? "F0" : "F";
+
             // Create itemlist and add item objects to it.
             var itemList = new ItemList() { items = new List<Item>() };
             foreach (var subscriptionItem in order.Subscriptions)
@@ -220,11 +223,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                     description = this.paymentDescription,
                     sku = subscriptionItem.SubscriptionId,
                     currency = this.ApplicationDomain.PortalLocalization.CurrencyCode,
-                    price = subscriptionItem.SeatPrice.ToString("F0", CultureInfo.InvariantCulture), // price in a few countries needs to be without decimals. 
+                    price = subscriptionItem.SeatPrice.ToString(moneyFixedPointFormat, CultureInfo.InvariantCulture),
                     quantity = subscriptionItem.Quantity.ToString()
-                });
-                paymentTotal += Math.Round(subscriptionItem.Quantity * Math.Round(subscriptionItem.SeatPrice));
-            }
+                });                
+                paymentTotal += Math.Round(subscriptionItem.Quantity * subscriptionItem.SeatPrice, Resources.Culture.NumberFormat.CurrencyDecimalDigits);                
+            }            
 
             string webExperienceId = string.Empty;
             apiContext.Config.TryGetValue("WebExperienceProfileId", out webExperienceId);
@@ -244,7 +247,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                         amount = new Amount()
                         {
                             currency = this.ApplicationDomain.PortalLocalization.CurrencyCode,
-                            total = paymentTotal.ToString("F0", CultureInfo.InvariantCulture)  
+                            total = paymentTotal.ToString(moneyFixedPointFormat, CultureInfo.InvariantCulture)  
                         }
                     }
                 },
@@ -254,6 +257,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                     cancel_url = redirectUrl + "&payment=failure"
                 }
             };
+            System.Diagnostics.Debug.WriteLine("Total Amount:" + paymentTotal.ToString("F", Resources.Culture));
 
             try
             {

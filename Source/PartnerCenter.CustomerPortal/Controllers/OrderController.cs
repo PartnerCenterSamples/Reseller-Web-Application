@@ -266,10 +266,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 // iterate through and build the SubsriptionHistory for this subscription. 
                 foreach (var historyItem in subscriptionHistoryList)
                 {
-                    decimal orderTotal = Math.Round(historyItem.SeatPrice * historyItem.SeatsBought, 2);
+                    decimal orderTotal = Math.Round(historyItem.SeatPrice * historyItem.SeatsBought, responseCulture.NumberFormat.CurrencyDecimalDigits);
                     historyItems.Add(new SubscriptionHistory()
                     {
-                        OrderTotal = orderTotal.ToString("C", responseCulture),
+                        OrderTotal = orderTotal.ToString("C", responseCulture),                                 // Currency format.
                         PricePerSeat = historyItem.SeatPrice.ToString("C", responseCulture),                    // Currency format. 
                         SeatsBought = historyItem.SeatsBought.ToString("G", responseCulture),                   // General format.  
                         OrderDate = historyItem.TransactionDate.ToLocalTime().ToString("d", responseCulture),   // Short date format. 
@@ -308,9 +308,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     isRenewable = false;
                     isEditable = false;
                 }
-
+                
                 // Compute the pro rated price per seat for this subcription & return for client side processing during updates. 
-                decimal proratedPerSeatPrice = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscription.ExpiryDate, portalOfferPrice), 2);
+                decimal proratedPerSeatPrice = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscription.ExpiryDate, portalOfferPrice), responseCulture.NumberFormat.CurrencyDecimalDigits);
 
                 SubscriptionViewModel subscriptionItem = new SubscriptionViewModel()
                 {

@@ -267,9 +267,6 @@
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>有効なドメインのプレフィックスを入力してください。</value>
   </data>
-  <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>有効な電話番号を入力してください。</value>
-  </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
     <value>サブスクリプション ID:</value>
   </data>
@@ -1166,5 +1163,11 @@
   </data>
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>ステータス</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>ベース ライセンスのサブスクリプション</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>注文</value>
   </data>
 </root>

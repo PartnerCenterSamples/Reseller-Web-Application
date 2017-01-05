@@ -267,9 +267,6 @@
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Voer een geldige Domeinvoorvoegsel</value>
   </data>
-  <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>Voer een geldig telefoonnummer</value>
-  </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
     <value>Abonnement-ID:</value>
   </data>
@@ -990,12 +987,6 @@
   <data name="PaymentDisplayName" xml:space="preserve">
     <value>Betaling Setup</value>
   </data>
-  <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>Mijn abonnementen</value>
-  </data>
-  <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>Mijn Account</value>
-  </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
     <value>Ga naar startpagina</value>
   </data>
@@ -1166,5 +1157,17 @@
   </data>
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Status</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Mijn bestellingen</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Mijn abonnementen</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Licentie op basis abonnementen</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Bestellingen</value>
   </data>
 </root>
