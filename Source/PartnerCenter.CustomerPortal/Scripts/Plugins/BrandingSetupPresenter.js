@@ -25,6 +25,7 @@ Microsoft.WebPortal.BrandingSetupPresenter = function (webPortal, feature, brand
             Phone: ko.observable("")
         },
         HeaderImage: ko.observable(""),
+        InstrumentationKey: ko.observable(""),
         PrivacyAgreement: ko.observable("")
     }
 }
@@ -149,6 +150,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype.onSaveBranding = function (
 
     formData.append("HeaderImage", this.viewModel.HeaderImage());
     formData.append("PrivacyAgreement", this.viewModel.PrivacyAgreement());
+    formData.append("InstrumentationKey", this.viewModel.InstrumentationKey());
     
     var saveBrandingServerCall = this.webPortal.ServerCallManager.create(this.feature,
         function () {
@@ -298,6 +300,10 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._updateViewModel = function
         this.existingBrandingConfiguration.PrivacyAgreement = "";
     }
 
+    if (!this.existingBrandingConfiguration.InstrumentationKey) {
+        this.existingBrandingConfiguration.InstrumentationKey = "";
+    }
+
     this.viewModel.OrganizationName(this.existingBrandingConfiguration.OrganizationName);
     this.viewModel.OrganizationLogo(this.existingBrandingConfiguration.OrganizationLogo);
     this.viewModel.ContactUs.Email(this.existingBrandingConfiguration.ContactUs.Email);
@@ -305,6 +311,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._updateViewModel = function
     this.viewModel.ContactSales.Email(this.existingBrandingConfiguration.ContactSales.Email);
     this.viewModel.ContactSales.Phone(this.existingBrandingConfiguration.ContactSales.Phone);
     this.viewModel.HeaderImage(this.existingBrandingConfiguration.HeaderImage);
+    this.viewModel.InstrumentationKey(this.existingBrandingConfiguration.InstrumentationKey);
     this.viewModel.PrivacyAgreement(this.existingBrandingConfiguration.PrivacyAgreement);
 }
 
@@ -337,6 +344,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._setupActions = function ()
         var isFormUpdated = this.viewModel.OrganizationName() != this.existingBrandingConfiguration.OrganizationName |
             this.viewModel.OrganizationLogo() != this.existingBrandingConfiguration.OrganizationLogo |
             this.viewModel.HeaderImage() != this.existingBrandingConfiguration.HeaderImage |
+            this.viewModel.InstrumentationKey() != this.existingBrandingConfiguration.InstrumentationKey |
             this.viewModel.PrivacyAgreement() != this.existingBrandingConfiguration.PrivacyAgreement;
 
         isFormUpdated = isFormUpdated | this.viewModel.ContactUs.Email() != this.existingBrandingConfiguration.ContactUs.Email |

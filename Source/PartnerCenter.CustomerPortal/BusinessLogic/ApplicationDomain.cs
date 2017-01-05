@@ -85,30 +85,37 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// Gets the customer purchases repository.
         /// </summary>
         public CustomerPurchasesRepository CustomerPurchasesRepository { get; private set; }
-        
+
+        /// <summary>
+        /// Gets the portal telemetry service.
+        /// </summary>
+        public TelemetryService TelemetryService { get; private set; }
+
         /// <summary>
         /// Initializes the application domain objects.
         /// </summary>
         /// <returns>A task.</returns>
         public static async Task InitializeAsync()
         {
-            if (ApplicationDomain.Instance == null)
+            if (Instance == null)
             {
-                ApplicationDomain.Instance = new ApplicationDomain();
+                Instance = new ApplicationDomain();
 
-                ApplicationDomain.Instance.AzureStorageService = new AzureStorageService(ApplicationConfiguration.AzureStorageConnectionString, ApplicationConfiguration.AzureStorageConnectionEndpointSuffix);
-                ApplicationDomain.Instance.CachingService = new CachingService(ApplicationDomain.Instance, ApplicationConfiguration.CacheConnectionString);
-                ApplicationDomain.Instance.PartnerCenterClient = await ApplicationDomain.AcquirePartnerCenterAccessAsync();
-                ApplicationDomain.Instance.PortalLocalization = new PortalLocalization(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.CustomersRepository = new PartnerCenterCustomersRepository(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.OffersRepository = new PartnerOffersRepository(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.MicrosoftOfferLogoIndexer = new MicrosoftOfferLogoIndexer(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.PortalBranding = new PortalBranding(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.PaymentConfigurationRepository = new PaymentConfigurationRepository(ApplicationDomain.Instance);                
-                ApplicationDomain.Instance.CustomerSubscriptionsRepository = new CustomerSubscriptionsRepository(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.CustomerPurchasesRepository = new CustomerPurchasesRepository(ApplicationDomain.Instance);
-                
-                await ApplicationDomain.Instance.PortalLocalization.InitializeAsync();
+                Instance.AzureStorageService = new AzureStorageService(ApplicationConfiguration.AzureStorageConnectionString, ApplicationConfiguration.AzureStorageConnectionEndpointSuffix);
+                Instance.CachingService = new CachingService(Instance, ApplicationConfiguration.CacheConnectionString);
+                Instance.PartnerCenterClient = await AcquirePartnerCenterAccessAsync();
+                Instance.PortalLocalization = new PortalLocalization(Instance);
+                Instance.CustomersRepository = new PartnerCenterCustomersRepository(Instance);
+                Instance.OffersRepository = new PartnerOffersRepository(Instance);
+                Instance.MicrosoftOfferLogoIndexer = new MicrosoftOfferLogoIndexer(Instance);
+                Instance.PortalBranding = new PortalBranding(Instance);
+                Instance.PaymentConfigurationRepository = new PaymentConfigurationRepository(Instance);
+                Instance.CustomerSubscriptionsRepository = new CustomerSubscriptionsRepository(Instance);
+                Instance.CustomerPurchasesRepository = new CustomerPurchasesRepository(Instance);
+                Instance.TelemetryService = new TelemetryService(Instance);
+
+                await Instance.PortalLocalization.InitializeAsync();
+                await Instance.TelemetryService.InitializeAsync();
             }
         }
 
@@ -123,7 +130,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 
             var credentials = await PartnerCredentials.Instance.GenerateByApplicationCredentialsAsync(
                 ConfigurationManager.AppSettings["partnercenter.applicationId"],
-                ConfigurationManager.AppSettings["partnercenter.applicationSecret"],                
+                ConfigurationManager.AppSettings["partnercenter.applicationSecret"],
                 ConfigurationManager.AppSettings["partnercenter.AadTenantId"],
                 ConfigurationManager.AppSettings["aadEndpoint"],
                 ConfigurationManager.AppSettings["aadGraphEndpoint"]);

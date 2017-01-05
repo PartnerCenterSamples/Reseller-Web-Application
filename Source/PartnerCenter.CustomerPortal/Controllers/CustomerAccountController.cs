@@ -22,7 +22,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using PartnerCenter.Models.Customers;
     using PartnerCenter.Models.Invoices;
     using PartnerCenter.Models.Subscriptions;
-    using PartnerCenter.RequestContext;
+    using RequestContext;
 
     /// <summary>
     /// Customer Account API Controller.
@@ -65,23 +65,18 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
             var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
 
-            List<CustomerLicensesModel> allSubscriptionsOfCustomer = new List<CustomerLicensesModel>();
-            foreach (var item in customerAllSubscriptions.Items)
-            {
-                if (item.BillingType == BillingType.License)
-                {                   
-                    allSubscriptionsOfCustomer.Add(new CustomerLicensesModel()
-                    {
-                        Id = item.Id,
-                        OfferName = item.OfferName,
-                        Quantity = item.Quantity.ToString("G", responseCulture),
-                        Status = this.GetStatusType(item.Status), 
-                        CreationDate = item.CreationDate.ToString("d", responseCulture)
-                    });
-                }                    
-            }
+            List<CustomerLicensesModel> allSubscriptionsOfCustomer = (from item in customerAllSubscriptions.Items
+                where item.BillingType == BillingType.License
+                select new CustomerLicensesModel()
+                {
+                    Id = item.Id,
+                    OfferName = item.OfferName,
+                    Quantity = item.Quantity.ToString("G", responseCulture),
+                    Status = this.GetStatusType(item.Status),
+                    CreationDate = item.CreationDate.ToString("d", responseCulture)
+                }).ToList();
 
-            return new CustomerViewModel()
+            return new CustomerViewModel
             {
                 Licenses = allSubscriptionsOfCustomer.OrderBy(items => items.OfferName)
             };
@@ -123,20 +118,20 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             string billingCulture = customerCountryValidationRules.SupportedCulturesList.FirstOrDefault();      // default billing culture is the first supported culture for the customer's selected country. 
             string billingLanguage = customerCountryValidationRules.SupportedLanguagesList.FirstOrDefault();    // default billing culture is the first supported language for the customer's selected country. 
 
-            newCustomer = new Customer()
+            newCustomer = new Customer
             {
-                CompanyProfile = new CustomerCompanyProfile()
+                CompanyProfile = new CustomerCompanyProfile
                 {
                     Domain = domainName,
                 },
-                BillingProfile = new CustomerBillingProfile()
+                BillingProfile = new CustomerBillingProfile
                 {
                     Culture = billingCulture,
                     Language = billingLanguage,
                     Email = customerViewModel.Email,
                     CompanyName = customerViewModel.CompanyName,
 
-                    DefaultAddress = new Address()
+                    DefaultAddress = new Address
                     {
                         FirstName = customerViewModel.FirstName,
                         LastName = customerViewModel.LastName,
@@ -159,7 +154,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     await ApplicationDomain.Instance.CustomersRepository.RegisterAsync(this.Principal.TenantId, newCustomer.Id);
                 }
             
-            return new CustomerViewModel()
+            return new CustomerViewModel
             {
                 AddressLine1 = newCustomer.BillingProfile.DefaultAddress.AddressLine1,
                 AddressLine2 = newCustomer.BillingProfile.DefaultAddress.AddressLine2,

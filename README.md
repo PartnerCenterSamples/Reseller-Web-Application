@@ -25,6 +25,9 @@ Customers can <ol>
 The portal can be deployed from within Partner Center at: <a href="https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment">https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment</a>.
 There is also a deployment project included in the solution through which, deployment can be started with the specified inputs.
 
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Visualize](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FPartnerCenterSamples%2FReseller-Web-Application%2Fmaster%2Fazuredeploy.json)
+
 <h2>Build & Deploy on your own</h2>
 If you are interested to fork and custom build/deploy the store front. We recommend reading [this blog post](https://blogs.msdn.microsoft.com/iwilliams/2016/12/17/reseller-storefront/) by [Isaiah Williams](https://github.com/isaiahwilliams)
 

@@ -15,6 +15,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
     public class BrandingConfiguration
     {
         /// <summary>
+        /// Gets or sets the Application Insight instrumentation key.
+        /// </summary>
+        public string InstrumentationKey { get; set; }
+
+        /// <summary>
         /// Gets or sets the organization name.
         /// </summary>
         public string OrganizationName { get; set; }

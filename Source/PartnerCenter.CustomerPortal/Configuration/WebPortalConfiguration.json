@@ -1,724 +1,726 @@
 ﻿{
-    "Dependencies": {
-        "DefaultAssetVersion": "Debug",
-        "Assets": [
-            {
-                "Version": "Debug",
-                "JavaScript": [
-                    "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.js",
-                    "~/Scripts/WebPortal/Dependencies/jquery-ui.js",
-                    "~/Scripts/WebPortal/Dependencies/knockout-3.2.0.debug.js",
-                    "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
-                ],
-                "Css": [
-                ]
-            },
-            {
-                "Version": "Release",
-                "JavaScript": [
-                    "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.min.js",
-                    "~/Scripts/WebPortal/Dependencies/jquery-ui.min.js",
-                    "~/Scripts/WebPortal/Dependencies/knockout-3.2.0.js",
-                    "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
-                ],
-                "Css": [
-                ]
-            }
+  "Dependencies": {
+    "DefaultAssetVersion": "Debug",
+    "Assets": [
+      {
+        "Version": "Debug",
+        "JavaScript": [
+          "~/Scripts/WebPortal/Dependencies/appinsights.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-ui.js",
+          "~/Scripts/WebPortal/Dependencies/knockout-3.2.0.debug.js",
+          "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
+        ],
+        "Css": [
         ]
+      },
+      {
+        "Version": "Release",
+        "JavaScript": [
+          "~/Scripts/WebPortal/Dependencies/appinsights.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.min.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-ui.min.js",
+          "~/Scripts/WebPortal/Dependencies/knockout-3.2.0.js",
+          "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
+        ],
+        "Css": [
+        ]
+      }
+    ]
+  },
+
+  "Core": {
+    "Startup": {
+      "DefaultAssetVersion": "Standard",
+      "Assets": [
+        {
+          "Version": "Standard",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Core/WebPortal.js",
+            "~/Scripts/WebPortal/Infrastructure/Helpers.js",
+            "~/Scripts/WebPortal/Infrastructure/KnockOutExtensions.js",
+            "~/Scripts/WebPortal/Infrastructure/Settings.js",
+            "~/Scripts/WebPortal/Infrastructure/Diagnostics.js",
+            "~/Scripts/WebPortal/Core/Shell.js",
+            "~/Scripts/WebPortal/Core/SplashScreen.js",
+            "~/Scripts/WebPortal/Core/EventSystem.js",
+            "~/Scripts/WebPortal/Utilities/RetryableServerCall.js",
+            "~/Scripts/WebPortal/Utilities/Animation.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/WebPortalStyles.css",
+            "~/Content/Styles/WebPortal/StandardSplashScreen.css"
+          ],
+          "Templates": [
+            "StandardSplashScreen"
+          ]
+        }
+      ]
     },
-
-    "Core": {
-        "Startup": {
-            "DefaultAssetVersion": "Standard",
-            "Assets": [
-                {
-                    "Version": "Standard",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Core/WebPortal.js",
-                        "~/Scripts/WebPortal/Infrastructure/Helpers.js",
-                        "~/Scripts/WebPortal/Infrastructure/KnockOutExtensions.js",
-                        "~/Scripts/WebPortal/Infrastructure/Settings.js",
-                        "~/Scripts/WebPortal/Infrastructure/Diagnostics.js",
-                        "~/Scripts/WebPortal/Core/Shell.js",
-                        "~/Scripts/WebPortal/Core/SplashScreen.js",
-                        "~/Scripts/WebPortal/Core/EventSystem.js",
-                        "~/Scripts/WebPortal/Utilities/RetryableServerCall.js",
-                        "~/Scripts/WebPortal/Utilities/Animation.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/WebPortalStyles.css",
-                        "~/Content/Styles/WebPortal/StandardSplashScreen.css"
-                    ],
-                    "Templates": [
-                        "StandardSplashScreen"
-                    ]
-                }
-            ]
-        },
-        "NonStartup": {
-            "DefaultAssetVersion": "Standard",
-            "Assets": [
-                {
-                    "Version": "Standard",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Core/SessionManager.js",
-                        "~/Scripts/WebPortal/Core/Presenter.js",
-                        "~/Scripts/WebPortal/Core/TemplatePresenter.js",
-                        "~/Scripts/WebPortal/Core/View.js",
-                        "~/Scripts/WebPortal/Core/ContentPanel.js",
-                        "~/Scripts/WebPortal/Core/Journey.js",
-                        "~/Scripts/WebPortal/Core/UrlManager.js",
-                        "~/Scripts/WebPortal/Core/ServerCallManager.js",
-                        "~/Scripts/WebPortal/Core/PortalService.js",
-                        "~/Scripts/WebPortal/Utilities/AsyncOperationSerializer.js",
-                        "~/Scripts/WebPortal/Utilities/Throttler.js",
-                        "~/Scripts/WebPortal/Utilities/Toggler.js"
-                    ],
-                    "Css": [
-                    ]
-                }
-            ]
+    "NonStartup": {
+      "DefaultAssetVersion": "Standard",
+      "Assets": [
+        {
+          "Version": "Standard",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Core/SessionManager.js",
+            "~/Scripts/WebPortal/Core/Presenter.js",
+            "~/Scripts/WebPortal/Core/TemplatePresenter.js",
+            "~/Scripts/WebPortal/Core/View.js",
+            "~/Scripts/WebPortal/Core/ContentPanel.js",
+            "~/Scripts/WebPortal/Core/Journey.js",
+            "~/Scripts/WebPortal/Core/UrlManager.js",
+            "~/Scripts/WebPortal/Core/ServerCallManager.js",
+            "~/Scripts/WebPortal/Core/PortalService.js",
+            "~/Scripts/WebPortal/Utilities/AsyncOperationSerializer.js",
+            "~/Scripts/WebPortal/Utilities/Throttler.js",
+            "~/Scripts/WebPortal/Utilities/Toggler.js"
+          ],
+          "Css": [
+          ]
         }
+      ]
+    }
+  },
+
+  "Services": [
+    {
+      "Name": "Commons",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Button.js"
+          ],
+          "Css": [
+          ]
+        }
+      ]
     },
-
-    "Services": [
+    {
+      "Name": "Actions",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
         {
-            "Name": "Commons",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/Button.js"
-                    ],
-                    "Css": [
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "Actions",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/Actions/Action.js",
-                        "~/Scripts/WebPortal/Services/Actions/ActionsManager.js",
-                        "~/Scripts/WebPortal/Services/Actions/ActionsService.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/Actions.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Services/Actions.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "Dialog",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/Dialog/Dialog.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/Dialog.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Services/Dialog.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "HeaderBar",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/HeaderBar/HeaderBar.js",
-                        "~/Scripts/WebPortal/Services/HeaderBar/HeaderBarSection.js",
-                        "~/Scripts/WebPortal/Services/HeaderBar/TitleSection.js",
-                        "~/Scripts/WebPortal/Services/HeaderBar/ActionsSection.js",
-                        "~/Scripts/WebPortal/Services/HeaderBar/LinksSection.js",
-                        "~/Scripts/WebPortal/Services/HeaderBar/NotificationsSection.js",
-                        "~/Scripts/WebPortal/Services/HeaderBar/UserSection.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/HeaderBar.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Services/HeaderBar.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "Notifications",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/Notifications/Notification.js",
-                        "~/Scripts/WebPortal/Services/Notifications/NotificationsManager.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/Notifications.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Services/Notifications.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "Login",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/Login/Login.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/Login.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Services/Login.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "PrimaryNavigation",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/PrimaryNavigation/PrimaryNavigation.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/PrimaryNavigation.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Services/PrimaryNavigation.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "UserMenu",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Services/UserMenu/UserMenuService.js"
-                    ],
-                    "Css": [
-                    ]
-                }
-            ]
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Actions/Action.js",
+            "~/Scripts/WebPortal/Services/Actions/ActionsManager.js",
+            "~/Scripts/WebPortal/Services/Actions/ActionsService.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Actions.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Actions.cshtml"
+          ]
         }
-    ],
-
-    "Views": [
+      ]
+    },
+    {
+      "Name": "Dialog",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
         {
-            "Name": "List",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/WebPortal/Views/List/List.js",
-                        "~/Scripts/WebPortal/Views/List/Column.js",
-                        "~/Scripts/WebPortal/Views/List/ListRenderer.js",
-                        "~/Scripts/WebPortal/Views/List/IListEventListener.js",
-                        "~/Scripts/WebPortal/Views/List/TablePageRenderer.js",
-                        "~/Scripts/WebPortal/Views/List/InfiniteScrollingRenderer.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/WebPortal/List.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Controls/List.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "AddSubscriptions",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/Plugins/Views/AddSubscriptionsView.js"
-                    ],
-                    "Css": [
-                    ],
-                    "Templates": [
-                        "~/Views/Controls/AddSubscriptions.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "NewCustomerProfile",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/Plugins/Views/NewCustomerProfileView.js"
-                    ],
-                    "Css": [
-                    ],
-                    "Templates": [
-                        "~/Views/Controls/NewCustomerProfile.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "OfferTile",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/Plugins/Views/OfferTile.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/Plugins/OfferTile.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Controls/OfferTile.cshtml"
-                    ]
-                }
-            ]
-        },
-        {
-            "Name": "OffersCatalog",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                    "JavaScript": [
-                        "~/Scripts/Plugins/Views/OffersCatalog.js"
-                    ],
-                    "Css": [
-                        "~/Content/Styles/Plugins/OffersCatalog.css"
-                    ],
-                    "Templates": [
-                        "~/Views/Controls/OffersCatalog.cshtml"
-                    ]
-                }
-            ]
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Dialog/Dialog.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Dialog.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Dialog.cshtml"
+          ]
         }
-    ],
+      ]
+    },
+    {
+      "Name": "HeaderBar",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/HeaderBar/HeaderBar.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/HeaderBarSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/TitleSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/ActionsSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/LinksSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/NotificationsSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/UserSection.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/HeaderBar.css"
+          ],
+          "Templates": [
+            "~/Views/Services/HeaderBar.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Notifications",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Notifications/Notification.js",
+            "~/Scripts/WebPortal/Services/Notifications/NotificationsManager.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Notifications.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Notifications.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Login",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Login/Login.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Login.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Login.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PrimaryNavigation",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/PrimaryNavigation/PrimaryNavigation.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/PrimaryNavigation.css"
+          ],
+          "Templates": [
+            "~/Views/Services/PrimaryNavigation.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UserMenu",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/UserMenu/UserMenuService.js"
+          ],
+          "Css": [
+          ]
+        }
+      ]
+    }
+  ],
 
-    "Plugins": {
-        "Defaults": {
-            "DisplayName": "Unknown",
-            "Tile": "/Content/Images/Plugins/Tiles/home-tile.png",
-            "Color": "#3D3C3A",
-            "AlternateColor": "#4D4C4A"
-        },
-        "Commons": {
-            "Name": "Commons",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-                {
-                    "Version": "1.0",
-                  "JavaScript": [
-                    "~/Scripts/Plugins/ErrorCode.js",
-                    "~/Scripts/Plugins/CommerceOperationType.js"
-                  ],
-                    "Css": [
-                        "~/Content/Styles/Plugins/Common.css",
-                        "~/Content/Styles/Plugins/AddSubscriptions.css"
-                    ]
-                }
-            ]
-        },
-        "Plugins": [
+  "Views": [
+    {
+      "Name": "List",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Views/List/List.js",
+            "~/Scripts/WebPortal/Views/List/Column.js",
+            "~/Scripts/WebPortal/Views/List/ListRenderer.js",
+            "~/Scripts/WebPortal/Views/List/IListEventListener.js",
+            "~/Scripts/WebPortal/Views/List/TablePageRenderer.js",
+            "~/Scripts/WebPortal/Views/List/InfiniteScrollingRenderer.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/List.css"
+          ],
+          "Templates": [
+            "~/Views/Controls/List.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "AddSubscriptions",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/AddSubscriptionsView.js"
+          ],
+          "Css": [
+          ],
+          "Templates": [
+            "~/Views/Controls/AddSubscriptions.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "NewCustomerProfile",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/NewCustomerProfileView.js"
+          ],
+          "Css": [
+          ],
+          "Templates": [
+            "~/Views/Controls/NewCustomerProfile.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "OfferTile",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/OfferTile.js"
+          ],
+          "Css": [
+            "~/Content/Styles/Plugins/OfferTile.css"
+          ],
+          "Templates": [
+            "~/Views/Controls/OfferTile.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "OffersCatalog",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/OffersCatalog.js"
+          ],
+          "Css": [
+            "~/Content/Styles/Plugins/OffersCatalog.css"
+          ],
+          "Templates": [
+            "~/Views/Controls/OffersCatalog.cshtml"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "Plugins": {
+    "Defaults": {
+      "DisplayName": "Unknown",
+      "Tile": "/Content/Images/Plugins/Tiles/home-tile.png",
+      "Color": "#3D3C3A",
+      "AlternateColor": "#4D4C4A"
+    },
+    "Commons": {
+      "Name": "Commons",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/ErrorCode.js",
+            "~/Scripts/Plugins/CommerceOperationType.js"
+          ],
+          "Css": [
+            "~/Content/Styles/Plugins/Common.css",
+            "~/Content/Styles/Plugins/AddSubscriptions.css"
+          ]
+        }
+      ]
+    },
+    "Plugins": [
+      {
+        "Name": "Home",
+        "DisplayName": "HomePluginDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/home-tile.png",
+        "DefaultFeature": "Home",
+        "Features": [
           {
             "Name": "Home",
-            "DisplayName": "HomePluginDisplayName",
-            "Tile": "/Content/Images/Plugins/Tiles/home-tile.png",
-            "DefaultFeature": "Home",
-            "Features": [
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
               {
-                "Name": "Home",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/HomePagePresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/HomePage.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "CustomerRegistration",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/CustomerRegistrationPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/CustomerRegistration.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "RegistrationConfirmation",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/RegistrationConfirmationPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/RegistrationConfirmation.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "ProcessOrder",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/ProcessOrderPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/ProcessOrder.css"
-                    ]
-                  }
-                ]
-              }
-
-            ]
-          },
-            {
-                "Name": "AdminConsole",
-                "DisplayName": "AdminConsoleDisplayName",
-                "Tile": "/Content/Images/Plugins/Tiles/dashboard-tile.png",
-                "Color": "#3090C7",
-                "AlternateColor": "#2080B7",
-                "DefaultFeature": "AdminConsole",
-                "Features": [
-                    {
-                        "Name": "AdminConsole",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/AdminConsolePresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/AdminConsole.css"
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-          {
-            "Name": "BrandingSetup",
-            "DisplayName": "BrandingDisplayName",
-            "Tile": "/Content/Images/Plugins/Tiles/branding-tile.png",
-            "Color": "#2874a6",
-            "AlternateColor": "#3884b6",
-            "DefaultFeature": "BrandingSetup",
-            "Features": [
-              {
-                "Name": "BrandingSetup",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/BrandingSetupPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/BrandingSetup.css"
-                    ]
-                  }
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/HomePagePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/HomePage.css"
                 ]
               }
             ]
           },
           {
-            "Name": "PartnerOffersSetup",
-            "DisplayName": "OffersDisplayName",
-            "Tile": "/Content/Images/Plugins/Tiles/offers-tile.png",
-            "Color": "#25383C",
-            "AlternateColor": "#35484C",
-            "DefaultFeature": "OfferList",
-            "Features": [
+            "Name": "CustomerRegistration",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
               {
-                "Name": "OfferList",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/OfferListPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/OfferList.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "AddOrUpdateOffers",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/AddOrUpdateOfferPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/AddOrUpdateOffer.css"
-                    ]
-                  }
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/CustomerRegistrationPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/CustomerRegistration.css"
                 ]
               }
             ]
           },
           {
-            "Name": "PaymentSetup",
-            "DisplayName": "PaymentDisplayName",
-            "Tile": "/Content/Images/Plugins/Tiles/payment-tile.png",
-            "Color": "#667C26",
-            "AlternateColor": "#768C36",
-            "DefaultFeature": "PaymentSetup",
-            "Features": [
+            "Name": "RegistrationConfirmation",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
               {
-                "Name": "PaymentSetup",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/PaymentSetupPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/PaymentSetup.css"
-                    ]
-                  }
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/RegistrationConfirmationPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/RegistrationConfirmation.css"
                 ]
               }
             ]
           },
           {
-            "Name": "CustomerSubscriptions",
-            "DisplayName": "MySubscriptionsDisplayName",
-            "Tile": "/Content/Images/Plugins/Tiles/subscriptions-tile.png",
-            "Color": "#3090C7",
-            "AlternateColor": "#2080B7",
-            "DefaultFeature": "Subscriptions",
-            "Features": [
+            "Name": "ProcessOrder",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
               {
-                "Name": "Subscriptions",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/SubscriptionsPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/Subscriptions.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "AddSubscriptions",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/AddSubscriptionsPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/AddSubscriptionsPage.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "UpdateSubscriptions",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/UpdateSubscriptionsPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/UpdateSubscriptions.css"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "Name": "CustomerAccount",
-            "DisplayName": "MyAccountDisplayName",
-            "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
-            "Color": "#667C26",
-            "AlternateColor": "#768C36",
-            "DefaultFeature": "CustomerAccount",
-            "Features": [
-              {
-                "Name": "CustomerAccount",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/CustomerAccountPresenter.js"
-                    ],
-                    "Css": [
-                      "~/Content/Styles/Plugins/CustomerAccount.css"
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "UpdateContactInformation",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/UpdateContactInformationPresenter.js"
-                    ],
-                    "Css": [
-                    ]
-                  }
-                ]
-              },
-              {
-                "Name": "UpdateCompanyInformation",
-                "DefaultAssetVersion": "1.0",
-                "Assets": [
-                  {
-                    "Version": "1.0",
-                    "JavaScript": [
-                      "~/Scripts/Plugins/UpdateCompanyInformationPresenter.js"
-                    ],
-                    "Css": [
-                    ]
-                  }
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/ProcessOrderPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/ProcessOrder.css"
                 ]
               }
             ]
           }
-        ],
 
-        "DefaultPlugin": "Home"
+        ]
+      },
+      {
+        "Name": "AdminConsole",
+        "DisplayName": "AdminConsoleDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/dashboard-tile.png",
+        "Color": "#3090C7",
+        "AlternateColor": "#2080B7",
+        "DefaultFeature": "AdminConsole",
+        "Features": [
+          {
+            "Name": "AdminConsole",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/AdminConsolePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/AdminConsole.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "BrandingSetup",
+        "DisplayName": "BrandingDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/branding-tile.png",
+        "Color": "#2874a6",
+        "AlternateColor": "#3884b6",
+        "DefaultFeature": "BrandingSetup",
+        "Features": [
+          {
+            "Name": "BrandingSetup",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/BrandingSetupPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/BrandingSetup.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "PartnerOffersSetup",
+        "DisplayName": "OffersDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/offers-tile.png",
+        "Color": "#25383C",
+        "AlternateColor": "#35484C",
+        "DefaultFeature": "OfferList",
+        "Features": [
+          {
+            "Name": "OfferList",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/OfferListPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/OfferList.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "AddOrUpdateOffers",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/AddOrUpdateOfferPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/AddOrUpdateOffer.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "PaymentSetup",
+        "DisplayName": "PaymentDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/payment-tile.png",
+        "Color": "#667C26",
+        "AlternateColor": "#768C36",
+        "DefaultFeature": "PaymentSetup",
+        "Features": [
+          {
+            "Name": "PaymentSetup",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/PaymentSetupPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/PaymentSetup.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "CustomerSubscriptions",
+        "DisplayName": "MySubscriptionsDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/subscriptions-tile.png",
+        "Color": "#3090C7",
+        "AlternateColor": "#2080B7",
+        "DefaultFeature": "Subscriptions",
+        "Features": [
+          {
+            "Name": "Subscriptions",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/SubscriptionsPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/Subscriptions.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "AddSubscriptions",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/AddSubscriptionsPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/AddSubscriptionsPage.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "UpdateSubscriptions",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/UpdateSubscriptionsPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/UpdateSubscriptions.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "CustomerAccount",
+        "DisplayName": "MyAccountDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
+        "Color": "#667C26",
+        "AlternateColor": "#768C36",
+        "DefaultFeature": "CustomerAccount",
+        "Features": [
+          {
+            "Name": "CustomerAccount",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/CustomerAccountPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/CustomerAccount.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "UpdateContactInformation",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/UpdateContactInformationPresenter.js"
+                ],
+                "Css": [
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "UpdateCompanyInformation",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/UpdateCompanyInformationPresenter.js"
+                ],
+                "Css": [
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+
+    "DefaultPlugin": "Home"
+  },
+
+  "Configuration": {
+    /* The default animation duration used in the portal. */
+    "DefaultAnimationDuration": 300,
+
+    /* The default throttling duration in milleseconds used by the throttledChange KO binding. */
+    "DefaultThrottlingDuration": 450,
+
+    /* The minimum supported resolution. */
+    "MinimumResolution": {
+      "Width": 1024,
+      "Height": 600
     },
 
-    "Configuration": {
-        /* The default animation duration used in the portal. */
-        "DefaultAnimationDuration": 300,
+    "HeaderBar": {
+      "Height": 41
+    },
 
-        /* The default throttling duration in milleseconds used by the throttledChange KO binding. */
-        "DefaultThrottlingDuration": 450,
+    /* Primary navigation configuration. */
+    "PrimaryNavigation": {
+      "Template": "tileBasedPrimaryNavigation-template"
+    },
 
-        /* The minimum supported resolution. */
-        "MinimumResolution": {
-            "Width": 1024,
-            "Height": 600
-        },
+    /* Action bar configuration. */
+    "ActionBar": {
+      "MenuBackgroundColor": "#333333",
+      "MenuHoverBackgroundColor": "#333333",
+      "MenuTextColor": "white",
+      "MenuHoverTextColor": "#007acc",
 
-        "HeaderBar": {
-            "Height": 41
-        },
+      /* The maximum number of actions to display in the actions bar before adding the other actions to the extra (...) action as children. */
+      "MaxActions": 5
+    },
 
-        /* Primary navigation configuration. */
-        "PrimaryNavigation": {
-            "Template": "tileBasedPrimaryNavigation-template"
-        },
+    /* Control panel settings. */
+    "ControlPanel": {
+      "AnimationDuration": 650,
 
-        /* Action bar configuration. */
-        "ActionBar": {
-            "MenuBackgroundColor": "#333333",
-            "MenuHoverBackgroundColor": "#333333",
-            "MenuTextColor": "white",
-            "MenuHoverTextColor": "#007acc",
+      /* The width of the fully expanded control panel. */
+      "FullWidth": 191
+    },
 
-            /* The maximum number of actions to display in the actions bar before adding the other actions to the extra (...) action as children. */
-            "MaxActions": 5
-        },
+    "Notifications": {
+      "Template": "notificationPanel-template"
+    },
 
-        /* Control panel settings. */
-        "ControlPanel": {
-            "AnimationDuration": 650,
+    /* Server call timeout configuration. */
+    "Timeout": {
+      "Default": 60000,
+      "Min": 2000,
+      "Max": 180000
+    },
 
-            /* The width of the fully expanded control panel. */
-            "FullWidth": 191
-        },
+    /* Diagnostics configuration. */
+    "Diagnostics": {
+      "Level": {
+        "Info": "INFO",
+        "Warning": "WARNING",
+        "Error": "ERROR"
+      }
+    },
 
-        "Notifications": {
-            "Template": "notificationPanel-template"
-        },
+    /* Server Web API urls. Add your Web API urls here. */
+    "WebApi": {
+      "WebPortalContent": "/Template/FrameworkFragments",
+      "Expenses": {
+        "GetExpenses": "/api/expenses"
+      }
+    },
 
-        /* Server call timeout configuration. */
-        "Timeout": {
-            "Default": 60000,
-            "Min": 2000,
-            "Max": 180000
-        },
-
-        /* Diagnostics configuration. */
-        "Diagnostics": {
-            "Level": {
-                "Info": "INFO",
-                "Warning": "WARNING",
-                "Error": "ERROR"
-            }
-        },
-
-        /* Server Web API urls. Add your Web API urls here. */
-        "WebApi": {
-            "WebPortalContent": "/Template/FrameworkFragments",
-            "Expenses": {
-                "GetExpenses": "/api/expenses"
-            }
-        },
-
-        "List": {
-            "PageSize": 20,
-            "Sensitivity": 0.85
-        }
+    "List": {
+      "PageSize": 20,
+      "Sensitivity": 0.85
     }
+  }
 }
