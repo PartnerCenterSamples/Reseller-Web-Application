@@ -1,3 +1,4 @@
+
 # How to Contribute
 One of the easiest ways to contribute is to participate in discussions and discuss issues. You can also contribute by submitting pull requests with code changes.
 
@@ -21,6 +22,7 @@ GitHub supports [markdown](http://github.github.com/github-flavored-markdown/), 
 If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests.
 You might also read these two blogs posts on contributing code: [Open Source Contribution Etiquette](http://tirania.org/blog/archive/2010/Dec-31.html) by Miguel de Icaza and [Don't "Push" Your Pull Requests](http://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) by Ilya Grigorik.
 
+** TODO :: Localization**
 **Commit/Pull Request Format**
 
 ```
