@@ -21,7 +21,7 @@
 /* The logo section in the header bar, this includes the product icon and title */
 
 #LogoSection {
-    width: 1px;
+    width: 15px;
     height: 100%;
     font-weight: 400;
     font-size: 18px;
