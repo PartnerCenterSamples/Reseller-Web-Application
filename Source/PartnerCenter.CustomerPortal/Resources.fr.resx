@@ -132,9 +132,6 @@
   <data name="ContactUs" xml:space="preserve">
     <value>Contactez-nous</value>
   </data>
-  <data name="CopyRight" xml:space="preserve">
-    <value>Copyright 2016</value>
-  </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>...</value>
   </data>
@@ -237,9 +234,6 @@
   <data name="MicrosoftId" xml:space="preserve">
     <value>Microsoft ID</value>
   </data>
-  <data name="SetupInformation" xml:space="preserve">
-    <value>Détails</value>
-  </data>
   <data name="Subscription" xml:space="preserve">
     <value>Abonnement</value>
   </data>
@@ -252,14 +246,8 @@
   <data name="AddSubscriptions" xml:space="preserve">
     <value>Ajouter des abonnements</value>
   </data>
-  <data name="Submit" xml:space="preserve">
-    <value>Envoyer</value>
-  </data>
   <data name="AcceptTerms" xml:space="preserve">
     <value>J’accepte les termes et conditions</value>
-  </data>
-  <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>Vous devez accepter les termes et conditions</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>S’il vous plaît entrez un préfixe de domaine valide</value>
@@ -386,9 +374,6 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
-  </data>
-  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>Il n’y a aucune offre de Microsoft au choix</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
     <value>Vous n’avez pas d’offres configurés. Cliquez sur Ajouter offre ci-dessus pour commencer à ajouter vos offres.</value>
@@ -654,9 +639,6 @@
   <data name="CustomerRegistrationMessage" xml:space="preserve">
     <value>Inscription client...</value>
   </data>
-  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>Créé avec succès client</value>
-  </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
     <value>Erreur d’enregistrement de commande</value>
   </data>
@@ -825,9 +807,6 @@
   <data name="InvalidContactUsPhone" xml:space="preserve">
     <value>Veuillez entrer un téléphone valide contacter le support technique</value>
   </data>
-  <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>Informations de paiement recueillies, traitement de commande...</value>
-  </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
     <value>Ajouter des sièges à abonnement.</value>
   </data>
@@ -840,17 +819,11 @@
   <data name="OrderFailureMessage" xml:space="preserve">
     <value>Erreur lors de l’ordre de traitement. Veuillez réessayer plus tard.</value>
   </data>
-  <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Échec dans l’ordre de traitement. S’il vous plaît, cliquez sur OK pour réessayer.</value>
-  </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
     <value>Défaillance dans la réception des informations de paiement. S’il vous plaît, cliquez sur OK pour réessayer.</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
     <value>Bien reçu des informations de paiement. Ordre de traitement...</value>
-  </data>
-  <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>Page de commande de traitement.</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
     <value>Votre ordre d’inscription a été traitée avec succès.</value>
@@ -1140,15 +1113,6 @@
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Statut</value>
   </data>
-  <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>Mes commandes</value>
-  </data>
-  <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>Mes abonnements</value>
-  </data>
-  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
-    <value>Abonnements de licence basé</value>
-  </data>
   <data name="OrdersCaption" xml:space="preserve">
     <value>Commandes</value>
   </data>
@@ -1160,9 +1124,6 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Abonnements d’utilisation en fonction</value>
-  </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Merci. Renseignements sur les clients a été mis en place. S’il vous plaît lisez cette page et cliquez sur "Envoyer" pour passer votre commande.</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
     <value>Cliquez ici pour configurer votre marque de la société.</value>
@@ -1182,11 +1143,8 @@
   <data name="CustomerManagementHeader" xml:space="preserve">
     <value>Gérer des clients pour les transactions pré-approuvé.</value>
   </data>
-  <data name="CustomerManagementSubText" xml:space="preserve">
-    <value>Vous pouvez marquer tous les clients actuels et futurs pour approbation préalable ou sélectionner des clients spécifiques pour une approbation préalable.</value>
-  </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
-    <value>Permettre à tous les clients actuels et futurs transactions préapprouvés dans la devanture de magasin.</value>
+    <value>Sélectionner tout</value>
   </data>
   <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
     <value>Pré-approuvés</value>
@@ -1217,5 +1175,56 @@
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
     <value>Acheté</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Détails Client</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Merci. Le client a été créé et que votre commande a été traitée avec succès.</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Procéder au paiement</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Préparation de commande et la redirection vers la passerelle de paiement...</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Informations de paiement recueillies, créant customer et order de traitement...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Paiement traitement de l’information recueillie, désormais arrêté...</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright ©2017.</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Aucune offre trouvée</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Rechercher par offre</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>« Tout sélectionner » marquera tous les clients actuels et futurs et approuvés préalablement pour effectuer des transactions dans la devanture de magasin.</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Effectuer une recherche par nom de l’entreprise ou de domaine</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Abonnements client géré</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partenaire gestion abonnements</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Historique des commandes</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Gérer les abonnements</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Échec dans l’ordre de traitement. S’il vous plaît cliquez sur terminé, puis réessayez.</value>
   </data>
 </root>

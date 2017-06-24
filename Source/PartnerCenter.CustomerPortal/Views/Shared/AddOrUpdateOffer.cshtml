@@ -105,8 +105,24 @@
 
 <script id="offerPicker-template" type="text/html">
     <div id="OfferSelectionWizard">
-        <label>@Resources.SelectMicrosoftOfferCaption</label>
-
+        <table  style="width:100%">
+            <tr width="100%">
+                <td width="100%" >
+                   <div style="float:left"><label>@Resources.SelectMicrosoftOfferCaption</label>  </div> 
+                    <div style="float:right" >
+                        <form >
+                                <fieldset class="SearchFieldSet" style="background-color:white;padding-top: 0px;padding-bottom: 0px;border: 0px;" >
+                                <input class="InputSearchField" placeholder="@Resources.SelectSearchByOffersPlaceholder" data-bind="value: searchTerm, valueUpdate: 'afterkeydown' " />
+                                <button class="InputSearchButton" data-bind="click: searchButtonClicked" style="padding-top: 8px;height:30px;padding-bottom: 8px;margin-top: 0px;margin-bottom: 0px;"><img src="/Content/Images/WebPortal/search.png" @*width="25" height="25"*@></button>
+                                </fieldset>
+                                </form>  
+                        
+                        </div> 
+                    </td>
+           
+            </tr>
+        </table>
+     
         <!-- ko stopBinding: true -->
         <div id="offerList" class="MicrosoftOfferList"></div>
         <!-- /ko -->

@@ -6,13 +6,13 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
 {
-    using System;    
+    using System;
     using System.Linq;
     using System.Threading.Tasks;
     using Exceptions;
     using Models;
     using Newtonsoft.Json;
-    using WindowsAzure.Storage.Table;    
+    using WindowsAzure.Storage.Table;
 
     /// <summary>
     /// Encapsulates persistence for orders during customer purchases.
@@ -56,7 +56,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             orderId.AssertNotEmpty(nameof(orderId));
             customerId.AssertNotEmpty(nameof(customerId));
 
-            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync();            
+            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync();
 
             var deletionResult = await customerOrdersTable.ExecuteAsync(
                 TableOperation.Delete(new CustomerOrderTableEntity() { PartitionKey = customerId, RowKey = orderId, ETag = "*" }));
@@ -78,14 +78,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync();
 
             string tableQueryFilter = TableQuery.CombineFilters(
-                TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, customerId), 
+                TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, customerId),
                 TableOperators.And,
                 TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.Equal, orderId));
 
             var getCustomerOrdersQuery = new TableQuery<CustomerOrderTableEntity>().Where(tableQueryFilter);
 
             TableQuerySegment<CustomerOrderTableEntity> resultSegment = null;
-            OrderViewModel customerOrder = null; 
+            OrderViewModel customerOrder = null;
             do
             {
                 resultSegment = await customerOrdersTable.ExecuteQuerySegmentedAsync<CustomerOrderTableEntity>(getCustomerOrdersQuery, resultSegment?.ContinuationToken);
@@ -95,7 +95,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
                     if (orderResult.RowKey == orderId)
                     {
                         customerOrder = JsonConvert.DeserializeObject<OrderViewModel>(orderResult.OrderBlob);
-                    }                        
+                    }
                 }
             }
             while (resultSegment.ContinuationToken != null);
@@ -121,9 +121,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             /// </summary>
             /// <param name="order">The order details.</param>            
             public CustomerOrderTableEntity(OrderViewModel order)
-            {                
+            {
                 this.PartitionKey = order.CustomerId;
-                this.RowKey = order.OrderId;                
+                this.RowKey = order.OrderId;
                 this.OrderBlob = JsonConvert.SerializeObject(order, Formatting.None);
             }
 

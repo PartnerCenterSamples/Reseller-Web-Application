@@ -124,7 +124,7 @@ Microsoft.WebPortal.Core.SessionManager.prototype.fetchPortalOffers = function (
     });
 }
 
-Microsoft.WebPortal.Core.SessionManager.prototype.fetchCustomerDetails = function (resolver) {
+Microsoft.WebPortal.Core.SessionManager.prototype.fetchCustomerSubscriptionDetails = function (resolver) {
     /// <summary>
     /// Retrieves the customer account details for use across the app.
     /// </summary>
@@ -132,7 +132,7 @@ Microsoft.WebPortal.Core.SessionManager.prototype.fetchCustomerDetails = functio
     /// are available or get a rejection if there was a failure retrieving them.</param>
 
     var getCustomerServerCall =
-        new Microsoft.WebPortal.Utilities.RetryableServerCall(this.webPortal.Helpers.ajaxCall("api/CustomerAccounts", Microsoft.WebPortal.HttpMethod.Get))
+        new Microsoft.WebPortal.Utilities.RetryableServerCall(this.webPortal.Helpers.ajaxCall("api/CustomerAccounts/Subscriptions", Microsoft.WebPortal.HttpMethod.Get))
 
     var self = this;
 

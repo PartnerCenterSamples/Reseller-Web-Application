@@ -132,9 +132,6 @@
   <data name="ContactUs" xml:space="preserve">
     <value>Neem contact op met ons</value>
   </data>
-  <data name="CopyRight" xml:space="preserve">
-    <value>Copyright 2016</value>
-  </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>...</value>
   </data>
@@ -237,9 +234,6 @@
   <data name="MicrosoftId" xml:space="preserve">
     <value>Microsoft ID</value>
   </data>
-  <data name="SetupInformation" xml:space="preserve">
-    <value>Details</value>
-  </data>
   <data name="Subscription" xml:space="preserve">
     <value>Abonnement</value>
   </data>
@@ -252,14 +246,8 @@
   <data name="AddSubscriptions" xml:space="preserve">
     <value>Toevoegen van abonnementen</value>
   </data>
-  <data name="Submit" xml:space="preserve">
-    <value>Opslaan</value>
-  </data>
   <data name="AcceptTerms" xml:space="preserve">
     <value>Ik accepteer de voorwaarden en bepalingen</value>
-  </data>
-  <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>U moet de bepalingen en voorwaarden accepteren</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Voer een geldige Domeinvoorvoegsel</value>
@@ -386,9 +374,6 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>Beschrijving</value>
-  </data>
-  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>Er zijn geen Microsoft aanbiedingen om uit te kiezen</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
     <value>U hoeft niet alle aanbiedingen geconfigureerd. Klik op bovenstaande toevoegen bieden om te beginnen met het toevoegen van uw aanbiedingen.</value>
@@ -654,9 +639,6 @@
   <data name="CustomerRegistrationMessage" xml:space="preserve">
     <value>Klant registratie...</value>
   </data>
-  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>Klant gemaakt</value>
-  </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
     <value>Order registratie fout</value>
   </data>
@@ -825,9 +807,6 @@
   <data name="InvalidContactUsPhone" xml:space="preserve">
     <value>Voer een geldige contact ondersteuning-telefoon</value>
   </data>
-  <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>Betalingsinformatie verzameld, verwerkingsvolgorde...</value>
-  </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
     <value>Zetels aan abonnement toe te voegen.</value>
   </data>
@@ -840,17 +819,11 @@
   <data name="OrderFailureMessage" xml:space="preserve">
     <value>Fout tijdens de verwerkingsvolgorde. Gelieve later opnieuw proberen.</value>
   </data>
-  <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Storing in de verwerkingsvolgorde. Klik gedaan opnieuw te proberen.</value>
-  </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
     <value>Storing in ontvangst van de betalingsinformatie. Klik gedaan opnieuw te proberen.</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
     <value>Correct ontvangen betalingsinformatie. Verwerkingsvolgorde...</value>
-  </data>
-  <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>De pagina van de verwerking van de bestelling.</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
     <value>Uw registratie bestelling correct verwerkt.</value>
@@ -1140,15 +1113,6 @@
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>Mijn bestellingen</value>
-  </data>
-  <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>Mijn abonnementen</value>
-  </data>
-  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
-    <value>Licentie op basis abonnementen</value>
-  </data>
   <data name="OrdersCaption" xml:space="preserve">
     <value>Bestellingen</value>
   </data>
@@ -1160,9 +1124,6 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Gebruik op basis abonnementen</value>
-  </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Dank u. Klantgegevens is opstelling geweest. Controleer deze pagina en klik op verzenden om uw bestelling te plaatsen.</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
     <value>Klik hierop als u uw bedrijf branding.</value>
@@ -1182,11 +1143,8 @@
   <data name="CustomerManagementHeader" xml:space="preserve">
     <value>Het beheren van klanten voor vooraf geselecteerde transacties.</value>
   </data>
-  <data name="CustomerManagementSubText" xml:space="preserve">
-    <value>U kunt het markeren van alle huidige en toekomstige klanten voor pre-goedkeuring of selecteer specifieke klanten voor pre-goedkeuring.</value>
-  </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
-    <value>Alle huidige en toekomstige klanten voorzien in vooraf goedgekeurde transacties aan de voorkant van de winkel.</value>
+    <value>Selecteer alle</value>
   </data>
   <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
     <value>Vooraf</value>
@@ -1217,5 +1175,56 @@
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
     <value>Gekocht</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Klantgegevens</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Dank u. Eerst de klant gemaakt en uw bestelling is verwerkt.</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Ga naar betaling</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Voorbereiding van de volgorde en omleiden naar betalingsgateway...</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Betalingsgegevens verzameld, klant en verwerkingsvolgorde maken...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Bevestiging</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Betalingsinformatie verzameld, nu de verwerkingsvolgorde...</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2017</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Geen aanbiedingen gevonden</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Zoek met de aanbieding</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>'Alles selecteren' markeert alle huidige en toekomstige klanten als vooraf goedgekeurde transact aan de voorkant van de winkel.</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Zoeken op bedrijfsnaam of domein</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Klant beheerd abonnementen</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partner beheerd abonnementen</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Bestelgeschiedenis</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Abonnementen beheren</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Storing in de verwerkingsvolgorde. Klik gedaan en probeer het opnieuw.</value>
   </data>
 </root>

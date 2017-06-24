@@ -121,13 +121,18 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// Gets or sets the customers licenses in this summary.
+        /// Gets or sets the customers billing culture
         /// </summary>
-        public IEnumerable<CustomerLicensesModel> Licenses { get; set; }
+        public string BillingCulture { get; set; }
 
         /// <summary>
-        /// Gets or sets the customers usage subscriptions in this summary.
+        /// Gets or sets the customers billing language;
         /// </summary>
-        public IEnumerable<CustomerUsageSubscriptionsModel> UsageSubscriptions { get; set; }
+        public string BillingLanguage { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Domain name
+        /// </summary>
+        public string DomainName { get; set; }
     }
 }

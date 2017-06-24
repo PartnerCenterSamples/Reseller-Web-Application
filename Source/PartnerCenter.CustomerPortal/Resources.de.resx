@@ -132,9 +132,6 @@
   <data name="ContactUs" xml:space="preserve">
     <value>Kontaktieren Sie uns</value>
   </data>
-  <data name="CopyRight" xml:space="preserve">
-    <value>Copyright 2016</value>
-  </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>...</value>
   </data>
@@ -237,9 +234,6 @@
   <data name="MicrosoftId" xml:space="preserve">
     <value>Microsoft-ID</value>
   </data>
-  <data name="SetupInformation" xml:space="preserve">
-    <value>Details</value>
-  </data>
   <data name="Subscription" xml:space="preserve">
     <value>Abonnement</value>
   </data>
@@ -252,14 +246,8 @@
   <data name="AddSubscriptions" xml:space="preserve">
     <value>Abonnements hinzufügen</value>
   </data>
-  <data name="Submit" xml:space="preserve">
-    <value>Senden</value>
-  </data>
   <data name="AcceptTerms" xml:space="preserve">
     <value>Ich akzeptiere die allgemeinen Geschäftsbedingungen</value>
-  </data>
-  <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>Sie müssen die allgemeinen Geschäftsbedingungen akzeptieren.</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Bitte geben Sie einen gültige Domäne Präfix</value>
@@ -386,9 +374,6 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>Beschreibung</value>
-  </data>
-  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>Es gibt keine Microsoft-Angebote zur Auswahl</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
     <value>Sie müssen keine Angebote konfiguriert. Klicken Sie auf hinzufügen, damit beginnen, Ihre Angebote oben bieten.</value>
@@ -648,9 +633,6 @@
   <data name="CustomerRegistrationMessage" xml:space="preserve">
     <value>Registrierung Kunden...</value>
   </data>
-  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>Kunden erfolgreich erstellt</value>
-  </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
     <value>Bestellung-Registrierungsfehler</value>
   </data>
@@ -819,9 +801,6 @@
   <data name="InvalidContactUsPhone" xml:space="preserve">
     <value>Bitte geben Sie eine gültige kontaktieren Sie den Support-Telefon</value>
   </data>
-  <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>Zahlungsinformationen gesammelt, Auftragsabwicklung...</value>
-  </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
     <value>Abonnement Sitze hinzufügen.</value>
   </data>
@@ -834,17 +813,11 @@
   <data name="OrderFailureMessage" xml:space="preserve">
     <value>Fehler beim Verarbeitungsreihenfolge. Versuchen Sie später erneut.</value>
   </data>
-  <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Fehler beim Verarbeitungsreihenfolge. Bitte klicken Sie auf fertig, um noch einmal zu versuchen.</value>
-  </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
     <value>Fehler beim Empfangen von Zahlungsinformationen. Bitte klicken Sie auf fertig, um noch einmal zu versuchen.</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
     <value>Zahlungsinformationen erhalten. Verarbeitungsreihenfolge...</value>
-  </data>
-  <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>Verarbeitung Bestellseite.</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
     <value>Ihre Registrierung Bestellung wurde erfolgreich bearbeitet.</value>
@@ -1134,15 +1107,6 @@
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>Meine Bestellungen</value>
-  </data>
-  <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>Meine Abonnements</value>
-  </data>
-  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
-    <value>Lizenz-basierten Abonnements</value>
-  </data>
   <data name="OrdersCaption" xml:space="preserve">
     <value>Bestellungen</value>
   </data>
@@ -1154,9 +1118,6 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Nutzung-Abonnements</value>
-  </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Danke. Kundeninformationen wurde eingerichtet. Bitte lesen Sie diese Seite, und klicken Sie auf senden, um Ihre Bestellung aufzugeben.</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
     <value>Klicken Sie, um Ihr Unternehmensbranding konfigurieren.</value>
@@ -1179,11 +1140,8 @@
   <data name="CustomerManagementHeader" xml:space="preserve">
     <value>Verwalten Sie Kunden für vorab genehmigte Transaktionen.</value>
   </data>
-  <data name="CustomerManagementSubText" xml:space="preserve">
-    <value>Sie können die Berechtigung zum Kauf von Produkten für alle oder nur für bestimmte Kunden vorab genehmigen. Sie werden nicht auf das PayPal Zahlungsportal geleitet.</value>
-  </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
-    <value>Ermöglichen Sie alle aktuelle und zukünftige Kunden vorab genehmigte Transaktionen in der Ladenfront.</value>
+    <value>Wählen Sie alle</value>
   </data>
   <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
     <value>Vorab genehmigte</value>
@@ -1217,5 +1175,56 @@
   </data>
   <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
     <value>Um Zahlungen von Ihren Kunden annehmen zu können, müssen Sie ein PayPal-Konto benutzen. Wenn Sie über keines verfügen, besuchen Sie bitte </value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Kundenangaben</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Danke. Der Kunde erstellt wurde und Ihre Bestellung wurde erfolgreich bearbeitet.</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Weiter zur Zahlung</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Bestellung vorbereitet und umleiten auf Zahlungs-Gateway...</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Zahlungsinformationen gesammelt, Kunden- und Verarbeitungsreihenfolge zu schaffen...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Bestätigung</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Zahlungsinformationen gesammelt, jetzt Auftragsabwicklung...</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Urheberrecht</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Keine Angebote gefunden</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Suche nach Angebot</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"Alles auswählen", markieren Sie alle aktuelle und zukünftige Kunden als freigeschalteter Transact in der Ladenzeile.</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Suche nach Firmenname oder Domäne</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Kunde verwaltet Abonnements</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partner verwaltet Abonnements</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Bestellhistorie</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Abonnements verwalten</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Fehler beim Verarbeitungsreihenfolge. Bitte klicken Sie auf fertig, und versuchen Sie es erneut.</value>
   </data>
 </root>

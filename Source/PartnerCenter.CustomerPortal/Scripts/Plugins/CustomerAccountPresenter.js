@@ -7,6 +7,38 @@ Microsoft.WebPortal.CustomerAccountPresenter = function (webPortal, feature, con
     /// <param name="webPortal">The web portal instance.</param>
     /// <param name="feature">The feature for which this presenter is created.</param>
     this.base.constructor.call(this, webPortal, feature, "CustomerAccount", "/Template/CustomerAccount");
+    this.onAddSubscriptionsClicked = function () {
+        // go to the add subscriptions page
+        webPortal.Journey.advance(Microsoft.WebPortal.Feature.AddSubscriptions);
+    }
+    this.onUpdateSubscriptionClicked = function () {
+        var subscriptionItem = {
+            SubscriptionId: this.SubscriptionId,
+            PortalOfferId: this.PortalOfferId,
+            FriendlyName: this.FriendlyName,
+            LicensesTotal: this.LicensesTotal,
+            SubscriptionProRatedPrice: this.SubscriptionProRatedPrice,
+            isUpdateSubscription: true,
+            isRenewSubscription: false
+        }
+
+        // navigate to page. 
+        webPortal.Journey.advance(Microsoft.WebPortal.Feature.UpdateSubscriptions, subscriptionItem);
+    }
+    this.onRenewSubscriptionClicked = function () {
+        var subscriptionItem = {
+            SubscriptionId: this.SubscriptionId,
+            PortalOfferId: this.PortalOfferId,
+            FriendlyName: this.FriendlyName,
+            LicensesTotal: this.LicensesTotal,
+            SubscriptionProRatedPrice: this.SubscriptionProRatedPrice,
+            isUpdateSubscription: false,
+            isRenewSubscription: true
+        }
+
+        // navigate to page.
+        webPortal.Journey.advance(Microsoft.WebPortal.Feature.UpdateSubscriptions, subscriptionItem);
+    }
 
     this.viewModel = {
         ShowProgress: ko.observable(true),
@@ -36,11 +68,11 @@ Microsoft.WebPortal.CustomerAccountPresenter.prototype.onRender = function () {
         self.viewModel.ShowProgress(true);
 
         var customerInfoProgress = $.Deferred();
-        self.webPortal.Session.fetchCustomerDetails(customerInfoProgress);
+        self.webPortal.Session.fetchCustomerSubscriptionDetails(customerInfoProgress);
 
         customerInfoProgress.done(function (customerInformation) {
-            self.viewModel.Licenses = customerInformation.Licenses;
-            self.viewModel.UsageSubscriptions = customerInformation.UsageSubscriptions;
+            self.viewModel.CustomerManagedSubscriptions = customerInformation.CustomerManagedSubscriptions;
+            self.viewModel.PartnerManagedSubscriptions = customerInformation.PartnerManagedSubscriptions;
             self.viewModel.IsSet(true);
         }).fail(function (result, status, error) {
             var notification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Error,

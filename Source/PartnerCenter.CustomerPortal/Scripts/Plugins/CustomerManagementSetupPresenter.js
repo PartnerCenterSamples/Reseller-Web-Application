@@ -11,12 +11,23 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter = function (webPortal, feat
     this.viewModel = {
         IsSet: ko.observable(false),
         IsEveryonePreApproved: ko.observable(false),
+        searchTerm: ko.observable(""),
         preApprovedCustomersList: ko.observableArray(),
-        preApprovedCustomerIds: ko.observableArray()        
+        preApprovedCustomerIds: ko.observableArray(),
+        searchButtonClicked: function () {
+            this.viewModel.preApprovedCustomersList(this.preChangePreApprovedCustomersDetails.Items.filter(customerfilter.bind(null, this.viewModel.searchTerm().toLowerCase())));
+        }
     }
-
     var preChangePreApprovedCustomersDetails = null;
     var preChangePreApprovedCustomerIds = null;
+    function customerfilter(searchTerm, value, index, array) {
+
+        if (searchTerm) {
+            return (array[index].CompanyName.toLowerCase().indexOf(searchTerm) !== -1 || array[index].Domain.toLowerCase().indexOf(searchTerm) !== -1);
+        }
+        else
+            return array[index];
+    }
 }
 
 // inherit TemplatePresenter
@@ -32,6 +43,14 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onRender = functi
 
     if (!this.preChangePreApprovedCustomersDetails) {
         self.webPortal.ContentPanel.showProgress();
+        function customerfilter(searchTerm, value, index, array) {
+         
+            if (searchTerm) { 
+                return (array[index].CompanyName.toLowerCase().indexOf(searchTerm().toLowerCase()) !== -1 || array[index].Domain.toLowerCase().indexOf(searchTerm().toLowerCase()) !== -1);
+            }
+            else
+                return array[index];
+        }
 
         var acquirePreApprovedCustomerDetails = function () {
             self.viewModel.IsSet(false);
@@ -40,7 +59,7 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onRender = functi
 
             getPreApprovedCustomerDetailsServerCall.execute().done(function (PreApprovedCustomersViewModel) {
                 self.viewModel.IsEveryonePreApproved(PreApprovedCustomersViewModel.IsEveryCustomerPreApproved);
-                self.viewModel.preApprovedCustomersList(PreApprovedCustomersViewModel.Items);                
+                self.viewModel.preApprovedCustomersList(PreApprovedCustomersViewModel.Items.filter(customerfilter.bind(null, "")));
 
                 self._setupCustomerIds(PreApprovedCustomersViewModel);
                 self.preChangePreApprovedCustomersDetails = PreApprovedCustomersViewModel;
@@ -118,7 +137,8 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onSaveConfigurati
 
             self._setupCustomerIds(PreApprovedCustomersViewModel);
             self.preChangePreApprovedCustomersDetails = PreApprovedCustomersViewModel;
-            self.preChangePreApprovedCustomerIds = PreApprovedCustomersViewModel.CustomerIds;            
+            self.preChangePreApprovedCustomerIds = PreApprovedCustomersViewModel.CustomerIds;
+            self.viewModel.searchTerm("");
             self.viewModel.IsSet(true);
 
             // disable our action buttons
@@ -168,6 +188,7 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setupActions = f
     this.resetPreApprovedCustomersAction = new Microsoft.WebPortal.Services.Action("reset-preapprovedcustomers", this.webPortal.Resources.Strings.Undo, function (menuItem) {
         self.viewModel.IsEveryonePreApproved(self.preChangePreApprovedCustomersDetails.IsEveryCustomerPreApproved);
         self.viewModel.preApprovedCustomersList(self.preChangePreApprovedCustomersDetails.Items);
+        self.viewModel.searchTerm("");
         self._setupCustomerIds(self.preChangePreApprovedCustomersDetails);
         self.preChangePreApprovedCustomerIds = self.preChangePreApprovedCustomersDetails.CustomerIds;        
     }, "/Content/Images/Plugins/action-undo.png", this.webPortal.Resources.Strings.Undo, null, false);

@@ -8,41 +8,6 @@ Microsoft.WebPortal.SubscriptionsPresenter = function (webPortal, feature) {
     /// <param name="feature">The feature for which this presenter is created.</param>
     this.base.constructor.call(this, webPortal, feature, "Subscriptions", "/Template/Subscriptions/");
 
-    this.onAddSubscriptionsClicked = function () {
-        // go to the add subscriptions page
-        webPortal.Journey.advance(Microsoft.WebPortal.Feature.AddSubscriptions);
-    }
-
-    this.onUpdateSubscriptionClicked = function () {        
-        var subscriptionItem = {
-            SubscriptionId: this.SubscriptionId,
-            PortalOfferId: this.PortalOfferId,
-            FriendlyName: this.FriendlyName,
-            LicensesTotal: this.LicensesTotal,
-            SubscriptionProRatedPrice: this.SubscriptionProRatedPrice,
-            isUpdateSubscription: true,
-            isRenewSubscription: false
-        }
-
-        // navigate to page. 
-        webPortal.Journey.advance(Microsoft.WebPortal.Feature.UpdateSubscriptions, subscriptionItem);
-    }
-
-    this.onRenewSubscriptionClicked = function () {
-        var subscriptionItem = {            
-            SubscriptionId: this.SubscriptionId, 
-            PortalOfferId: this.PortalOfferId,
-            FriendlyName: this.FriendlyName, 
-            LicensesTotal: this.LicensesTotal,
-            SubscriptionProRatedPrice: this.SubscriptionProRatedPrice, 
-            isUpdateSubscription: false, 
-            isRenewSubscription: true
-        }
-
-        // navigate to page.
-        webPortal.Journey.advance(Microsoft.WebPortal.Feature.UpdateSubscriptions, subscriptionItem);
-    }
-
     this.onToggleClicked = function (data, event) {
         // get this subscription row reference. 
         var currentSubscriptionRowElement = event.currentTarget.parentElement;

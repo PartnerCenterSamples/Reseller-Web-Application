@@ -133,7 +133,7 @@
     <value>Contact us</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
-    <value>Copyright 2016</value>
+    <value>Copyright 2017</value>
   </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>...</value>
@@ -229,7 +229,7 @@
     <value>Confirmation</value>
   </data>
   <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Thank you. Customer information has been setup. Please review this page and click submit to place your order.</value>
+    <value>Thank you. The customer was created and your order was successfully processed.</value>
   </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>Customer information</value>
@@ -241,7 +241,7 @@
     <value>Microsoft ID</value>
   </data>
   <data name="SetupInformation" xml:space="preserve">
-    <value>Details</value>
+    <value>Customer Details</value>
   </data>
   <data name="Subscription" xml:space="preserve">
     <value>Subscription</value>
@@ -256,13 +256,10 @@
     <value>Add subscriptions</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>Submit</value>
+    <value>Proceed to payment</value>
   </data>
   <data name="AcceptTerms" xml:space="preserve">
     <value>I accept the terms and conditions</value>
-  </data>
-  <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>You must accept the terms and conditions</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Please enter a valid domain prefix</value>
@@ -311,6 +308,9 @@
   </data>
   <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
     <value>Select a Microsoft offer:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Search by offer</value>
   </data>
   <data name="YourAnnualPriceCaption" xml:space="preserve">
     <value>Annual price:</value>
@@ -394,7 +394,7 @@
     <value>Description</value>
   </data>
   <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>There are no Microsoft offers to choose from</value>
+    <value>No offers found</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
     <value>You do not have any offers configured. Click Add Offer above to start adding your offers.</value>
@@ -670,7 +670,7 @@
     <value>Registering customer...</value>
   </data>
   <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>Successfully created customer</value>
+    <value>Preparing order and redirecting to payment gateway...</value>
   </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
     <value>Order Registration Error</value>
@@ -844,7 +844,10 @@
     <value>Please enter a valid contact support phone</value>
   </data>
   <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>Payment information collected, processing order...</value>
+    <value>Payment information collected, creating customer and processing order...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Payment information collected, now processing order...</value>
   </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
     <value>Adding seats to subscription.</value>
@@ -859,7 +862,7 @@
     <value>Error while processing order. Please retry later.</value>
   </data>
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Failure in processing order. Please click done to try again.</value>
+    <value>Failure in processing order. Please click done and try again.</value>
   </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
     <value>Failure in receiving payment information. Please click done to try again.</value>
@@ -868,7 +871,7 @@
     <value>Successfully received payment information. Processing order...</value>
   </data>
   <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>Order Processing Page.</value>
+    <value>Confirmation</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
     <value>Your registration order was successfully processed.</value>
@@ -988,10 +991,10 @@
     <value>Payment Setup</value>
   </data>
   <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>My Orders</value>
+    <value>Order History</value>
   </data>
   <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>My Subscriptions</value>
+    <value>Manage Subscriptions</value>
   </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
     <value>Go to home page</value>
@@ -1165,7 +1168,10 @@
     <value>Status</value>
   </data>
   <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
-    <value>License based subscriptions</value>
+    <value>Customer managed subscriptions</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partner managed subscriptions</value>
   </data>
   <data name="OrdersCaption" xml:space="preserve">
     <value>Orders</value>
@@ -1186,10 +1192,10 @@
     <value>Manage customers for pre-approved transactions.</value>
   </data>
   <data name="CustomerManagementSubText" xml:space="preserve">
-    <value>You can either mark all current and future customers for pre approval or select specific customers for pre-approval.</value>
+      <value>“Select all” will mark all current and future customers as pre-approved to transact in the store front.</value>
   </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
-    <value>Allow all current and future customers for pre-approved transactions in the store front.</value>
+    <value>Select all</value>
   </data>
   <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
     <value>Pre-approved</value>
@@ -1217,5 +1223,8 @@
   </data>
   <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
     <value>This transaction is pre-approved. Processing order...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Search by company name or domain</value>
   </data>
 </root>

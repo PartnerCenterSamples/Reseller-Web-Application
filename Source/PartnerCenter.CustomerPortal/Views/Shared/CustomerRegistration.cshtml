@@ -5,11 +5,8 @@
         <!-- ko stopBinding: true -->        
         <div id="AddSubscriptionsViewContainer"></div>
         <div id="CustomerProfileContainer"></div>        
-        <!-- /ko -->
-        <div class="row">
-            <input id="Consent" name="Consent" type="checkbox"><label for="Consent" id="ConsentContainer">@Resources.AcceptTerms</label>
-        </div>        
-        <br /><div id="validation_summary" class="error"></div><br />
+        <!-- /ko -->    
+        <div id="validation_summary" class="error"></div><br />
         <a id="SubmitButton" class="submitButton" data-bind="click: onFormSubmit">@Resources.Submit</a>
     </form>
     <script>
@@ -37,12 +34,7 @@
                     required: true
                 }
             },
-            messages: {
-                consent: {
-                    required: "@Resources.AcceptTermsValidationMessage"
-                }
-            },
-            submitHandler: function (form) {
+                  submitHandler: function (form) {
 
             }
         });

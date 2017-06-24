@@ -560,6 +560,58 @@
             ]
           }
         ]
+      },     {
+        "Name": "CustomerAccount",
+        "DisplayName": "MyAccountDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
+        "Color": "#667C26",
+        "AlternateColor": "#768C36",
+        "DefaultFeature": "CustomerAccount",
+        "Features": [
+          {
+            "Name": "CustomerAccount",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/CustomerAccountPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/CustomerAccount.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "UpdateContactInformation",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/UpdateContactInformationPresenter.js"
+                ],
+                "Css": [
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "UpdateCompanyInformation",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/UpdateCompanyInformationPresenter.js"
+                ],
+                "Css": [
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "Name": "CustomerSubscriptions",
@@ -615,60 +667,7 @@
             ]
           }
         ]
-      },
-      {
-        "Name": "CustomerAccount",
-        "DisplayName": "MyAccountDisplayName",
-        "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
-        "Color": "#667C26",
-        "AlternateColor": "#768C36",
-        "DefaultFeature": "CustomerAccount",
-        "Features": [
-          {
-            "Name": "CustomerAccount",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-              {
-                "Version": "1.0",
-                "JavaScript": [
-                  "~/Scripts/Plugins/CustomerAccountPresenter.js"
-                ],
-                "Css": [
-                  "~/Content/Styles/Plugins/CustomerAccount.css"
-                ]
-              }
-            ]
-          },
-          {
-            "Name": "UpdateContactInformation",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-              {
-                "Version": "1.0",
-                "JavaScript": [
-                  "~/Scripts/Plugins/UpdateContactInformationPresenter.js"
-                ],
-                "Css": [
-                ]
-              }
-            ]
-          },
-          {
-            "Name": "UpdateCompanyInformation",
-            "DefaultAssetVersion": "1.0",
-            "Assets": [
-              {
-                "Version": "1.0",
-                "JavaScript": [
-                  "~/Scripts/Plugins/UpdateCompanyInformationPresenter.js"
-                ],
-                "Css": [
-                ]
-              }
-            ]
-          }
-        ]
-      }
+      } 
     ],
 
     "DefaultPlugin": "Home"

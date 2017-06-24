@@ -41,7 +41,10 @@ Microsoft.WebPortal.ProcessOrderPresenter = function (webPortal, feature, proces
         TotalPrice: ko.observable(""),
         showDoneButton: ko.observable(false),
         showSubscriptions: ko.observable(false),
-        nextJourney: Microsoft.WebPortal.Feature.Subscriptions
+        nextJourney: Microsoft.WebPortal.Feature.CustomerAccount,
+        CustomerRegistrationInfo: ko.observable(""),
+        Address: ko.observable(""),
+        ContactInformation: ko.observable("")
     }
 
     self.apiUrl = "";
@@ -53,7 +56,7 @@ Microsoft.WebPortal.ProcessOrderPresenter = function (webPortal, feature, proces
         self.viewModel.nextJourney = Microsoft.WebPortal.Feature.Home;
     } else {
         self.apiUrl = existingCustomerOrderUrl;
-        self.viewModel.nextJourney = Microsoft.WebPortal.Feature.Subscriptions;
+        self.viewModel.nextJourney = Microsoft.WebPortal.Feature.CustomerAccount;
     }
 
     this.onDoneClicked = function () {
@@ -71,7 +74,7 @@ Microsoft.WebPortal.ProcessOrderPresenter.prototype.onRender = function () {
 
     var self = this;
     ko.applyBindings(this, $("#ProcessOrderContainer")[0]);
-
+        
     var processOrder = function() {
         // If paypal sent failure then display message and go back to subscriptions page. 
         if (self.viewModel.txStatus.toLowerCase() == "failure") {
@@ -87,11 +90,17 @@ Microsoft.WebPortal.ProcessOrderPresenter.prototype.onRender = function () {
             if (self.viewModel.paymentId.toLowerCase() === "preapproved") {
                 pageTitleText = self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingPreApprovedTxNotification;
             }
-            else {
-                pageTitleText = self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingOrderNotification;
-            }
+
             self.viewModel.PageTitle(pageTitleText);
-            var thisNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress, self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingOrderMessage);
+
+            var thisNotification;
+            if (self.viewModel.customerId != null) {
+                thisNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress, self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingOrderMessage);
+            }
+            else {
+                thisNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress, self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ExistingCustomerProcessingOrderMessage);
+            }
+
             self.webPortal.Services.Notifications.add(thisNotification);
 
             new Microsoft.WebPortal.Utilities.RetryableServerCall(self.webPortal.Helpers.ajaxCall(self.apiUrl, Microsoft.WebPortal.HttpMethod.Get, {
@@ -103,9 +112,30 @@ Microsoft.WebPortal.ProcessOrderPresenter.prototype.onRender = function () {
                 if (self.viewModel.customerId != null) {
                     self.viewModel.showDoneButton(true);
                     self.viewModel.showSubscriptions(true);
-                    self.viewModel.PageTitle(self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.NewCustomerOrderSuccessMessage);
                     self.viewModel.Subscriptions(result.Subscriptions);
                     self.viewModel.TotalPrice(result.SummaryTotal);
+                    self.viewModel.CustomerRegistrationInfo(result.CustomerViewModel);
+
+                    var addressLine = result.CustomerViewModel.AddressLine1;
+                    if (result.CustomerViewModel.AddressLine2) {
+                        addressLine += " " + result.CustomerViewModel.AddressLine2;
+                    }
+
+                    var AddressInfo = [
+                        addressLine,
+                        result.CustomerViewModel.City + ", " + result.CustomerViewModel.State + " " + result.CustomerViewModel.ZipCode,
+                        result.CustomerViewModel.Country
+                    ];
+
+                    var ContactInfo = [
+                        result.CustomerViewModel.FirstName + " " + result.CustomerViewModel.LastName,
+                        result.CustomerViewModel.Email,
+                        result.CustomerViewModel.Phone
+                    ];
+
+                    self.viewModel.Address(AddressInfo);
+                    self.viewModel.ContactInformation(ContactInfo);
+
                 } else {
                     // all processed so push to subscriptions page. 
                     self.webPortal.Journey.start(self.viewModel.nextJourney);

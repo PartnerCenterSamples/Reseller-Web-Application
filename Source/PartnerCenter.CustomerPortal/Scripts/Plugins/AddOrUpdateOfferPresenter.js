@@ -20,7 +20,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter = function (webPortal, feature, ex
         MicrosoftOffer: ko.observable(this.isNewOffer ? "" : existingOffer.MicrosoftOffer),
         Title: ko.observable(this.isNewOffer ? "" : existingOffer.Title),
         SubTitle: ko.observable(this.isNewOffer ? "" : existingOffer.SubTitle),
-        Price: ko.observable(this.isNewOffer ? "" : Globalize.format(existingOffer.Price, "n")),        
+        Price: ko.observable(this.isNewOffer ? "" : Globalize.format(existingOffer.Price, "n")),
         Features: ko.observableArray([]),
         Summary: ko.observableArray([]),
         Logo: ko.observable(this.isNewOffer ? "" : existingOffer.LogoUri),
@@ -117,7 +117,9 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.GetMicrosoftOffers = fun
     var self = this;
 
     offersFetchProgress.done(function (microsoftOffers) {
-        self.microsoftOffers = microsoftOffers;
+        self.microsoftOffers = microsoftOffers.filter(function (item) {
+            return item.Offer.Id.indexOf('MS-AZR-') == -1;
+        });
 
         self.baseOffersViewModels = ko.utils.arrayMap(self.microsoftOffers, function (baseOffer) {
             return {
@@ -125,7 +127,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.GetMicrosoftOffers = fun
                 Name: baseOffer.Offer.Name,
                 Description: baseOffer.Offer.Description,
                 Category: baseOffer.Offer.Category.Name,
-                ThumbnailUri: baseOffer.ThumbnailUri
+                ThumbnailUri: baseOffer.ThumbnailUri            
             }
         });
 
@@ -308,10 +310,29 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
 
     this.OfferSelectionWizardViewModel = {
         offerList: new Microsoft.WebPortal.Views.List(self.webPortal, "#offerList", self),
+        Offers: ko.observableArray(this.baseOffersViewModels),
+        searchTerm: ko.observable(""),
         baseOffers: this.microsoftOffers,
-        errorMessage: ko.observable("")
-    };
+        errorMessage: ko.observable(""),
+        searchButtonClicked: function () {
+            this.offerList.set(this.filteredItems());
+            this.offerList.setComplete(true);
+            this.offerList.renderer();
+        }
 
+ 
+    };
+    this.OfferSelectionWizardViewModel.filteredItems = ko.computed(function () {
+        var filter = this.searchTerm().toLowerCase();
+        if (!filter) {
+           return this.Offers();          
+        } else {
+            return ko.utils.arrayFilter(this.Offers(), function (item) {
+                return item.Name.toLowerCase().indexOf(filter) !== -1;
+            });
+        }
+    }, this.OfferSelectionWizardViewModel);
+  
     // TODO: In later iterations, we will support sorting and filtering
     this.OfferSelectionWizardViewModel.offerList.setColumns([
         new Microsoft.WebPortal.Views.List.Column("Name", "min-width: 300px; width: 300px; white-space: normal;", true, false,
@@ -324,8 +345,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
     this.OfferSelectionWizardViewModel.offerList.enableStatusBar(false);
     this.OfferSelectionWizardViewModel.offerList.setSelectionMode(Microsoft.WebPortal.Views.List.SelectionMode.Single);
     this.OfferSelectionWizardViewModel.offerList.setSorting("Name", Microsoft.WebPortal.Views.List.SortDirection.Ascending , true);
-
-    this.OfferSelectionWizardViewModel.offerList.set(this.baseOffersViewModels);
+    this.OfferSelectionWizardViewModel.offerList.set(this.OfferSelectionWizardViewModel.filteredItems());
     this.OfferSelectionWizardViewModel.offerList.setComplete(true);
 
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.DialogShown, this.onSelectBaseOfferWizardShown, this);
