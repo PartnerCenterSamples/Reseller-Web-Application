@@ -97,6 +97,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         public TelemetryService TelemetryService { get; private set; }
 
         /// <summary>
+        /// Gets the customer registration repository.
+        /// </summary>
+        public CustomerRegistrationRepository CustomerRegistrationRepository { get; private set; }
+
+        /// <summary>
         /// Initializes the application domain objects.
         /// </summary>
         /// <returns>A task.</returns>
@@ -119,6 +124,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 Instance.CustomerPurchasesRepository = new CustomerPurchasesRepository(ApplicationDomain.Instance);
                 Instance.CustomerOrdersRepository = new OrdersRepository(ApplicationDomain.Instance);
                 Instance.TelemetryService = new TelemetryService(Instance);
+                Instance.CustomerRegistrationRepository = new CustomerRegistrationRepository(ApplicationDomain.Instance);
 
                 await Instance.PortalLocalization.InitializeAsync();
                 await Instance.TelemetryService.InitializeAsync();
@@ -132,7 +138,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         private static async Task<IAggregatePartner> AcquirePartnerCenterAccessAsync()
         {
             PartnerService.Instance.ApiRootUrl = ConfigurationManager.AppSettings["partnerCenter.apiEndPoint"];
-            PartnerService.Instance.ApplicationName = "Web Store Front V1.3";
+            PartnerService.Instance.ApplicationName = "Web Store Front V1.4";
 
             var credentials = await PartnerCredentials.Instance.GenerateByApplicationCredentialsAsync(
                 ConfigurationManager.AppSettings["partnercenter.applicationId"],

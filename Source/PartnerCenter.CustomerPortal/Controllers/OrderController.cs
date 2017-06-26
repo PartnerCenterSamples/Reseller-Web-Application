@@ -20,7 +20,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using Filters.WebApi;
     using Models;
     using Newtonsoft.Json;
-
+    using PartnerCenter.Models;
+    using PartnerCenter.Models.Customers;
+    
     /// <summary>
     /// Manages customer orders.
     /// </summary>    
@@ -202,13 +204,78 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             paymentId.AssertNotEmpty(nameof(paymentId));
             payerId.AssertNotEmpty(nameof(payerId));
+
+            // Retrieve customer registration details persisted
+            CustomerRegistrationRepository customerRegistrationRepository = new CustomerRegistrationRepository(ApplicationDomain.Instance);
+
+            CustomerViewModel customerRegistrationInfoPersisted = await ApplicationDomain.Instance.CustomerRegistrationRepository.RetrieveAsync(customerId);
+
+            var newCustomer = new Customer()
+            {
+                CompanyProfile = new CustomerCompanyProfile()
+                {
+                    Domain = customerRegistrationInfoPersisted.DomainName,
+                },
+                BillingProfile = new CustomerBillingProfile()
+                {
+                    Culture = customerRegistrationInfoPersisted.BillingCulture,
+                    Language = customerRegistrationInfoPersisted.BillingLanguage,
+                    Email = customerRegistrationInfoPersisted.Email,
+                    CompanyName = customerRegistrationInfoPersisted.CompanyName,
+
+                    DefaultAddress = new Address()
+                    {
+                        FirstName = customerRegistrationInfoPersisted.FirstName,
+                        LastName = customerRegistrationInfoPersisted.LastName,
+                        AddressLine1 = customerRegistrationInfoPersisted.AddressLine1,
+                        AddressLine2 = customerRegistrationInfoPersisted.AddressLine2,
+                        City = customerRegistrationInfoPersisted.City,
+                        State = customerRegistrationInfoPersisted.State,
+                        Country = customerRegistrationInfoPersisted.Country,
+                        PostalCode = customerRegistrationInfoPersisted.ZipCode,
+                        PhoneNumber = customerRegistrationInfoPersisted.Phone,
+                    }
+                }
+            };
+           
+            // Register customer
+            newCustomer = await ApplicationDomain.Instance.PartnerCenterClient.Customers.CreateAsync(newCustomer);
+            var newCustomerId = newCustomer.CompanyProfile.TenantId;
+
+            CustomerViewModel customerViewModel = new CustomerViewModel()
+            {
+                AddressLine1 = newCustomer.BillingProfile.DefaultAddress.AddressLine1,
+                AddressLine2 = newCustomer.BillingProfile.DefaultAddress.AddressLine2,
+                City = newCustomer.BillingProfile.DefaultAddress.City,
+                State = newCustomer.BillingProfile.DefaultAddress.State,
+                ZipCode = newCustomer.BillingProfile.DefaultAddress.PostalCode,
+                Country = newCustomer.BillingProfile.DefaultAddress.Country,
+                Phone = newCustomer.BillingProfile.DefaultAddress.PhoneNumber,
+                Language = newCustomer.BillingProfile.Language,
+                FirstName = newCustomer.BillingProfile.DefaultAddress.FirstName,
+                LastName = newCustomer.BillingProfile.DefaultAddress.LastName,
+                Email = newCustomer.BillingProfile.Email,
+                CompanyName = newCustomer.BillingProfile.CompanyName,
+                MicrosoftId = newCustomer.CompanyProfile.TenantId,
+                UserName = newCustomer.BillingProfile.Email,
+                Password = newCustomer.UserCredentials.Password,
+                AdminUserAccount = newCustomer.UserCredentials.UserName + "@" + newCustomer.CompanyProfile.Domain
+            };
+            
             PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, "ProcessingOrder");            
 
             // use payment gateway to extract order information. 
             OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync(payerId, paymentId, string.Empty, string.Empty);
-            CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, customerId, paymentGateway);
+
+            // Assign the actual customer Id
+            orderToProcess.CustomerId = newCustomerId;
+
+            CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, newCustomerId, paymentGateway);
             await commerceOperation.PurchaseAsync(orderToProcess);
-            SubscriptionsSummary summaryResult = await this.GetSubscriptionSummaryAsync(customerId);
+            SubscriptionsSummary summaryResult = await this.GetSubscriptionSummaryAsync(newCustomerId);
+
+            // Remove the persisted customer registration info.
+            var deleteResult = ApplicationDomain.Instance.CustomerRegistrationRepository.DeleteAsync(customerId);
 
             // Capture the request for the customer summary for analysis.
             var eventProperties = new Dictionary<string, string> { { "CustomerId", orderToProcess.CustomerId }, { "PayerId", payerId }, { "PaymentId", paymentId } };
@@ -217,6 +284,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds } };
 
             ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/NewCustomerProcessOrder", eventProperties, eventMetrics);
+
+            summaryResult.CustomerViewModel = customerViewModel;
 
             return summaryResult;
         }

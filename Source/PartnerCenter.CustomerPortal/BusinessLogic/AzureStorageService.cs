@@ -31,6 +31,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         private const string PublicPortalAssetsBlobContainerName = "publiccustomerportalassets";
 
         /// <summary>
+        /// The name of the portal customers blob container.
+        /// </summary>
+        private const string PrivatePortalCustomerBlobContainerName = "customerportalregistration";
+
+        /// <summary>
         /// The name of the Partner Center customers Azure table.
         /// </summary>
         private const string CustomersTableName = "PartnerCenterCustomers";
@@ -49,6 +54,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// The name of the customer orders Azure table.
         /// </summary>
         private const string CustomerOrdersTableName = "PreApprovedCustomerOrders";
+
+        /// <summary>
+        /// The name of the customer Azure table.
+        /// </summary>
+        private const string CustomerRegistrationTableName = "CustomerRegistrations";
 
         /// <summary>
         /// The Azure cloud storage account.
@@ -84,6 +94,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// The Azure customer orders table.
         /// </summary>
         private CloudTable customerOrdersTable;
+
+        /// <summary>
+        /// The Azure customer registration table.
+        /// </summary>
+        private CloudTable customerRegistrationTable;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureStorageService"/> class.
@@ -252,6 +267,23 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             // someone can delete the table externally
             await this.customerOrdersTable.CreateIfNotExistsAsync();
             return this.customerOrdersTable;
+        }
+
+        /// <summary>
+        /// Gets the customer registration table.
+        /// </summary>
+        /// <returns>The customer registration table.</returns>
+        public async Task<CloudTable> GetCustomerRegistrationTableAsync()
+        {
+            if (this.customerRegistrationTable == null)
+            {
+                CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
+                this.customerRegistrationTable = tableClient.GetTableReference(AzureStorageService.CustomerRegistrationTableName);
+            }
+           
+            // someone can delete the table externally
+            await this.customerRegistrationTable.CreateIfNotExistsAsync();
+            return this.customerRegistrationTable;
         }
     }
 }

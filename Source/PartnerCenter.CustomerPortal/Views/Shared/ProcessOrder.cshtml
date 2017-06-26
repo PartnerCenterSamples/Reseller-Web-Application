@@ -1,8 +1,72 @@
 ﻿<div id="ProcessOrderContainer">
     <div class="row">
-        <label class="section">@Resources.ProcessOrderPageCaption</label><br />
         <label data-bind="text: viewModel.PageTitle"></label>
     </div>
+    <!-- ko if: viewModel.CustomerRegistrationInfo -->
+    <div class="row">
+        <label class="section">@Resources.Confirmation</label><br />
+        <label>@Resources.ConfirmationMessage</label>
+    </div>
+    <div class="row">
+        <label class="section">@Resources.SetupInformation</label>
+    </div>
+    <div class="row section-divider">
+        <div class="titleCell">
+            <label>@Resources.MicrosoftId</label>
+        </div>
+        <div class="left-float">
+            <label data-bind="text: viewModel.CustomerRegistrationInfo().MicrosoftId"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.AdminUserAccount</label>
+        </div>
+        <div class="left-float">
+            <label data-bind="text: viewModel.CustomerRegistrationInfo().AdminUserAccount"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.PasswordLabel</label>
+        </div>
+        <div class="left-float">
+            <label data-bind="text: viewModel.CustomerRegistrationInfo().Password"></label>
+        </div>
+    </div>
+    <div class="row">
+        <img src="~/Content/Images/WebPortal/notification-info.png" />
+        <label> @Resources.RegistrationConfirmationPasswordNoticeCaption</label>
+    </div>
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.CustomerPrimaryContactCaption</label>
+        </div>
+        <div class="left-float">
+            <!-- ko foreach: viewModel.ContactInformation -->
+            <label data-bind="text: $data"></label><br />
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.CustomerOrganizationNameCaption</label>
+        </div>
+        <div class="left-float">
+            <label data-bind="text: viewModel.CustomerRegistrationInfo().CompanyName"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.Address</label>
+        </div>
+        <div class="left-float">
+            <!-- ko foreach: viewModel.Address -->
+            <label data-bind="text: $data"></label><br />
+            <!-- /ko -->
+        </div>
+    </div>
+    <!-- /ko -->
 
     <!-- ko if: viewModel.showSubscriptions -->
     <div class="row">
@@ -27,7 +91,6 @@
                     </td>
                     <td />
                 </tr>
-
                 <!-- ko foreach: viewModel.Subscriptions -->
                 <tr>
                     <td>

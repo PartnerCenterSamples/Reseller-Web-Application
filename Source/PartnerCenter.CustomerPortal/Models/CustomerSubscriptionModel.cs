@@ -1,25 +1,25 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="CustomerLicensesModel.cs" company="Microsoft">
+// <copyright file="CustomerSubscriptionModel.cs" company="Microsoft">
 //      Copyright (c) Microsoft Corporation.  All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
-{    
+{
     /// <summary>
-    /// The customer licenses view model.
+    /// The customer subscription model
     /// </summary>
-    public class CustomerLicensesModel
+    public class CustomerSubscriptionModel
     {
         /// <summary>
         /// Gets or sets the customer license Id.
         /// </summary>
-        public string Id { get; set; }
+        public string SubscriptionId { get; set; }
 
         /// <summary>
         /// Gets or sets the offer name.
         /// </summary>
-        public string OfferName { get; set; }
+        public string FriendlyName { get; set; }
 
         /// <summary>
         /// Gets or sets the customer license status like None, Active, Suspended or Deleted
@@ -29,7 +29,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// <summary>
         /// Gets or sets the total number of licenses for this customer license.
         /// </summary>
-        public string Quantity { get; set; }
+        public string LicensesTotal { get; set; }
 
         /// <summary>
         /// Gets or sets the license creation date. 

@@ -15,6 +15,7 @@
             /*
                 Framework strings
             */
+            PartnerCountry: "@Html.Raw(@Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.ApplicationDomain.Instance.PortalLocalization.CountryIso2Code)",
             CurrentLocale: "@Html.Raw(@Resources.Culture.Name)",
             Loading: "@Html.Raw(@Resources.Loading)",
             FailedToLoadPortal: "@Html.Raw(@Resources.FailedToLoadPortal)",
@@ -218,7 +219,8 @@
                     NewCustomerProcessOrderFailureReceivingPaymentMessage: "@Html.Raw(@Resources.NewCustomerProcessOrderFailureReceivingPaymentMessage)",
                     NewCustomerOrderSuccessMessage: "@Html.Raw(@Resources.NewCustomerOrderSuccessMessage)",
                     InvalidInputErrorPrefix: "@Html.Raw(@Resources.InvalidInputErrorPrefix)",
-                    DownstreamErrorPrefix: "@Html.Raw(@Resources.DownstreamErrorPrefix)"
+                    DownstreamErrorPrefix: "@Html.Raw(@Resources.DownstreamErrorPrefix)",
+                    ExistingCustomerProcessingOrderMessage: "@Html.Raw(@Resources.ExistingCustomerProcessingOrderMessage)"
                 },
                 AddSubscriptionsView: {
                     SelectOfferErrorMessage: "@Html.Raw(@Resources.SelectOfferErrorMessage)",

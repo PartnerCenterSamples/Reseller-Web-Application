@@ -5,22 +5,34 @@
             <td colspan="2" class="Header">
                 @Resources.CustomerManagementDisplayName                
             </td>
-        </tr>
+          </tr>    
         <tr>
-            <td class="Subtext BottomPadded" colspan="2">
-                @Resources.CustomerManagementSubText
-            </td>
-        </tr>
-        <tr>
-            <td class="abovemedium-text">
+            <td class="abovemedium-text" style="padding-top: 0px; padding-bottom: 0px;">
                 <input type="checkbox" id="toggleAllCustomers" data-bind="checked: viewModel.IsEveryonePreApproved" />
                 @Resources.CustomerManagementAllCustomersToggleCaption
+                </td>
+            <td colspan="2" style="padding-top: 0px; padding-bottom: 0px;">
+                <div style="float:right">
+                    <form action="#">
+                        <fieldset  class="SearchFieldSet" style="padding-top: 0px;border-bottom-width: 1px;padding-bottom: 0px;border-top-width: 1px;border-left-width: 1px;border-right-width: 1px;padding-left: 2px;padding-right: 2px;" >
+                            <input class="InputSearchField" style="width: 400px;" placeholder="@Resources.SelectSearchbyNameDomainPlaceholder" data-bind="value: viewModel.searchTerm, valueUpdate: 'afterkeydown'" />
+                            <button class="InputSearchButton" data-bind="click: viewModel.searchButtonClicked" style="padding-top: 8px;height:30px;padding-bottom: 8px;margin-top: 0px;margin-bottom: 0px;">
+                                <img src="/Content/Images/WebPortal/search.png">
+                            </button>
+                            </fieldset>
+                        </form>
+                </div>
             </td>
         </tr>
-        <tr><td colspan="2" class="section-divider"></td></tr>
+        <tr>
+            <td class="abovemedium-text BottomPadded" colspan="2">
+                <img src="~/Content/Images/WebPortal/notification-info.png" /> @Resources.CustomerManagementSubText
+            </td>
+        </tr>
+          <tr><td colspan="2" class="section-divider"></td></tr>
     </table>
     <!-- ko if: !viewModel.IsEveryonePreApproved() -->
-    <table width="100%" cellpadding="1" data-bind="fadeVisible: viewModel.IsSet">
+      <table width="100%" cellpadding="1" data-bind="fadeVisible: viewModel.IsSet">
         <tbody>
             <tr>
                 <td>

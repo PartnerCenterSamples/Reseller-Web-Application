@@ -39,24 +39,21 @@ Microsoft.WebPortal.CustomerRegistrationPresenter = function (webPortal, feature
             // if client id is already present then skip the create Customer call. 
             // Call Create Customer if customer is not registered (or is retring due an error from the past).  
             var customerId = this.customerProfileView.viewModel.CustomerMicrosoftID();            
-            if (!customerId) {
-                customerNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress, self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.CustomerRegistrationMessage);
-                self.webPortal.Services.Notifications.add(customerNotification);
-
+            if (!customerId) {               
                 new Microsoft.WebPortal.Utilities.RetryableServerCall(self.webPortal.Helpers.ajaxCall("api/CustomerAccounts",
                         Microsoft.WebPortal.HttpMethod.Post,
                         self.getCustomerInformation(),
                         Microsoft.WebPortal.ContentType.Json, 120000),
                     "RegisterCustomer", []).execute()
                     // Success of Create Customer API Call. 
-                    .done(function (registrationConfirmation) { 
+                    .done(function (customerTemporaryGuid) {
                         // Reset the CustomerMicrosoftID to CustomerId returned. 
-                        self.customerProfileView.viewModel.CustomerMicrosoftID(registrationConfirmation.MicrosoftId);
-                        self.customerRegistrationInfo = registrationConfirmation; // maintain this for future retries while user is still on the same page. 
+                        self.customerProfileView.viewModel.CustomerMicrosoftID(customerTemporaryGuid);
 
                         // turn the notification into a success
-                        customerNotification.type(Microsoft.WebPortal.Services.Notification.NotificationType.Success);
-                        notificationMessage = self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.CustomerRegistrationSuccessMessage + " - " + registrationConfirmation.CompanyName + " (" + registrationConfirmation.MicrosoftId + ")";
+                        notificationMessage = self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.CustomerRegistrationSuccessMessage;
+                        customerNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress, notificationMessage);
+                        self.webPortal.Services.Notifications.add(customerNotification);
                         customerNotification.message(notificationMessage);
                         customerNotification.buttons([
                             Microsoft.WebPortal.Services.Button.create(Microsoft.WebPortal.Services.Button.StandardButtons.OK, self.webPortal.Resources.Strings.OK, function () {
@@ -64,31 +61,65 @@ Microsoft.WebPortal.CustomerRegistrationPresenter = function (webPortal, feature
                             })
                         ]);
 
-                        // raise the Order passing along the registrationConfirmation data object.  
-                        // self.raiseOrder(customerNotification, self.customerRegistrationInfo);                        
-                        var registeredCustomer = registrationConfirmation;
                         var registrationConfirmationInfo = {                            
                             SubscriptionsToOrder: self.getSubscriptions(),
-                            AddressLine1: registeredCustomer.AddressLine1,
-                            AddressLine2: registeredCustomer.AddressLine2,
-                            AdminUserAccount: registeredCustomer.AdminUserAccount,
-                            Password: registeredCustomer.Password,
-                            City: registeredCustomer.City,
-                            CompanyName: registeredCustomer.CompanyName,
-                            Country: registeredCustomer.Country,
-                            Email: registeredCustomer.Email,
-                            FirstName: registeredCustomer.FirstName,
-                            Language: registeredCustomer.Language,
-                            LastName: registeredCustomer.LastName,
-                            MicrosoftId: registeredCustomer.MicrosoftId,
-                            Phone: registeredCustomer.Phone,
-                            State: registeredCustomer.State,
-                            UserName: registeredCustomer.UserName,
-                            ZipCode: registeredCustomer.ZipCode
+                            MicrosoftId: customerTemporaryGuid,
                         }
 
-                        // hand it off to the registration summary presenter
-                        self.webPortal.Journey.advance(Microsoft.WebPortal.Feature.RegistrationConfirmation, registrationConfirmationInfo);
+                        // hand it off to Order API for the new customer prepare order                      
+                        // Customer Registration info is now persisted in the above steps. 
+                        var orderToPlace = {
+                            Subscriptions: registrationConfirmationInfo.SubscriptionsToOrder,
+                            OperationType: Microsoft.WebPortal.CommerceOperationType.NewPurchase, //PurchaseSubscriptions.
+                            CustomerId: registrationConfirmationInfo.MicrosoftId // Temporary Customer Id.             
+                        };
+
+                        new Microsoft.WebPortal.Utilities.RetryableServerCall(self.webPortal.Helpers.ajaxCall("api/Order/NewCustomerPrepareOrder", Microsoft.WebPortal.HttpMethod.Post, orderToPlace, Microsoft.WebPortal.ContentType.Json, 120000), "RegisterCustomerOrder", []).execute()
+                                // Success of Create CustomerOrder API Call. 
+                                .done(function (result) {
+                                    // orderNotification.dismiss();
+                                    // we need to now redirect to paypal based on the response from the API.             
+                                    window.location = result;
+                                })
+                                    // Failure in Create CustomerOrder API call. 
+                                .fail(function (result, status, error) {
+                                    // on failure check if customerid is returned (or check using errCode). if returned then do something to set the ClientCustomerId
+                                    orderNotification.type(Microsoft.WebPortal.Services.Notification.NotificationType.Error);
+                                    orderNotification.buttons([
+                                        // no need for retry button. user should be able to hit submit.
+                                        Microsoft.WebPortal.Services.Button.create(Microsoft.WebPortal.Services.Button.StandardButtons.OK, self.webPortal.Resources.Strings.OK, function () {
+                                            orderNotification.dismiss();
+                                        })
+                                    ]);
+
+                                    var errorPayload = JSON.parse(result.responseText);
+
+                                    if (errorPayload) {
+                                        switch (errorPayload.ErrorCode) {
+                                            case Microsoft.WebPortal.ErrorCode.InvalidInput:
+                                                orderNotification.message(self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.InvalidInputErrorPrefix + errorPayload.Details.ErrorMessage);
+                                                break;
+                                            case Microsoft.WebPortal.ErrorCode.DownstreamServiceError:
+                                                orderNotification.message(self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.DownstreamErrorPrefix + errorPayload.Details.ErrorMessage);
+                                                break;
+                                            case Microsoft.WebPortal.ErrorCode.PaymentGatewayPaymentError:
+                                            case Microsoft.WebPortal.ErrorCode.PaymentGatewayIdentityFailureDuringPayment:
+                                            case Microsoft.WebPortal.ErrorCode.PaymentGatewayFailure:
+                                                orderNotification.message(errorPayload.Details.ErrorMessage);
+                                                break;
+                                            default:
+                                                orderNotification.message(self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.OrderRegistrationFailureMessage);
+                                                break;
+                                        }
+                                    } else {
+                                        orderNotification.message(self.webPortal.Resources.Strings.Plugins.CustomerRegistrationPage.OrderRegistrationFailureMessage);
+                                    }
+
+                                })
+                                .always(function () {
+                                    self.isPosting = false;
+                                });
+
                     })
                     // Failure of Create Customer API Call. 
                     .fail(function (result, status, error) {                        

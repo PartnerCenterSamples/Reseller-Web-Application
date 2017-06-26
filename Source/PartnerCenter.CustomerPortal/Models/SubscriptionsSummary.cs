@@ -22,5 +22,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// Gets or sets the total amount for this subscription summary.
         /// </summary>
         public string SummaryTotal { get; set; }
+
+        /// <summary>
+        /// Gets or sets Customer view model
+        /// </summary>
+        public CustomerViewModel CustomerViewModel { get; set; }
     }
 }

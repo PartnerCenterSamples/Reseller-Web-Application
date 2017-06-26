@@ -12,10 +12,7 @@
                     <td width="80%">
                         <label class="section">@Resources.OrdersCaption</label>
                     </td>
-                    <td class="right-aligned" width="20%">
-                        <label class="Link medium-text" data-bind="click: onAddSubscriptionsClicked">@Resources.BuyMoreSubscriptionsMessage</label>
-                    </td>
-                </tr>
+                  </tr>
                 <tr>
                     <td colspan="2" class="section-divider"></td>
                 </tr>
@@ -54,10 +51,6 @@
                     </td>
                     <td class="right-aligned">
                         <label data-bind="text: $data.SubscriptionTotal"></label>
-                    </td>
-                    <td class="right-aligned">
-                        <label class="Link medium-text subscription-action" data-bind="visible: IsRenewable, click: $parent.onRenewSubscriptionClicked">@Resources.SubscriptionSummaryRenewLinkCaption</label>
-                        <label class="Link medium-text subscription-action" data-bind="visible: IsEditable,  click: $parent.onUpdateSubscriptionClicked">@Resources.AddMoreLicensesCaption</label>
                     </td>
                     <td class="collapse_down" data-bind="click: $parent.onToggleClicked" />
                 </tr>

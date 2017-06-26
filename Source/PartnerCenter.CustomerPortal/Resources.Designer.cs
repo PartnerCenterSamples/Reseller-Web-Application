@@ -70,15 +70,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must accept the terms and conditions.
-        /// </summary>
-        public static string AcceptTermsValidationMessage {
-            get {
-                return ResourceManager.GetString("AcceptTermsValidationMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You do not have the rights needed to access this area.
         /// </summary>
         public static string AccessDeniedMessage {
@@ -484,7 +475,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thank you. Customer information has been setup. Please review this page and click submit to place your order..
+        ///   Looks up a localized string similar to Thank you. The customer was created and your order was successfully processed..
         /// </summary>
         public static string ConfirmationMessage {
             get {
@@ -574,7 +565,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copyright 2016.
+        ///   Looks up a localized string similar to Copyright 2017.
         /// </summary>
         public static string CopyRight {
             get {
@@ -970,7 +961,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Allow all current and future customers for pre-approved transactions in the store front..
+        ///   Looks up a localized string similar to Select all.
         /// </summary>
         public static string CustomerManagementAllCustomersToggleCaption {
             get {
@@ -1033,7 +1024,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You can either mark all current and future customers for pre approval or select specific customers for pre-approval..
+        ///   Looks up a localized string similar to “Select all” will mark all current and future customers as pre-approved to transact in the store front..
         /// </summary>
         public static string CustomerManagementSubText {
             get {
@@ -1294,7 +1285,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully created customer.
+        ///   Looks up a localized string similar to Preparing order and redirecting to payment gateway....
         /// </summary>
         public static string CustomerRegistrationSuccessMessage {
             get {
@@ -1501,7 +1492,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There are no Microsoft offers to choose from.
+        ///   Looks up a localized string similar to No offers found.
         /// </summary>
         public static string EmptyMicrosoftOfferListMessage {
             get {
@@ -1542,6 +1533,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         public static string ErrorPageTitleCaption {
             get {
                 return ResourceManager.GetString("ErrorPageTitleCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment information collected, now processing order....
+        /// </summary>
+        public static string ExistingCustomerProcessingOrderMessage {
+            get {
+                return ResourceManager.GetString("ExistingCustomerProcessingOrderMessage", resourceCulture);
             }
         }
         
@@ -1789,6 +1789,24 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provide an image file type for the header image.
+        /// </summary>
+        public static string InvalidHeaderImageMessage {
+            get {
+                return ResourceManager.GetString("InvalidHeaderImageMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid header image Uri. Please make sure the Uri is valid..
+        /// </summary>
+        public static string InvalidHeaderImageUriMessage {
+            get {
+                return ResourceManager.GetString("InvalidHeaderImageUriMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid header image URI uploaded.
         /// </summary>
         public static string InvalidHeaderImageUriMessage {
@@ -1906,7 +1924,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to License based subscriptions.
+        ///   Looks up a localized string similar to Customer managed subscriptions.
         /// </summary>
         public static string LicenseBasedSubscriptionsCaption {
             get {
@@ -2041,7 +2059,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to My Subscriptions.
+        ///   Looks up a localized string similar to Manage Subscriptions.
         /// </summary>
         public static string MyAccountDisplayName {
             get {
@@ -2050,7 +2068,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to My Orders.
+        ///   Looks up a localized string similar to Order History.
         /// </summary>
         public static string MySubscriptionsDisplayName {
             get {
@@ -2338,7 +2356,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failure in processing order. Please click done to try again..
+        ///   Looks up a localized string similar to Failure in processing order. Please click done and try again..
         /// </summary>
         public static string OrderProcessingFailureNotification {
             get {
@@ -2415,6 +2433,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         public static string OrganizationNameFieldSubText {
             get {
                 return ResourceManager.GetString("OrganizationNameFieldSubText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partner managed subscriptions.
+        /// </summary>
+        public static string PartnerManagedSubscriptionsCaption {
+            get {
+                return ResourceManager.GetString("PartnerManagedSubscriptionsCaption", resourceCulture);
             }
         }
         
@@ -2716,7 +2743,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Payment information collected, processing order....
+        ///   Looks up a localized string similar to Payment information collected, creating customer and processing order....
         /// </summary>
         public static string ProcessingOrderMessage {
             get {
@@ -2743,7 +2770,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Order Processing Page..
+        ///   Looks up a localized string similar to Confirmation.
         /// </summary>
         public static string ProcessOrderPageCaption {
             get {
@@ -2941,7 +2968,25 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Details.
+        ///   Looks up a localized string similar to Search by company name or domain.
+        /// </summary>
+        public static string SelectSearchbyNameDomainPlaceholder {
+            get {
+                return ResourceManager.GetString("SelectSearchbyNameDomainPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by offer.
+        /// </summary>
+        public static string SelectSearchByOffersPlaceholder {
+            get {
+                return ResourceManager.GetString("SelectSearchByOffersPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Details.
         /// </summary>
         public static string SetupInformation {
             get {
@@ -2977,7 +3022,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Submit.
+        ///   Looks up a localized string similar to Proceed to payment.
         /// </summary>
         public static string Submit {
             get {

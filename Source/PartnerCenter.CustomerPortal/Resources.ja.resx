@@ -132,9 +132,6 @@
   <data name="ContactUs" xml:space="preserve">
     <value>お問い合わせ</value>
   </data>
-  <data name="CopyRight" xml:space="preserve">
-    <value>著作権 2016</value>
-  </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>.</value>
   </data>
@@ -237,9 +234,6 @@
   <data name="MicrosoftId" xml:space="preserve">
     <value>マイクロソフトの ID</value>
   </data>
-  <data name="SetupInformation" xml:space="preserve">
-    <value>詳細</value>
-  </data>
   <data name="Subscription" xml:space="preserve">
     <value>サブスクリプション</value>
   </data>
@@ -252,14 +246,8 @@
   <data name="AddSubscriptions" xml:space="preserve">
     <value>サブスクリプションを追加します。</value>
   </data>
-  <data name="Submit" xml:space="preserve">
-    <value>送信</value>
-  </data>
   <data name="AcceptTerms" xml:space="preserve">
     <value>利用規約に同意します。</value>
-  </data>
-  <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>諸条件に同意する必要があります。</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>有効なドメインのプレフィックスを入力してください。</value>
@@ -386,9 +374,6 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>説明</value>
-  </data>
-  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>選択する Microsoft 提供がないです。</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
     <value>構成されている任意のオファーがありません。あなたのオファーを追加する上記提供を追加をクリックします。</value>
@@ -654,9 +639,6 @@
   <data name="CustomerRegistrationMessage" xml:space="preserve">
     <value>顧客を登録しています.</value>
   </data>
-  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>正常に顧客を作成</value>
-  </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
     <value>注文登録エラー</value>
   </data>
@@ -825,9 +807,6 @@
   <data name="InvalidContactUsPhone" xml:space="preserve">
     <value>有効な連絡先サポートの電話番号を入力してください。</value>
   </data>
-  <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>お支払い情報を収集、処理順序.</value>
-  </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
     <value>席をサブスクリプションに追加します。</value>
   </data>
@@ -840,17 +819,11 @@
   <data name="OrderFailureMessage" xml:space="preserve">
     <value>処理順序エラーが発生しました。後で再試行してください。</value>
   </data>
-  <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>処理順序に失敗しました。再試行する完了] をクリックしてください。</value>
-  </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
     <value>支払い情報の受信に失敗しました。再試行する完了] をクリックしてください。</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
     <value>お支払い情報を正常に受信します。処理順序.</value>
-  </data>
-  <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>注文処理のページ。</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
     <value>登録注文が正常に処理されました。</value>
@@ -968,12 +941,6 @@
   </data>
   <data name="PaymentDisplayName" xml:space="preserve">
     <value>お支払い設定</value>
-  </data>
-  <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>個人用サブスクリプション</value>
-  </data>
-  <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>私のアカウント</value>
   </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
     <value>ホーム ページに移動します。</value>
@@ -1146,9 +1113,6 @@
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>ステータス</value>
   </data>
-  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
-    <value>ベース ライセンスのサブスクリプション</value>
-  </data>
   <data name="OrdersCaption" xml:space="preserve">
     <value>注文</value>
   </data>
@@ -1160,9 +1124,6 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>使用状況ベースのサブスクリプション</value>
-  </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>ありがとう。お客様の情報は、セットアップをされています。このページをご覧ください、ご注文送信] をクリックします。</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
     <value>あなたの会社のブランドを構成するをクリックします。</value>
@@ -1182,11 +1143,8 @@
   <data name="CustomerManagementHeader" xml:space="preserve">
     <value>事前に承認されたトランザクションのための顧客を管理します。</value>
   </data>
-  <data name="CustomerManagementSubText" xml:space="preserve">
-    <value>事前承認のためのすべての現在および将来の顧客をマークまたは事前承認の特定の顧客を選択することができます。</value>
-  </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
-    <value>ストア フロントで事前に承認されたトランザクションのすべての現在および将来の顧客を許可します。</value>
+    <value>すべてを選択します。</value>
   </data>
   <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
     <value>事前承認</value>
@@ -1217,5 +1175,56 @@
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
     <value>ご購入</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>お客様情報</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>ありがとう。お客様が作成され、ご注文が正常に処理されました。</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>お支払いに進みます</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>注文の準備とお支払いゲートウェイにリダイレクトする.</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>お支払いの情報の収集、顧客との処理順序を作成.</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>お支払い情報を収集、処理順序今.</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>ない提供していますが見つかりました</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>提供による検索します。</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>「すべて選択」店の前の事前承認としてすべて現在および将来お客様を迎えます。</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>会社名またはドメインで検索します。</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>お客様が管理するサブスクリプション</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>パートナーは、サブスクリプションを管理</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>注文履歴</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>サブスクリプションを管理します。</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>処理順序に失敗しました。[完了] をクリックして、もう一度やり直してください。</value>
   </data>
 </root>
