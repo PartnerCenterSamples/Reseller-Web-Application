@@ -10,7 +10,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
     using System.Threading.Tasks;
     using Commerce;
     using Configuration;
-    using Customers;
     using Offers;
     using PartnerCenter.Extensions;
 
@@ -114,7 +113,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 Instance.AzureStorageService = new AzureStorageService(ApplicationConfiguration.AzureStorageConnectionString, ApplicationConfiguration.AzureStorageConnectionEndpointSuffix);
                 Instance.CachingService = new CachingService(Instance, ApplicationConfiguration.CacheConnectionString);
                 Instance.PartnerCenterClient = await AcquirePartnerCenterAccessAsync();
-                Instance.PortalLocalization = new PortalLocalization(Instance);                
+                Instance.PortalLocalization = new PortalLocalization(Instance);
                 Instance.OffersRepository = new PartnerOffersRepository(Instance);
                 Instance.MicrosoftOfferLogoIndexer = new MicrosoftOfferLogoIndexer(Instance);
                 Instance.PortalBranding = new PortalBranding(Instance);

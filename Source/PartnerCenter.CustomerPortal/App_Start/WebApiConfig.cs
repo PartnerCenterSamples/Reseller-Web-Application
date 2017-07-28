@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal
-{    
+{
     using System.Web.Http;
     using System.Web.Mvc;
     using Models.Validators;
@@ -22,8 +22,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
         public static void Register(HttpConfiguration configuration)
         {
             configuration.MapHttpAttributeRoutes();
-            
-            DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(ExpiryDateInTenYearsAttribute), typeof(RangeAttributeAdapter));            
+
+            DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(ExpiryDateInTenYearsAttribute), typeof(RangeAttributeAdapter));
 
             configuration.Routes.MapHttpRoute(
                 name: "DefaultApi",

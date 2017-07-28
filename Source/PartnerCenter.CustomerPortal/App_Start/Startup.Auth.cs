@@ -13,7 +13,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
     using Azure.ActiveDirectory.GraphClient;
     using BusinessLogic;
     using Configuration;
-    using Exceptions;
     using IdentityModel.Clients.ActiveDirectory;
     using global::Owin;
     using Owin.Security;
@@ -54,8 +53,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                     Notifications = new OpenIdConnectAuthenticationNotifications()
                     {
                         RedirectToIdentityProvider = (context) =>
-                        {                            
+                        {
+                            string appBaseUrl = context.Request.Scheme + "://" + context.Request.Host + context.Request.PathBase;
+
+                            context.ProtocolMessage.RedirectUri = appBaseUrl + "/";
+                            context.ProtocolMessage.PostLogoutRedirectUri = appBaseUrl;
                             context.ProtocolMessage.Parameters.Add("lc", Resources.Culture.LCID.ToString());
+
                             return Task.FromResult(0);
                         },
                         AuthorizationCodeReceived = async (context) =>

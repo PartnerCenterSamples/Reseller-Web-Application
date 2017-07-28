@@ -82,17 +82,19 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             var subscriptionOperations = ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(order.CustomerId).Subscriptions.ById(subscriptionId);
             var partnerCenterSubscription = await subscriptionOperations.GetAsync();
 
-            List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
-            resultOrderSubscriptions.Add(new OrderSubscriptionItemViewModel()
+            List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>
             {
-                OfferId = subscriptionId,
-                SubscriptionId = subscriptionId,
-                PartnerOfferId = subscriptionToAugment.PartnerOfferId,
-                SubscriptionExpiryDate = subscriptionToAugment.ExpiryDate,
-                Quantity = partnerCenterSubscription.Quantity,
-                SeatPrice = partnerOffer.Price,
-                SubscriptionName = partnerOffer.Title
-            });
+                new OrderSubscriptionItemViewModel()
+                {
+                    OfferId = subscriptionId,
+                    SubscriptionId = subscriptionId,
+                    PartnerOfferId = subscriptionToAugment.PartnerOfferId,
+                    SubscriptionExpiryDate = subscriptionToAugment.ExpiryDate,
+                    Quantity = partnerCenterSubscription.Quantity,
+                    SeatPrice = partnerOffer.Price,
+                    SubscriptionName = partnerOffer.Title
+                }
+            };
 
             orderResult.Subscriptions = resultOrderSubscriptions;
             return await Task.FromResult(orderResult);
