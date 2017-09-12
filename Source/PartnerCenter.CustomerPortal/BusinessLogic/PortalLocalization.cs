@@ -47,7 +47,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <summary>
         /// Gets the portal's locale which is applied for offer API calls to partner center. 
         /// </summary>
-        public string OfferLocale { get; private set;  }
+        public string OfferLocale { get; private set; }
 
         /// <summary>
         /// Initializes state and ensures the object is ready to be consumed.
@@ -59,9 +59,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             this.CountryIso2Code = partnerLegalBusinessProfile.Address.Country;
 
             RegionInfo partnerRegion = null;
-            
+
             try
-            {   
+            {
                 // Get the default locale using the Country Validation rules infrastructure.  
                 var partnerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(this.CountryIso2Code).GetAsync();
 
@@ -72,11 +72,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             {
                 // we will default region to en-US so that currency is USD. 
                 this.Locale = "en-US";
-                partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);                
+                partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);
             }
 
             this.OfferLocale = this.ResolveOfferLocale(this.Locale);
-            
+
             // figure out the currency             
             this.CurrencyCode = partnerRegion.ISOCurrencySymbol;
             this.CurrencySymbol = partnerRegion.CurrencySymbol;
@@ -93,10 +93,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         private string ResolveOfferLocale(string locale)
         {
             List<string> portalSupportedLocales = new List<string>
-            { 
+            {
                 "de",
                 "en",
                 "es",
+                "he",
                 "nl",
                 "fr",
                 "ja"
@@ -107,11 +108,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 "de-DE",
                 "en-US",
                 "es-ES",
+                "he-IL",
                 "nl-NL",
                 "fr-FR",
                 "ja-JP"
             };
-                        
+
             //// Examples [en-US, en-GB, en-CA] -> en-US ==> en ==> (en-US), en-GB ==> en ==> (en-US), en-CA ==> en ==> (en-US).            
             //// Examples [fr-CH, de-CH, it-CH] -> fr-CH ==> fr ==> (fr-FR), de-CH ==> de ==> (de-DE), it-CH ==> it ==> (en-US).
 
@@ -127,7 +129,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             {
                 offerSpecificLocale = portalOfferLocaleDefaults.ElementAt(localeIndex);
             }
-                        
+
             return offerSpecificLocale;
         }
     }

@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>בחזרה</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>קנה עכשיו</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>לנקות את כל</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>צור קשר</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>זכויות יוצרים 2017</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>ישויות לא נמצאו</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>לא היתה אפשרות לקבל את תוכן הפורטל</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>הראשון</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>תצורת הפורטל שנראה לא חוקי</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>אתמול</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>טעינה</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>כניסה</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>פעולות נוספות...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>: לחזור </value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>הבא</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>לא</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>הודעות פעיל</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value> הודעות חדשות</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>אוקיי</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>סיסמה</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>לא היתה אפשרות למצוא configuation פורטל</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>זוכר אותי</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>נסה שנית</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>צא</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לקבל את התוכן תכונה</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>מקבל תכונה תוכן</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>שם משתמש:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>תצוגת משבצות</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>כן</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>עליך לבחור הצעה אחת לפחות כדי לרכוש.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>הסכום הכולל</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>להסיר את העגלה</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>כתובת</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>חשבון המשתמש Admin</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>תודה. הלקוח נוצר ולא עיבד בהצלחה את ההזמנה שלך.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>מידע על לקוחות</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>עשיתי</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft מזהה</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>פרטי הלקוח:</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>מנוי</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>מנויים</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>סה</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>להוסיף מנויים</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>המשך תשלום</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>אני מקבל את התנאים וההתניות</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>הזינו קידומת מחשבים חוקי</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>מזהה המנוי:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>לעדכן את פרטי החברה שלך</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>בניית לוח המחוונים שלך</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>לבחור אשר מציע למכור</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>להוסיף שיטת תשלום</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>ברוך הבא</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>כדי בונה חנות האינטרנט שלך!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>חיוב מבוסס</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>תקציר:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>להוסיף</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>התאמה אישית</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>תכונות:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>בחר הצעה של Microsoft:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>חיפוש לפי ההצעה</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>מחיר שנתי:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>מציעים כותרת משנה:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>מציעים שם:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>להוסיף תכונות ההצעה</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>להוסיף תכונה ההצעה אחרי זה</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>להוסיף נקודות סיכום ההצעה</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>להוסיף תקציר ההצעה אחרי זה</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>לחץ כדי להגדיר את חברת מיתוג.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>לתאר תכונה שנותן את ההצעה הזו</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>לחץ כדי להגדיר את ההצעות שלך</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>לכתוב סיכום של ההצעה</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>לחץ כדי להגדיר את אפשרויות התשלום שלך</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>מחיר:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>מסיר את ההצעה תכונה</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>להסיר את ההצעה סיכום</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>נקבעה</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>הצרכים תצורה</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את מידע לוח המחוונים</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>להתאים אישית את האתר שלך לפני שתתחיל למכור</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>. אתה יכול ללכת ולהתחיל למכור!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>להוסיף הצעה חדשה</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>קטגוריה</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>התאמה אישית</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>מחק</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>מחיקת במסכי</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>מחיקת הצעות</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>תיאור</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>אין מבצעים מצאו</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>אין לך הצעות מוגדר. לחץ על הוסף מציעים לעיל כדי להתחיל הוספת הצעות שלך.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>הצעה של Microsoft</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את Microsoft מציעה</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>ההצעה</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>מתחדשת באופן אוטומטי</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>ניתן לרכוש</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>הצעות נמחקו</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>לא ניתן למחוק את במסכי</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>מתחדשת באופן ידני</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לשמור את ההצעה</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>הצעה שנשמרו בהצלחה!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את ההצעות</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>מאחזר הצעות</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>זמין לרכישה</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>שמור</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>להציל את ההצעה</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>להציל את ההצעה</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value> מושבים</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>נא בחר הצעה</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value> כדי </value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>עדכון ההצעה</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>שם הארגון שלך</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>בטל</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את השותף מיתוג</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>איחזור שותף מיתוג</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>קביעת תצורה של חנות האינטרנט שלך</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>לספק את המידע בארגון שלך. זה יהיה גלוי הכותרת העליונה והתחתונה על כל הדפים</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לשמור מיתוג</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>עדכון מידע התאמה למותג</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>המיתוג נשמר. לחץ על לחצן ' רענן ' בשורת הכותרת כדי לצפות בשינויים שערכת</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>: קשר מכירות</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>קשר ישיר:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>תמיכה בדוא</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>תמונת הכותרת:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>מוצג בחלק העליון של דף הבית. (. jpg, קבצי jpeg, .img, .gif). להעלות קובץ או הזן כתובת URL של תמונה חוקי</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>בחר קובץ תמונה עליונה מהמחשב שלך</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>לוגו:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>מוצג בכותרת העליונה של כל דף, תמונות של גודל 32 מאת 32 פועלות בצורה הטובה ביותר. להעלות קובץ או הזן כתובת URL של תמונה חוקי</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>בחר קובץ תמונה של לוגו הארגון מהמחשב שלך</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>שם:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>שם חוקי של החברה שלך, שמוצג על הכותרת העליונה של כל דף</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>מספר טלפון</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>פורטל טען מחדש</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>רענן הפורטל כדי לצפות בשינויים שערכת</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>לבטל שינויים המקומיות מיתוג</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את פרטי התשלום</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>איחזור פרטי התשלום</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>חשבון ה-Paypal בשידור חי</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>לספק את PayPal Pro הגדרות חשבון</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>כדי ליצור חשבון חדש pro, אם אין לך אחת.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>כדי לקבל תשלומים מהלקוחות שלך, אתה צריך להשתמש בחשבון PayPal pro, בקר בכתובת:</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>סוג חשבון PayPal:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>באפשרותך לבחור סוג חשבון בדיקה כדי לבדוק את העסקאות שלך. ברגע עובד, באפשרותך לעבור לסוג חשבון פעיל להתחיל מנהל עסקים</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>PayPal מזהה לקוח:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>הזן את מזהה לקוח PayPal שלך</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>הסוד PayPal לקוח:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>הזן את הסוד לקוח PayPal שלך</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>חשבון ה-Paypal ארגז חול</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>בטל שינויים שלא נשמרו התשלום</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לשמור את פרטי התשלום</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>עדכון פרטי התשלום</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>פרטי התשלום מעודכן</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>שורת כתובת 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>שורת כתובת 2</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>העיר</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>מדינה</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>פרטי החברה</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>מידע ליצירת קשר</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>הקידומת התחום שלך תופיע לאחר @ כתובת המייל שלכם בתחום. זה חייב להיות ייחודי, לכך שאינו יכול להכיל כל סימני פיסוק. דוגמה: החברה.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>תחום קידומת</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>כתובת הדוא ל שלך</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>הקפד שלהזין כתובת דוא ל חוקית. הנקודה העיקרית של איש הקשר כדי לשלוח לך מידע חשוב כדי שתוכל להתחיל להגדיר את נתוני התשלום שלך יהיה.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>שם פרטי</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>שם משפחה</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>זה יהיה מזהה המשתמש תשתמש עם חשבונך Office 365.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>שם משתמש</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>מדינה/מחוז</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>מיקוד / מיקוד</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-שלא שולמו</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>קביעת תצורה של אתר האינטרנט שלך</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>האתר הזה הוא עדיין בבנייה. אנא בקרו מאוחר יותר.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את הצעות</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>הסכום ששולם על</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>המחיר ששולם</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>קצב</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>לחדש</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>שנוספו המושבים</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>רכש</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>חידוש</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לרשום את הלקוח. אנא נסה מאוחר יותר.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>רישום לקוחות...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>הכנת סדר וניתוב אל שער התשלום...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>צו רישום שגיאות</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>לקנות מנויים נוספים</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>רשיונות</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>Pro-מדורג</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>בחר אחד או יותר הצעות</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>אין לך את הזכויות כדי להיכנס לאזור זה</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>שגיאת עדכון סדר</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>אירעה שגיאת קלט נתקל. נא בדוק את הקלט ונסה שוב.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>התחום אינו זמין. הזינו קידומת תחום אחר</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>התמונות הנבחרות שבהן גדולות מדי. נא לציין תמונות קטנות או להעלות אחד אחד</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>נא ציין כתובת חוקית</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>נא בחר קובץ תמונה חוקי להעלות</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>האם אתה בטוח שברצונך למחוק את ההצעות שנבחרו? אם הלקוחות שלך כבר רכשו הצעות אלה, מנויים שנרכשו תכבד אך לא תהיה מתחדשת.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>נא להעתיק את חשבון המשתמש Admin והסיסמה ולשמור במיקום מאובטח. אתה לא תוכל להחזיר אותו אחרי דף זה.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>תאריך תפוגה</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>המחיר ששולם יוצג pro-מדורג לפי הצורך. </value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>מחיר שנתי</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>נא הוסף מנוי</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>דף הבית</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>הצגת פרטי ההתקשרות</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>מנהלים שאינם השותף לא מורשים להיכנס.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>פנה למחלקת מכירות</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>דוא:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>טלפון:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>נא תקן את הכנס את הודעתך:</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>. אנחנו אפשרות לעבד את בקשתך בשלב זה. אנא נסה מאוחר יותר או צור קשר דרך דוא. פרטי שגיאה-    </value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>ניתן לעדכן מנוי הדחיפה אחד בלבד.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>הכנת סדר וניתוב אל שער התשלום...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>אירעה שגיאה במהלך הוספת מנויים. </value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>אין אפשרות לעבד את התשלום שלך – </value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>יכול לא הפעלה לשער</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>תצורת התשלום אינו חוקי.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>לא ניתן לעבד את התשלום שלך בשלב זה. אנא פנה אלינו באמצעות דוא. </value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>תמונת כותרת לא חוקית אורי. נא ודא כי ה-Uri בתוקף.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>אירעה בעיה באחד השדות שהזנת: </value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>לוגו ארגון לא חוקי אורי. נא ודא כי ה-Uri בתוקף.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>לא חוקי הפרטיות אורי. נא ודא כי ה-Uri בתוקף.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>פרטיות</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>קישור פרטיות:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>באפשרותך לציין קישור שמראה הפרטיות תקנון ללקוחות שלך כאן אשר יופיע בכותרת התחתונה של דף הבית</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>הצג את תנאי הפרטיות באתר הזה</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את החשבון שלך. נא נסה שוב מאוחר יותר.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את המנויים שלך. נא נסה שוב מאוחר יותר.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>דוא ל מכירות</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>חידוש מנוי</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>שם הארגון</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>איש קשר ראשי</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את פרטי המבצע. נא נסה שוב מאוחר יותר. </value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>שדה אחד או יותר אינם חוקיים. אנא תקן אותן ולאחר מכן לשלוח.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>הנמזהה תא</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>סיכום שנתי</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>לבחור את ההצעה</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>לבחור את ההצעה שאתה רוצה למכור</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>מציע אחד או יותר שאתה מנסה להוסיף כבר קיימת. באפשרותך להוסיף רישיונות יותר מנויים קיימים.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>משתמש/שנה</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>אנא הזן טלפון מכירות קשר תקף</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>אנא הזן טלפון תמיכה קשר תקפים</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>תשלום מידע שנאסף, יצירת סדר עיבוד של לקוחות...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>פרטי התשלום אסף, עכשיו סדר עיבוד...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>הוספת מושבים למנוי.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>הוספת מנויים.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>חידוש המנוי.</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>אירעה שגיאה בעת עיבוד סדר. נא נסה שנית מאוחר יותר.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>כשל בסדר עיבוד. נא לחץ על בוצע ונסה שוב.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>כשל בקבלת פרטי התשלום. לחץ על סגור כדי לנסות שוב.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>פרטי התשלום שהתקבלו בהצלחה. סדר עיבוד...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>הזמנתך רישום היה עיבד בהצלחה.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>כשל בקבלת פרטי התשלום. אנא התחבר והוספת מנויים.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>באפשרותנו לעבד את התשלום שלך.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>מראה באיש הקשר לנו סעיף של כותרת</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>הדייר {0} לספירה כבר רשום ללקוח מרכז השותפים: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>מספר</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} חייב להיות גדול מאפס</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>מחרוזת</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} אינו מוגדר</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() נכשל: {0}, SubscriptionId: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>לספק קובץ תמונה מסוג עבור הלוגו של הארגון</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>לוגו ארגון לא חוקי אורי שהועלו</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>לספק קובץ תמונה מסוג תמונת הכותרת</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>תמונת כותרת לא חוקית אורי שהועלו</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>הסכם הפרטיות לא חוקי אורי שהועלו</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>אירעה שגיאה בעת עיבוד בקשתך.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>שגיאה</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>פעולה לא חוקית המבוצעת.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>הסדר צריך להיות פריט מנוי אחד לפחות.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>מצב התשלום אינו נתמך</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>הצעת מחיר צריכה להיות יותר מאפס</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>חייב להיות מוגדר MicrosoftOfferId</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>המזהה להיות GUID חוקי</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>נכשל בעדכון השותף מציע התמדה</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>הצעה של Microsoft אינו מותר לעדכן. ליצור הצעה חדשה במקום זאת.</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>ההצעה לא נמצא</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>ContactUs סעיף לא נמצא בתצורת המיתוג פורטל</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>קשר לא חוקי לנו כתובת דוא</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>חוקי צרו איתנו קשר בטלפון</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>קשר מכירות דוא ל לא תקין</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>טלפון מכירות ליצירת קשר לא חוקי</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>להוסיף רישיונות נוספים</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>לא היתה אפשרות לרשום את לקוח מרכז שותף חדש</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>הבית</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>בונה חנות האינטרנט</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>מיתוג ההתקנה</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>הצעות ההתקנה</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>תשלום ההתקנה</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>היסטוריית ההזמנות</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>ניהול מנויים</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>לעבור לדף הבית</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>אוסטרליה</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>אוסטריה</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>בלגיה</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>בולגריה</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>קנדה</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>קרואטיה</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>קפריסין</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>הרפובליקה הצ\'כית</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>דנמרק</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>אסטוניה</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>פינלנד</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>צרפת</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>גרמניה</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>יוון</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>הונגריה</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>איסלנד</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>אירלנד</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>איטליה</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>יפן</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>לטביה</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>ליכטנשטיין</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>ליטא</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>לוקסמבורג</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>מלטה</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>מונאקו</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>הולנד</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>ניו זילנד</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>נורווגיה</value>
+  </data>
+  <data name="CountryNamePO" xml:space="preserve">
+    <value>פולין</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>פורטוגל</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>רומניה</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>סלובקיה</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>סלובניה</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>ספרד</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>שוודיה</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>שוויץ</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>בריטניה</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>ארצות הברית</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>שם הארגון נדרש.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>המדינה נדרשת.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>שורת כתובת 1 נדרש.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>העיר נדרש.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>השדה דוא ל הוא לא כתובת דואר אלקטרוני חוקית.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>קידומת תחום נדרש.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>שם פרטי נדרש.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>שם המשפחה נדרשת.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>מספר הטלפון נדרש.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>צא מיישום</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>פעיל</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>נמחק</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>אף אחד</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>מושעה</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>תאריך יצירה</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>שם</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>כמות</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>מצב</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>לקוחות ניהול מנויים</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>שותף ניהול מנויים</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>הזמנות</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>מכשור מפתח:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>באפשרותך לציין מפתח מכשור יישום תובנות על מנת ללכוד נתוני הטלמטריה מהפורטל.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>השימוש המבוסס על מנויים</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>הלקוחות המאושרים מראש</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>ניהול הלקוחות לעסקאות שאושרו מראש.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"בחר הכל" יסמן את כל הנוכחיים והעתידיים הלקוחות כפי שאושרו מראש לבצע בו את עסקינו בחזית החנות.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>בחר את כל</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>מאושרים מראש</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>שם הלקוח</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>שם התחום הראשי</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft מזהה</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לאחזר את פרטי הלקוח שאושרו מראש.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>עדכון מידע הלקוחות המאושרים מראש</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>מידע אודות לקוחות שאושרו מראש מעודכן</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>לא היתה אפשרות לשמור הלקוחות המאושרים מראש מידע</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>תנועה זו היא שאושרו מראש. סדר עיבוד...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>חיפוש לפי שם חברה או קבוצת מחשבים</value>
+  </data>
+</root>
