@@ -1227,4 +1227,7 @@
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
     <value>Fehler beim Verarbeitungsreihenfolge. Bitte klicken Sie auf fertig, und versuchen Sie es erneut.</value>
   </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brasilien</value>
+  </data>
 </root>

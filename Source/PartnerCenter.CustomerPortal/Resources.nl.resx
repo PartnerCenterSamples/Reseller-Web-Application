@@ -1227,4 +1227,7 @@
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
     <value>Storing in de verwerkingsvolgorde. Klik gedaan en probeer het opnieuw.</value>
   </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazilië</value>
+  </data>
 </root>
