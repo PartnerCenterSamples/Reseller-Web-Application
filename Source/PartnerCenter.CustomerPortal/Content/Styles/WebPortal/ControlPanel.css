@@ -5,7 +5,7 @@
     position: absolute;
     float: left;
     height: calc(100% - 41px);
-    width: 0px;
+    width: 0;
     min-height: 400px;
     color: #B5B5B5;
     background-color: #333333;

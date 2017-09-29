@@ -55,9 +55,9 @@
     text-decoration: none;
 }
 
-.link:hover {
-    text-decoration: underline;
-}
+    .link:hover {
+        text-decoration: underline;
+    }
 
 .center {
     text-align: center;
@@ -77,15 +77,15 @@
 }
 
 .section {
-    font-size: 32px;    
+    font-size: 32px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: inline-block;
 }
 
-.section:first-of-type {
-    margin-top: 0px;
-}
+    .section:first-of-type {
+        margin-top: 0px;
+    }
 
 .titleCell {
     float: left;
@@ -98,9 +98,9 @@
     clear: left;
 }
 
-.row:first-of-type {
-    padding-top: 0px;
-}
+    .row:first-of-type {
+        padding-top: 0px;
+    }
 
 .button {
     -webkit-border-radius: 0;
@@ -115,22 +115,22 @@
     cursor: pointer;
 }
 
-.button:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
-}
+    .button:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
 
 .border-divider {
     border-top: 1px dashed black;
 }
 
 .section-divider {
-    border-top: 1px solid gray;    
+    border-top: 1px solid gray;
 }
 
 
@@ -151,15 +151,15 @@
     cursor: pointer;
 }
 
-.submitButton:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
-}
+    .submitButton:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
 
 .error {
     color: red;
@@ -173,9 +173,9 @@
     padding-left: 2px;
 }
 
-.Required label {
-    color: red;
-}
+    .Required label {
+        color: red;
+    }
 
 .Header {
     border-bottom: 1px solid rgba(190, 190, 190, 0.5);
@@ -213,32 +213,32 @@
 
 .InputSearchField {
     height: 30px;
-    width:200px;
+    width: 200px;
     border: none;
     color: #464443;
     padding: 0px 0px 0px 0px;
-    margin:0px,0px,0px,0px;
-    align-items:center;
-    outline:none;
-     
+    margin: 0px,0px,0px,0px;
+    align-items: center;
+    outline: none;
 }
-}
-.SearchFieldSet{
-    background-color:white;
+
+.SearchFieldSet {
+    background-color: white;
     border: 1px solid rgba(200, 200, 200, 0.9);
-     padding: 0px 0px 0px 0px;
-     margin:0px,0px,0px,0px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px,0px,0px,0px;
 }
+
 .InputSearchButton {
-  background-color:white;
-  border: none;
-  cursor: pointer;
-  padding:2px,0px,0px,0px;
-  margin:4px,4px,4px,4px;
-  outline:none;
-  align-items:center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px,0px,0px,0px;
+    margin: 4px,4px,4px,4px;
+    outline: none;
+    align-items: center;
 }
- }
+
 .FullWidthInput {
     width: 700px;
     min-width: 600px;
@@ -264,10 +264,10 @@ select {
     display: inline-block;
 }
 
-.payment-total label {
-    text-align: right;
-    font-size: 24px;
-}
+    .payment-total label {
+        text-align: right;
+        font-size: 24px;
+    }
 
 .subscriptions-table {
     width: 100%;

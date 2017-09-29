@@ -1,9 +1,9 @@
 ﻿#CustomerSubscriptionsContainer {
 }
 
-#CustomerSubscriptionsContainer .subscriptions-content {
-    padding: 15px;
-}
+    #CustomerSubscriptionsContainer .subscriptions-content {
+        padding: 15px;
+    }
 
 .subscriptions-title-row {
     width: 500px;
@@ -29,25 +29,26 @@
 }
 
 .collapse_up,
-.collapse_down{
-	padding:4px 21px 4px 4px;
-	cursor:pointer;
+.collapse_down {
+    padding: 4px 21px 4px 4px;
+    cursor: pointer;
 }
 
-.collapse_up{
-	background:url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIRnC2nKLnT4or00Puy3rx7VQAAOw==) no-repeat center left !important;	
+.collapse_up {
+    background: url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIRnC2nKLnT4or00Puy3rx7VQAAOw==) no-repeat center left !important;
     background-size: 15px;
 }
 
-.collapse_down{
-	background:url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIPnI+py+0/hJzz0IruwjsVADs=) no-repeat center left !important;	
+.collapse_down {
+    background: url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIPnI+py+0/hJzz0IruwjsVADs=) no-repeat center left !important;
     background-size: 15px;
 }
 
 
-tr.SubscriptionRow {    
+tr.SubscriptionRow {
     display: table-row;
 }
+
 tr.SubscriptionHistoryRow {
     display: none;
 }
