@@ -99,7 +99,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 "es",
                 "nl",
                 "fr",
-                "ja"
+                "ja",
+                "pt"
             };
 
             List<string> portalOfferLocaleDefaults = new List<string>
@@ -109,7 +110,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 "es-ES",
                 "nl-NL",
                 "fr-FR",
-                "ja-JP"
+                "ja-JP",
+                "pt-BR"
             };
                         
             //// Examples [en-US, en-GB, en-CA] -> en-US ==> en ==> (en-US), en-GB ==> en ==> (en-US), en-CA ==> en ==> (en-US).            

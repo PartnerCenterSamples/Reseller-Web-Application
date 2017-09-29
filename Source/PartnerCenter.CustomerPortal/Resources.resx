@@ -1192,7 +1192,7 @@
     <value>Manage customers for pre-approved transactions.</value>
   </data>
   <data name="CustomerManagementSubText" xml:space="preserve">
-      <value>“Select all” will mark all current and future customers as pre-approved to transact in the store front.</value>
+    <value>“Select all” will mark all current and future customers as pre-approved to transact in the store front.</value>
   </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
     <value>Select all</value>
@@ -1226,5 +1226,8 @@
   </data>
   <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
     <value>Search by company name or domain</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazil</value>
   </data>
 </root>

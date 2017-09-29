@@ -1227,4 +1227,7 @@
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
     <value>Falta en el orden de procesamiento. Por favor, haga clic en hecho y vuelva a intentarlo.</value>
   </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brasil</value>
+  </data>
 </root>

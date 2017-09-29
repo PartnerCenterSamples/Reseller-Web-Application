@@ -1227,4 +1227,7 @@
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
     <value>処理順序に失敗しました。[完了] をクリックして、もう一度やり直してください。</value>
   </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
 </root>
