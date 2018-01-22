@@ -11,7 +11,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
-    using System.Web;
     using System.Web.Http;
     using BusinessLogic;
     using BusinessLogic.Commerce;
@@ -20,9 +19,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using Filters.WebApi;
     using Models;
     using Newtonsoft.Json;
-    using PartnerCenter.Models;
-    using PartnerCenter.Models.Customers;
-    using PartnerCenter.Models.Invoices;
     using PartnerCenter.Models.Subscriptions;
     using RequestContext;
 

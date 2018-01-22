@@ -14,7 +14,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.Mvc
     /// <summary>
     /// Augments MVC authentication by replacing the principal with a more usable customer portal principal object.
     /// </summary>
-    public class AuthenticationFilter : ActionFilterAttribute, IAuthenticationFilter
+    public sealed class AuthenticationFilter : ActionFilterAttribute, IAuthenticationFilter
     {
         /// <summary>
         /// Authenticates an incoming request.

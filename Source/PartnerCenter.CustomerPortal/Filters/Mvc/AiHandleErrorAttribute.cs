@@ -14,7 +14,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.Mvc
     /// Attribute used to track exceptions using Application Insights if it is configured.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-    public class AiHandleErrorAttribute : HandleErrorAttribute
+    public sealed class AiHandleErrorAttribute : HandleErrorAttribute
     {
         /// <summary>
         /// Called when an exception occurs.

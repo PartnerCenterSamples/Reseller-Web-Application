@@ -6,7 +6,6 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
 {
-    using System.Web;
     using System.Web.Http;
     using System.Web.Http.Controllers;
     using BusinessLogic;
@@ -14,7 +13,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
     /// <summary>
     /// Implements portal authorization for Web API controllers.
     /// </summary>
-    public class Authorize : AuthorizeAttribute
+    public sealed class Authorize : AuthorizeAttribute
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Authorize"/> class.
