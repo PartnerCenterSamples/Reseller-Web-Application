@@ -9,7 +9,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using Configuration;
     using PartnerCenter.Models.Offers;
     using RequestContext;
 

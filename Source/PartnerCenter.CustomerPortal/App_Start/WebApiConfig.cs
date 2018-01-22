@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal
-{    
+{
     using System.Web.Http;
     using System.Web.Mvc;
     using Models.Validators;

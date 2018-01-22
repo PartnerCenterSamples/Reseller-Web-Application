@@ -6,8 +6,6 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 {
-    using System;
-
     /// <summary>
     /// The base class for all domain objects.
     /// </summary>

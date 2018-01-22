@@ -13,7 +13,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.Mvc
     /// <summary>
     /// Implements portal authorization for MVC controllers.
     /// </summary>
-    public class Authorize : AuthorizeAttribute
+    public sealed class Authorize : AuthorizeAttribute
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Authorize"/> class.
@@ -28,7 +28,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.Mvc
         /// Gets or sets the user role which is allowed access.
         /// </summary>
         public UserRole UserRole { get; set; }
-        
+
         /// <summary>
         /// Authorizes an incoming request based on the user role.
         /// </summary>

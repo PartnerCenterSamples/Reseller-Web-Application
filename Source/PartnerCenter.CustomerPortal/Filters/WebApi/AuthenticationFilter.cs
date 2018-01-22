@@ -15,7 +15,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
     /// <summary>
     /// Augments Web API authentication by replacing the principal with a more usable custom principal object.
     /// </summary>
-    public class AuthenticationFilter : ActionFilterAttribute, IAuthenticationFilter
+    public sealed class AuthenticationFilter : ActionFilterAttribute, IAuthenticationFilter
     {
         /// <summary>
         /// Authenticates a web API incoming request.

@@ -20,7 +20,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
     /// <summary>
     /// A filter that handles portal errors and returns a unified error response.
     /// </summary>
-    public class ErrorHandler : ExceptionFilterAttribute
+    public sealed class ErrorHandler : ExceptionFilterAttribute
     {
         /// <summary>
         /// Intercepts unhandled exceptions and crafts the error response appropriately.

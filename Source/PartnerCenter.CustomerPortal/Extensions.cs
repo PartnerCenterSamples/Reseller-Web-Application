@@ -10,9 +10,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
     using System.Globalization;
     using System.Net;
     using System.Net.Http;
-    using System.Text.RegularExpressions;
     using System.Threading;
-    using BusinessLogic.Exceptions;    
+    using BusinessLogic.Exceptions;
 
     /// <summary>
     /// Groups useful extension methods.
