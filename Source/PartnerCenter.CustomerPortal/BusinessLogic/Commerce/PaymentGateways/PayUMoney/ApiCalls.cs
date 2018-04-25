@@ -9,8 +9,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
     using System.Collections.Specialized;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic;
-    using Microsoft.Store.PartnerCenter.CustomerPortal.Models;
+    using BusinessLogic;
+    using Models;
 
     /// <summary>
     /// class definition

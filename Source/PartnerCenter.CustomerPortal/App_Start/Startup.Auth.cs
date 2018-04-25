@@ -13,8 +13,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
     using Azure.ActiveDirectory.GraphClient;
     using BusinessLogic;
     using Configuration;
-    using Exceptions;
     using IdentityModel.Clients.ActiveDirectory;
+    using IdentityModel.Tokens;
     using global::Owin;
     using Owin.Security;
     using Owin.Security.Cookies;
@@ -45,7 +45,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                 {
                     ClientId = ApplicationConfiguration.ActiveDirectoryClientID,
                     Authority = ApplicationConfiguration.ActiveDirectoryEndPoint + "common",
-                    TokenValidationParameters = new System.IdentityModel.Tokens.TokenValidationParameters
+                    TokenValidationParameters = new TokenValidationParameters
                     {
                         // instead of using the default validation (validating against a single issuer value, as we do in line of business apps), 
                         // we inject our own multitenant validation logic

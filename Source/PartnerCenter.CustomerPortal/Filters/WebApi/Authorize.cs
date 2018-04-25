@@ -6,7 +6,6 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Filters.WebApi
 {
-    using System.Web;
     using System.Web.Http;
     using System.Web.Http.Controllers;
     using BusinessLogic;

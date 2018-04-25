@@ -6,14 +6,11 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
 {
-    using System;
-    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
     using Exceptions;
     using Models;
     using Newtonsoft.Json;
-    using WindowsAzure.Storage.Blob;
     using WindowsAzure.Storage.Table;
 
     /// <summary>

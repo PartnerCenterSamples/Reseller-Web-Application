@@ -15,7 +15,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
     using Models;
     using Newtonsoft.Json;
     using RequestContext;
-    using WindowsAzure.Storage.Blob;    
+    using WindowsAzure.Storage.Blob;
 
     /// <summary>
     /// Encapsulates the behavior of offers a partner has configured to sell to their customers.

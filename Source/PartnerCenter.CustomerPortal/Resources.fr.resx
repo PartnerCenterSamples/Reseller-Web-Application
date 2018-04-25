@@ -1197,9 +1197,6 @@
   <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
     <value>Paiement traitement de l’information recueillie, désormais arrêté...</value>
   </data>
-  <data name="CopyRight" xml:space="preserve">
-    <value>Copyright ©2017.</value>
-  </data>
   <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
     <value>Aucune offre trouvée</value>
   </data>
@@ -1265,5 +1262,8 @@
   </data>
   <data name="PayUWebsiteCaption" xml:space="preserve">
     <value>payumoney.com</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2018</value>
   </data>
 </root>

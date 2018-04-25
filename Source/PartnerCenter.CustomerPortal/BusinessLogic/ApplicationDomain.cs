@@ -10,7 +10,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
     using System.Threading.Tasks;
     using Commerce;
     using Configuration;
-    using Customers;
     using Offers;
     using PartnerCenter.Extensions;
 

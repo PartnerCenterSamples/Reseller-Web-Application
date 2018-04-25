@@ -22,7 +22,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using Newtonsoft.Json;
     using PartnerCenter.Models;
     using PartnerCenter.Models.Customers;
-    
+
     /// <summary>
     /// Manages customer orders.
     /// </summary>    

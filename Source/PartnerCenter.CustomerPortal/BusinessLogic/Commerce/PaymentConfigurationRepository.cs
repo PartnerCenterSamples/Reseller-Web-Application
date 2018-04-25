@@ -6,7 +6,6 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 {
-    using System;
     using System.Linq;
     using System.Threading.Tasks;
     using Exceptions;
