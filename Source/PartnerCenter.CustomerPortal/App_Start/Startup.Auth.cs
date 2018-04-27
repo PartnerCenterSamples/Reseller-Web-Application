@@ -75,7 +75,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
 
                             // acquire a graph token to manage the user tenant
                             Uri serviceRoot = new Uri(new Uri(ApplicationConfiguration.ActiveDirectoryGraphEndPoint), userTenantId);
-                            ActiveDirectoryClient userAdClient = new ActiveDirectoryClient(serviceRoot, async () => await Task.FromResult(userAuthResult.AccessToken));
+                            ActiveDirectoryClient userAdClient = new ActiveDirectoryClient(serviceRoot, async () => await Task.FromResult(userAuthResult.AccessToken).ConfigureAwait(false));
 
                             // add the user roles to the claims
                             var userMemberships = userAdClient.Users.GetByObjectId(signedInUserObjectId).MemberOf.ExecuteAsync().Result;
@@ -95,7 +95,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                                 string partnerCenterCustomerId = string.Empty;
 
                                 // Check to see if this login came from the tenant of a customer of the partner
-                                var customerDetails = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(userTenantId).GetAsync();
+                                var customerDetails = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(userTenantId).GetAsync().ConfigureAwait(false);
 
                                 // indeed a customer
                                 partnerCenterCustomerId = customerDetails.Id;

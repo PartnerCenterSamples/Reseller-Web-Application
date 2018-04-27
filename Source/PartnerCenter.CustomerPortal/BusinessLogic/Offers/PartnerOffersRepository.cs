@@ -51,7 +51,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
         /// <returns>True if the offers were configured and stored, false otherwise.</returns>
         public async Task<bool> IsConfiguredAsync()
         {
-            return (await this.RetrieveAsync()).Where(offer => offer.IsInactive == false).Count() > 0;
+            return (await this.RetrieveAsync().ConfigureAwait(false)).Where(offer => offer.IsInactive == false).Count() > 0;
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
         public async Task<IEnumerable<MicrosoftOffer>> RetrieveMicrosoftOffersAsync()
         {
             var microsoftOffers = await this.ApplicationDomain.CachingService
-                .FetchAsync<List<MicrosoftOffer>>(PartnerOffersRepository.MicrosoftOffersCacheKey);
+                .FetchAsync<List<MicrosoftOffer>>(MicrosoftOffersCacheKey).ConfigureAwait(false);
 
             if (microsoftOffers == null)
             {
@@ -69,7 +69,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
                 var localeSpecificPartnerCenterClient = this.ApplicationDomain.PartnerCenterClient.With(RequestContextFactory.Instance.Create(this.ApplicationDomain.PortalLocalization.OfferLocale));
 
                 // Offers.ByCountry is required to pull country / region specific offers. 
-                var partnerCenterOffers = await localeSpecificPartnerCenterClient.Offers.ByCountry(this.ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync();
+                var partnerCenterOffers = await localeSpecificPartnerCenterClient.Offers.ByCountry(this.ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync().ConfigureAwait(false);
 
                 var eligibleOffers = partnerCenterOffers?.Items.Where(offer =>
                     !offer.IsAddOn &&
@@ -83,15 +83,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
                     microsoftOffers.Add(new MicrosoftOffer()
                     {
                         Offer = partnerCenterOffer,
-                        ThumbnailUri = new Uri(await this.ApplicationDomain.MicrosoftOfferLogoIndexer.GetOfferLogoUriAsync(partnerCenterOffer), UriKind.Relative)
+                        ThumbnailUri = new Uri(await this.ApplicationDomain.MicrosoftOfferLogoIndexer.GetOfferLogoUriAsync(partnerCenterOffer).ConfigureAwait(false), UriKind.Relative)
                     });
                 }
 
                 // cache the Microsoft offers for one day
-                await this.ApplicationDomain.CachingService.StoreAsync<List<MicrosoftOffer>>(
-                    PartnerOffersRepository.MicrosoftOffersCacheKey,
+                await this.ApplicationDomain.CachingService.StoreAsync(
+                    MicrosoftOffersCacheKey,
                     microsoftOffers,
-                    TimeSpan.FromDays(1));
+                    TimeSpan.FromDays(1)).ConfigureAwait(false);
             }
 
             return microsoftOffers;
@@ -124,7 +124,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
         public async Task<IEnumerable<PartnerOffer>> RetrieveAsync()
         {
             var partnerOffers = await this.ApplicationDomain.CachingService
-                .FetchAsync<List<PartnerOffer>>(PartnerOffersRepository.PartnerOffersCacheKey);
+                .FetchAsync<List<PartnerOffer>>(PartnerOffersCacheKey).ConfigureAwait(false);
 
             if (partnerOffers == null)
             {
@@ -156,9 +156,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
                 partnerOffers = partnerOffers ?? new List<PartnerOffer>();
 
                 // cache the partner offers
-                await this.ApplicationDomain.CachingService.StoreAsync<List<PartnerOffer>>(
-                    PartnerOffersRepository.PartnerOffersCacheKey,
-                    partnerOffers);
+                await this.ApplicationDomain.CachingService.StoreAsync(
+                    PartnerOffersCacheKey,
+                    partnerOffers).ConfigureAwait(false);
             }
 
             return partnerOffers;
@@ -178,11 +178,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
 
             newPartnerOffer.Id = Guid.NewGuid().ToString();
 
-            ICollection<PartnerOffer> allPartnerOffers = new List<PartnerOffer>(await this.RetrieveAsync());
+            ICollection<PartnerOffer> allPartnerOffers = new List<PartnerOffer>(await this.RetrieveAsync().ConfigureAwait(false));
             new PartnerOfferNormalizer().Normalize(newPartnerOffer);
             allPartnerOffers.Add(newPartnerOffer);
 
-            await this.UpdateAsync(allPartnerOffers);
+            await this.UpdateAsync(allPartnerOffers).ConfigureAwait(false);
 
             return newPartnerOffer;
         }
@@ -199,7 +199,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
                 throw new ArgumentNullException(nameof(partnerOfferUpdate));
             }
 
-            IList<PartnerOffer> allPartnerOffers = new List<PartnerOffer>(await this.RetrieveAsync());
+            IList<PartnerOffer> allPartnerOffers = new List<PartnerOffer>(await this.RetrieveAsync().ConfigureAwait(false));
             new PartnerOfferNormalizer().Normalize(partnerOfferUpdate);
 
             var existingPartnerOffer = allPartnerOffers.Where(offer => offer.Id == partnerOfferUpdate.Id).FirstOrDefault();
@@ -217,7 +217,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
 
             allPartnerOffers[allPartnerOffers.IndexOf(existingPartnerOffer)] = partnerOfferUpdate;
 
-            await this.UpdateAsync(allPartnerOffers);
+            await this.UpdateAsync(allPartnerOffers).ConfigureAwait(false);
 
             return partnerOfferUpdate;
         }

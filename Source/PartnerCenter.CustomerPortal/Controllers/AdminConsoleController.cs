@@ -36,11 +36,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<AdminConsoleViewModel> GetAdminConsoleStatus()
         {
-            AdminConsoleViewModel adminConsoleViewModel = new AdminConsoleViewModel();
-
-            adminConsoleViewModel.IsOffersConfigured = await ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync();
-            adminConsoleViewModel.IsBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync();
-            adminConsoleViewModel.IsPaymentConfigured = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync();
+            AdminConsoleViewModel adminConsoleViewModel = new AdminConsoleViewModel
+            {
+                IsOffersConfigured = await ApplicationDomain.Instance.OffersRepository.IsConfiguredAsync().ConfigureAwait(false),
+                IsBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync().ConfigureAwait(false),
+                IsPaymentConfigured = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync().ConfigureAwait(false)
+            };
 
             return adminConsoleViewModel;
         }
@@ -53,7 +54,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<BrandingConfiguration> GetBrandingConfiguration()
         {
-            return await ApplicationDomain.Instance.PortalBranding.RetrieveAsync();
+            return await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -148,14 +149,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 brandingConfiguration.InstrumentationKey = HttpContext.Current.Request.Form["InstrumentationKey"];
             }
 
-            var updatedBrandingConfiguration = await ApplicationDomain.Instance.PortalBranding.UpdateAsync(brandingConfiguration);
-            bool isPaymentConfigurationSetup = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync();
+            var updatedBrandingConfiguration = await ApplicationDomain.Instance.PortalBranding.UpdateAsync(brandingConfiguration).ConfigureAwait(false);
+            bool isPaymentConfigurationSetup = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync().ConfigureAwait(false);
             if (isPaymentConfigurationSetup)
             {
                 // update the web experience profile. 
-                var paymentConfiguration = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync();
+                var paymentConfiguration = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync().ConfigureAwait(false);
                 paymentConfiguration.WebExperienceProfileId = PaymentGatewayConfig.GetPaymentGatewayInstance(ApplicationDomain.Instance, "retrieve payment").CreateWebExperienceProfile(paymentConfiguration, updatedBrandingConfiguration, ApplicationDomain.Instance.PortalLocalization.CountryIso2Code);
-                await ApplicationDomain.Instance.PaymentConfigurationRepository.UpdateAsync(paymentConfiguration);
+                await ApplicationDomain.Instance.PaymentConfigurationRepository.UpdateAsync(paymentConfiguration).ConfigureAwait(false);
             }
 
             return updatedBrandingConfiguration;
@@ -169,7 +170,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<IEnumerable<PartnerOffer>> GetOffers()
         {
-            return (await ApplicationDomain.Instance.OffersRepository.RetrieveAsync()).Where(offer => offer.IsInactive == false);
+            return (await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false)).Where(offer => offer.IsInactive == false);
         }
 
         /// <summary>
@@ -181,7 +182,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpPost]
         public async Task<PartnerOffer> AddOffer(PartnerOffer newPartnerOffer)
         {
-            return await ApplicationDomain.Instance.OffersRepository.AddAsync(newPartnerOffer);
+            return await ApplicationDomain.Instance.OffersRepository.AddAsync(newPartnerOffer).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -193,7 +194,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpPut]
         public async Task<PartnerOffer> UpdateOffer(PartnerOffer partnerOffer)
         {
-            return await ApplicationDomain.Instance.OffersRepository.UpdateAsync(partnerOffer);
+            return await ApplicationDomain.Instance.OffersRepository.UpdateAsync(partnerOffer).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -205,7 +206,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpPost]
         public async Task<IEnumerable<PartnerOffer>> DeleteOffers(List<PartnerOffer> partnerOffersToDelete)
         {
-            return (await ApplicationDomain.Instance.OffersRepository.MarkAsDeletedAsync(partnerOffersToDelete)).Where(offer => offer.IsInactive == false);
+            return (await ApplicationDomain.Instance.OffersRepository.MarkAsDeletedAsync(partnerOffersToDelete).ConfigureAwait(false)).Where(offer => offer.IsInactive == false);
         }
 
         /// <summary>
@@ -216,7 +217,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("MicrosoftOffers")]
         public async Task<IEnumerable<MicrosoftOffer>> GetMicrosoftOffers()
         {
-            return await ApplicationDomain.Instance.OffersRepository.RetrieveMicrosoftOffersAsync();
+            return await ApplicationDomain.Instance.OffersRepository.RetrieveMicrosoftOffersAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -227,7 +228,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("Payment")]
         public async Task<PaymentConfiguration> GetPaymentConfiguration()
         {
-            return await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync();
+            return await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -244,16 +245,16 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             paymentGateway.ValidateConfiguration(paymentConfiguration);
 
             // check if branding configuration has been setup else don't create web experience profile. 
-            bool isBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync();
+            bool isBrandingConfigured = await ApplicationDomain.Instance.PortalBranding.IsConfiguredAsync().ConfigureAwait(false);
             if (isBrandingConfigured)
             {
                 // create a web experience profile using the branding for the web store. 
-                BrandingConfiguration brandConfig = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync();
+                BrandingConfiguration brandConfig = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
                 paymentConfiguration.WebExperienceProfileId = paymentGateway.CreateWebExperienceProfile(paymentConfiguration, brandConfig, ApplicationDomain.Instance.PortalLocalization.CountryIso2Code);
             }
 
             // Save the validated & complete payment configuration to repository.
-            PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.UpdateAsync(paymentConfiguration);
+            PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.UpdateAsync(paymentConfiguration).ConfigureAwait(false);
 
             return paymentConfig;
         }
@@ -266,7 +267,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [Route("PreApprovedCustomers")]
         public async Task<PreApprovedCustomersViewModel> GetPreApprovedCustomers()
         {
-            return await ApplicationDomain.Instance.PreApprovedCustomersRepository.RetrieveCustomerDetailsAsync();
+            return await ApplicationDomain.Instance.PreApprovedCustomersRepository.RetrieveCustomerDetailsAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -279,7 +280,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         public async Task<PreApprovedCustomersViewModel> UpdatePreApprovedCustomersConfiguration(PreApprovedCustomersViewModel preApprovedCustomers)
         {
             // Save to repository.
-            PreApprovedCustomersViewModel updatedCustomers = await ApplicationDomain.Instance.PreApprovedCustomersRepository.UpdateAsync(preApprovedCustomers);
+            PreApprovedCustomersViewModel updatedCustomers = await ApplicationDomain.Instance.PreApprovedCustomersRepository.UpdateAsync(preApprovedCustomers).ConfigureAwait(false);
 
             return updatedCustomers;
         }

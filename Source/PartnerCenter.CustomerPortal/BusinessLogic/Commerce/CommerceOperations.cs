@@ -74,7 +74,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             // use the normalizer to validate the order. 
             OrderNormalizer orderNormalizer = new OrderNormalizer(this.ApplicationDomain, order);
-            order = await orderNormalizer.NormalizePurchaseSubscriptionOrderAsync();
+            order = await orderNormalizer.NormalizePurchaseSubscriptionOrderAsync().ConfigureAwait(false);
 
             // build the purchase line items. 
             List<PurchaseLineItem> purchaseLineItems = new List<PurchaseLineItem>();
@@ -87,7 +87,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             }
             
             // associate line items in order to partner offers. 
-            var lineItemsWithOffers = await this.AssociateWithPartnerOffersAsync(purchaseLineItems);
+            var lineItemsWithOffers = await this.AssociateWithPartnerOffersAsync(purchaseLineItems).ConfigureAwait(false);
             ICollection<IBusinessTransaction> subTransactions = new List<IBusinessTransaction>();            
 
             // prepare payment authorization
@@ -116,7 +116,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             subTransactions.Add(capturePayment);
             
             // build an aggregated transaction from the previous steps and execute it as a whole
-            await CommerceOperations.RunAggregatedTransaction(subTransactions);
+            await RunAggregatedTransaction(subTransactions);
             
             return new TransactionResult(persistSubscriptionsAndPurchases.Result, DateTime.UtcNow);
         }
@@ -161,7 +161,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             subTransactions.Add(new CapturePayment(this.PaymentGateway, () => paymentAuthorization.Result));
             
             // build an aggregated transaction from the previous steps and execute it as a whole
-            await CommerceOperations.RunAggregatedTransaction(subTransactions);
+            await CommerceOperations.RunAggregatedTransaction(subTransactions).ConfigureAwait(false);
             
             var additionalSeatsPurchaseResult = new TransactionResultLineItem(
                 subscriptionId, 

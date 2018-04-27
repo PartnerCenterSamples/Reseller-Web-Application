@@ -77,13 +77,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
         {
             if (bundler == null)
             {
-                throw new ArgumentNullException("bundler", "null bundler passed in");
+                throw new ArgumentNullException(nameof(bundler), "null bundler passed in");
             }
 
             bundler.Clear();
 
-            Assets startUpAssets = await this.AggregateStartupAssets();
-            Assets nonStartUpAssets = await this.AggregateNonStartupAssets();
+            Assets startUpAssets = await this.AggregateStartupAssets().ConfigureAwait(false);
+            Assets nonStartUpAssets = await this.AggregateNonStartupAssets().ConfigureAwait(false);
 
             // build the start up javascript and css files and bundle them
             List<string> startupClasses = new List<string>(startUpAssets.JavaScript);

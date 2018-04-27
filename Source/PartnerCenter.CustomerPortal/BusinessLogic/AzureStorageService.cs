@@ -155,7 +155,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                     blobPrefix,
                     new Random().Next().ToString()));
             }
-            while (await newBlob.ExistsAsync());
+            while (await newBlob.ExistsAsync().ConfigureAwait(false));
 
             return newBlob;
         }
@@ -169,10 +169,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.privateBlobContainer == null)
             {
                 CloudBlobClient blobClient = this.storageAccount.CreateCloudBlobClient();
-                this.privateBlobContainer = blobClient.GetContainerReference(AzureStorageService.PrivatePortalAssetsBlobContainerName);
+                this.privateBlobContainer = blobClient.GetContainerReference(PrivatePortalAssetsBlobContainerName);
             }
 
-            await this.privateBlobContainer.CreateIfNotExistsAsync();
+            await this.privateBlobContainer.CreateIfNotExistsAsync().ConfigureAwait(false);
             return this.privateBlobContainer;
         }
 
@@ -185,17 +185,17 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.publicBlobContainer == null)
             {
                 CloudBlobClient blobClient = this.storageAccount.CreateCloudBlobClient();
-                this.publicBlobContainer = blobClient.GetContainerReference(AzureStorageService.PublicPortalAssetsBlobContainerName);                
+                this.publicBlobContainer = blobClient.GetContainerReference(PublicPortalAssetsBlobContainerName);                
             }
 
-            if (!await this.publicBlobContainer.ExistsAsync())
+            if (!await this.publicBlobContainer.ExistsAsync().ConfigureAwait(false))
             {
-                await this.publicBlobContainer.CreateAsync();
+                await this.publicBlobContainer.CreateAsync().ConfigureAwait(false);
 
-                var permissions = await this.publicBlobContainer.GetPermissionsAsync();
+                var permissions = await this.publicBlobContainer.GetPermissionsAsync().ConfigureAwait(false);
                 permissions.PublicAccess = BlobContainerPublicAccessType.Blob;
 
-                await this.publicBlobContainer.SetPermissionsAsync(permissions);
+                await this.publicBlobContainer.SetPermissionsAsync(permissions).ConfigureAwait(false);
             }
 
             return this.publicBlobContainer;
@@ -210,11 +210,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.partnerCenterCustomersTable == null)
             {                
                 CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.partnerCenterCustomersTable = tableClient.GetTableReference(AzureStorageService.CustomersTableName);
+                this.partnerCenterCustomersTable = tableClient.GetTableReference(CustomersTableName);
             }
 
             // someone can delete the table externally
-            await this.partnerCenterCustomersTable.CreateIfNotExistsAsync();
+            await this.partnerCenterCustomersTable.CreateIfNotExistsAsync().ConfigureAwait(false);
             return this.partnerCenterCustomersTable;
         }
 
@@ -227,11 +227,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.customerSubscriptionsTable == null)
             {
                 CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.customerSubscriptionsTable = tableClient.GetTableReference(AzureStorageService.CustomerSubscriptionsTableName);
+                this.customerSubscriptionsTable = tableClient.GetTableReference(CustomerSubscriptionsTableName);
             }
 
             // someone can delete the table externally
-            await this.customerSubscriptionsTable.CreateIfNotExistsAsync();
+            await this.customerSubscriptionsTable.CreateIfNotExistsAsync().ConfigureAwait(false);
             return this.customerSubscriptionsTable;
         }
 
@@ -244,11 +244,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.customerPurchasesTable == null)
             {
                 CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.customerPurchasesTable = tableClient.GetTableReference(AzureStorageService.CustomerPurchasesTableName);
+                this.customerPurchasesTable = tableClient.GetTableReference(CustomerPurchasesTableName);
             }
 
             // someone can delete the table externally
-            await this.customerPurchasesTable.CreateIfNotExistsAsync();
+            await this.customerPurchasesTable.CreateIfNotExistsAsync().ConfigureAwait(false);
             return this.customerPurchasesTable;
         }
 

@@ -67,10 +67,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             subscriptionId.AssertNotEmpty(nameof(subscriptionId)); // is Required for the commerce operation.             
 
             // grab the customer subscription from our store
-            var subscriptionToAugment = await this.GetSubscriptionAsync(subscriptionId, order.CustomerId);
+            var subscriptionToAugment = await this.GetSubscriptionAsync(subscriptionId, order.CustomerId).ConfigureAwait(false);
 
             // retrieve the partner offer this subscription relates to, we need to know the current price
-            var partnerOffer = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync(subscriptionToAugment.PartnerOfferId);
+            var partnerOffer = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync(subscriptionToAugment.PartnerOfferId).ConfigureAwait(false);
 
             if (partnerOffer.IsInactive)
             {
@@ -80,22 +80,24 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
 
             // retrieve the subscription from Partner Center
             var subscriptionOperations = ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(order.CustomerId).Subscriptions.ById(subscriptionId);
-            var partnerCenterSubscription = await subscriptionOperations.GetAsync();
+            var partnerCenterSubscription = await subscriptionOperations.GetAsync().ConfigureAwait(false);
 
-            List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
-            resultOrderSubscriptions.Add(new OrderSubscriptionItemViewModel()
+            List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>
             {
-                OfferId = subscriptionId,
-                SubscriptionId = subscriptionId,
-                PartnerOfferId = subscriptionToAugment.PartnerOfferId,
-                SubscriptionExpiryDate = subscriptionToAugment.ExpiryDate,
-                Quantity = partnerCenterSubscription.Quantity,
-                SeatPrice = partnerOffer.Price,
-                SubscriptionName = partnerOffer.Title
-            });
+                new OrderSubscriptionItemViewModel()
+                {
+                    OfferId = subscriptionId,
+                    SubscriptionId = subscriptionId,
+                    PartnerOfferId = subscriptionToAugment.PartnerOfferId,
+                    SubscriptionExpiryDate = subscriptionToAugment.ExpiryDate,
+                    Quantity = partnerCenterSubscription.Quantity,
+                    SeatPrice = partnerOffer.Price,
+                    SubscriptionName = partnerOffer.Title
+                }
+            };
 
             orderResult.Subscriptions = resultOrderSubscriptions;
-            return await Task.FromResult(orderResult);
+            return await Task.FromResult(orderResult).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -127,7 +129,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             }
 
             // retrieve all the partner offers to match against them
-            IEnumerable<PartnerOffer> allPartnerOffers = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync();
+            IEnumerable<PartnerOffer> allPartnerOffers = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false);
 
             List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
             foreach (var lineItem in orderSubscriptions)
@@ -219,20 +221,22 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             decimal proratedSeatCharge = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscriptionToAugment.ExpiryDate, partnerOffer.Price), Resources.Culture.NumberFormat.CurrencyDecimalDigits);
             decimal totalCharge = Math.Round(proratedSeatCharge * seatsToPurchase, Resources.Culture.NumberFormat.CurrencyDecimalDigits);
 
-            List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
-            resultOrderSubscriptions.Add(new OrderSubscriptionItemViewModel()
+            List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>
             {
-                OfferId = subscriptionId,
-                SubscriptionId = subscriptionId,
-                PartnerOfferId = subscriptionToAugment.PartnerOfferId,
-                SubscriptionExpiryDate = subscriptionToAugment.ExpiryDate,
-                Quantity = seatsToPurchase,
-                SeatPrice = proratedSeatCharge,
-                SubscriptionName = partnerOffer.Title
-            });
+                new OrderSubscriptionItemViewModel()
+                {
+                    OfferId = subscriptionId,
+                    SubscriptionId = subscriptionId,
+                    PartnerOfferId = subscriptionToAugment.PartnerOfferId,
+                    SubscriptionExpiryDate = subscriptionToAugment.ExpiryDate,
+                    Quantity = seatsToPurchase,
+                    SeatPrice = proratedSeatCharge,
+                    SubscriptionName = partnerOffer.Title
+                }
+            };
 
             orderResult.Subscriptions = resultOrderSubscriptions;
-            return await Task.FromResult(orderResult);
+            return await Task.FromResult(orderResult).ConfigureAwait(false);
         }
 
         /// <summary>

@@ -62,12 +62,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
         {
             try
             {
-                var partnerCenterSubscription = await this.SubscriptionOperations.GetAsync();
+                var partnerCenterSubscription = await this.SubscriptionOperations.GetAsync().ConfigureAwait(false);
 
                 this.originalSeatCount = partnerCenterSubscription.Quantity;
                 partnerCenterSubscription.Quantity += this.SeatsToPurchase;
 
-                this.Result = await this.SubscriptionOperations.PatchAsync(partnerCenterSubscription);
+                this.Result = await this.SubscriptionOperations.PatchAsync(partnerCenterSubscription).ConfigureAwait(false);
             }
             catch (PartnerException subscriptionUpdateProblem)
             {
@@ -94,7 +94,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 {
                     // restore the original seat count for the subscription
                     this.Result.Quantity = this.originalSeatCount;
-                    await this.SubscriptionOperations.PatchAsync(this.Result);
+                    await this.SubscriptionOperations.PatchAsync(this.Result).ConfigureAwait(false);
                 }
                 catch (Exception subscriptionUpdateProblem)
                 {

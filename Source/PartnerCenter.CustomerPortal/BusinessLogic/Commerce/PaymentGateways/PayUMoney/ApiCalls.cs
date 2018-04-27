@@ -15,7 +15,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
     /// <summary>
     /// class definition
     /// </summary>
-    public class ApiCalls
+    public sealed class ApiCalls
     {
         /// <summary>
         /// Http client object to call web API
@@ -29,11 +29,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <returns>returns PayUMoneyPaymentResponse.</returns>
         public static async Task<PaymentResponse> GetPaymentDetails(string paymentId)
         {
-            PaymentConfiguration payconfig = await GetPaymentConfigAsync();
-            NameValueCollection header = new NameValueCollection();
-            header.Add("Authorization", payconfig.WebExperienceProfileId);
-            PaymentResponse response = await PostAsync<PaymentResponse>(header, string.Format(Constant.PaymentResponseUrl, payconfig.ClientId, paymentId));
-            return await Task.FromResult(response);
+            PaymentConfiguration payconfig = await GetPaymentConfigAsync().ConfigureAwait(false);
+            NameValueCollection header = new NameValueCollection
+            {
+                { "Authorization", payconfig.WebExperienceProfileId }
+            };
+            PaymentResponse response = await PostAsync<PaymentResponse>(header, string.Format(Constant.PaymentResponseUrl, payconfig.ClientId, paymentId)).ConfigureAwait(false);
+            return await Task.FromResult(response).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -43,11 +45,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <returns>returns transaction response.</returns>
         public static async Task<TransactionStatusResponse> GetPaymentStatus(string paymentId)
         {
-            PaymentConfiguration payconfig = await GetPaymentConfigAsync();
-            NameValueCollection header = new NameValueCollection();
-            header.Add("Authorization", payconfig.WebExperienceProfileId);
-            TransactionStatusResponse response = await PostAsync<TransactionStatusResponse>(header, string.Format(Constant.PaymentStatusUrl, payconfig.ClientId, paymentId));
-            return await Task.FromResult(response);
+            PaymentConfiguration payconfig = await GetPaymentConfigAsync().ConfigureAwait(false);
+            NameValueCollection header = new NameValueCollection
+            {
+                { "Authorization", payconfig.WebExperienceProfileId }
+            };
+            TransactionStatusResponse response = await PostAsync<TransactionStatusResponse>(header, string.Format(Constant.PaymentStatusUrl, payconfig.ClientId, paymentId)).ConfigureAwait(false);
+            return await Task.FromResult(response).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -58,11 +62,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <returns>returns PayUMoneyRefundResponse.</returns>
         public static async Task<RefundResponse> RefundPayment(string paymentId, string amount)
         {
-            PaymentConfiguration payconfig = await GetPaymentConfigAsync();
-            NameValueCollection header = new NameValueCollection();
-            header.Add("Authorization", payconfig.WebExperienceProfileId);
-            RefundResponse response = await PostAsync<RefundResponse>(header, string.Format(Constant.PaymentRefundUrl, payconfig.ClientId, paymentId, amount));
-            return await Task.FromResult(response);
+            PaymentConfiguration payconfig = await GetPaymentConfigAsync().ConfigureAwait(false);
+            NameValueCollection header = new NameValueCollection
+            {
+                { "Authorization", payconfig.WebExperienceProfileId }
+            };
+            RefundResponse response = await PostAsync<RefundResponse>(header, string.Format(Constant.PaymentRefundUrl, payconfig.ClientId, paymentId, amount)).ConfigureAwait(false);
+            return await Task.FromResult(response).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -71,7 +77,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <returns>return payment configuration</returns>
         private static async Task<PaymentConfiguration> GetPaymentConfigAsync()
         {
-            PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync();
+            PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync().ConfigureAwait(false);
 
             return paymentConfig;
         }
@@ -89,10 +95,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             message.Headers.Add("Accept", "application/json");
             message.Headers.TryAddWithoutValidation("Authorization", header.Get("Authorization"));
             T data = default(T);
-            HttpResponseMessage response = await client.SendAsync(message);
+            HttpResponseMessage response = await client.SendAsync(message).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
-                data = await response.Content.ReadAsAsync<T>();
+                data = await response.Content.ReadAsAsync<T>().ConfigureAwait(false);
             }
 
             return data;

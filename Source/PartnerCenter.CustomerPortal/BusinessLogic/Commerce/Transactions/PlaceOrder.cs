@@ -61,7 +61,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
             try
             {
                 // place the order
-                this.Result = await this.Customer.Orders.CreateAsync(this.Order);
+                this.Result = await this.Customer.Orders.CreateAsync(this.Order).ConfigureAwait(false);
             }
             catch (PartnerException orderPlacingProblem)
             {
@@ -91,12 +91,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                     try
                     {
                         var subscriptionOperations = this.Customer.Subscriptions.ById(orderLineItem.SubscriptionId);
-                        var subscriptionToSuspend = await subscriptionOperations.GetAsync();
+                        var subscriptionToSuspend = await subscriptionOperations.GetAsync().ConfigureAwait(false);
 
                         subscriptionToSuspend.Status = SubscriptionStatus.Suspended;
                         subscriptionToSuspend.FriendlyName = subscriptionToSuspend.FriendlyName.Replace(Resources.UnpaidSubscriptionSuffix, string.Empty) + Resources.UnpaidSubscriptionSuffix;
 
-                        Subscription patchedSubscription = await subscriptionOperations.PatchAsync(subscriptionToSuspend);
+                        Subscription patchedSubscription = await subscriptionOperations.PatchAsync(subscriptionToSuspend).ConfigureAwait(false);
 
                         Trace.TraceInformation("Suspended subscription: {0}", orderLineItem.SubscriptionId);
                     }
@@ -115,7 +115,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
 
                 try
                 {
-                    await Task.WhenAll(suspensionTasks);
+                    await Task.WhenAll(suspensionTasks).ConfigureAwait(false);
                 }
                 catch (Exception exception)
                 {

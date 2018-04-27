@@ -33,14 +33,16 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var getMicrosoftOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveMicrosoftOffersAsync();
             var getPartnerOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveAsync();
 
-            await Task.WhenAll(isBrandingConfigured, isOffersConfigured, isPaymentConfigured);
+            await Task.WhenAll(isBrandingConfigured, isOffersConfigured, isPaymentConfigured).ConfigureAwait(false);
 
-            var offerCatalogViewModel = new OfferCatalogViewModel();
-            offerCatalogViewModel.IsPortalConfigured = isBrandingConfigured.Result && isOffersConfigured.Result && isPaymentConfigured.Result;
+            var offerCatalogViewModel = new OfferCatalogViewModel
+            {
+                IsPortalConfigured = isBrandingConfigured.Result && isOffersConfigured.Result && isPaymentConfigured.Result
+            };
 
             if (offerCatalogViewModel.IsPortalConfigured)
             {
-                await Task.WhenAll(getMicrosoftOffersTask, getPartnerOffersTask);
+                await Task.WhenAll(getMicrosoftOffersTask, getPartnerOffersTask).ConfigureAwait(false);
 
                 var microsoftOffers = getMicrosoftOffersTask.Result;
                 var partnerOffers = getPartnerOffersTask.Result.Where(offer => offer.IsInactive == false);

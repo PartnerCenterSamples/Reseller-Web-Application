@@ -53,7 +53,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
         /// <returns>A task.</returns>
         public async Task ExecuteAsync()
         {
-            this.Result = await this.CustomerPurchasesRepository.AddAsync(this.CustomerPurchaseToPersist);
+            this.Result = await this.CustomerPurchasesRepository.AddAsync(this.CustomerPurchaseToPersist).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 try
                 {
                     // delete the inserted row
-                    await this.CustomerPurchasesRepository.DeleteAsync(this.Result);
+                    await this.CustomerPurchasesRepository.DeleteAsync(this.Result).ConfigureAwait(false);
                 }
                 catch (Exception deletionProblem)
                 {

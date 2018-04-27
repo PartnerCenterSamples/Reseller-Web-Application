@@ -42,7 +42,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.WebPortal
         {
             if (defaults == null)
             {
-                throw new ArgumentNullException("defaults", "defaults cannot be null");
+                throw new ArgumentNullException(nameof(defaults), "defaults cannot be null");
             }
 
             defaults.Validate();

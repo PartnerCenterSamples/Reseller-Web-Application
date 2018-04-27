@@ -118,7 +118,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
             this.bulkSubscriptionPersistenceTransaction = new SequentialAggregateTransaction(persistenceTransactions);
 
             // execute it!
-            await this.bulkSubscriptionPersistenceTransaction.ExecuteAsync();
+            await this.bulkSubscriptionPersistenceTransaction.ExecuteAsync().ConfigureAwait(false);
 
             // store the reuslting transaction line items
             this.Result = transactionResultLineItems;
@@ -132,7 +132,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
         {
             if (this.bulkSubscriptionPersistenceTransaction != null)
             {
-                await this.bulkSubscriptionPersistenceTransaction.RollbackAsync();
+                await this.bulkSubscriptionPersistenceTransaction.RollbackAsync().ConfigureAwait(false);
                 this.bulkSubscriptionPersistenceTransaction = null;
             }
         }

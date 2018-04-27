@@ -47,8 +47,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <returns>True if configured, false otherwise.</returns>
         public async Task<bool> IsConfiguredAsync()
         {
-            var paymentConfigurationBlob = await this.GetPaymentConfigurationBlob();
-            return await paymentConfigurationBlob.ExistsAsync();
+            var paymentConfigurationBlob = await this.GetPaymentConfigurationBlob().ConfigureAwait(false);
+            return await paymentConfigurationBlob.ExistsAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -58,22 +58,22 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         public async Task<PaymentConfiguration> RetrieveAsync()
         {
             var paymentConfiguration = await this.ApplicationDomain.CachingService
-                .FetchAsync<PaymentConfiguration>(PaymentConfigurationRepository.PaymentConfigurationCacheKey);
+                .FetchAsync<PaymentConfiguration>(PaymentConfigurationCacheKey).ConfigureAwait(false);
 
             if (paymentConfiguration == null)
             {
-                var paymentConfigurationBlob = await this.GetPaymentConfigurationBlob();
+                var paymentConfigurationBlob = await this.GetPaymentConfigurationBlob().ConfigureAwait(false);
                 paymentConfiguration = new PaymentConfiguration();
 
-                if (await paymentConfigurationBlob.ExistsAsync())
+                if (await paymentConfigurationBlob.ExistsAsync().ConfigureAwait(false))
                 {
-                    paymentConfiguration = JsonConvert.DeserializeObject<PaymentConfiguration>(await paymentConfigurationBlob.DownloadTextAsync());
-                    await this.NormalizeAsync(paymentConfiguration);
+                    paymentConfiguration = JsonConvert.DeserializeObject<PaymentConfiguration>(await paymentConfigurationBlob.DownloadTextAsync().ConfigureAwait(false));
+                    await this.NormalizeAsync(paymentConfiguration).ConfigureAwait(false);
 
                     // cache the payment configuration
-                    await this.ApplicationDomain.CachingService.StoreAsync<PaymentConfiguration>(
-                        PaymentConfigurationRepository.PaymentConfigurationCacheKey,
-                        paymentConfiguration);
+                    await this.ApplicationDomain.CachingService.StoreAsync(
+                        PaymentConfigurationCacheKey,
+                        paymentConfiguration).ConfigureAwait(false);
                 }
             }
             
@@ -89,13 +89,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         {
             newPaymentConfiguration.AssertNotNull(nameof(newPaymentConfiguration));
            
-            await this.NormalizeAsync(newPaymentConfiguration);
+            await this.NormalizeAsync(newPaymentConfiguration).ConfigureAwait(false);
 
-            var paymentConfigurationBlob = await this.GetPaymentConfigurationBlob();
-            await paymentConfigurationBlob.UploadTextAsync(JsonConvert.SerializeObject(newPaymentConfiguration));
+            var paymentConfigurationBlob = await this.GetPaymentConfigurationBlob().ConfigureAwait(false);
+            await paymentConfigurationBlob.UploadTextAsync(JsonConvert.SerializeObject(newPaymentConfiguration)).ConfigureAwait(false);
 
             // invalidate the cache, we do not update it to avoid race condition between web instances
-            await this.ApplicationDomain.CachingService.ClearAsync(PaymentConfigurationRepository.PaymentConfigurationCacheKey);
+            await this.ApplicationDomain.CachingService.ClearAsync(PaymentConfigurationCacheKey).ConfigureAwait(false);
 
             return newPaymentConfiguration;
         }
@@ -119,7 +119,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 throw new PartnerDomainException(Resources.InvalidPaymentModeErrorMessage);
             }
 
-            await Task.FromResult(0);
+            await Task.FromResult(0).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <returns>The portal payment configuration BLOB.</returns>
         private async Task<CloudBlockBlob> GetPaymentConfigurationBlob()
         {
-            var portalAssetsBlobContainer = await this.ApplicationDomain.AzureStorageService.GetPrivateCustomerPortalAssetsBlobContainerAsync();
+            var portalAssetsBlobContainer = await this.ApplicationDomain.AzureStorageService.GetPrivateCustomerPortalAssetsBlobContainerAsync().ConfigureAwait(false);
 
             return portalAssetsBlobContainer.GetBlockBlobReference(PaymentConfigurationRepository.PaymentConfigurationBlobName);
         }

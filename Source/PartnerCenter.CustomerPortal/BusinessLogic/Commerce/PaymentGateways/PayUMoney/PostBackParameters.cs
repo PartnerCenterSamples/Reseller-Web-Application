@@ -89,7 +89,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// Gets or sets card type
         /// </summary>
         [DataMember(Name = "CardType")]
-        public string Card_type { get; set; }
+        public string CardType { get; set; }
 
         /// <summary>
         /// Gets or sets card hash

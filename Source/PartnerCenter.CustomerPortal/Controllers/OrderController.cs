@@ -60,15 +60,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             {
                 case CommerceOperationType.AdditionalSeatsPurchase:
                     operationDescription = Resources.AddSeatsOperationCaption;
-                    orderDetails = await orderNormalizer.NormalizePurchaseAdditionalSeatsOrderAsync();
+                    orderDetails = await orderNormalizer.NormalizePurchaseAdditionalSeatsOrderAsync().ConfigureAwait(false);
                     break;
                 case CommerceOperationType.NewPurchase:
                     operationDescription = Resources.NewPurchaseOperationCaption;
-                    orderDetails = await orderNormalizer.NormalizePurchaseSubscriptionOrderAsync();
+                    orderDetails = await orderNormalizer.NormalizePurchaseSubscriptionOrderAsync().ConfigureAwait(false);
                     break;
                 case CommerceOperationType.Renewal:
                     operationDescription = Resources.RenewOperationCaption;
-                    orderDetails = await orderNormalizer.NormalizeRenewSubscriptionOrderAsync();
+                    orderDetails = await orderNormalizer.NormalizeRenewSubscriptionOrderAsync().ConfigureAwait(false);
                     break;
             }
 
@@ -76,10 +76,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             string redirectUrl = string.Format(CultureInfo.InvariantCulture, "{0}/#ProcessOrder?ret=true", Request.RequestUri.GetLeftPart(UriPartial.Authority));
 
             // Create the right payment gateway to use for customer oriented payment transactions. 
-            IPaymentGateway paymentGateway = await this.CreatePaymentGateway(operationDescription, orderDetails.CustomerId);
+            IPaymentGateway paymentGateway = await this.CreatePaymentGateway(operationDescription, orderDetails.CustomerId).ConfigureAwait(false);
 
             // execute and get payment gateway action URI.           
-            string generatedUri = await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);            
+            string generatedUri = await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails).ConfigureAwait(false);            
 
             // Capture the request for the customer summary for analysis.
             var eventProperties = new Dictionary<string, string> { { "CustomerId", orderDetails.CustomerId }, { "OperationType", orderDetails.OperationType.ToString() } };
@@ -125,13 +125,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             switch (orderToProcess.OperationType)
             {
                 case CommerceOperationType.Renewal:
-                    transactionResult = await commerceOperation.RenewSubscriptionAsync(orderToProcess);
+                    transactionResult = await commerceOperation.RenewSubscriptionAsync(orderToProcess).ConfigureAwait(false);
                     break;
                 case CommerceOperationType.AdditionalSeatsPurchase:
-                    transactionResult = await commerceOperation.PurchaseAdditionalSeatsAsync(orderToProcess);
+                    transactionResult = await commerceOperation.PurchaseAdditionalSeatsAsync(orderToProcess).ConfigureAwait(false);
                     break;
                 case CommerceOperationType.NewPurchase:
-                    transactionResult = await commerceOperation.PurchaseAsync(orderToProcess);
+                    transactionResult = await commerceOperation.PurchaseAsync(orderToProcess).ConfigureAwait(false);
                     break;
             }
 
@@ -143,7 +143,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/process", eventProperties, eventMetrics);
 
-            return await Task.FromResult(transactionResult);
+            return await Task.FromResult(transactionResult).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -312,7 +312,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var customerSubscriptionsHistoryTask = ApplicationDomain.Instance.CustomerPurchasesRepository.RetrieveAsync(customerId);
             var allPartnerOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveAsync();
             var currentMicrosoftOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveMicrosoftOffersAsync();
-            await Task.WhenAll(customerSubscriptionsTask, customerSubscriptionsHistoryTask, allPartnerOffersTask, currentMicrosoftOffersTask);
+            await Task.WhenAll(customerSubscriptionsTask, customerSubscriptionsHistoryTask, allPartnerOffersTask, currentMicrosoftOffersTask).ConfigureAwait(false);
 
             var customerSubscriptionsHistory = customerSubscriptionsHistoryTask.Result;
 

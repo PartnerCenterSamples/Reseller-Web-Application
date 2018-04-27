@@ -39,7 +39,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [OutputCache(NoStore = true, Duration = 0)]
         public async Task<ActionResult> Home()
         {
-            var portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync();
+            var portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
 
             if (portalBranding.HeaderImage != null)
             {
@@ -244,9 +244,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         public async Task<ActionResult> FrameworkFragments()
         {
             WebPortalConfigurationManager builder = ApplicationConfiguration.WebPortalConfigurationManager;
-            ViewBag.Templates = (await builder.AggregateNonStartupAssets()).Templates;
+            ViewBag.Templates = (await builder.AggregateNonStartupAssets().ConfigureAwait(false)).Templates;
 
-            var portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync();
+            var portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
 
             ViewBag.OrganizationName = portalBranding.OrganizationName;
 

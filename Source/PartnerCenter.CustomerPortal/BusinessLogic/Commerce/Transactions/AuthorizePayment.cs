@@ -44,7 +44,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
         public async Task ExecuteAsync()
         {
             // authorize with the payment gateway
-            this.Result = await this.PaymentGateway.ExecutePaymentAsync();            
+            this.Result = await this.PaymentGateway.ExecutePaymentAsync().ConfigureAwait(false);            
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 try
                 {
                     // void the previously authorized payment
-                    await this.PaymentGateway.VoidAsync(this.Result);
+                    await this.PaymentGateway.VoidAsync(this.Result).ConfigureAwait(false);
                 }
                 catch (Exception voidingProblem)
                 {

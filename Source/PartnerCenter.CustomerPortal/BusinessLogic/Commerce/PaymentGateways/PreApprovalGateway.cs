@@ -41,7 +41,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         public async Task CaptureAsync(string authorizationCode)
         {
             // clean up the order item. 
-            await ApplicationDomain.Instance.CustomerOrdersRepository.DeleteAsync(this.orderId, this.customerId);
+            await ApplicationDomain.Instance.CustomerOrdersRepository.DeleteAsync(this.orderId, this.customerId).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <returns>Capture string id.</returns>
         public async Task<string> ExecutePaymentAsync()
         {
-            return await Task.FromResult("Pre-approvedTransaction");
+            return await Task.FromResult("Pre-approvedTransaction").ConfigureAwait(false);
         }
 
         /// <summary>
@@ -63,14 +63,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         {
             // will essentially return the returnUrl as is with additional decorations. 
             // persist the order. 
-            OrderViewModel orderDetails = await ApplicationDomain.Instance.CustomerOrdersRepository.AddAsync(order);
+            OrderViewModel orderDetails = await ApplicationDomain.Instance.CustomerOrdersRepository.AddAsync(order).ConfigureAwait(false);
 
             // for future cleanup.
             this.orderId = orderDetails.OrderId;
             this.customerId = orderDetails.CustomerId;
 
             string appReturnUrl = returnUrl + string.Format(CultureInfo.InvariantCulture, "&oid={0}&payment=success&PayerID=PayId&paymentId=PreApproved", orderDetails.OrderId);
-            return await Task.FromResult(appReturnUrl);
+            return await Task.FromResult(appReturnUrl).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             this.customerId = customerId;
 
             // use order repository to extract details.             
-            return await ApplicationDomain.Instance.CustomerOrdersRepository.RetrieveAsync(orderId, customerId);
+            return await ApplicationDomain.Instance.CustomerOrdersRepository.RetrieveAsync(orderId, customerId).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         public async Task VoidAsync(string authorizationCode)
         {
             // clean up the order item. 
-            await ApplicationDomain.Instance.CustomerOrdersRepository.DeleteAsync(this.orderId, this.customerId);
+            await ApplicationDomain.Instance.CustomerOrdersRepository.DeleteAsync(this.orderId, this.customerId).ConfigureAwait(false);
         }
 
         /// <summary>

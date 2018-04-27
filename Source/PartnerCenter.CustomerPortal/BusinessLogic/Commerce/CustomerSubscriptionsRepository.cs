@@ -42,9 +42,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
                 ExpiryDate = newCustomerSubscription.ExpiryDate
             };
 
-            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync();
+            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync().ConfigureAwait(false);
 
-            var insertionResult = await customerSubscriptionsTable.ExecuteAsync(TableOperation.Insert(customerSubscriptionTableEntity));
+            var insertionResult = await customerSubscriptionsTable.ExecuteAsync(TableOperation.Insert(customerSubscriptionTableEntity)).ConfigureAwait(false);
             insertionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to add customer subscription", insertionResult.Result);
 
             return newCustomerSubscription;
@@ -59,9 +59,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerSubscriptionToRemove.AssertNotNull(nameof(customerSubscriptionToRemove));
 
-            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync();
+            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync().ConfigureAwait(false);
 
-            var deletionResult = await customerSubscriptionsTable.ExecuteAsync(TableOperation.Delete(new CustomerSubscriptionTableEntity(customerSubscriptionToRemove.CustomerId, customerSubscriptionToRemove.SubscriptionId) { ETag = "*" }));
+            var deletionResult = await customerSubscriptionsTable.ExecuteAsync(TableOperation.Delete(new CustomerSubscriptionTableEntity(customerSubscriptionToRemove.CustomerId, customerSubscriptionToRemove.SubscriptionId) { ETag = "*" })).ConfigureAwait(false);
             deletionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to remove customer subscription", deletionResult.Result);
         }
 
@@ -81,8 +81,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
                 ETag = "*"
             });
 
-            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync();
-            var updateResult = await customerSubscriptionsTable.ExecuteAsync(updateSubscriptionOperation);
+            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync().ConfigureAwait(false);
+            var updateResult = await customerSubscriptionsTable.ExecuteAsync(updateSubscriptionOperation).ConfigureAwait(false);
 
             updateResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to update customer subscription", updateResult.Result);
 
@@ -98,7 +98,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerId.AssertNotEmpty(nameof(customerId));
 
-            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync();
+            var customerSubscriptionsTable = await this.ApplicationDomain.AzureStorageService.GetCustomerSubscriptionsTableAsync().ConfigureAwait(false);
             var getCustomerSubscriptionsQuery = new TableQuery<CustomerSubscriptionTableEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, customerId));
 
             TableQuerySegment<CustomerSubscriptionTableEntity> resultSegment = null;
@@ -107,7 +107,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
 
             do
             {
-                resultSegment = await customerSubscriptionsTable.ExecuteQuerySegmentedAsync<CustomerSubscriptionTableEntity>(getCustomerSubscriptionsQuery, resultSegment?.ContinuationToken);
+                resultSegment = await customerSubscriptionsTable.ExecuteQuerySegmentedAsync(getCustomerSubscriptionsQuery, resultSegment?.ContinuationToken).ConfigureAwait(false);
 
                 foreach (var customerSubscriptionResult in resultSegment.AsEnumerable())
                 {
