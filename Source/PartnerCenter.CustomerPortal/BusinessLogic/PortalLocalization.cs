@@ -55,7 +55,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <returns>A task.</returns>
         public async Task InitializeAsync()
         {
-            var partnerLegalBusinessProfile = await this.ApplicationDomain.PartnerCenterClient.Profiles.LegalBusinessProfile.GetAsync();
+            var partnerLegalBusinessProfile = await this.ApplicationDomain.PartnerCenterClient.Profiles.LegalBusinessProfile.GetAsync().ConfigureAwait(false);
             this.CountryIso2Code = partnerLegalBusinessProfile.Address.Country;
 
             RegionInfo partnerRegion = null;
@@ -63,7 +63,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             try
             {   
                 // Get the default locale using the Country Validation rules infrastructure.  
-                var partnerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(this.CountryIso2Code).GetAsync();
+                var partnerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(this.CountryIso2Code).GetAsync().ConfigureAwait(false);
 
                 this.Locale = partnerCountryValidationRules.DefaultCulture;
                 partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);
@@ -75,7 +75,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);                
             }
 
-            this.OfferLocale = this.ResolveOfferLocale(this.Locale);
+            this.OfferLocale = ResolveOfferLocale(this.Locale);
             
             // figure out the currency             
             this.CurrencyCode = partnerRegion.ISOCurrencySymbol;
@@ -90,7 +90,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// </summary>
         /// <param name="locale">Partner Locale</param>
         /// <returns>Offer Locale</returns>
-        private string ResolveOfferLocale(string locale)
+        private static string ResolveOfferLocale(string locale)
         {
             List<string> portalSupportedLocales = new List<string>
             { 

@@ -132,9 +132,6 @@
   <data name="ContactUs" xml:space="preserve">
     <value>Contact us</value>
   </data>
-  <data name="CopyRight" xml:space="preserve">
-    <value>Copyright 2017</value>
-  </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>...</value>
   </data>
@@ -1265,5 +1262,8 @@
   </data>
   <data name="PayUWebsiteCaption" xml:space="preserve">
     <value>payumoney.com</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2018</value>
   </data>
 </root>

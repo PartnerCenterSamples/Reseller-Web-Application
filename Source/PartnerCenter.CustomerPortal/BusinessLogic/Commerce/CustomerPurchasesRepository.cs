@@ -44,9 +44,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
                 PurchaseType = newCustomerPurchase.PurchaseType.ToString()
             };
 
-            var customerPurchasesTable = await this.ApplicationDomain.AzureStorageService.GetCustomerPurchasesTableAsync();
+            var customerPurchasesTable = await this.ApplicationDomain.AzureStorageService.GetCustomerPurchasesTableAsync().ConfigureAwait(false);
 
-            var insertionResult = await customerPurchasesTable.ExecuteAsync(TableOperation.Insert(customerPurchaseTableEntity));
+            var insertionResult = await customerPurchasesTable.ExecuteAsync(TableOperation.Insert(customerPurchaseTableEntity)).ConfigureAwait(false);
             insertionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to add customer purchase", insertionResult.Result);
 
             newCustomerPurchase = new CustomerPurchaseEntity(
@@ -70,10 +70,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerPurchaseToRemove.AssertNotNull(nameof(customerPurchaseToRemove));
 
-            var customerPurchasesTable = await this.ApplicationDomain.AzureStorageService.GetCustomerPurchasesTableAsync();
+            var customerPurchasesTable = await this.ApplicationDomain.AzureStorageService.GetCustomerPurchasesTableAsync().ConfigureAwait(false);
 
             var deletionResult = await customerPurchasesTable.ExecuteAsync(
-                TableOperation.Delete(new CustomerPurchaseTableEntity(customerPurchaseToRemove.CustomerId, customerPurchaseToRemove.SubscriptionId) { RowKey = customerPurchaseToRemove.Id, ETag = "*" }));
+                TableOperation.Delete(new CustomerPurchaseTableEntity(customerPurchaseToRemove.CustomerId, customerPurchaseToRemove.SubscriptionId) { RowKey = customerPurchaseToRemove.Id, ETag = "*" })).ConfigureAwait(false);
 
             deletionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to delete customer purchase", deletionResult.Result);
         }
@@ -87,7 +87,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerId.AssertNotEmpty(nameof(customerId));
 
-            var customerPurchasesTable = await this.ApplicationDomain.AzureStorageService.GetCustomerPurchasesTableAsync();
+            var customerPurchasesTable = await this.ApplicationDomain.AzureStorageService.GetCustomerPurchasesTableAsync().ConfigureAwait(false);
             var getCustomerPurchasesQuery = new TableQuery<CustomerPurchaseTableEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, customerId));
 
             TableQuerySegment<CustomerPurchaseTableEntity> resultSegment = null;
@@ -96,7 +96,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
 
             do
             {
-                resultSegment = await customerPurchasesTable.ExecuteQuerySegmentedAsync<CustomerPurchaseTableEntity>(getCustomerPurchasesQuery, resultSegment?.ContinuationToken);
+                resultSegment = await customerPurchasesTable.ExecuteQuerySegmentedAsync(getCustomerPurchasesQuery, resultSegment?.ContinuationToken);
 
                 foreach (var customerPurchaseResult in resultSegment.AsEnumerable())
                 {

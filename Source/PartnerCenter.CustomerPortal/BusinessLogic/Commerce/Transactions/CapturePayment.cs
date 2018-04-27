@@ -70,7 +70,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 this.AuthorizationCode = this.AcquireInput.Invoke();
             }
 
-            await this.PaymentGateway.CaptureAsync(this.AuthorizationCode);
+            await this.PaymentGateway.CaptureAsync(this.AuthorizationCode).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
             Trace.TraceInformation("CapturePayment.RollbackAsync executed. Authorization code: {0}", this.AuthorizationCode);
 
             // TODO: Notify the system integrity recovery component
-            await Task.FromResult(0);
+            await Task.FromResult(0).ConfigureAwait(false);
         }
     }
 }

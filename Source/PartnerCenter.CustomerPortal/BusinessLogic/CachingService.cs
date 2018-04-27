@@ -58,7 +58,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             if (this.isCashingEnabled)
             {
                 IDatabase cache = await this.GetCacheReferenceAsync();
-                await cache.StringSetAsync(key, JsonConvert.SerializeObject(objectToCache), expiresAfter);
+                await cache.StringSetAsync(key, JsonConvert.SerializeObject(objectToCache), expiresAfter).ConfigureAwait(false);
             }
         }
 
@@ -101,8 +101,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 
             if (this.isCashingEnabled)
             {
-                IDatabase cache = await this.GetCacheReferenceAsync();
-                await cache.KeyDeleteAsync(key);
+                IDatabase cache = await this.GetCacheReferenceAsync().ConfigureAwait(false);
+                await cache.KeyDeleteAsync(key).ConfigureAwait(false);
             }
         }
 
@@ -119,7 +119,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 
             if (this.cacheConnection == null)
             {
-                this.cacheConnection = await ConnectionMultiplexer.ConnectAsync(this.cacheConnectionString);
+                this.cacheConnection = await ConnectionMultiplexer.ConnectAsync(this.cacheConnectionString).ConfigureAwait(false);
             }
 
             return this.cacheConnection.GetDatabase();

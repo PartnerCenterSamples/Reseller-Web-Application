@@ -7,7 +7,7 @@
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Infrastructure
 {
     using System.Threading.Tasks;
-    
+
     /// <summary>
     /// Represents an atomic business transaction which can be rolled back in case there was a failure.
     /// </summary>

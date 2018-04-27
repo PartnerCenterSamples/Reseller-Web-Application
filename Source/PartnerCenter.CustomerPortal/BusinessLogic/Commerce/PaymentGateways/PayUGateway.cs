@@ -82,7 +82,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         {
             returnUrl.AssertNotEmpty(nameof(returnUrl));
             order.AssertNotNull(nameof(order));
-            RemotePost myremotepost = await this.PrepareRemotePost(order, returnUrl);
+            RemotePost myremotepost = await this.PrepareRemotePost(order, returnUrl).ConfigureAwait(false);
             return myremotepost.Post();
         }
 
@@ -94,7 +94,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         {
             try
             {
-                TransactionStatusResponse paymentResponse = await ApiCalls.GetPaymentStatus(this.paymentId);
+                TransactionStatusResponse paymentResponse = await ApiCalls.GetPaymentStatus(this.paymentId).ConfigureAwait(false);
                 if (paymentResponse != null && paymentResponse.Result.Count > 0 && paymentResponse.Result[0].Status.Equals(Constant.MoneyWithPayU))
                 {
                     return paymentResponse.Result[0].Amount.ToString();
@@ -131,7 +131,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             // given the authorizationId string... Lookup the authorization to void it. 
             try
             {
-                RefundResponse refundResponse = await ApiCalls.RefundPayment(this.payerId, authorizationCode);
+                RefundResponse refundResponse = await ApiCalls.RefundPayment(this.payerId, authorizationCode).ConfigureAwait(false);
                 if (refundResponse.Status != 0 || !refundResponse.Message.Equals("Refund Initiated"))
                 {
                     throw new Exception("Error in refund");
@@ -206,10 +206,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             OrderViewModel orderFromPayment = null;
             try
             {
-                PaymentResponse paymentResponse = await ApiCalls.GetPaymentDetails(this.paymentId);
+                PaymentResponse paymentResponse = await ApiCalls.GetPaymentDetails(this.paymentId).ConfigureAwait(false);
                 if (paymentResponse != null && paymentResponse.Result.Count > 0)
                 {
-                    orderFromPayment = await this.GetOrderDetails(paymentResponse.Result[0].PostBackParam.Udf1, paymentResponse.Result[0].PostBackParam.ProductInformation, paymentResponse.Result[0].PostBackParam.Udf2);
+                    orderFromPayment = await this.GetOrderDetails(paymentResponse.Result[0].PostBackParam.Udf1, paymentResponse.Result[0].PostBackParam.ProductInformation, paymentResponse.Result[0].PostBackParam.Udf2).ConfigureAwait(false);
                 }
             }
             catch (Exception ex)
@@ -248,7 +248,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             string phone = string.Empty;
             string email = string.Empty;
             CustomerRegistrationRepository customerRegistrationRepository = new CustomerRegistrationRepository(ApplicationDomain.Instance);
-            CustomerViewModel customerRegistrationInfo = await customerRegistrationRepository.RetrieveAsync(order.CustomerId);
+            CustomerViewModel customerRegistrationInfo = await customerRegistrationRepository.RetrieveAsync(order.CustomerId).ConfigureAwait(false);
             fname = customerRegistrationInfo.FirstName;
             phone = customerRegistrationInfo.Phone;
             email = customerRegistrationInfo.Email;

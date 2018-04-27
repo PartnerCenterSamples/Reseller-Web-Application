@@ -36,10 +36,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             newOrder.AssertNotNull(nameof(newOrder));
 
-            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync();
+            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync().ConfigureAwait(false);
             CustomerOrderTableEntity orderEntity = new CustomerOrderTableEntity(newOrder);
 
-            var insertionResult = await customerOrdersTable.ExecuteAsync(TableOperation.Insert(orderEntity));
+            var insertionResult = await customerOrdersTable.ExecuteAsync(TableOperation.Insert(orderEntity)).ConfigureAwait(false);
             insertionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to add customer order", insertionResult.Result);
 
             return newOrder;
@@ -56,10 +56,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             orderId.AssertNotEmpty(nameof(orderId));
             customerId.AssertNotEmpty(nameof(customerId));
 
-            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync();
+            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync().ConfigureAwait(false);
 
             var deletionResult = await customerOrdersTable.ExecuteAsync(
-                TableOperation.Delete(new CustomerOrderTableEntity() { PartitionKey = customerId, RowKey = orderId, ETag = "*" }));
+                TableOperation.Delete(new CustomerOrderTableEntity() { PartitionKey = customerId, RowKey = orderId, ETag = "*" })).ConfigureAwait(false);
 
             deletionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to delete customer order", deletionResult.Result);
         }
@@ -75,7 +75,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             orderId.AssertNotEmpty(nameof(orderId));
             customerId.AssertNotEmpty(nameof(customerId));
 
-            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync();
+            var customerOrdersTable = await this.ApplicationDomain.AzureStorageService.GetCustomerOrdersTableAsync().ConfigureAwait(false);
 
             string tableQueryFilter = TableQuery.CombineFilters(
                 TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, customerId),
@@ -88,7 +88,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             OrderViewModel customerOrder = null;
             do
             {
-                resultSegment = await customerOrdersTable.ExecuteQuerySegmentedAsync<CustomerOrderTableEntity>(getCustomerOrdersQuery, resultSegment?.ContinuationToken);
+                resultSegment = await customerOrdersTable.ExecuteQuerySegmentedAsync(getCustomerOrdersQuery, resultSegment?.ContinuationToken).ConfigureAwait(false);
 
                 foreach (var orderResult in resultSegment.AsEnumerable())
                 {

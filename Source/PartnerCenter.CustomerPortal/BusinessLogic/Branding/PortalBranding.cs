@@ -44,8 +44,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <returns>True if the branding was configured and stored, false otherwise.</returns>
         public async Task<bool> IsConfiguredAsync()
         {
-            var portalBrandingBlob = await this.GetPortalBrandingBlobAsync();
-            return await portalBrandingBlob.ExistsAsync();
+            var portalBrandingBlob = await this.GetPortalBrandingBlobAsync().ConfigureAwait(false);
+            return await portalBrandingBlob.ExistsAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -55,17 +55,17 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         public async Task<BrandingConfiguration> RetrieveAsync()
         {
             var portalBranding = await this.ApplicationDomain.CachingService
-                .FetchAsync<BrandingConfiguration>(PortalBranding.PortalBrandingCacheKey);
+                .FetchAsync<BrandingConfiguration>(PortalBrandingCacheKey).ConfigureAwait(false);
 
             if (portalBranding == null)
             {
-                var portalBrandingBlob = await this.GetPortalBrandingBlobAsync();
+                var portalBrandingBlob = await this.GetPortalBrandingBlobAsync().ConfigureAwait(false);
                 portalBranding = new BrandingConfiguration();
 
-                if (await portalBrandingBlob.ExistsAsync())
+                if (await portalBrandingBlob.ExistsAsync().ConfigureAwait(false))
                 {
-                    portalBranding = JsonConvert.DeserializeObject<BrandingConfiguration>(await portalBrandingBlob.DownloadTextAsync());
-                    await this.NormalizeAsync(portalBranding);
+                    portalBranding = JsonConvert.DeserializeObject<BrandingConfiguration>(await portalBrandingBlob.DownloadTextAsync().ConfigureAwait(false));
+                    await this.NormalizeAsync(portalBranding).ConfigureAwait(false);
                 }
                 else
                 {
@@ -74,9 +74,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 }
 
                 // cache the portal branding
-                await this.ApplicationDomain.CachingService.StoreAsync<BrandingConfiguration>(
-                    PortalBranding.PortalBrandingCacheKey,
-                    portalBranding);
+                await this.ApplicationDomain.CachingService.StoreAsync(
+                    PortalBrandingCacheKey,
+                    portalBranding).ConfigureAwait(false);
             }
 
             return portalBranding;
@@ -190,7 +190,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 // there is an logo image specified, upload it to BLOB storage and setup the URI property to point to it
                 brandingConfiguration.OrganizationLogo = await this.UploadStreamToBlobStorageAsync(
                     "OrganizationLogo",
-                    brandingConfiguration.OrganizationLogoContent);
+                    brandingConfiguration.OrganizationLogoContent).ConfigureAwait(false);
 
                 brandingConfiguration.OrganizationLogoContent = null;
             }
@@ -200,7 +200,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 // there is a header image specified, upload it to BLOB storage and setup the URI property to point to it
                 brandingConfiguration.HeaderImage = await this.UploadStreamToBlobStorageAsync(
                     "HeaderImage",
-                    brandingConfiguration.HeaderImageContent);
+                    brandingConfiguration.HeaderImageContent).ConfigureAwait(false);
 
                 brandingConfiguration.HeaderImageContent = null;
             }

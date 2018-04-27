@@ -32,7 +32,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             try
             {
                 // get a copy of the plugins and the client configuration
-                PluginsSegment clientVisiblePlugins = await ApplicationConfiguration.WebPortalConfigurationManager.GeneratePlugins();
+                PluginsSegment clientVisiblePlugins = await ApplicationConfiguration.WebPortalConfigurationManager.GeneratePlugins().ConfigureAwait(false);
                 IDictionary<string, dynamic> clientConfiguration = new Dictionary<string, dynamic>(ApplicationConfiguration.ClientConfiguration);
 
                 // configure the tiles to show and hide based on the logged in user role
@@ -58,8 +58,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 clientConfiguration["DefaultTile"] = clientVisiblePlugins.DefaultPlugin;
                 clientConfiguration["Tiles"] = clientVisiblePlugins.Plugins;
 
-                ViewBag.Templates = (await ApplicationConfiguration.WebPortalConfigurationManager.AggregateStartupAssets()).Templates;
-                ViewBag.OrganizationName = (await ApplicationDomain.Instance.PortalBranding.RetrieveAsync()).OrganizationName;
+                ViewBag.Templates = (await ApplicationConfiguration.WebPortalConfigurationManager.AggregateStartupAssets().ConfigureAwait(false)).Templates;
+                ViewBag.OrganizationName = (await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false)).OrganizationName;
                 ViewBag.IsAuthenticated = Request.IsAuthenticated ? "true" : "false";
 
                 if (Request.IsAuthenticated)
@@ -101,7 +101,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         /// <returns>The error view.</returns>
         public async Task<ActionResult> Error(string errorMessage)
         {
-            var portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync();
+            var portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
 
             ViewBag.ErrorMessage = errorMessage;
             ViewBag.OrganizationName = portalBranding.OrganizationName;

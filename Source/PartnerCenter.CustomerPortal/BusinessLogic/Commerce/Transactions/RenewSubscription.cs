@@ -62,7 +62,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 this.Result = await this.SubscriptionOperations.PatchAsync(new Subscription()
                 {
                     Status = SubscriptionStatus.Active
-                });
+                }).ConfigureAwait(false);
             }
             catch (PartnerException subscriptionUpdateProblem)
             {
@@ -94,7 +94,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 try
                 {
                     // restore the original subscription state
-                    await this.SubscriptionOperations.PatchAsync(this.existingSubscription);
+                    await this.SubscriptionOperations.PatchAsync(this.existingSubscription).ConfigureAwait(false);
                 }
                 catch (Exception rollbackProblem)
                 {

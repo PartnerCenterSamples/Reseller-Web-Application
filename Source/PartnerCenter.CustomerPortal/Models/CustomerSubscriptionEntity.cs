@@ -7,7 +7,7 @@
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
 {
     using System;
-    
+
     /// <summary>
     /// Represents a unique subscription purchased by a customer.
     /// </summary>

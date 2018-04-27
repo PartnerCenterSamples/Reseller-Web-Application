@@ -58,7 +58,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
             }
 
             // call the standard bundling implementation
-            await base.UpdateBundles(bundler);
+            await base.UpdateBundles(bundler).ConfigureAwait(false);
 
             this.isBundlesGenerated = true;
         }
@@ -70,7 +70,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
         public override async Task<Assets> AggregateStartupAssets()
         {
             // return the startup assests we had already built
-            return await Task.FromResult<Assets>(this.startupAssets.Value);
+            return await Task.FromResult(this.startupAssets.Value).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
         public override async Task<Assets> AggregateNonStartupAssets()
         {
             // return the non startup assests we had already built
-            return await Task.FromResult<Assets>(this.nonStartupAssets.Value);
+            return await Task.FromResult(this.nonStartupAssets.Value).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
         public override async Task<PluginsSegment> GeneratePlugins()
         {
             // return the plugin configuration as found in the configuration file
-            return (await Task.FromResult<PluginsSegment>(this.Configuration.Plugins)).Clone() as PluginsSegment;
+            return (await Task.FromResult(this.Configuration.Plugins).ConfigureAwait(false)).Clone() as PluginsSegment;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
         public override async Task<Dictionary<string, dynamic>> GenerateConfigurationDictionary()
         {
             // return the configuration as is
-            return await Task.FromResult<Dictionary<string, dynamic>>(this.Configuration.Configuration);
+            return await Task.FromResult(this.Configuration.Configuration).ConfigureAwait(false);
         }
 
         /// <summary>

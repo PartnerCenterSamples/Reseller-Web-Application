@@ -6,14 +6,11 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
 {
-    using System;
-    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
     using Exceptions;
     using Models;
     using Newtonsoft.Json;
-    using WindowsAzure.Storage.Blob;
     using WindowsAzure.Storage.Table;
 
     /// <summary>
@@ -48,10 +45,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerRegistrationInfo.AssertNotNull(nameof(customerRegistrationInfo));
 
-            var customerRegistrationTable = await this.ApplicationDomain.AzureStorageService.GetCustomerRegistrationTableAsync();
+            var customerRegistrationTable = await this.ApplicationDomain.AzureStorageService.GetCustomerRegistrationTableAsync().ConfigureAwait(false);
             CustomerRegistrationTableEntity customerRegistrationTableEntity = new CustomerRegistrationTableEntity(customerRegistrationInfo);
 
-            var insertionResult = await customerRegistrationTable.ExecuteAsync(TableOperation.Insert(customerRegistrationTableEntity));
+            var insertionResult = await customerRegistrationTable.ExecuteAsync(TableOperation.Insert(customerRegistrationTableEntity)).ConfigureAwait(false);
             insertionResult.HttpStatusCode.AssertHttpResponseSuccess(ErrorCode.PersistenceFailure, "Failed to add customer registration details", insertionResult.Result);
 
             return customerRegistrationInfo;
@@ -66,7 +63,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerId.AssertNotEmpty(nameof(customerId));
 
-            var customerRegistrationTable = await this.ApplicationDomain.AzureStorageService.GetCustomerRegistrationTableAsync();
+            var customerRegistrationTable = await this.ApplicationDomain.AzureStorageService.GetCustomerRegistrationTableAsync().ConfigureAwait(false);
 
             var deletionResult = customerRegistrationTable.Execute(
                 TableOperation.Delete(new CustomerRegistrationTableEntity() { PartitionKey = customerId, RowKey = customerId, ETag = "*" }));
@@ -83,7 +80,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         {
             customerGuid.AssertNotEmpty(nameof(customerGuid));
 
-            var customerRegistrationTable = await this.ApplicationDomain.AzureStorageService.GetCustomerRegistrationTableAsync();
+            var customerRegistrationTable = await this.ApplicationDomain.AzureStorageService.GetCustomerRegistrationTableAsync().ConfigureAwait(false);
 
             string tableQueryFilter = TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.Equal, customerGuid);
 
@@ -92,11 +89,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             TableQuerySegment<CustomerRegistrationTableEntity> resultSegment = null;
             CustomerViewModel customerRegistrationInfo = null;
 
-            resultSegment = await customerRegistrationTable.ExecuteQuerySegmentedAsync<CustomerRegistrationTableEntity>(getCustomerOrdersQuery, resultSegment?.ContinuationToken);
+            resultSegment = await customerRegistrationTable.ExecuteQuerySegmentedAsync(getCustomerOrdersQuery, resultSegment?.ContinuationToken).ConfigureAwait(false);
 
             do
             {
-                resultSegment = await customerRegistrationTable.ExecuteQuerySegmentedAsync<CustomerRegistrationTableEntity>(getCustomerOrdersQuery, resultSegment?.ContinuationToken);
+                resultSegment = await customerRegistrationTable.ExecuteQuerySegmentedAsync(getCustomerOrdersQuery, resultSegment?.ContinuationToken).ConfigureAwait(false);
 
                 foreach (var customerResult in resultSegment.AsEnumerable())
                 {

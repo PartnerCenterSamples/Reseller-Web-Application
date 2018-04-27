@@ -52,7 +52,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Infrastructure
         {
             for (this.lastExecutedTransactionIndex = 0; this.lastExecutedTransactionIndex < this.childTransactions.Length; ++this.lastExecutedTransactionIndex)
             {
-                await this.childTransactions[this.lastExecutedTransactionIndex].ExecuteAsync();
+                await this.childTransactions[this.lastExecutedTransactionIndex].ExecuteAsync().ConfigureAwait(false);
             }
         }
 
@@ -67,7 +67,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Infrastructure
             {
                 try
                 {
-                    await this.childTransactions[i].RollbackAsync();
+                    await this.childTransactions[i].RollbackAsync().ConfigureAwait(false);
                 }
                 catch (Exception rollbackProblem)
                 {

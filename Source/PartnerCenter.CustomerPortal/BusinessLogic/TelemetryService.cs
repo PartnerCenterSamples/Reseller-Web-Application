@@ -58,7 +58,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// <returns>A task for asynchronous purposes.</returns>
         public async Task InitializeAsync()
         {
-            this.InstrumentationKey = (await ApplicationDomain.Instance.PortalBranding.RetrieveAsync()).InstrumentationKey;
+            this.InstrumentationKey = (await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false)).InstrumentationKey;
 
             if (!string.IsNullOrEmpty(this.InstrumentationKey))
             {

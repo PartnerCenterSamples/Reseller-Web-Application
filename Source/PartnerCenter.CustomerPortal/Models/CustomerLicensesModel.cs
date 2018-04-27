@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
-{    
+{
     /// <summary>
     /// The customer licenses view model.
     /// </summary>

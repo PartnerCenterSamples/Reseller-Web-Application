@@ -60,7 +60,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
         public async Task ExecuteAsync()
         {
             // retrieve the subscription
-            var customerSubscriptions = await this.repository.RetrieveAsync(this.desiredSubscriptionUpdates.CustomerId);
+            var customerSubscriptions = await this.repository.RetrieveAsync(this.desiredSubscriptionUpdates.CustomerId).ConfigureAwait(false);
             this.originalSubscriptionState = customerSubscriptions.Where(subscription => subscription.SubscriptionId == this.desiredSubscriptionUpdates.SubscriptionId).FirstOrDefault();
 
             if (this.originalSubscriptionState == null)
@@ -69,7 +69,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
             }
 
             // update the subscription
-            this.Result = await this.repository.UpdateAsync(this.desiredSubscriptionUpdates);
+            this.Result = await this.repository.UpdateAsync(this.desiredSubscriptionUpdates).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Tr
                 try
                 {
                     // restore the subscription to what it was before
-                    await this.repository.UpdateAsync(this.originalSubscriptionState);
+                    await this.repository.UpdateAsync(this.originalSubscriptionState).ConfigureAwait(false);
                 }
                 catch (Exception restoreProblem)
                 {

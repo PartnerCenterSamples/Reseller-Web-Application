@@ -11,7 +11,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
-    using System.Web;
     using System.Web.Http;
     using BusinessLogic;
     using BusinessLogic.Commerce;
@@ -20,9 +19,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using Filters.WebApi;
     using Models;
     using Newtonsoft.Json;
-    using PartnerCenter.Models;
-    using PartnerCenter.Models.Customers;
-    using PartnerCenter.Models.Invoices;
     using PartnerCenter.Models.Subscriptions;
     using RequestContext;
 
@@ -41,7 +37,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [HttpGet]
         public async Task<ManagedSubscriptionsViewModel> GetCustomerSubscriptions()
         {          
-            return await this.GetManagedSubscriptions();
+            return await this.GetManagedSubscriptions().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -67,14 +63,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             string domainName = string.Format(CultureInfo.InvariantCulture, "{0}.onmicrosoft.com", customerViewModel.DomainPrefix);
 
             // check domain available.
-            bool isDomainTaken = await ApplicationDomain.Instance.PartnerCenterClient.Domains.ByDomain(domainName).ExistsAsync();
+            bool isDomainTaken = await ApplicationDomain.Instance.PartnerCenterClient.Domains.ByDomain(domainName).ExistsAsync().ConfigureAwait(false);
             if (isDomainTaken)
             {
                 throw new PartnerDomainException(ErrorCode.DomainNotAvailable).AddDetail("DomainPrefix", domainName);
             }
 
             // get the locale, we default to the first locale used in a country for now.
-            var customerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(customerViewModel.Country).GetAsync();
+            var customerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(customerViewModel.Country).GetAsync().ConfigureAwait(false);
             string billingCulture = customerCountryValidationRules.SupportedCulturesList.FirstOrDefault();      // default billing culture is the first supported culture for the customer's selected country. 
             string billingLanguage = customerCountryValidationRules.SupportedLanguagesList.FirstOrDefault();    // default billing culture is the first supported language for the customer's selected country. 
 
@@ -101,7 +97,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             };
 
             CustomerRegistrationRepository customerRegistrationRepository = new CustomerRegistrationRepository(ApplicationDomain.Instance);
-            CustomerViewModel customerRegistrationInfo = await customerRegistrationRepository.AddAsync(customerRegistrationInfoToPersist);
+            CustomerViewModel customerRegistrationInfo = await customerRegistrationRepository.AddAsync(customerRegistrationInfoToPersist).ConfigureAwait(false);
 
             return customerRegistrationInfo.MicrosoftId;
         }
@@ -123,14 +119,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(ApplicationDomain.Instance.PortalLocalization.OfferLocale));
 
             // Get all subscriptions of customer from PC
-            var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
+            var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync().ConfigureAwait(false);
                        
             // Get subscriptions for portal customer
             var customerSubscriptionsTask = ApplicationDomain.Instance.CustomerSubscriptionsRepository.RetrieveAsync(this.Principal.PartnerCenterCustomerId);
             var allPartnerOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveAsync();
             var currentMicrosoftOffersTask = ApplicationDomain.Instance.OffersRepository.RetrieveMicrosoftOffersAsync();
 
-            await Task.WhenAll(customerSubscriptionsTask, allPartnerOffersTask, currentMicrosoftOffersTask);
+            await Task.WhenAll(customerSubscriptionsTask, allPartnerOffersTask, currentMicrosoftOffersTask).ConfigureAwait(false);
 
             // retrieve all the partner offers to match against them
             var allPartnerOffers = allPartnerOffersTask.Result;
