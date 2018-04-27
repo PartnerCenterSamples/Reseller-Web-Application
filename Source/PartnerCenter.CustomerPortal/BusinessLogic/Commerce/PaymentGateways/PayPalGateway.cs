@@ -199,7 +199,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             returnUrl.AssertNotEmpty(nameof(returnUrl));
             order.AssertNotNull(nameof(order));
 
-            APIContext apiContext = await this.GetAPIContextAsync().ConfigureAwait(false);
+            APIContext apiContext = await this.GetApiContextAsync().ConfigureAwait(false);
             decimal paymentTotal = 0;
 
             // PayPal wouldnt manage decimal points for few countries (example Hungary & Japan). 
@@ -285,7 +285,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <returns>Capture string id.</returns>
         public async Task<string> ExecutePaymentAsync()
         {
-            APIContext apiContext = await this.GetAPIContextAsync().ConfigureAwait(false);
+            APIContext apiContext = await this.GetApiContextAsync().ConfigureAwait(false);
             try
             {
                 Payment payment = new Payment() { id = this.paymentId };
@@ -303,7 +303,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                 ParsePayPalException(ex);
             }
 
-            return await Task.FromResult(string.Empty);
+            return await Task.FromResult(string.Empty).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -319,7 +319,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
 
             authorizationCode.AssertNotEmpty(nameof(authorizationCode));
             
-            APIContext apiContext = await this.GetAPIContextAsync().ConfigureAwait(false);
+            APIContext apiContext = await this.GetApiContextAsync().ConfigureAwait(false);
 
             // given the authorizationId. Lookup the authorization to find the amount. 
             try
@@ -340,7 +340,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                 };
 
                 var responseCapture = cardAuthorization.Capture(apiContext, capture);
-                await Task.FromResult(string.Empty);
+                await Task.FromResult(string.Empty).ConfigureAwait(false);
             }
             catch (PayPalException ex)
             {
@@ -360,10 +360,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             // given the authorizationId string... Lookup the authorization to void it. 
             try
             {                
-                APIContext apiContext = await this.GetAPIContextAsync();
+                APIContext apiContext = await this.GetApiContextAsync().ConfigureAwait(false);
                 Authorization cardAuthorization = Authorization.Get(apiContext, authorizationCode);
                 cardAuthorization.Void(apiContext);
-                await Task.FromResult(string.Empty);
+                await Task.FromResult(string.Empty).ConfigureAwait(false);
             }
             catch (PayPalException ex)
             {
@@ -388,7 +388,80 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             this.payerId = payerId;
             this.paymentId = paymentId;
 
-            return await this.GetOrderDetails();
+            return await this.GetOrderDetails().ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Throws PartnerDomainException by parsing PayPal exception. 
+        /// </summary>
+        /// <param name="ex">Exceptions from PayPal SDK.</param>        
+        private static void ParsePayPalException(PayPalException ex)
+        {
+            if (ex is PaymentsException)
+            {
+                PaymentsException pe = ex as PaymentsException;
+
+                // Get the details of this exception with ex.Details and format the error message in the form of "We are unable to process your payment –  {Errormessage} :: [err1, err2, .., errN]".                
+                StringBuilder errorString = new StringBuilder();
+                errorString.Append(Resources.PaymentGatewayErrorPrefix);
+
+                // build error string for errors returned from financial institutions.
+                if (pe.Details != null)
+                {
+                    string errorName = pe.Details.name.ToUpper();
+
+                    if (errorName == null || errorName.Length < 1)
+                    {
+                        errorString.Append(pe.Details.message);
+                        throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", errorString.ToString());
+                    }
+                    else if (errorName.Contains("UNKNOWN_ERROR"))
+                    {
+                        throw new PartnerDomainException(ErrorCode.PaymentGatewayPaymentError);
+                    }
+                    else if (errorName.Contains("VALIDATION") && pe.Details.details != null)
+                    {
+                        // Check if there are sub collection details and build error string.                                       
+                        errorString.Append("[");
+                        foreach (ErrorDetails errorDetails in pe.Details.details)
+                        {
+                            // removing extrataneous information.                     
+                            string errorField = errorDetails.field;
+                            if (errorField.Contains("payer.funding_instruments[0]."))
+                            {
+                                errorField = errorField.Replace("payer.funding_instruments[0].", string.Empty).ToString();
+                            }
+
+                            errorString.AppendFormat("{0} - {1},", errorField, errorDetails.issue);
+                        }
+
+                        errorString.Replace(',', ']', errorString.Length - 2, 2); // remove the last comma and replace it with ]. 
+                    }
+                    else
+                    {
+                        errorString.Append(Resources.PayPalUnableToProcessPayment);
+                    }
+                }
+
+                throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", errorString.ToString());
+            }
+
+            if (ex is IdentityException)
+            {
+                // ideally this shouldn't be raised from customer experience calls. 
+                // can occur when admin has generated a new secret for an existing app id in PayPal but didnt update portal payment configuration.                                
+                throw new PartnerDomainException(ErrorCode.PaymentGatewayIdentityFailureDuringPayment).AddDetail("ErrorMessage", Resources.PaymentGatewayIdentityFailureDuringPayment);
+            }
+
+            // few PayPalException types contain meaningfull exception information only in InnerException. 
+            if (ex is PayPalException && ex.InnerException != null)
+            {
+                throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", ex.InnerException.Message);
+            }
+            else
+            {
+                throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", ex.Message);
+            }
         }
 
         /// <summary>
@@ -398,7 +471,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         private async Task<OrderViewModel> GetOrderDetails()
         {
             OrderViewModel orderFromPayment = null;   
-            APIContext apiContext = await this.GetAPIContextAsync();
+            APIContext apiContext = await this.GetApiContextAsync().ConfigureAwait(false);
 
             try
             {
@@ -444,14 +517,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// Retrieves the API Context for PayPal. 
         /// </summary>
         /// <returns>PayPal APIContext</returns>
-        private async Task<APIContext> GetAPIContextAsync()
+        private async Task<APIContext> GetApiContextAsync()
         {
             //// The GetAccessToken() of the SDK Returns the currently cached access token. 
             //// If no access token was previously cached, or if the current access token is expired, then a new one is generated and returned. 
             //// See more - https://github.com/paypal/PayPal-NET-SDK/blob/develop/Source/SDK/Api/OAuthTokenCredential.cs
 
             // Before getAPIContext ... set up PayPal configuration. This is an expensive call which can benefit from caching. 
-            PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync();
+            PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync().ConfigureAwait(false);
 
             Dictionary<string, string> configMap = new Dictionary<string, string>
             {
@@ -470,79 +543,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             };
 
             return apiContext;
-        }
-
-        /// <summary>
-        /// Throws PartnerDomainException by parsing PayPal exception. 
-        /// </summary>
-        /// <param name="ex">Exceptions from PayPal SDK.</param>        
-        private static void ParsePayPalException(PayPalException ex)
-        {
-            if (ex is PaymentsException)
-            {
-                PaymentsException pe = ex as PaymentsException;
-
-                // Get the details of this exception with ex.Details and format the error message in the form of "We are unable to process your payment –  {Errormessage} :: [err1, err2, .., errN]".                
-                StringBuilder errorString = new StringBuilder();
-                errorString.Append(Resources.PaymentGatewayErrorPrefix);                
-
-                // build error string for errors returned from financial institutions.
-                if (pe.Details != null)
-                {
-                    string errorName = pe.Details.name.ToUpper();
-
-                    if (errorName == null || errorName.Length < 1)
-                    {
-                        errorString.Append(pe.Details.message);
-                        throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", errorString.ToString());
-                    }                        
-                    else if (errorName.Contains("UNKNOWN_ERROR"))
-                    {                        
-                        throw new PartnerDomainException(ErrorCode.PaymentGatewayPaymentError);
-                    }
-                    else if (errorName.Contains("VALIDATION") && pe.Details.details != null)
-                    {
-                        // Check if there are sub collection details and build error string.                                       
-                        errorString.Append("[");
-                        foreach (ErrorDetails errorDetails in pe.Details.details)
-                        {
-                            // removing extrataneous information.                     
-                            string errorField = errorDetails.field;
-                            if (errorField.Contains("payer.funding_instruments[0]."))
-                            {
-                                errorField = errorField.Replace("payer.funding_instruments[0].", string.Empty).ToString();
-                            }
-
-                            errorString.AppendFormat("{0} - {1},", errorField, errorDetails.issue);
-                        }
-
-                        errorString.Replace(',', ']', errorString.Length - 2, 2); // remove the last comma and replace it with ]. 
-                    }
-                    else
-                    {                        
-                        errorString.Append(Resources.PayPalUnableToProcessPayment);
-                    }
-                }
-
-                throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", errorString.ToString());
-            }
-
-            if (ex is IdentityException)
-            {
-                // ideally this shouldn't be raised from customer experience calls. 
-                // can occur when admin has generated a new secret for an existing app id in PayPal but didnt update portal payment configuration.                                
-                throw new PartnerDomainException(ErrorCode.PaymentGatewayIdentityFailureDuringPayment).AddDetail("ErrorMessage", Resources.PaymentGatewayIdentityFailureDuringPayment);
-            }
-
-            // few PayPalException types contain meaningfull exception information only in InnerException. 
-            if (ex is PayPalException && ex.InnerException != null)
-            {                
-                throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", ex.InnerException.Message);
-            }
-            else
-            {                
-                throw new PartnerDomainException(ErrorCode.PaymentGatewayFailure).AddDetail("ErrorMessage", ex.Message);
-            }
         }
     }
 }
