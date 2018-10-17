@@ -1,0 +1,265 @@
+﻿<script>
+    /*
+        Stores all the client side resources such as strings, image URLs and constants. The portal will consume this and store it in memory. Add your strings here.
+    */
+    var portalResources = {
+        Keys: {
+            /*
+                Keys strings
+            */
+            InstrumentationKey: "@Html.Raw(Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.ApplicationDomain.Instance.TelemetryService.InstrumentationKey)"
+        },
+        Strings: {
+            /*
+                Framework strings
+            */
+            PartnerCountry: "@Html.Raw(Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.ApplicationDomain.Instance.PortalLocalization.CountryIso2Code)",
+            CurrentLocale: "@Html.Raw(Resources.Culture.Name)",
+            Loading: "@Html.Raw(Resources.Loading)",
+            FailedToLoadPortal: "@Html.Raw(Resources.FailedToLoadPortal)",
+            PortalConfigurationNotFound: "@Html.Raw(Resources.PortalConfigurationNotFound)",
+            InvalidPortalConfiguration: "@Html.Raw(Resources.InvalidPortalConfiguration)",
+            NavigateBackTo: "@Html.Raw(Resources.NavigateBackTo)",
+            Ellipsis: "@Html.Raw(Resources.Ellipsis)",
+            MoreActionsTooltip: "@Html.Raw(Resources.MoreActionsTooltip)",
+            Yes: "@Html.Raw(Resources.Yes)",
+            No: "@Html.Raw(Resources.No)",
+            OK: "@Html.Raw(Resources.OK)",
+            Cancel: "@Html.Raw(Resources.Cancel)",
+            Retry: "@Html.Raw(Resources.RetryCapital)",
+            Next: "@Html.Raw(Resources.Next)",
+            Back: "@Html.Raw(Resources.Back)",
+            Add: "@Html.Raw(Resources.AddCaption)",
+            Delete: "@Html.Raw(Resources.Delete)",
+            Save: "@Html.Raw(Resources.Save)",
+            Undo: "@Html.Raw(Resources.Undo)",
+            NotificationsSummary: "@Html.Raw(Resources.NotificationsSummary)",
+            TemplateLoadFailureMessage: "@Html.Raw(Resources.TemplateLoadFailureMessage)",
+            TemplateLoadRetryMessage: "@Html.Raw(Resources.TemplateLoadRetryMessage)",
+            EmptyListMessage: "@Html.Raw(Resources.EmptyListMessage)",
+            SignOut: "@Html.Raw(Resources.Signout)",
+            SignOutToolTipCaption: "@Html.Raw(Resources.SignOutToolTipCaption)",
+            AccessDeniedMessage: "@Html.Raw(Resources.AccessDeniedMessage)",
+
+            /*
+                Localized Country strings
+            */
+
+            Countries: {
+                AU: "@Html.Raw(Resources.CountryNameAU)",
+                AT: "@Html.Raw(Resources.CountryNameAT)",
+                BE: "@Html.Raw(Resources.CountryNameBE)",
+                BG: "@Html.Raw(Resources.CountryNameBG)",
+                CA: "@Html.Raw(Resources.CountryNameCA)",
+                HR: "@Html.Raw(Resources.CountryNameHR)",
+                CY: "@Html.Raw(Resources.CountryNameCY)",
+                CZ: "@Html.Raw(Resources.CountryNameCZ)",
+                DK: "@Html.Raw(Resources.CountryNameDK)",
+                EE: "@Html.Raw(Resources.CountryNameEE)",
+                FI: "@Html.Raw(Resources.CountryNameFI)",
+                FR: "@Html.Raw(Resources.CountryNameFR)",
+                DE: "@Html.Raw(Resources.CountryNameDE)",
+                GR: "@Html.Raw(Resources.CountryNameGR)",
+                HU: "@Html.Raw(Resources.CountryNameHU)",
+                IS: "@Html.Raw(Resources.CountryNameIS)",
+                IE: "@Html.Raw(Resources.CountryNameIE)",
+                IT: "@Html.Raw(Resources.CountryNameIT)",
+                JP: "@Html.Raw(Resources.CountryNameJP)",
+                LV: "@Html.Raw(Resources.CountryNameLV)",
+                LI: "@Html.Raw(Resources.CountryNameLI)",
+                LT: "@Html.Raw(Resources.CountryNameLT)",
+                LU: "@Html.Raw(Resources.CountryNameLU)",
+                MT: "@Html.Raw(Resources.CountryNameMT)",
+                MC: "@Html.Raw(Resources.CountryNameMC)",
+                NL: "@Html.Raw(Resources.CountryNameNL)",
+                NZ: "@Html.Raw(Resources.CountryNameNZ)",
+                NO: "@Html.Raw(Resources.CountryNameNO)",
+                PO: "@Html.Raw(Resources.CountryNamePO)",
+                PT: "@Html.Raw(Resources.CountryNamePT)",
+                RO: "@Html.Raw(Resources.CountryNameRO)",
+                SK: "@Html.Raw(Resources.CountryNameSK)",
+                SL: "@Html.Raw(Resources.CountryNameSL)",
+                ES: "@Html.Raw(Resources.CountryNameES)",
+                SE: "@Html.Raw(Resources.CountryNameSE)",
+                CH: "@Html.Raw(Resources.CountryNameCH)",
+                GB: "@Html.Raw(Resources.CountryNameGB)",
+            	US: "@Html.Raw(Resources.CountryNameUS)",
+            	IN: "@Html.Raw(Resources.CountryNameIN)"
+            },
+
+            /*
+                Plugin strings
+            */
+
+            Plugins: {
+                BadInputGenericMessage: "@Html.Raw(Resources.BadInputGenericMessage)",
+                InvalidInput: "@Html.Raw(Resources.InvalidInput)",
+
+                AdminConsole: {
+                    DashboardStatusOk: "@Html.Raw(Resources.DashboardStatusOk)",
+                    DashboardStatusNotOk: "@Html.Raw(Resources.DashboardStatusNotOk)",
+                    DashboardItemConfigured: "@Html.Raw(Resources.DashboardItemConfigured)",
+                    DashboardItemNeedsConfiguration: "@Html.Raw(Resources.DashboardItemNeedsConfiguration)",
+                    DashboardLoadingError: "@Html.Raw(Resources.DashboardLoadingError)"
+                },
+                AdminOfferConfiguration: {
+                    AddOfferCaption: "@Html.Raw(Resources.AddOfferCaption)",
+                    DeleteOffersCaption: "@Html.Raw(Resources.DeleteOffersCaption)",
+                    MicrosoftOfferListColumnCaption: "@Html.Raw(Resources.MicrosoftOfferListColumnCaption)",
+                    CustomizationOfferListColumnCaption: "@Html.Raw(Resources.CustomizationOfferListColumnCaption)",
+                    EmptyOfferListMessage: "@Html.Raw(Resources.EmptyOfferListMessage)",
+                    DeletingOfferMessage: "@Html.Raw(Resources.DeletingOfferMessage)",
+                    OfferAutomaticallyRenewable: "@Html.Raw(Resources.OfferAutomaticallyRenewable)",
+                    OfferManuallyRenewable: "@Html.Raw(Resources.OfferManuallyRenewable)",
+                    OfferAvailableForPurchase: "@Html.Raw(Resources.OfferAvailableForPurchase)",
+                    OfferUnavailableForPurchase: "@Html.Raw(Resources.OfferUnavailableForPurchase)",
+                    To: "@Html.Raw(Resources.To)",
+                    Seats: "@Html.Raw(Resources.Seats)",
+                    OfferDeletionConfirmation: "@Html.Raw(Resources.OfferDeletionConfirmation)",
+                    OfferDeletionFailure: "@Html.Raw(Resources.OfferDeletionFailure)",
+                    OffersFetchFailure: "@Html.Raw(Resources.OffersFetchFailure)",
+                    OffersFetchProgress: "@Html.Raw(Resources.OffersFetchProgress)",
+                    DeleteOffersPromptMessage: "@Html.Raw(Resources.DeleteOffersPromptMessage)"
+                },
+                AddOrUpdateOffer: {
+                    PickOfferCaption: "@Html.Raw(Resources.PickOfferCaption)",
+                    PickOfferTooltip: "@Html.Raw(Resources.PickOfferTooltip)",
+                    SaveOfferCaption: "@Html.Raw(Resources.SaveOfferCaption)",
+                    MicrosoftOfferRetrievalErrorMessage: "@Html.Raw(Resources.MicrosoftOfferRetrievalErrorMessage)",
+                    SavingOfferMessage: "@Html.Raw(Resources.SavingOfferMessage)",
+                    UpdatingOfferMessage: "@Html.Raw(Resources.UpdatingOfferMessage)",
+                    OfferSaveSuccessMessage: "@Html.Raw(Resources.OfferSaveSuccessMessage)",
+                    OfferSaveErrorMessage: "@Html.Raw(Resources.OfferSaveErrorMessage)",
+                    SelectOfferErrorMessage: "@Html.Raw(Resources.SelectOfferErrorMessage)",
+                    Description: "@Html.Raw(Resources.Description)",
+                    Category: "@Html.Raw(Resources.Category)",
+                    Offer: "@Html.Raw(Resources.Offer)",
+                    EmptyMicrosoftOfferListMessage: "@Html.Raw(Resources.EmptyMicrosoftOfferListMessage)"
+                },
+                PortalBranding: {
+                    BrandingRetrievalErrorMessage: "@Html.Raw(Resources.BrandingRetrievalErrorMessage)",
+                    BrandingRetrievalProgressMessage: "@Html.Raw(Resources.BrandingRetrievalProgressMessage)",
+                    BrandingUpdateProgressMessage: "@Html.Raw(Resources.BrandingUpdateProgressMessage)",
+                    BrandingUpdateSuccessMessage: "@Html.Raw(Resources.BrandingUpdateSuccessMessage)",
+                    ReloadPortalButtonCaption: "@Html.Raw(Resources.ReloadPortalButtonCaption)",
+                    ReloadPortalButtonTooltip: "@Html.Raw(Resources.ReloadPortalButtonTooltip)",
+                    BrandingUpdateErrorMessage: "@Html.Raw(Resources.BrandingUpdateErrorMessage)",
+                    UndoBrandingChangesTooltip: "@Html.Raw(Resources.UndoBrandingChangesTooltip)",
+                    ImagesTooLarge: "@Html.Raw(Resources.ImagesTooLarge)",
+                    InvalidAgreementUserId: "@Html.Raw(Resources.InvalidAgreementUserId)",
+                    InvalidFileType: "@Html.Raw(Resources.InvalidFileType)",
+                    InvalidOrganizationLogoUri: "@Html.Raw(Resources.InvalidOrganizationLogoUri)",
+                    InvalidHeaderImageUri: "@Html.Raw(Resources.InvalidHeaderImageUri)",
+                    InvalidPrivacyAgreementUri: "@Html.Raw(Resources.InvalidPrivacyAgreementUri)",
+                    InvalidContactUsPhone: "@Html.Raw(Resources.InvalidContactUsPhone)",
+                    InvalidContactSalesPhone: "@Html.Raw(Resources.InvalidContactSalesPhone)"
+                },
+                PaymentConfiguration: {
+                    SandboxAccountTypeCaption: "@Html.Raw(Resources.SandboxAccountTypeCaption)",
+                    LiveAccountTypeCaption: "@Html.Raw(Resources.LiveAccountTypeCaption)",
+                    FetchPaymentConfigurationErrorMessage: "@Html.Raw(Resources.FetchPaymentConfigurationErrorMessage)",
+                    FetchPaymentConfigurationProgressMessage: "@Html.Raw(Resources.FetchPaymentConfigurationProgressMessage)",
+                    UpdatePaymentProgressMessage: "@Html.Raw(Resources.UpdatePaymentProgressMessage)",
+                    UpdatePaymentSuccessMessage: "@Html.Raw(Resources.UpdatePaymentSuccessMessage)",
+                    UpdatePaymentErrorMessage: "@Html.Raw(Resources.UpdatePaymentErrorMessage)",
+                    UndoUnsavedChanges: "@Html.Raw(Resources.UndoUnsavedChanges)"
+                },
+                CustomerManagementConfiguration: {
+                    FetchPreApprovedCustomersErrorMessage: "@Html.Raw(Resources.FetchPreApprovedCustomersErrorMessage)",
+                    UpdatePreApprovedCustomersProgressMessage: "@Html.Raw(Resources.UpdatePreApprovedCustomersProgressMessage)",
+                    UpdatePreApprovedCustomersSuccessMessage: "@Html.Raw(Resources.UpdatePreApprovedCustomersSuccessMessage)",
+                    UpdatePreApprovedCustomersErrorMessage: "@Html.Raw(Resources.UpdatePreApprovedCustomersErrorMessage)"
+                },
+                HomePage: {
+                    CouldNotRetrievePartnerOffers: "@Html.Raw(Resources.CouldNotRetrievePartnerOffers)"
+                },
+                CustomerRegistrationPage: {
+                    PreparingOrderAndRedirectingMessage: "@Html.Raw(Resources.PreparingOrderAndRedirectingMessage)",
+                    CustomerRegistrationSuccessMessage: "@Html.Raw(Resources.CustomerRegistrationSuccessMessage)",
+                    CustomerRegistrationFailureMessage: "@Html.Raw(Resources.CustomerRegistrationFailureMessage)",
+                    OrderRegistrationFailureMessage: "@Html.Raw(Resources.OrderRegistrationFailureMessage)",
+                    CustomerRegistrationMessage: "@Html.Raw(Resources.CustomerRegistrationMessage)",
+                    InvalidInputErrorPrefix: "@Html.Raw(Resources.InvalidInputErrorPrefix)",
+                    DownstreamErrorPrefix: "@Html.Raw(Resources.DownstreamErrorPrefix)",
+                    DomainNotAvailable: "@Html.Raw(Resources.DomainNotAvailable)",
+                    InvalidAddress: "@Html.Raw(Resources.InvalidAddress)"
+                },
+                UpdateSubscriptionPage: {
+                    PreparingOrderAndRedirectingMessage: "@Html.Raw(Resources.PreparingOrderAndRedirectingMessage)",
+                    ProratedPaymentTotalText: "@Html.Raw(Resources.ProratedPaymentTotal)",
+                    OrderUpdateFailureMessage: "@Html.Raw(Resources.OrderUpdateFailureMessage)",
+                    InvalidInputErrorPrefix: "@Html.Raw(Resources.InvalidInputErrorPrefix)",
+                    DownstreamErrorPrefix: "@Html.Raw(Resources.DownstreamErrorPrefix)",
+                    RenewSubscriptionTitleText: "@Html.Raw(Resources.RenewSubscriptionTitleCaption)",
+                    CouldNotRetrieveOffer: "@Html.Raw(Resources.CouldNotRetrieveOffer)",
+                    AddMoreSeatsTitleText: "@Html.Raw(Resources.AddMoreLicensesCaption)",
+                    PaymentTotalText: "@Html.Raw(Resources.TotalAmountCaption)"
+                },
+                AddSubscriptionPage: {
+                    PreparingOrderAndRedirectingMessage: "@Html.Raw(Resources.PreparingOrderAndRedirectingMessage)",
+                    OrderAddFailureMessage: "@Html.Raw(Resources.OrderAddFailureMessage)",
+                    InvalidInputErrorPrefix: "@Html.Raw(Resources.InvalidInputErrorPrefix)",
+                    DownstreamErrorPrefix: "@Html.Raw(Resources.DownstreamErrorPrefix)"
+                },
+                SubscriptionsSummaryPage: {
+                    CouldNotRetrieveSubscriptionsSummary: "@Html.Raw(Resources.CouldNotRetrieveSubscriptionsSummary)"
+                },
+                CustomerAccountPage: {
+                    CouldNotRetrieveCustomerAccount: "@Html.Raw(Resources.CouldNotRetrieveCustomerAccount)"
+                },
+                ProcessOrderPage: {
+                    PaymentGatewayErrorPrefix: "@Html.Raw(Resources.PaymentGatewayErrorPrefix)",
+                    CannotAddExistingSubscriptionError: "@Html.Raw(Resources.CannotAddExistingSubscriptionError)",
+                    ProcessingOrderMessage: "@Html.Raw(Resources.ProcessingOrderMessage)",
+                    OrderProcessingFailureNotification: "@Html.Raw(Resources.OrderProcessingFailureNotification)",
+                    ProcessingOrderNotification: "@Html.Raw(Resources.ProcessingOrderNotification)",
+                    ProcessingPreApprovedTxNotification: "@Html.Raw(Resources.ProcessingPreApprovedTxNotification)",
+                    PaymentReceiptFailureNotification: "@Html.Raw(Resources.PaymentReceiptFailureNotification)",
+                    OrderFailureMessage: "@Html.Raw(Resources.OrderFailureMessage)",
+                    NewCustomerProcessOrderFailureReceivingPaymentMessage: "@Html.Raw(Resources.NewCustomerProcessOrderFailureReceivingPaymentMessage)",
+                    NewCustomerOrderSuccessMessage: "@Html.Raw(Resources.NewCustomerOrderSuccessMessage)",
+                    InvalidInputErrorPrefix: "@Html.Raw(Resources.InvalidInputErrorPrefix)",
+                    DownstreamErrorPrefix: "@Html.Raw(Resources.DownstreamErrorPrefix)",
+                    ExistingCustomerProcessingOrderMessage: "@Html.Raw(Resources.ExistingCustomerProcessingOrderMessage)"
+                },
+                AddSubscriptionsView: {
+                    SelectOfferErrorMessage: "@Html.Raw(Resources.SelectOfferErrorMessage)",
+                    EmptyListCaption: "@Html.Raw(Resources.EmptyListCaption)"
+                }
+            }
+        },
+
+        Images: {
+            /*
+                Framework images
+            */
+
+            ForwardArrow: "/Content/Images/WebPortal/forward.png",
+            BackwardArrow: "/Content/Images/WebPortal/back.png",
+            Tick: "/Content/Images/WebPortal/tick.png",
+            Cross: "/Content/Images/WebPortal/cross.png",
+            Refresh: "/Content/Images/WebPortal/refresh.png",
+            SuccessNotification: "/Content/Images/WebPortal/notification-success.png",
+            InfoNotification: "/Content/Images/WebPortal/notification-info.png",
+            WarningNotification: "/Content/Images/WebPortal/notification-warning.png",
+            ErrorNotification: "/Content/Images/WebPortal/notification-error.png",
+            ProgressNotification: "/Content/Images/WebPortal/notification-progress.gif",
+            Ellipsis: "/Content/Images/WebPortal/ellipsis.png",
+            SortDescending: "/Content/Images/WebPortal/sorted-desc.png",
+            SortAscending: "/Content/Images/WebPortal/sorted-asc.png",
+
+            /*
+                Plugin images
+            */
+
+            Plugins: {
+                Expenses: {
+                    ListViewTabActive: "/Content/Images/Plugins/Expenses/list-view-on.png",
+                    ListViewTabInactive: "/Content/Images/Plugins/Expenses/list-view.png",
+                    ChartViewTabActive: "/Content/Images/Plugins/Expenses/chart-view-on.png",
+                    ChartViewTabInactive: "/Content/Images/Plugins/Expenses/chart-view.png"
+                }
+            }
+        }
+    }
+</script>

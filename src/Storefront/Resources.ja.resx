@@ -1,0 +1,1284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>今すぐ購入します。</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>すべてクリア</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>著作権 2018</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>見つけたないエンティティ</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>ポータルのコンテンツを取得できませんでした。</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>まずは</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>ポータルの構成が無効であると思われる</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>前の</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>読み込み</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>他の操作.</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>戻ってください。</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>次に</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>違います</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>アクティブな通知</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>新しい通知</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>わかりました</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>ポータルの構成が見つかりませんでした。</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>私を覚えなさい</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>サインアウトします。</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>機能の内容を取得できませんでした。</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>機能の内容を取得</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>ユーザー名:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>表示タイル</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>うん</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>少なくとも 1 つの提供を購入するを選択してください。</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>合計金額</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>カートから削除します。</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>アドレス</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>管理者ユーザー アカウント</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>ありがとう。お客様が作成され、ご注文が正常に処理されました。</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>顧客情報</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>完成です</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>マイクロソフトの ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>顧客の詳細</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>サブスクリプション</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>サブスクリプション</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>合計</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>サブスクリプションを追加します。</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>お支払いに進みます</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>利用規約に同意します。</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>有効なドメインのプレフィックスを入力してください。</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>サブスクリプション ID:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>会社情報を更新します。</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>あなたのダッシュ ボードを構築</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>販売する提供していますを選択</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>お支払い方法を追加します。</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>ようこそ</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>あなたの Web ストア ビルダー!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>ベースの課金</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>概要:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>カスタマイズ</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>機能:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>マイクロソフトのオファーを選択します。</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>提供による検索します。</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>年間の価格:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>字幕を提供しています。</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>プラン名。</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>提供機能を追加します。</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>この後提供機能を追加します。</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>ご要約ポイントを追加します。</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>この後キャンペーン概要を追加します。</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>あなたの会社のブランドを構成するをクリックします。</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>このオファーを与える機能について説明します。</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>あなたのオファーを構成します</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>キャンペーン概要を書く</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>支払いオプションを構成する] をクリックします。</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>価格:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>提供機能を削除します。</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>キャンペーン概要を削除します。</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>構成</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>構成が必要</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>ダッシュ ボードの情報を取得できませんでした。</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>販売を開始する前に、あなたのサイトをパーソナライズします。</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>販売を開始してもいいです!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>新たな申込みを追加します。</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>カテゴリ</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>カスタマイズ</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>オファーを削除します。</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>オファーを削除します。</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>説明</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>ない提供していますが見つかりました</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>構成されている任意のオファーがありません。あなたのオファーを追加する上記提供を追加をクリックします。</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>マイクロソフト提供</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>マイクロソフトのオファーを取得できませんでした。</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>提供します。</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>自動的に再生可能</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>購入可能</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>提供が削除されています。</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>オファーを削除できませんでした。</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>手動で再生可能</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>オファーを保存できませんでした。</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>正常に保存を提供します!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>オファーを取得できませんでした。</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>オファーを取得</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>購入はできません。</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>オファーを保存します。</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>オファーを保存</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>席</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>オファーを選択してください。</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>宛先</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>オファーを更新</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>組織名</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>ブランディング パートナーを取得できませんでした。</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>取得パートナー ブランド</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>Web ストアを構成します。</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>ヘッダーとフッターのすべてのページに表示される組織情報を指定します。</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>ブランディングを保存できませんでした。</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>ブランド情報を更新</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>ブランディングに保存されます。変更を表示するには、ヘッダー バーのリロード ボタンをクリックします。</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>営業担当:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>サポートのお問い合わせ:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>サポートのメール アドレス</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>ヘッダー イメージ:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>ホーム ページの上部に表示されます。(.jpg、.jpeg、.img、.gif)。ファイルをアップロードまたは有効なイメージの URL を入力</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>お使いのコンピューターからヘッダー画像ファイルを選択します。</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>ロゴ:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>すべてのページのヘッダーに表示される、サイズ 32 で 32 の画像に適しています。ファイルをアップロードまたは有効なイメージの URL を入力</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>お使いのコンピューターから組織のロゴの画像ファイルを選択します。</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>名前:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>あなたの会社の法的な名前、各ページのヘッダーに</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>リロード ポータル</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>変更を確認するポータルを再読み込み</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>ローカル ブランドの変更を元に戻す</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>お支払い情報を取得できませんでした。</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>お支払い情報の取得</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>ライブ口座</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>アカウントの設定あなたの PayPal のプロを提供します。</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>あなたは 1 つを持っていない場合は、新しい pro アカウントを作成。</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>あなたの顧客から支払いを受け取る、PayPal pro アカウントを使用、訪問をしてくださいする必要があります。</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>PayPal アカウントの種類:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>あなたのトランザクションをテストするためのテスト アカウントの種類を選択できます。作業は、取引を開始するライブ アカウントの種類を切り替えることができます。</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>PayPal クライアント ID:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>PayPal のクライアント ID を入力してください。</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>PayPal クライアント シークレット:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>あなたの PayPal のクライアント シークレットを入力します。</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>サンド ボックス アカウント</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>保存されていないお支払いの変更を元に戻す</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>お支払い情報を保存できませんでした。</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>お支払い情報の更新</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>お支払い情報の更新</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>住所行 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>住所 2 行目</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>市</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>国</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>会社情報</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>連絡先情報</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>ドメイン プレフィックスが表示されます後、@ あなたのドメインのメール アドレスで。一意である必要があり、任意の句読点を含めることはできません。例: 貴社。</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>ドメイン プレフィックス</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>メール アドレス</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>有効な電子メール アドレスを入力することを確認します。それは、支払いデータを設定する開始するための重要な情報を送信する連絡先の主なポイントになります。</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>最初の名前</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>最後の名前</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>これは、Office 365 アカウントに使用するユーザー id になります。</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>都道府県/州</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>郵便番号/郵便番号</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-未払い</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>ウェブサイトを設定します。</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>このウェブサイトはまだ建設中です。後で参照してください。</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>オファーを取得できませんでした。</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>支払った金額</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>支払った価格</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>レート</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>追加席</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>ご購入</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>顧客を登録できませんでした。後でやり直してください。</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>顧客を登録しています.</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>注文の準備とお支払いゲートウェイにリダイレクトする.</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>注文登録エラー</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>多くのサブスクリプションを購入します。</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>ライセンス</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>プロ格</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>1 つまたは複数のオファーを選択します。</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>このエリアにアクセスするための権限がありません。</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>順序の更新エラー</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>入力エラーが発生しました。入力を確認して、もう一度やり直してください。</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>ドメインは利用できません。別のドメイン プレフィックスを入力してください。</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>選択した画像は大きすぎます。お小さい画像を指定するか、1 つずつをアップロード</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>有効なアドレスを指定してください。</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>有効な画像ファイルをアップロードするを選択してください。</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>選択した提供していますを削除するよろしいですか。お客様はすでに、これらのオファーを購入した、購入したサブスクリプションはまだ使用されますが、再生はできません。</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>管理者ユーザー アカウントとパスワードをコピーして安全な場所に保存してください。このページを終了後、それを取得することはできません。</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>有効期限します。</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>プロ格に応じて支払われた価格が表示されます。</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>年間の価格</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>サブスクリプションを追加してください。</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>ホーム ページ</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>連絡先の詳細を表示</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>パートナー管理者以外がログインする権限がありません。</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>営業担当に連絡</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>電子メール：</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>電話番号:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>無効な入力を修正してください。</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>この時点であなたの要求を処理できておりません。後で試すか、メールでお問い合わせください。エラーの詳細-   </value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>1 つだけ subcription を更新できます。</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>注文の準備とお支払いゲートウェイにリダイレクトする.</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>サブスクリプションの追加中にエラー。</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>我々 は-あなたの支払いを処理することは</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>ポータルを起動できませんでした。</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>お支払い設定は無効です。</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>この時点で、お支払いを処理できません。メールでお問い合わせください。</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>無効なヘッダー イメージ Uri。Uri が有効なことを確認してください。</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>入力したフィールドのいずれかで問題が発生しました。</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>無効な組織ロゴ Uri。Uri が有効なことを確認してください。</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>無効な Uri のプライバシー。Uri が有効なことを確認してください。</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>プライバシー</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>プライバシー リンク:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>ここでホーム ページのフッターに表示されますあなたの顧客にプライバシー条件を示すリンクを指定できます。</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>このウェブサイトのプライバシー規約を表示します。</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>あなたのアカウントを取得できませんでした。後でもう一度試してください。</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>あなたのサブスクリプションを取得できませんでした。後でもう一度試してください。</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>営業メール</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>サブスクリプションを更新します。</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>組織名</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>主な連絡先</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>オファーの詳細を取得できませんでした。後でもう一度試してください。</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>1 つ以上のフィールドが無効です。くださいそれらを修正し、送信。</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>ご注文します。</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>年間合計</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>オファーを選択します。</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>販売したい申し出をピックアップします。</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>既に追加しようとしている 1 つまたは複数提供していますが存在します。ライセンスは、既存のサブスクリプションに追加できます。</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>ユーザー/年</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>有効な販売連絡先を入力してください。</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>有効な連絡先サポートの電話番号を入力してください。</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>お支払いの情報の収集、顧客との処理順序を作成.</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>お支払い情報を収集、処理順序今.</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>席をサブスクリプションに追加します。</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>サブスクリプションを追加します。</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>サブスクリプションを更新します。</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>処理順序エラーが発生しました。後で再試行してください。</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>処理順序に失敗しました。[完了] をクリックして、もう一度やり直してください。</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>支払い情報の受信に失敗しました。再試行する完了] をクリックしてください。</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>お支払い情報を正常に受信します。処理順序.</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>登録注文が正常に処理されました。</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>支払い情報の受信に失敗しました。ログインし、サブスクリプションを追加します。</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>あなたの支払いを処理できておりません。</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>連絡先に示す私たちのヘッダー セクション</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} 広告テナントは、パートナー センターの顧客に既に登録されている: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} は 0 より大きくなければなりません</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>文字列</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} が設定されていません</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() に失敗しました: {0}、サブスクリプション Id: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>組織のロゴのイメージ ファイルの種類を提供します。</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>無効な組織ロゴ URI をアップロード</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>ヘッダー画像は、画像ファイルの種類</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>無効なヘッダー イメージ URI がアップロード</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>無効なプライバシー規約 URI をアップロード</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>要求の処理中にエラーが発生しました。</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>無効な操作が行われています。</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>少なくとも 1 つのサブスクリプション アイテム順序が必要です。</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>お支払いモードはサポートされていません</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>提供価格であるべきよりもゼロ</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>MicrosoftOfferId を設定する必要があります。</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>Id は有効な GUID である必要があります。</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>パートナー提供の永続性を更新できませんでした。</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>マイクロソフトのオファーを更新することはできません。新しい提案を作成します。</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>見つかりませんを提供します。</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>振込セクション ポータルのブランド構成が見つかりませんでした。</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>無効な連絡先私たちの e メール アドレス</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>無効な電話お問い合わせ</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>無効な連絡先販売メール アドレス</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>無効な連絡先営業電話</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>ライセンスを追加します。</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>新しいパートナー ・ センター顧客を登録できませんでした。</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Web 店の建築者</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>ブランドのセットアップ</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>提供セットアップ</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>お支払い設定</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>注文履歴</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>サブスクリプションを管理します。</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>ホーム ページに移動します。</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>オーストラリア</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>オーストリア</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>ベルギー</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>ブルガリア</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>カナダ</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>クロアチア</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>キプロス</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>チェコ共和国</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>デンマーク</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>エストニア</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>フィンランド</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>フランス</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>ドイツ</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>ギリシャ</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>ハンガリー</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>アイスランド</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>アイルランド</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>イタリア</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>ラトビア</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>リヒテンシュタイン</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>リトアニア</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>ルクセンブルク</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>マルタ</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>モナコ</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>オランダ</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>ニュージーランド</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>ノルウェー</value>
+  </data>
+  <data name="CountryNamePO" xml:space="preserve">
+    <value>ポーランド</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>ポルトガル</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>ルーマニア</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>スロバキア</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>スロベニア</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>スペイン</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>スウェーデン</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>スイス</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>英国</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>米国</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>組織名は必須です。</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>国は必須です。</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>住所行 1 が必要です。</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>都市が必要です。</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>電子メールのフィールドは、有効な電子メール アドレスではありません。</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>ドメイン プレフィックスが必要です。</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>最初の名前が必要です。</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>最後の名前が必要です。</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>電話番号が必要です。</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>アプリケーションからサインアウトします。</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>アクティブです</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>どれも</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>中断</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>ステータス</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>お客様が管理するサブスクリプション</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>パートナーは、サブスクリプションを管理</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>注文</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>インストルメンテーションのキー:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>ポータルからのテレメトリ データをキャプチャするために、アプリケーションのインサイト インストルメンテーション キーを指定できます。</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>使用状況ベースのサブスクリプション</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>事前承認済みのお客様</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>事前に承認されたトランザクションのための顧客を管理します。</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>「すべて選択」店の前の事前承認としてすべて現在および将来お客様を迎えます。</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>すべてを選択します。</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>事前承認</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>顧客名</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>プライマリ ドメイン名</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>マイクロソフトの ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>事前に承認された顧客の詳細を取得できませんでした。</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>事前に承認された顧客情報の更新</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>事前に承認された顧客情報の更新</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>事前に承認された顧客の情報を保存できませんでした。</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>このトランザクションは、事前承認済みです。処理順序.</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>会社名またはドメインで検索します。</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>インド</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>PayU アカウントの種類:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>あなたのトランザクションをテストするためのテスト アカウントの種類を選択できます。作業は、取引を開始するライブ アカウントの種類を切り替えることができます。</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>PayU マーチャント キー:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>PayU 商人塩を入力します。</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU 商人塩:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>PayU マーチャント キーを入力します。</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>PayU 承認</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>PayU 承認を入力します。</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>PayUMoney 商人のアカウントの設定を提供します。</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>あなたは 1 つを持っていない場合は、新しい商人のアカウントを作成します。</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>あなたの顧客から支払いを受け取る、PayUMoney の商人のアカウントを使用してをご覧くださいする必要があります。</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>契約ユーザー ID:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>マイクロソフト クラウド契約の受諾と関連するパートナーのユーザーの識別子。</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>無効なユーザー id。</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>同意、</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>サービス利用規約</value>
+  </data>
+</root>

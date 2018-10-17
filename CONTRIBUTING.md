@@ -1,32 +1,80 @@
-# How to Contribute
-One of the easiest ways to contribute is to participate in discussions and discuss issues. You can also contribute by submitting pull requests with code changes.
+# Contributing to Partner Center Storefront
 
-## General feedback, discussions, bugs, feature requests?
-Please start a discussion or log a new issue on the [Home repo issue tracker](https://github.com/PartnerCenterSamples/Reseller-Web-Application/issues).
+This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to and actually do, grant us
+the rights to use your contribution. View the [Contributor License Agreement](https://cla.microsoft.com) for more details.
 
-## Filing issues
-When filing issues, please consider using this sample [bug filing template](https://github.com/aspnet/Home/wiki/Functional-bug-template) from the ASP.Net team.
-The best way to get your bug fixed is to be as detailed as you can be about the problem.
-Providing steps to reproduce the problem is ideal.
-Here are questions you can answer before you file a bug to make sure you're not missing any important information.
+When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
 
-1. Did you include the snippet of broken code in the issue?
-2. What are the *EXACT* steps to reproduce this problem?
-3. What operating system are you using?
-4. What version of Visual Studio are you using?
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-GitHub supports [markdown](http://github.github.com/github-flavored-markdown/), so when filing bugs make sure you check the formatting before clicking submit.
+- [Code of Conduct](#code-of-conduct)
+- [Issues and Bugs](#finding-issues)
+- [Feature Requests](#requesting-features)
+- [Submission Guidelines](#submission-guidelines)
 
-## Contributing code and content
-If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests.
-You might also read these two blogs posts on contributing code: [Open Source Contribution Etiquette](http://tirania.org/blog/archive/2010/Dec-31.html) by Miguel de Icaza and [Don't "Push" Your Pull Requests](http://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) by Ilya Grigorik.
+## Code of Conduct
 
-**Commit/Pull Request Format**
+Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 
-```
-Summary of the changes (Less than 80 chars)
- - Detail 1
- - Detail 2
+## Finding Issues
 
-#bugnumber (in this specific format)
-```
+If you find a bug in the source code or a mistake in the documentation, you can help us by
+[submitting an issue](#submitting-an-issue) to the GitHub Repository. Even better, you can
+[submit a Pull Request](#submitting-a-pull-request) with a fix.
+
+## Requesting Features
+
+You can *request* a new feature by [submitting an issue](#submitting-an-issue) to the GitHub
+Repository. If you would like to *implement* a new feature, please submit an issue with
+a proposal for your work first, to be sure that we can use it.
+
+**Small Features** can be crafted and directly [submitted as a Pull Request](#submitting-a-pull-request).
+
+## Submission Guidelines
+
+### Submitting an Issue
+
+Before you submit an issue, search the archive, maybe your question was already answered.
+
+If your issue appears to be a bug and hasn't been reported, open a new issue.
+Help us to maximize the effort we can spend fixing issues and add new
+features, by not reporting duplicate issues.  Providing the following information will increase the
+chances of your issue being dealt with quickly:
+
+- **Overview of the Issue** - if an error is being thrown a non-minified stack trace helps
+- **Version** - what version is affected (e.g. 0.1.2)
+- **Motivation for or Use Case** - explain what are you trying to do and why the current behavior is a bug for you
+- **Browsers and Operating System** - is this a problem with all browsers?
+- **Reproduce the Error** - provide a live example or an unambiguous set of steps
+- **Related Issues** - has a similar issue been reported before?
+- **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be
+  causing the problem (line of code or commit)
+
+You can file new issues by providing the above information at the [corresponding repository's issues link]https://github.com/PartnerCenterSamples/Reseller-Web-Application/issues/new).
+
+### Submitting a Pull Request
+
+Before you submit your Pull Request (PR) consider the following guidelines:
+
+- [Search the repository]https://github.com/PartnerCenterSamples/Reseller-Web-Application/pulls) for an open or closed PR
+  that relates to your submission. You don't want to duplicate effort.
+
+- Make your changes in a new git fork:
+
+- Commit your changes using a descriptive commit message
+- Push your fork to GitHub:
+- In GitHub, create a pull request
+- If we suggest changes then:
+  - Make the required updates.
+  - Rebase your fork and force push to your GitHub repository (this will update your Pull Request):
+
+    ```shell
+    git rebase master -i
+    git push -f
+    ```
+
+That is it! Thank you for your contribution!
