@@ -1,0 +1,168 @@
+﻿<div id="GrandBrandingContainer">
+    <form id="PortalBrandingForm">
+        <table id="BrandingContainer" class="FullSize" cellpadding="5" data-bind="fadeVisible: viewModel.IsSet">
+            <tr>
+                <td colspan="2" class="Header">
+                    @Resources.BrandingSetupPromptMessage
+                </td>
+            </tr>
+            <tr>
+                <td class="Subtext BottomPadded" colspan="2">
+                    @Resources.BrandingSetupSecondaryMessage
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.OrganizationNameFieldHeader <label class="Required"><label>*</label></label>
+                </td>
+                <td class="Subtext">
+                    <input id="OrganizationName" name="OrganizationName" type="text" class="InputField FullWidthInput" required data-bind="textinput: viewModel.OrganizationName" /><br />
+                    @Resources.OrganizationNameFieldSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.OrganizationLogoFieldHeader
+                </td>
+                <td class="Subtext">
+                    <input type="text" id="OrganizationLogo" name="OrganizationLogo" class="InputField FullWidthInput VerticalCenter" data-bind="textInput: viewModel.OrganizationLogo" />
+                    <input id="UploadOrganizationLogo" type="file" accept="image/*" data-bind="event: { change: onOrganizationLogoUpdated }" />
+                    <img src="~/Content/Images/WebPortal/attach-black.png" title="@Resources.OrganizationLogoUploadTooltip" class="VerticalCenter HoverableLink" data-bind="click: onUploadOrganizationLogoClicked" />
+                    <br />
+                    @Resources.OrganizationLogoSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.ContactUsFieldHeader
+                </td>
+                <td>
+                    <table cellspacing="0">
+                        <tr>
+                            <td>
+                                <label id="ContactUsEmailLabel">@Resources.SupportEmailAddressHeader&nbsp;<label class="Required"><label>*</label></label></label><br />
+                                <input id="ContactUsEmail" name="ContactUsEmail" type="email" class="InputField HalfWidthInput" data-bind="textinput: viewModel.ContactUs.Email" />
+                            </td>
+                            <td class="PaddingLeft">
+                                <label id="ContactUsPhoneLabel">@Resources.PhoneHeaderCaption&nbsp;</label><label class="Required"><label>*</label></label><br />
+                                <input id="ContactUsPhone" name="ContactUsPhone" type="text" class="InputField HalfWidthInput" data-bind="textinput: viewModel.ContactUs.Phone" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="Subtext">@Resources.ShowInContactUsHeaderCaption</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.ContactSalesHeader
+                </td>
+                <td>
+                    <table cellspacing="0">
+                        <tr>
+                            <td>
+                                <label id="ContactSalesEmailLabel">@Resources.SalesEmailAddressHeader</label><br />
+                                <input id="ContactSalesEmail" name="ContactSalesEmail" type="email" class="InputField HalfWidthInput" data-bind="textinput: viewModel.ContactSales.Email" />
+                            </td>
+                            <td class="PaddingLeft">
+                                @Resources.PhoneHeaderCaption<br />
+                                <input id="ContactSalesPhone" name="ContactSalesPhone" type="text" class="InputField HalfWidthInput" data-bind="textinput: viewModel.ContactSales.Phone" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="Subtext">@Resources.ShowInContactUsHeaderCaption</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.HeaderImageFieldHeader
+                </td>
+                <td class="Subtext">
+                    <input id="HeaderImage" name="HeaderImage" type="text" class="InputField FullWidthInput VerticalCenter" data-bind="textinput: viewModel.HeaderImage" />
+                    <input id="UploadHeaderImage" type="file" accept="image/*" data-bind="event: { change: onHeaderImageUpdated }" />
+                    <img src="~/Content/Images/WebPortal/attach-black.png" title="@Resources.HeaderImageUploadTooltip" class="VerticalCenter HoverableLink" data-bind="click: onUploadHeaderClicked" />
+                    <br />
+                    @Resources.HeaderImageSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.PrivacyAgreementFieldHeader
+                </td>
+                <td class="Subtext">
+                    <input id="PrivacyAgreement" name="PrivacyAgreement" type="text" class="InputField FullWidthInput" data-bind="textinput: viewModel.PrivacyAgreement" /><br />
+                    @Resources.PrivacyAgreementFieldSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.AgreementUserIdFieldHeader
+                </td>
+                <td class="Subtext">
+                    <input id="InstrumentationKey" name="AgreementUserId" type="text" class="InputField FullWidthInput" data-bind="textinput: viewModel.AgreementUserId" /><br />
+                    @Resources.AgreementUserIdSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.InstrumentationKeyFieldHeader
+                </td>
+                <td class="Subtext">
+                    <input id="InstrumentationKey" name="InstrumentationKey" type="text" class="InputField FullWidthInput" data-bind="textinput: viewModel.InstrumentationKey" /><br />
+                    @Resources.InstrumentationKeyFieldSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="FullHeight"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        $("#PortalBrandingForm").validate({
+            errorPlacement: function (error, element) {
+                if (element.attr("name") == "ContactUsEmail") {
+                    error.insertAfter("#ContactUsEmailLabel");
+                } else if (element.attr("name") == "ContactSalesEmail") {
+                    error.insertAfter("#ContactSalesEmailLabel");
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            rules: {
+                AgreementUserId: {
+                    required: true
+                },
+                OrganizationName: {
+                    required: true
+                },
+                ContactUsEmail: {
+                    required: true,
+                    email: true
+                },
+                ContactUsPhone: {
+                    digits: true,
+                    required: true,
+                    minlength: 7
+                },
+                ContactSalesEmail: {
+                    email: true
+                },
+                ContactSalesPhone: {
+                    digits: true,
+                    minlength: 7
+                }
+            },
+            messages: {
+            },
+            submitHandler: function (form) {
+            }
+        });
+    </script>
+</div>
