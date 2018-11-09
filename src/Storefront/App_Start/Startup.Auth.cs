@@ -10,6 +10,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Globalization;
+    using System.Linq;
     using System.Net;
     using System.Threading.Tasks;
     using System.Web;
@@ -97,7 +98,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
                             }
                             else
                             {
-                                if (context.AuthenticationTicket.Identity.FindFirst(System.Security.Claims.ClaimTypes.Role).Value != Startup.GlobalAdminUserRole)
+                                if (context.AuthenticationTicket.Identity.FindAll(System.Security.Claims.ClaimTypes.Role).SingleOrDefault(c => c.Value.Equals(GlobalAdminUserRole, StringComparison.InvariantCultureIgnoreCase)) == null)
                                 {
                                     // this login came from the partner's tenant, only allow admins to access the site, non admins will only
                                     // see the unauthenticated experience but they can't configure the portal nor can purchase
