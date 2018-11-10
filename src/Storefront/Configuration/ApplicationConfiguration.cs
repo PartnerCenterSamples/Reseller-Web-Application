@@ -74,14 +74,14 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration
         /// A lazy reference to client configuration.
         /// </summary>
         private static Lazy<IDictionary<string, dynamic>> clientConfiguration = new Lazy<IDictionary<string, dynamic>>(
-            () => WebPortalConfigurationManager.GenerateConfigurationDictionary().Result);
+            () => WebPortalConfigurationManager.GenerateConfigurationDictionary());
 
         /// <summary>
         /// Gets the web portal configuration file path.
         /// </summary>
         public static string WebPortalConfigurationFilePath => Path.Combine(
-                    HttpRuntime.AppDomainAppPath,
-                    WebConfigurationManager.AppSettings[WebPortalConfigurationFilePathKey] + PaymentGatewayConfig.GetWebConfigPath());
+            HttpRuntime.AppDomainAppPath,
+            $"{WebConfigurationManager.AppSettings[WebPortalConfigurationFilePathKey]}{PaymentGatewayConfig.GetWebConfigPath()}");
 
         /// <summary>
         /// Gets the client configuration.

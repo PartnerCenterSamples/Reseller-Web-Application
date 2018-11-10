@@ -183,6 +183,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         /// Serves the HTML template for the adding or updating offers.
         /// </summary>
         /// <returns>The HTML template for the add or update offer presenter.</returns>
+        [HttpGet]
         [Filters.Mvc.PortalAuthorize(UserRole = UserRole.Partner)]
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult AddOrUpdateOffer()
@@ -194,6 +195,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         /// Serves the HTML template for the partner offer list.
         /// </summary>
         /// <returns>The HTML template for the partner offer list presenter.</returns>
+        [HttpGet]
         [Filters.Mvc.PortalAuthorize(UserRole = UserRole.Partner)]
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult OfferList()
@@ -206,6 +208,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         /// Serves the HTML templates for the branding setup page.
         /// </summary>
         /// <returns>The HTML templates for the branding setup page.</returns>
+        [HttpGet]
         [Filters.Mvc.PortalAuthorize(UserRole = UserRole.Partner)]
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult BrandingSetup()
@@ -217,6 +220,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         /// Serves the HTML templates for the payment setup page.
         /// </summary>
         /// <returns>The HTML templates for the payment setup page.</returns>
+        [HttpGet]
         [Filters.Mvc.PortalAuthorize(UserRole = UserRole.Partner)]
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult PaymentSetup()
@@ -228,6 +232,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         /// Serves the HTML templates for the customer management setup page.
         /// </summary>
         /// <returns>The HTML templates for the customer management setup page.</returns>
+        [HttpGet]
         [Filters.Mvc.PortalAuthorize(UserRole = UserRole.Partner)]
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult CustomerManagementSetup()
@@ -244,7 +249,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         public async Task<ActionResult> FrameworkFragments()
         {
             WebPortalConfigurationManager builder = ApplicationConfiguration.WebPortalConfigurationManager;
-            ViewBag.Templates = (await builder.AggregateNonStartupAssets().ConfigureAwait(false)).Templates;
+            ViewBag.Templates = builder.AggregateNonStartupAssets().Templates;
 
             BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
 

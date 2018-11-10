@@ -83,7 +83,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
             Trace.TraceInformation("CapturePayment.RollbackAsync executed. Authorization code: {0}", AuthorizationCode);
 
             // TODO: Notify the system integrity recovery component
-            await Task.FromResult(0).ConfigureAwait(false);
+            await Task.CompletedTask.ConfigureAwait(false);
         }
     }
 }

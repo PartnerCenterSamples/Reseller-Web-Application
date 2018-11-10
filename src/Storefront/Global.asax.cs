@@ -9,6 +9,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
     using System;
     using System.Configuration;
     using System.Diagnostics;
+    using System.Threading.Tasks;
     using System.Web;
     using System.Web.Http;
     using System.Web.Mvc;
@@ -35,7 +36,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
             FilterConfig.RegisterWebApiFilters(GlobalConfiguration.Configuration.Filters);
 
             // intialize our application domain PartnerCenterClient and PortalLocalization
-            ApplicationDomain.BootstrapAsync().Wait();
+            Task.Run(() => ApplicationDomain.BootstrapAsync()).Wait();
 
             // configure the web portal client application
             string portalConfigurationPath = ApplicationConfiguration.WebPortalConfigurationFilePath;
@@ -46,14 +47,14 @@ namespace Microsoft.Store.PartnerCenter.Storefront
             }
 
             // intialize our application domain
-            ApplicationDomain.InitializeAsync().Wait();
+            Task.Run(() => ApplicationDomain.InitializeAsync()).Wait();
 
             // create the web portal configuration manager
             IWebPortalConfigurationFactory webPortalConfigFactory = new WebPortalConfigurationFactory();
             ApplicationConfiguration.WebPortalConfigurationManager = webPortalConfigFactory.Create(portalConfigurationPath);
 
             // setup the application assets bundles
-            ApplicationConfiguration.WebPortalConfigurationManager.UpdateBundles(Bundler.Instance).Wait();
+            ApplicationConfiguration.WebPortalConfigurationManager.UpdateBundles(Bundler.Instance);
         }
 
         /// <summary>

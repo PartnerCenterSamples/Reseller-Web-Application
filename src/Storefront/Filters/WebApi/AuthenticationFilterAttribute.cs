@@ -17,7 +17,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Filters.WebApi
     /// Augments Web API authentication by replacing the principal with a more usable custom principal object.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
-    public class AuthenticationFilterAttribute : ActionFilterAttribute, IAuthenticationFilter
+    public sealed class AuthenticationFilterAttribute : ActionFilterAttribute, IAuthenticationFilter
     {
         /// <summary>
         /// Authenticates a web API incoming request.
@@ -25,11 +25,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Filters.WebApi
         /// <param name="context">The authentication context.</param>
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A task.</returns>
-        public Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
+        public async Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
         {
             context.Principal = new CustomerPortalPrincipal(HttpContext.Current.User as System.Security.Claims.ClaimsPrincipal);
 
-            return Task.FromResult(0);
+            await Task.CompletedTask.ConfigureAwait(false);
         }
 
         /// <summary>
@@ -38,10 +38,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Filters.WebApi
         /// <param name="context">The authentication context.</param>
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A task.</returns>
-        public Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
+        public async Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
         {
             // Do nothing
-            return Task.FromResult(0);
+            await Task.CompletedTask.ConfigureAwait(false);
         }
     }
 }

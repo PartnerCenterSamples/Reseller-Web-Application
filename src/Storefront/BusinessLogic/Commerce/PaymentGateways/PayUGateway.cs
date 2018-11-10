@@ -116,7 +116,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         /// <returns>A task.</returns>
         public async Task CaptureAsync(string authorizationCode)
         {
-            ////PayU api not provided
+            // PayU api not provided
             await Task.FromResult(string.Empty).ConfigureAwait(false);
         }
 
@@ -130,9 +130,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
             authorizationCode.AssertNotEmpty(nameof(authorizationCode));
 
             // given the authorizationId string... Lookup the authorization to void it. 
+
             try
             {
                 RefundResponse refundResponse = await ApiCalls.RefundPayment(payerId, authorizationCode).ConfigureAwait(false);
+
                 if (refundResponse.Status != 0 || !refundResponse.Message.Equals("Refund Initiated", StringComparison.InvariantCulture))
                 {
                     throw new Exception("Error in refund");
@@ -140,7 +142,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
             }
             catch (Exception ex)
             {
-                this.ParsePayUException(ex);
+                ParsePayUException(ex);
             }
         }
 
@@ -205,9 +207,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         private async Task<OrderViewModel> GetOrderDetails()
         {
             OrderViewModel orderFromPayment = null;
+
             try
             {
                 PaymentResponse paymentResponse = await ApiCalls.GetPaymentDetails(paymentId).ConfigureAwait(false);
+
                 if (paymentResponse != null && paymentResponse.Result.Count > 0)
                 {
                     orderFromPayment = await GetOrderDetails(paymentResponse.Result[0].PostBackParam.Udf1, paymentResponse.Result[0].PostBackParam.ProductInformation, paymentResponse.Result[0].PostBackParam.Udf2).ConfigureAwait(false);
@@ -218,7 +222,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
                 ParsePayUException(ex);
             }
 
-            return await Task.FromResult(orderFromPayment).ConfigureAwait(false);
+            return orderFromPayment;
         }
 
         /// <summary>
@@ -346,7 +350,9 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
                 ParsePayUException(ex);
             }
 
-            return await Task.FromResult(orderFromPayment).ConfigureAwait(false);
+            await Task.CompletedTask.ConfigureAwait(false);
+
+            return orderFromPayment;
         }
 
         /// <summary>

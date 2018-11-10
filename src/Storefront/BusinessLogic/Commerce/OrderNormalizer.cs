@@ -97,7 +97,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
             };
 
             orderResult.Subscriptions = resultOrderSubscriptions;
-            return await Task.FromResult(orderResult).ConfigureAwait(false);
+
+            return orderResult;
         }
 
         /// <summary>
@@ -132,6 +133,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
             IEnumerable<PartnerOffer> allPartnerOffers = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false);
 
             List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
+
             foreach (OrderSubscriptionItemViewModel lineItem in orderSubscriptions)
             {
                 PartnerOffer offerToPurchase = allPartnerOffers.Where(offer => offer.Id == lineItem.SubscriptionId).FirstOrDefault();
@@ -159,7 +161,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
             }
 
             orderResult.Subscriptions = resultOrderSubscriptions;
-            return await Task.FromResult(orderResult).ConfigureAwait(false);
+
+            return orderResult;
         }
 
         /// <summary>
@@ -236,7 +239,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
             };
 
             orderResult.Subscriptions = resultOrderSubscriptions;
-            return await Task.FromResult(orderResult).ConfigureAwait(false);
+
+            return orderResult;
         }
 
         /// <summary>

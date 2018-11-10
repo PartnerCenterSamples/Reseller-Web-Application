@@ -401,8 +401,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
             try
             {
                 // the get will retrieve the payment information. iterate the items in the transaction collection to extract details.            
-                Payment paymentDetails = Payment.Get(apiContext, this.paymentId);
+                Payment paymentDetails = Payment.Get(apiContext, paymentId);
+
                 orderFromPayment = new OrderViewModel();
+
                 List<OrderSubscriptionItemViewModel> orderSubscriptions = new List<OrderSubscriptionItemViewModel>();
 
                 if (paymentDetails.transactions.Count > 0)
@@ -435,7 +437,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
                 ParsePayPalException(ex);
             }
 
-            return await Task.FromResult(orderFromPayment).ConfigureAwait(false);
+            return orderFromPayment;
         }
 
         /// <summary>
@@ -444,9 +446,9 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         /// <returns>PayPal APIContext</returns>
         private async Task<APIContext> GetAPIContextAsync()
         {
-            //// The GetAccessToken() of the SDK Returns the currently cached access token. 
-            //// If no access token was previously cached, or if the current access token is expired, then a new one is generated and returned. 
-            //// See more - https://github.com/paypal/PayPal-NET-SDK/blob/develop/Source/SDK/Api/OAuthTokenCredential.cs
+            // The GetAccessToken() of the SDK Returns the currently cached access token. 
+            // If no access token was previously cached, or if the current access token is expired, then a new one is generated and returned. 
+            // See more - https://github.com/paypal/PayPal-NET-SDK/blob/develop/Source/SDK/Api/OAuthTokenCredential.cs
 
             // Before getAPIContext ... set up PayPal configuration. This is an expensive call which can benefit from caching. 
             PaymentConfiguration paymentConfig = await ApplicationDomain.Instance.PaymentConfigurationRepository.RetrieveAsync().ConfigureAwait(false);
@@ -482,6 +484,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
 
                 // Get the details of this exception with ex.Details and format the error message in the form of "We are unable to process your payment –  {Errormessage} :: [err1, err2, .., errN]".                
                 StringBuilder errorString = new StringBuilder();
+
                 errorString.Append(Resources.PaymentGatewayErrorPrefix);
 
                 // build error string for errors returned from financial institutions.

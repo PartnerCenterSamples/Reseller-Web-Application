@@ -8,7 +8,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration.Manager
 {
     using System;
     using System.Collections.Generic;
-    using System.Threading.Tasks;
     using Bundling;
     using WebPortal;
 
@@ -40,8 +39,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration.Manager
             : base(configurationFilePath)
         {
             // we only want to generate the assets once since all users of the system will be served the same assets
-            this.startupAssets = new Lazy<Assets>(() => { return this.GenerateStartupAssets(); });
-            this.nonStartupAssets = new Lazy<Assets>(() => { return this.GenerateNonStartupAssets(); });
+            startupAssets = new Lazy<Assets>(() => { return GenerateStartupAssets(); });
+            nonStartupAssets = new Lazy<Assets>(() => { return GenerateNonStartupAssets(); });
         }
 
         /// <summary>
@@ -49,58 +48,58 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration.Manager
         /// </summary>
         /// <param name="bundler">The bundler instance.</param>
         /// <returns>A task which is complete when the bundles are updated.</returns>
-        public override async Task UpdateBundles(Bundler bundler)
+        public override void UpdateBundles(Bundler bundler)
         {
-            if (this.isBundlesGenerated)
+            if (isBundlesGenerated)
             {
                 // only generate the bundles once since they will remain constant across the web application's life span
                 return;
             }
 
             // call the standard bundling implementation
-            await base.UpdateBundles(bundler).ConfigureAwait(false);
+            base.UpdateBundles(bundler);
 
-            this.isBundlesGenerated = true;
+            isBundlesGenerated = true;
         }
 
         /// <summary>
         /// Aggregates client side files which are needed during the portal start up.
         /// </summary>
         /// <returns>The aggregated startup assets.</returns>
-        public override async Task<Assets> AggregateStartupAssets()
+        public override Assets AggregateStartupAssets()
         {
             // return the startup assests we had already built
-            return await Task.FromResult<Assets>(this.startupAssets.Value).ConfigureAwait(false);
+            return startupAssets.Value;
         }
 
         /// <summary>
         /// Aggregates client side files which are needed once the portal is up and running.
         /// </summary>
         /// <returns>The aggregated non startup assets.</returns>
-        public override async Task<Assets> AggregateNonStartupAssets()
+        public override Assets AggregateNonStartupAssets()
         {
             // return the non startup assests we had already built
-            return await Task.FromResult<Assets>(this.nonStartupAssets.Value).ConfigureAwait(false);
+            return nonStartupAssets.Value;
         }
 
         /// <summary>
         /// Generates the plugins which will be sent down to the client.
         /// </summary>
         /// <returns>The plugins configuration.</returns>
-        public override async Task<PluginsSegment> GeneratePlugins()
+        public override PluginsSegment GeneratePlugins()
         {
             // return the plugin configuration as found in the configuration file
-            return (await Task.FromResult<PluginsSegment>(this.Configuration.Plugins).ConfigureAwait(false)).Clone() as PluginsSegment;
+            return Configuration.Plugins.Clone() as PluginsSegment;
         }
 
         /// <summary>
         /// Generates the configuration settings which will be sent down to the client.
         /// </summary>
         /// <returns>A dictionary of configuration settings.</returns>
-        public override async Task<Dictionary<string, dynamic>> GenerateConfigurationDictionary()
+        public override Dictionary<string, dynamic> GenerateConfigurationDictionary()
         {
             // return the configuration as is
-            return await Task.FromResult(Configuration.Configuration).ConfigureAwait(false);
+            return Configuration.Configuration;
         }
 
         /// <summary>
@@ -110,8 +109,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration.Manager
         private Assets GenerateStartupAssets()
         {
             // aggregate asset files in this order: dependency, core startup
-            Assets dependencies = this.Configuration.Dependencies.Assets.GetAssetsByVersion(this.Configuration.Dependencies.DefaultAssetVersion);
-            Assets coreStartup = this.Configuration.Core.Startup.Assets.GetAssetsByVersion(this.Configuration.Core.Startup.DefaultAssetVersion);
+            Assets dependencies = Configuration.Dependencies.Assets.GetAssetsByVersion(Configuration.Dependencies.DefaultAssetVersion);
+            Assets coreStartup = Configuration.Core.Startup.Assets.GetAssetsByVersion(Configuration.Core.Startup.DefaultAssetVersion);
 
             return dependencies + coreStartup;
         }
@@ -123,12 +122,12 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration.Manager
         private Assets GenerateNonStartupAssets()
         {
             // aggregate asset files in this order: core non startup, services, views, plugins
-            Assets nonStartup = this.Configuration.Core.NonStartup.Assets.GetAssetsByVersion(this.Configuration.Core.NonStartup.DefaultAssetVersion);
-            Assets services = this.Configuration.Services.AggregateAssets();
-            Assets views = this.Configuration.Views.AggregateAssets();
-            Assets plugins = this.Configuration.Plugins.Commons.Assets.GetAssetsByVersion(this.Configuration.Plugins.Commons.DefaultAssetVersion);
+            Assets nonStartup = Configuration.Core.NonStartup.Assets.GetAssetsByVersion(Configuration.Core.NonStartup.DefaultAssetVersion);
+            Assets services = Configuration.Services.AggregateAssets();
+            Assets views = Configuration.Views.AggregateAssets();
+            Assets plugins = Configuration.Plugins.Commons.Assets.GetAssetsByVersion(Configuration.Plugins.Commons.DefaultAssetVersion);
 
-            foreach (Plugin plugin in this.Configuration.Plugins.Plugins)
+            foreach (Plugin plugin in Configuration.Plugins.Plugins)
             {
                 plugins += plugin.Features.AggregateAssets();
 

@@ -71,7 +71,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
             customerId = orderDetails.CustomerId;
 
             string appReturnUrl = returnUrl + string.Format(CultureInfo.InvariantCulture, "&oid={0}&payment=success&PayerID=PayId&paymentId=PreApproved", orderDetails.OrderId);
-            return await Task.FromResult(appReturnUrl).ConfigureAwait(false);
+
+            return appReturnUrl;
         }
 
         /// <summary>
