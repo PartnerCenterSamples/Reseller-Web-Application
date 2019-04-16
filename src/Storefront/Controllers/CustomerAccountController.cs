@@ -122,7 +122,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
             // Get all subscriptions of customer from PC
             ResourceCollection<Subscription> customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync().ConfigureAwait(false);
 
-            IEnumerable<CustomerSubscriptionEntity> customerSubscriptions = await ApplicationDomain.Instance.CustomerSubscriptionsRepository.RetrieveAsync(Principal.PartnerCenterCustomerId).ConfigureAwait(false);
+            IEnumerable<CustomerSubscriptionEntity> customerSubscriptions = await ApplicationDomain.Instance.CustomerSubscriptionsRepository.RetrieveAsync(clientCustomerId).ConfigureAwait(false);
             IEnumerable<PartnerOffer> allPartnerOffers = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false);
             IEnumerable<MicrosoftOffer> currentMicrosoftOffers = await ApplicationDomain.Instance.OffersRepository.RetrieveMicrosoftOffersAsync().ConfigureAwait(false);
 
@@ -219,7 +219,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
             };
 
             // Capture the request for customer managed subscriptions and partner managed subscriptions for analysis.
-            Dictionary<string, string> eventProperties = new Dictionary<string, string> { { "CustomerId", Principal.PartnerCenterCustomerId } };
+            Dictionary<string, string> eventProperties = new Dictionary<string, string> { { "CustomerId", clientCustomerId } };
 
             // Track the event measurements for analysis.
             Dictionary<string, double> eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds }, { "CustomerManagedSubscriptions", customerManagedSubscriptions.Count }, { "PartnerManagedSubscriptions", partnerManagedSubscriptions.Count } };

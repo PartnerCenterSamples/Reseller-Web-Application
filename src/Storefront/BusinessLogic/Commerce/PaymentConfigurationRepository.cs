@@ -68,7 +68,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                 if (await paymentConfigurationBlob.ExistsAsync().ConfigureAwait(false))
                 {
                     paymentConfiguration = JsonConvert.DeserializeObject<PaymentConfiguration>(await paymentConfigurationBlob.DownloadTextAsync().ConfigureAwait(false));
-                    await NormalizeAsync(paymentConfiguration).ConfigureAwait(false);
+                    Normalize(paymentConfiguration);
 
                     // cache the payment configuration
                     await ApplicationDomain.CachingService.StoreAsync(
@@ -89,7 +89,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         {
             newPaymentConfiguration.AssertNotNull(nameof(newPaymentConfiguration));
 
-            await NormalizeAsync(newPaymentConfiguration).ConfigureAwait(false);
+            Normalize(newPaymentConfiguration);
 
             CloudBlockBlob paymentConfigurationBlob = await GetPaymentConfigurationBlob().ConfigureAwait(false);
             await paymentConfigurationBlob.UploadTextAsync(JsonConvert.SerializeObject(newPaymentConfiguration)).ConfigureAwait(false);
@@ -101,11 +101,22 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         }
 
         /// <summary>
+        /// Retrieves the portal payment configuration BLOB reference.
+        /// </summary>
+        /// <returns>The portal payment configuration BLOB.</returns>
+        private async Task<CloudBlockBlob> GetPaymentConfigurationBlob()
+        {
+            CloudBlobContainer portalAssetsBlobContainer = await ApplicationDomain.AzureStorageService.GetPrivateCustomerPortalAssetsBlobContainerAsync().ConfigureAwait(false);
+
+            return portalAssetsBlobContainer.GetBlockBlobReference(PaymentConfigurationBlobName);
+        }
+
+        /// <summary>
         /// Applies business rules to <see cref="PaymentConfiguration"/> instances.
         /// </summary>
         /// <param name="paymentConfiguration">A payment configuration instance.</param>
         /// <returns>A task.</returns>
-        private async Task NormalizeAsync(PaymentConfiguration paymentConfiguration)
+        private void Normalize(PaymentConfiguration paymentConfiguration)
         {
             paymentConfiguration.AssertNotNull(nameof(paymentConfiguration));
 
@@ -118,19 +129,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             {
                 throw new PartnerDomainException(Resources.InvalidPaymentModeErrorMessage);
             }
-
-            await Task.FromResult(0).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// Retrieves the portal payment configuration BLOB reference.
-        /// </summary>
-        /// <returns>The portal payment configuration BLOB.</returns>
-        private async Task<CloudBlockBlob> GetPaymentConfigurationBlob()
-        {
-            CloudBlobContainer portalAssetsBlobContainer = await ApplicationDomain.AzureStorageService.GetPrivateCustomerPortalAssetsBlobContainerAsync().ConfigureAwait(false);
-
-            return portalAssetsBlobContainer.GetBlockBlobReference(PaymentConfigurationBlobName);
         }
     }
 }

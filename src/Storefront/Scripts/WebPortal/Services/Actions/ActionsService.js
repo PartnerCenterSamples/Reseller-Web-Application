@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.ActionsService = function (webPortal, serviceName, elementSelector) {
+﻿Microsoft.WebPortal.Services.ActionsService = function (webPortal, serviceName, elementSelector) {
     /// <summary>
     /// Implements an actions service which supports adding and removing simple and compound actions.
     /// </summary>
@@ -10,7 +8,7 @@ Microsoft.WebPortal.Services.ActionsService = function (webPortal, serviceName, 
 
     this.base.constructor.call(this, webPortal, serviceName);
     this.actionsManager = new Microsoft.WebPortal.Services.ActionsManager(this.webPortal, elementSelector);
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.ActionsService, Microsoft.WebPortal.Core.PortalService);
 
@@ -20,7 +18,7 @@ Microsoft.WebPortal.Services.ActionsService.prototype._runService = function () 
     /// </summary>
 
     this.actionsManager.render();
-}
+};
 
 Microsoft.WebPortal.Services.ActionsService.prototype._stopService = function () {
     /// <summary>
@@ -28,7 +26,7 @@ Microsoft.WebPortal.Services.ActionsService.prototype._stopService = function ()
     /// </summary>
 
     this.actionsManager.destroy();
-}
+};
 
 Microsoft.WebPortal.Services.ActionsService.prototype.add = function (action) {
     /// <summary>
@@ -42,7 +40,7 @@ Microsoft.WebPortal.Services.ActionsService.prototype.add = function (action) {
     }
 
     this.actionsManager.add(action);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsService.prototype.addRange = function (actions) {
     /// <summary>
@@ -56,7 +54,7 @@ Microsoft.WebPortal.Services.ActionsService.prototype.addRange = function (actio
     }
 
     this.actionsManager.addRange(actions);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsService.prototype.remove = function (action) {
     /// <summary>
@@ -70,7 +68,7 @@ Microsoft.WebPortal.Services.ActionsService.prototype.remove = function (action)
     }
 
     this.actionsManager.remove(action);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsService.prototype.removeById = function (actionId) {
     /// <summary>
@@ -84,7 +82,7 @@ Microsoft.WebPortal.Services.ActionsService.prototype.removeById = function (act
     }
 
     this.actionsManager.removeById(actionId);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsService.prototype.clear = function () {
     /// <summary>
@@ -97,6 +95,6 @@ Microsoft.WebPortal.Services.ActionsService.prototype.clear = function () {
     }
 
     this.actionsManager.clear();
-}
+};
 
 //@ sourceURL=ActionsService.js

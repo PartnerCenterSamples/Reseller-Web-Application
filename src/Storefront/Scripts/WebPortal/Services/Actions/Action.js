@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, tooltip, children, enabled) {
+﻿Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, tooltip, children, enabled) {
     /// <summary>
     /// Defines an action that can be displayed in the header bar.
     /// </summary>
@@ -67,7 +65,7 @@ Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, 
         // let the mouse cursor be pointer is the action is enabled to indicate interaction
         return this.enabled() ? "pointer" : "default";
     }, this);
-   
+
     this.arrowTransformation = ko.computed(function () {
         // controls the 3d transformation applied to the sub actions arrow, rotates the arrow when the sub menu is shown
         return this.isSubMenuShown() ? "rotate(180deg)" : "rotate(0deg)";
@@ -85,12 +83,12 @@ Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, 
 
     this.renderArrow = ko.computed(function () {
         // determines whether to render an arrow signifying a drop down menu for the action or not
-        return this.hasChildren() && this.id() != $WebPortal.Settings.Ids.ExtraActionsMenuItem;
+        return this.hasChildren() && this.id() !== $WebPortal.Settings.Ids.ExtraActionsMenuItem;
     }, this);
 
     this.isRoot = ko.computed(function () {
         // determines whether this is a root action or a child one
-        return this.parent() == null;
+        return this.parent() === null;
     }, this);
 
     this.onClick = function (action, event) {
@@ -120,7 +118,7 @@ Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, 
             } else if (!isSubMenuShown) {
                 // this is a compound action which had its menu hidden, align the menu to the action and its min width to the action's width
                 this.subMenuXPosition($("#" + this.elementId()).position().left);
-                this.subMenuMinWidth( ( $("#" + this.elementId()).width() + 2 ) + "px");
+                this.subMenuMinWidth($("#" + this.elementId()).width() + 2) + "px";
 
                 // show the menu
                 this.isSubMenuShown(true);
@@ -136,7 +134,7 @@ Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, 
                 event.stopPropagation();
             }
         }
-    }
+    };
 
     this.onHover = function () {
         /// <summary>
@@ -154,7 +152,7 @@ Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, 
                 this.textColor($WebPortal.Configuration.ActionBar.MenuHoverTextColor);
             }
         }
-    }
+    };
 
     this.onUnhover = function () {
         /// <summary>
@@ -172,7 +170,7 @@ Microsoft.WebPortal.Services.Action = function (id, displayName, handler, icon, 
                 this.textColor($WebPortal.Configuration.ActionBar.MenuTextColor);
             }
         }
-    }
-}
+    };
+};
 
 //@ sourceURL=Action.js

@@ -1,12 +1,10 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Infrastructure.Settings = {
+﻿Microsoft.WebPortal.Infrastructure.Settings = {
     /// <summary>
     /// Defines common portal settings. This class just groups there settings together and is different from configuration since
     /// the elements here are not meant to change.
     /// </summary>
 
-    Ids : {
+    Ids: {
         SplashScreen: "#SplashScreen",
         HeaderBar: "#HeaderBar",
         PrimaryNavigation: "#PrimaryNavigation",
@@ -42,6 +40,6 @@ Microsoft.WebPortal.Infrastructure.Settings = {
         DefaultColumnHeaderTemplate: "defaultColumnHeader-template",
         ListHeaderSelector: " #ListHeaders",
         ListBodySelector: " .ListBodyContainer",
-        ListFooterSelector: " #ListFooter",
+        ListFooterSelector: " #ListFooter"
     }
-}
+};

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.NotificationsSection = function (webPortal) {
+﻿Microsoft.WebPortal.Services.NotificationsSection = function (webPortal) {
     /// <summary>
     /// Renders the notifications icon and number if there are pending notifications.
     /// </summary>
@@ -13,7 +11,7 @@ Microsoft.WebPortal.Services.NotificationsSection = function (webPortal) {
         if (this.webPortal.Services.Notifications && this.webPortal.Services.Notifications.isRunning) {
             this.webPortal.Services.Notifications.toggle();
         }
-    }
+    };
 
     this.notificationsCount = ko.computed(function () {
         if (this.webPortal.Services.Notifications && this.webPortal.Services.Notifications.isRunning) {
@@ -34,12 +32,12 @@ Microsoft.WebPortal.Services.NotificationsSection = function (webPortal) {
 
     this.onHover = function (elementId, model) {
         $(elementId).css("background-color", webPortal.activeTile().AlternateColor);
-    }
+    };
 
     this.onUnhover = function (elementId, model) {
         $(elementId).css("background-color", "");
-    }
-}
+    };
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.NotificationsSection, Microsoft.WebPortal.Services.HeaderBarSection);
 

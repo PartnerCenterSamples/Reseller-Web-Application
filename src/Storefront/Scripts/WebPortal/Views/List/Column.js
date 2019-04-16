@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Views.List.Column = function (field, style, sortable, clickable, title, tooltip, headerTemplate, cellTemplate) {
+﻿Microsoft.WebPortal.Views.List.Column = function (field, style, sortable, clickable, title, tooltip, headerTemplate, cellTemplate) {
     /// <summary>
     /// Defines a list column.
     /// </summary>
@@ -23,6 +21,6 @@ Microsoft.WebPortal.Views.List.Column = function (field, style, sortable, clicka
     this.tooltip = ko.observable(tooltip || this.title());
     this.headerTemplate = ko.observable(headerTemplate || $WebPortal.Settings.List.DefaultColumnHeaderTemplate);
     this.cellTemplate = ko.observable(cellTemplate || null);
-}
+};
 
 //@ sourceURL=Column.js

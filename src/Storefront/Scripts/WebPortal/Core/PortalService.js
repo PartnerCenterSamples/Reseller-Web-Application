@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.PortalService = function (webPortal, name) {
+﻿Microsoft.WebPortal.Core.PortalService = function (webPortal, name) {
     /// <summary>
     /// The base class all portal services must extend. A service can be run or stopped and is attached to the web portal instance upon running.
     /// </summary>

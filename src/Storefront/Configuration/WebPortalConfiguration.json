@@ -6,9 +6,9 @@
         "Version": "Debug",
         "JavaScript": [
           "~/Scripts/WebPortal/Dependencies/appinsights.js",
-          "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.js",
+          "~/Scripts/WebPortal/Dependencies/jquery.js",
           "~/Scripts/WebPortal/Dependencies/jquery-ui.js",
-          "~/Scripts/WebPortal/Dependencies/knockout-3.4.2.debug.js",
+          "~/Scripts/WebPortal/Dependencies/knockout-debug.js",
           "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
         ],
         "Css": [
@@ -18,9 +18,9 @@
         "Version": "Release",
         "JavaScript": [
           "~/Scripts/WebPortal/Dependencies/appinsights.js",
-          "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.min.js",
+          "~/Scripts/WebPortal/Dependencies/jquery.min.js",
           "~/Scripts/WebPortal/Dependencies/jquery-ui.min.js",
-          "~/Scripts/WebPortal/Dependencies/knockout-3.4.2.js",
+          "~/Scripts/WebPortal/Dependencies/knockout-min.js",
           "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
         ],
         "Css": [
@@ -560,7 +560,8 @@
             ]
           }
         ]
-      },     {
+      },
+      {
         "Name": "CustomerAccount",
         "DisplayName": "MyAccountDisplayName",
         "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
@@ -667,7 +668,7 @@
             ]
           }
         ]
-      } 
+      }
     ],
 
     "DefaultPlugin": "Home"

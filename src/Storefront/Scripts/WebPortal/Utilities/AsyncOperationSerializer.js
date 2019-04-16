@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Utilities.AsyncOperationSerializer = function () {
+﻿Microsoft.WebPortal.Utilities.AsyncOperationSerializer = function () {
     /// <summary>
     /// This class ensures that asynchronous operations are run sequentially. This is useful when you want to perform an animation let's say when adding an
     /// item to a menu but only after the previous animations are done. This is also useful to guarantee object integrity if the user clicks too fast on something
@@ -9,7 +7,7 @@ Microsoft.WebPortal.Utilities.AsyncOperationSerializer = function () {
 
     this.operationQueue = [];
     this.isProcessing = false;
-}
+};
 
 Microsoft.WebPortal.Utilities.AsyncOperationSerializer.prototype.queue = function (targetObject, targetMethod) {
     /// <summary>
@@ -31,7 +29,7 @@ Microsoft.WebPortal.Utilities.AsyncOperationSerializer.prototype.queue = functio
         this.isProcessing = true;
         this._process();
     }
-}
+};
 
 Microsoft.WebPortal.Utilities.AsyncOperationSerializer.prototype._process = function () {
     /// <summary>
@@ -47,13 +45,13 @@ Microsoft.WebPortal.Utilities.AsyncOperationSerializer.prototype._process = func
         var targetMethod = currentOperation[1];
 
         // add the deferred as the first argument to be passed to the target method
-        var methodArguments = [ operationResolver ];
+        var methodArguments = [operationResolver];
 
         // add the provided arguments to argument list
         for (var i = 2; i < currentOperation.length; ++i) {
             methodArguments.push(currentOperation[i]);
         }
-        
+
         $WebPortal.Diagnostics.informationLocal("AsyncOperationSerializer: Processing request: " + targetObject + ":" + targetMethod.toString().slice(0, 100) + "...");
 
         // invoke the method!
@@ -75,6 +73,6 @@ Microsoft.WebPortal.Utilities.AsyncOperationSerializer.prototype._process = func
         $WebPortal.Diagnostics.informationLocal("AsyncOperationSerializer: All requests in queue have been processed.");
         this.isProcessing = false;
     }
-}
+};
 
 //@ sourceURL=AsyncOperationSerializer.js

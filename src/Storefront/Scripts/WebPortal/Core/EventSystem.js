@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.EventSystem = function (webPortal) {
+﻿Microsoft.WebPortal.Core.EventSystem = function (webPortal) {
     /// <summary>
     /// The event system implements an observer pattern where a component can raise an event and
     /// any other component interested in that event can listen to it.

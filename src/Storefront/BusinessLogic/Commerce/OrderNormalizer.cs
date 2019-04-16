@@ -58,7 +58,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
 
             order.Subscriptions.AssertNotNull(nameof(order.Subscriptions));
             List<OrderSubscriptionItemViewModel> orderSubscriptions = order.Subscriptions.ToList();
-            if (!(orderSubscriptions.Count == 1))
+
+            if (orderSubscriptions.Count != 1)
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.MoreThanOneSubscriptionUpdateErrorMessage);
             }
@@ -133,10 +134,9 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
             IEnumerable<PartnerOffer> allPartnerOffers = await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false);
 
             List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
-
             foreach (OrderSubscriptionItemViewModel lineItem in orderSubscriptions)
             {
-                PartnerOffer offerToPurchase = allPartnerOffers.Where(offer => offer.Id == lineItem.SubscriptionId).FirstOrDefault();
+                PartnerOffer offerToPurchase = allPartnerOffers.FirstOrDefault(offer => offer.Id == lineItem.SubscriptionId);
 
                 if (offerToPurchase == null)
                 {
@@ -171,8 +171,9 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
         /// <returns>Normalized order.</returns>
         public async Task<OrderViewModel> NormalizePurchaseAdditionalSeatsOrderAsync()
         {
-            OrderViewModel order = this.Order;
+            OrderViewModel order = Order;
             order.CustomerId.AssertNotEmpty(nameof(order.CustomerId));
+
             if (order.OperationType != CommerceOperationType.AdditionalSeatsPurchase)
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.InvalidOperationForOrderMessage).AddDetail("Field", "OperationType");
@@ -188,7 +189,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
 
             order.Subscriptions.AssertNotNull(nameof(order.Subscriptions));
             List<OrderSubscriptionItemViewModel> orderSubscriptions = order.Subscriptions.ToList();
-            if (!(orderSubscriptions.Count == 1))
+
+            if (orderSubscriptions.Count != 1)
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput).AddDetail("ErrorMessage", Resources.MoreThanOneSubscriptionUpdateErrorMessage);
             }
@@ -212,7 +214,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
 
             // retrieve the subscription from Partner Center
             Subscriptions.ISubscription subscriptionOperations = ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(order.CustomerId).Subscriptions.ById(subscriptionId);
-            PartnerCenter.Models.Subscriptions.Subscription partnerCenterSubscription = await subscriptionOperations.GetAsync().ConfigureAwait(false);
 
             // if subscription expiry date.Date is less than today's UTC date then subcription has expired. 
             if (subscriptionToAugment.ExpiryDate.Date < DateTime.UtcNow.Date)
@@ -249,11 +250,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
         /// <param name="subscriptionId">The subscription ID.</param>
         /// <param name="customerId">The customer ID.</param>
         /// <returns>The matching subscription.</returns>
-        private async Task<CustomerSubscriptionEntity> GetSubscriptionAsync(string subscriptionId, string customerId)
+        private static async Task<CustomerSubscriptionEntity> GetSubscriptionAsync(string subscriptionId, string customerId)
         {
             // grab the customer subscription from our store
             IEnumerable<CustomerSubscriptionEntity> customerSubscriptions = await ApplicationDomain.Instance.CustomerSubscriptionsRepository.RetrieveAsync(customerId).ConfigureAwait(false);
-            CustomerSubscriptionEntity subscriptionToAugment = customerSubscriptions.Where(subscription => subscription.SubscriptionId == subscriptionId).FirstOrDefault();
+            CustomerSubscriptionEntity subscriptionToAugment = customerSubscriptions.FirstOrDefault(subscription => subscription.SubscriptionId == subscriptionId);
 
             if (subscriptionToAugment == null)
             {

@@ -241,7 +241,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         public async Task<PaymentConfiguration> UpdatePaymentConfiguration(PaymentConfiguration paymentConfiguration)
         {
             IPaymentGateway paymentGateway = PaymentGatewayConfig.GetPaymentGatewayInstance(ApplicationDomain.Instance, "configure payment");
-            //// validate the payment configuration before saving. 
+            // validate the payment configuration before saving. 
             paymentGateway.ValidateConfiguration(paymentConfiguration);
 
             // check if branding configuration has been setup else don't create web experience profile. 

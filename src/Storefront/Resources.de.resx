@@ -118,8 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Back" xml:space="preserve">
-    <value>Zurück
- </value>
+    <value>Zurück</value>
   </data>
   <data name="BuyNow" xml:space="preserve">
     <value>Jetzt kaufen</value>
@@ -464,7 +463,7 @@
     <value>Den Namen Ihrer Organisation</value>
   </data>
   <data name="Undo" xml:space="preserve">
-    <value>"Rückgängig"</value>
+    <value>Rückgängig</value>
   </data>
   <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
     <value>Branding-Partner konnte nicht abgerufen werden.</value>

@@ -18,12 +18,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         /// <summary>
         /// Gets the signed in user principal.
         /// </summary>
-        protected CustomerPortalPrincipal Principal
-        {
-            get
-            {
-                return HttpContext.Current.User as CustomerPortalPrincipal;
-            }
-        }
+        protected CustomerPortalPrincipal Principal => HttpContext.Current.User as CustomerPortalPrincipal;
     }
 }

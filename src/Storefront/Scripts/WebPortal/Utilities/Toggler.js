@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Utilities.Toggler = {
+﻿Microsoft.WebPortal.Utilities.Toggler = {
     injectToggling: function (targetObject, showFunction, hideFunction, isShown) {
         /// <summary>
         /// Adds toggling behavior to the provided object. The object will support show(), hide(), toggle() and isShown() methods. The inner
@@ -56,7 +54,7 @@ Microsoft.WebPortal.Utilities.Toggler = {
             } else {
                 showProgress.resolve();
             }
-        }
+        };
 
         // implement a show method on the object
         targetObject.show = function () {
@@ -68,7 +66,7 @@ Microsoft.WebPortal.Utilities.Toggler = {
             var showProgress = $.Deferred();
             serializer.queue(null, showTask, showProgress, true, showFunction, arguments);
             return showProgress;
-        }
+        };
 
         // implement a hide method on the object
         targetObject.hide = function () {
@@ -80,7 +78,7 @@ Microsoft.WebPortal.Utilities.Toggler = {
             var hideProgress = $.Deferred();
             serializer.queue(null, showTask, hideProgress, false, hideFunction, arguments);
             return hideProgress;
-        }
+        };
 
         targetObject.toggle = function () {
             /// <summary>
@@ -105,8 +103,8 @@ Microsoft.WebPortal.Utilities.Toggler = {
             });
 
             return toggleProgress;
-        }
+        };
     }
-}
+};
 
 //@ sourceURL=Toggler.js

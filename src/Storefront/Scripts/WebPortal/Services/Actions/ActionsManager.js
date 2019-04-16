@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.ActionsManager = function (webPortal, elementSelector, maxActionsInBar, actionsTemplate) {
+﻿Microsoft.WebPortal.Services.ActionsManager = function (webPortal, elementSelector, maxActionsInBar, actionsTemplate) {
     /// <summary>
     /// The actions manager maintains and renders actions which the user can invoke. It provides APIs to add and remove actions.
     /// Actions can be enabled or disabled. Actions also can be simple or compound.
@@ -39,7 +37,7 @@ Microsoft.WebPortal.Services.ActionsManager = function (webPortal, elementSelect
     // the serializer is used to ensure that adding and removing actions execute sequentially. Since each operation is asynchronous,
     // we need to ensure the animation is finished before we start with the next operation
     this.operationSerializer = new Microsoft.WebPortal.Utilities.AsyncOperationSerializer();
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.render = function () {
     /// <summary>
@@ -48,7 +46,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.render = function () {
 
     // listen to the hide menus event
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.HideMenus, this._onHideMenusEvent, this);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.destroy = function () {
     /// <summary>
@@ -60,7 +58,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.destroy = function () {
 
     // stop listening to the hide menus event
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.HideMenus, this._onHideMenusEvent, this);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.add = function (action) {
     /// <summary>
@@ -76,7 +74,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.add = function (action) {
     } else {
         this.webPortal.Diagnostics.warningLocal("Microsoft.WebPortal.Services.ActionsManager.add: action is undefined.");
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.addRange = function (actions) {
     /// <summary>
@@ -91,7 +89,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.addRange = function (actio
     } else {
         this.webPortal.Diagnostics.warningLocal("Microsoft.WebPortal.Services.ActionsManager.addRange: actions is undefined.");
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.remove = function (action) {
     /// <summary>
@@ -107,7 +105,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.remove = function (action)
     } else {
         this.webPortal.Diagnostics.warningLocal("Microsoft.WebPortal.ActionsManager.remove: action is undefined.");
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.removeById = function (actionId) {
     /// <summary>
@@ -123,7 +121,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.removeById = function (act
     } else {
         this.webPortal.Diagnostics.warningLocal("Microsoft.WebPortal.ActionsManager.removeById: actionId is undefined.");
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype.clear = function () {
     /// <summary>
@@ -132,7 +130,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype.clear = function () {
 
     this.webPortal.Diagnostics.informationLocal("Microsoft.WebPortal.ActionsManager.clear: enqueuing request.");
     this.operationSerializer.queue(this, this._clear);
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._add = function (operationResolver, action) {
     /// <summary>
@@ -154,7 +152,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._add = function (operation
             this._extraActions.children.push(action);
             operationResolver.resolve();
         } else {
-            if (this.actions().length == this._maxActionsInBar) {
+            if (this.actions().length === this._maxActionsInBar) {
                 // we have reached our max actions, clear the (...) from any previous children
                 this._extraActions.children.splice(0, this._extraActions.children().length);
 
@@ -177,7 +175,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._add = function (operation
     } else {
         operationResolver.resolve();
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._remove = function (operationResolver, action, actionId) {
     /// <summary>
@@ -207,7 +205,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._remove = function (operat
         // this action is not top level, remove it from its parent
         action.parent().children.remove(action);
 
-        if (action.parent().children().length == 0) {
+        if (action.parent().children().length === 0) {
             // parent no longer has children, remove it too
             this._remove(operationResolver, action.parent());
         } else {
@@ -237,7 +235,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._remove = function (operat
 
                 // animate the action
                 self.addActionAnimation.show("#" + itemToAdd.elementId()).always(function () {
-                    if (self._extraActions.children().length == 0) {
+                    if (self._extraActions.children().length === 0) {
                         // remove the (...) since it is now empty
                         self._remove(operationResolver, self._extraActions);
                     } else {
@@ -252,7 +250,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._remove = function (operat
             }
         });
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._clear = function (operationResolver) {
     /// <summary>
@@ -278,7 +276,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._clear = function (operati
     } else {
         operationResolver.resolve();
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._validateAction = function (action) {
     /// <summary>
@@ -294,7 +292,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._validateAction = function
     }
 
     return false;
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._searchActionsById = function (actionsArray, actionId) {
     /// <summary>
@@ -325,7 +323,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._searchActionsById = funct
     }
 
     return matchingAction;
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._hideCompoundActionMenus = function () {
     /// <summary>
@@ -335,7 +333,7 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._hideCompoundActionMenus =
     for (var i in this.actions()) {
         this.actions()[i].isSubMenuShown(false);
     }
-}
+};
 
 Microsoft.WebPortal.Services.ActionsManager.prototype._onHideMenusEvent = function (eventId, context, broadcaster) {
     /// <summary>
@@ -346,6 +344,6 @@ Microsoft.WebPortal.Services.ActionsManager.prototype._onHideMenusEvent = functi
     /// <param name="broadcaster">broadcaster of the event.</param>
 
     this._hideCompoundActionMenus();
-}
+};
 
 //@ sourceURL=ActionsManager.js

@@ -259,7 +259,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
                     TemplateId = microsoftCloudAgreement.TemplateId,
                     Type = AgreementType.MicrosoftCloudAgreement,
                     UserId = branding.AgreementUserId
-                });
+                }).ConfigureAwait(false);
 
             string newCustomerId = newCustomer.CompanyProfile.TenantId;
 

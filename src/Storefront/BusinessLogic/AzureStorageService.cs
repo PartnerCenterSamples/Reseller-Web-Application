@@ -182,11 +182,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                 publicBlobContainer = blobClient.GetContainerReference(PublicPortalAssetsBlobContainerName);
             }
 
-            if (!await this.publicBlobContainer.ExistsAsync().ConfigureAwait(false))
+            if (!await publicBlobContainer.ExistsAsync().ConfigureAwait(false))
             {
-                await this.publicBlobContainer.CreateAsync().ConfigureAwait(false);
+                await publicBlobContainer.CreateAsync().ConfigureAwait(false);
 
-                BlobContainerPermissions permissions = await this.publicBlobContainer.GetPermissionsAsync().ConfigureAwait(false);
+                BlobContainerPermissions permissions = await publicBlobContainer.GetPermissionsAsync().ConfigureAwait(false);
                 permissions.PublicAccess = BlobContainerPublicAccessType.Blob;
 
                 await publicBlobContainer.SetPermissionsAsync(permissions).ConfigureAwait(false);
@@ -201,10 +201,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         /// <returns>The Partner Center customers table.</returns>
         public async Task<CloudTable> GetPartnerCenterCustomersTableAsync()
         {
-            if (this.partnerCenterCustomersTable == null)
+            if (partnerCenterCustomersTable == null)
             {
-                CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
-                this.partnerCenterCustomersTable = tableClient.GetTableReference(CustomersTableName);
+                CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+                partnerCenterCustomersTable = tableClient.GetTableReference(CustomersTableName);
             }
 
             // someone can delete the table externally

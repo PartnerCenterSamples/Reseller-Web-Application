@@ -25,9 +25,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
             partnerOffer.AssertNotNull(nameof(partnerOffer));
 
             // ensure the Microsoft offer ID and other required properties are set
-            Guid offerId;
 
-            if (!Guid.TryParse(partnerOffer.Id, out offerId))
+            if (!Guid.TryParse(partnerOffer.Id, out Guid offerId))
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.IdMustBeAValidGUID).AddDetail("Field", "Id");
             }
@@ -38,17 +37,17 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
             }
 
             partnerOffer.Title.AssertNotEmpty("Offer title");
-            
+
             if (partnerOffer.Price <= 0)
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.OfferPriceShouldBeMoreThanZero).AddDetail("Field", "Price");
             }
 
             // flatten the offer price based on locale decimal settings. 
-            partnerOffer.Price = Math.Round(partnerOffer.Price, Resources.Culture.NumberFormat.CurrencyDecimalDigits, MidpointRounding.AwayFromZero);             
+            partnerOffer.Price = Math.Round(partnerOffer.Price, Resources.Culture.NumberFormat.CurrencyDecimalDigits, MidpointRounding.AwayFromZero);
 
-            partnerOffer.Features = PartnerOfferNormalizer.CleanupEmptyEntries(partnerOffer.Features);
-            partnerOffer.Summary = PartnerOfferNormalizer.CleanupEmptyEntries(partnerOffer.Summary);
+            partnerOffer.Features = CleanupEmptyEntries(partnerOffer.Features);
+            partnerOffer.Summary = CleanupEmptyEntries(partnerOffer.Summary);
         }
 
         /// <summary>
@@ -65,7 +64,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
 
             ICollection<string> filteredList = new List<string>();
 
-            foreach (var element in enumerable)
+            foreach (string element in enumerable)
             {
                 if (!string.IsNullOrWhiteSpace(element))
                 {

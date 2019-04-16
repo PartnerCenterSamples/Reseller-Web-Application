@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.ISplashScreen = function () {
+﻿Microsoft.WebPortal.Core.ISplashScreen = function () {
     /// <summary>
     /// The interface any splash screen must implement.
     /// </summary>

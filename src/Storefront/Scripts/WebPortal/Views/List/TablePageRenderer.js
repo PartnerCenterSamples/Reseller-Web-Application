@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Views.List.TablePageRenderer = function (list) {
+﻿Microsoft.WebPortal.Views.List.TablePageRenderer = function (list) {
     /// <summary>
     /// Renders a paged list. The footer will contain links used to navigate to pages.
     /// </summary>
@@ -31,7 +29,7 @@ Microsoft.WebPortal.Views.List.TablePageRenderer = function (list) {
     // determines if a row is in the current page or not
     this.inCurrentPage = function (index) {
         return index >= this.pageIndex() * this.pageSize() && index < (this.pageIndex() + 1) * this.pageSize();
-    }
+    };
 
     this.pageSizeSubscription = this.pageSize.subscribe(function () {
         // page size changed, go to first page
@@ -50,10 +48,10 @@ Microsoft.WebPortal.Views.List.TablePageRenderer = function (list) {
         // refresh the page any time the rows update
         this.refreshPage();
     }, this);
-    
+
     // render the first page
     this.refreshPage();
-}
+};
 
 // inherit ListRenderer
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Views.List.TablePageRenderer, Microsoft.WebPortal.Views.List.ListRenderer);
@@ -65,7 +63,7 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.onDataRequestStarted 
 
     // disable the next button
     this.disableNext(true);
-}
+};
 
 Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.onDataArrived = function () {
     /// <summary>
@@ -77,7 +75,7 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.onDataArrived = funct
 
     // we do not want the page to unnecessarily refresh when the rows are added as we are going to manually trigger it by moving to the new page
     this.supressPageRefresh = true;
-}
+};
 
 Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.onDataRequestFinished = function (pageIndex) {
     /// <summary>
@@ -88,7 +86,7 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.onDataRequestFinished
     // navigate to the page index and reenable back page refresh
     this.supressPageRefresh = false;
     this.goToPage(pageIndex);
-}
+};
 
 Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.performSelectAll = function (allSelected) {
     /// <summary>
@@ -99,14 +97,14 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.performSelectAll = fu
     var startIndex = this.pageIndex() * this.pageSize();
 
     // we normally want to loop through the page size but there is a possibility that the total rows we have are less, account for this case
-    var rowCountToSelect = Math.min(this.pageSize(), this.rows().length - (this.pageIndex() * this.pageSize() ));
+    var rowCountToSelect = Math.min(this.pageSize(), this.rows().length - this.pageIndex() * this.pageSize());
 
-    for (var i = 0; i < rowCountToSelect ; ++i) {
+    for (var i = 0; i < rowCountToSelect; ++i) {
         if (this.rows()[startIndex + i].isSelected) {
             this.rows()[startIndex + i].isSelected(allSelected);
         }
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.goToPage = function (pageIndex) {
     /// <summary>
@@ -139,7 +137,7 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.goToPage = function (
     // new rows
     this.pageIndex(pageIndex);
     this.refreshPage();
-}
+};
 
 Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.refreshPage = function () {
     /// <summary>
@@ -152,7 +150,7 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.refreshPage = functio
 
     var startIndex = this.pageIndex() * this.pageSize();
     this.rowsToRender(this.rows.slice(startIndex, startIndex + this.pageSize()));
-}
+};
 
 Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.destroy = function () {
     /// <summary>
@@ -176,6 +174,6 @@ Microsoft.WebPortal.Views.List.TablePageRenderer.prototype.destroy = function ()
         this.rowsSubscription.dispose();
         this.rowsSubscription = null;
     }
-}
+};
 
 //@ sourceURL=TablePageRenderer.js

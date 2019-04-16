@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Views.List.ListRenderer = function (list, bodyTemplate, footerTemplate) {
+﻿Microsoft.WebPortal.Views.List.ListRenderer = function (list, bodyTemplate, footerTemplate) {
     /// <summary>
     /// Renders the list in a particular style.
     /// </summary>
@@ -18,7 +16,7 @@ Microsoft.WebPortal.Views.List.ListRenderer = function (list, bodyTemplate, foot
     this.rows = list.rows;
     this.pageSize = list.pageSize;
     this.isComplete = list.isComplete;
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.performSelectAll = function (allSelected) {
     /// <summary>
@@ -26,32 +24,32 @@ Microsoft.WebPortal.Views.List.ListRenderer.prototype.performSelectAll = functio
     /// </summary>
     /// <param name="allSelected">True to select all, false to deselect all.</param>
 
-    for (var i = 0; i < this.rows().length ; ++i) {
+    for (var i = 0; i < this.rows().length; ++i) {
         if (this.rows()[i].isSelected) {
             this.rows()[i].isSelected(allSelected);
         }
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.onListScrolled = function (self) {
     /// <summary>
     /// Called when the list body is scrolled.
     /// </summary>
     /// <param name="self">The renderer instance.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.ensureOccupancy = function () {
     /// <summary>
     /// Called to ensure that the list body fills it real estate with rows.
     /// </summary>
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.onDataRequestStarted = function (context) {
     /// <summary>
     /// Called before a request for additional data is made. Implementations can implement this to add pre-fetch behavior.
     /// </summary>
     /// <param name="context">An optional context parameter.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.onDataArrived = function (newRows, context) {
     /// <summary>
@@ -59,14 +57,14 @@ Microsoft.WebPortal.Views.List.ListRenderer.prototype.onDataArrived = function (
     /// </summary>
     /// <param name="newRows">The new rows received.</param>
     /// <param name="context">An optional context parameter.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.onDataRequestFinished = function (context) {
     /// <summary>
     /// Called when requesting data is finished whether in success or in failure. Implementations can implement this to add their clean up logic.
     /// </summary>
     /// <param name="context">An optional context parameter.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.requestMoreRows = function (index, count, context) {
     /// <summary>
@@ -108,12 +106,12 @@ Microsoft.WebPortal.Views.List.ListRenderer.prototype.requestMoreRows = function
             self.onDataRequestFinished(context);
         }, 0);
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.ListRenderer.prototype.destroy = function () {
     /// <summary>
     /// Destroys the renderer.
     /// </summary>
-}
+};
 
 //@ sourceURL=ListRenderer.js

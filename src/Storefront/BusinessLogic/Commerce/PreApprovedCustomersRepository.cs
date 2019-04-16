@@ -67,7 +67,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             if (currentPreApprovedCustomers.CustomerIds != null)
             {
                 // Find if the all customers approved entry is present. 
-                allCustomersPreApproved = currentPreApprovedCustomers.CustomerIds.Where(cid => (cid == Guid.Empty.ToString())).Count() > 0;
+                allCustomersPreApproved = currentPreApprovedCustomers.CustomerIds.Any(cid => cid == Guid.Empty.ToString());
             }
 
             // populate portal customer list. 
@@ -88,10 +88,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                     try
                     {
                         // can raise an exception if a customer has been removed from PartnerCenter although preapproved in the portal.                         
-                        preApprovedCustomerDetails.Where(customer => customer.TenantId == customerId).FirstOrDefault().IsPreApproved = true;
+                        preApprovedCustomerDetails.FirstOrDefault(customer => customer.TenantId == customerId).IsPreApproved = true;
                     }
                     catch (NullReferenceException)
                     {
+                        // This has been intentionally left empty.
                     }
                 }
             }
@@ -102,12 +103,9 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                 Items = preApprovedCustomerDetails.OrderBy(customer => customer.CompanyName)
             };
 
-            if (!allCustomersPreApproved)
+            if (!allCustomersPreApproved && currentPreApprovedCustomers.CustomerIds != null)
             {
-                if (currentPreApprovedCustomers.CustomerIds != null)
-                {
-                    viewModel.CustomerIds.AddRange(currentPreApprovedCustomers.CustomerIds.ToList());
-                }
+                viewModel.CustomerIds.AddRange(currentPreApprovedCustomers.CustomerIds.ToList());
             }
 
             return viewModel;
@@ -157,7 +155,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             if (existingCustomers.CustomerIds != null)
             {
                 // Find if the all customers approved entry is present. 
-                int allCustomersApproved = existingCustomers.CustomerIds.Where(cid => (cid == Guid.Empty.ToString())).Count();
+                int allCustomersApproved = existingCustomers.CustomerIds.Count(cid => cid == Guid.Empty.ToString());
                 if (allCustomersApproved > 0)
                 {
                     isCustomerPreApproved = true;
@@ -165,7 +163,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                 else
                 {
                     // check if current customer is in the pre approved list. 
-                    int currentCustomerApproved = existingCustomers.CustomerIds.Where(cid => cid == customerId).Count();
+                    int currentCustomerApproved = existingCustomers.CustomerIds.Count(cid => cid == customerId);
                     isCustomerPreApproved = currentCustomerApproved > 0;
                 }
             }

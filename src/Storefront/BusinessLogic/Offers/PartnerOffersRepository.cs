@@ -51,7 +51,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
         /// <returns>True if the offers were configured and stored, false otherwise.</returns>
         public async Task<bool> IsConfiguredAsync()
         {
-            return (await RetrieveAsync().ConfigureAwait(false)).Where(offer => offer.IsInactive == false).Count() > 0;
+            return (await RetrieveAsync().ConfigureAwait(false)).Any(offer => !offer.IsInactive);
         }
 
         /// <summary>
@@ -73,18 +73,21 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
 
                 IEnumerable<PartnerCenter.Models.Offers.Offer> eligibleOffers = partnerCenterOffers?.Items.Where(offer =>
                     !offer.IsAddOn &&
-                    (offer.PrerequisiteOffers == null || offer.PrerequisiteOffers.Count() <= 0)
-                    && offer.IsAvailableForPurchase == true);
+                    (offer.PrerequisiteOffers == null || !offer.PrerequisiteOffers.Any())
+                    && offer.IsAvailableForPurchase);
 
                 microsoftOffers = new List<MicrosoftOffer>();
 
-                foreach (PartnerCenter.Models.Offers.Offer partnerCenterOffer in eligibleOffers)
+                if (eligibleOffers != null)
                 {
-                    microsoftOffers.Add(new MicrosoftOffer()
+                    foreach (PartnerCenter.Models.Offers.Offer partnerCenterOffer in eligibleOffers)
                     {
-                        Offer = partnerCenterOffer,
-                        ThumbnailUri = new Uri(await ApplicationDomain.MicrosoftOfferLogoIndexer.GetOfferLogoUriAsync(partnerCenterOffer).ConfigureAwait(false), UriKind.Relative)
-                    });
+                        microsoftOffers.Add(new MicrosoftOffer()
+                        {
+                            Offer = partnerCenterOffer,
+                            ThumbnailUri = new Uri(await ApplicationDomain.MicrosoftOfferLogoIndexer.GetOfferLogoUriAsync(partnerCenterOffer).ConfigureAwait(false), UriKind.Relative)
+                        });
+                    }
                 }
 
                 // cache the Microsoft offers for one day
@@ -105,7 +108,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
         public async Task<PartnerOffer> RetrieveAsync(string partnerOfferId)
         {
             partnerOfferId.AssertNotEmpty(nameof(partnerOfferId));
-            PartnerOffer matchingPartnerOffer = (await RetrieveAsync().ConfigureAwait(false)).Where(offer => offer.Id == partnerOfferId).FirstOrDefault();
+            PartnerOffer matchingPartnerOffer = (await RetrieveAsync().ConfigureAwait(false)).FirstOrDefault(offer => offer.Id == partnerOfferId);
 
             if (matchingPartnerOffer != null)
             {
@@ -171,10 +174,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
         /// <returns>The added partner offer.</returns>
         public async Task<PartnerOffer> AddAsync(PartnerOffer newPartnerOffer)
         {
-            if (newPartnerOffer == null)
-            {
-                throw new ArgumentNullException(nameof(newPartnerOffer));
-            }
+            newPartnerOffer.AssertNotNull(nameof(newPartnerOffer));
 
             newPartnerOffer.Id = Guid.NewGuid().ToString();
 
@@ -194,15 +194,12 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
         /// <returns>The updated partner offer.</returns>
         public async Task<PartnerOffer> UpdateAsync(PartnerOffer partnerOfferUpdate)
         {
-            if (partnerOfferUpdate == null)
-            {
-                throw new ArgumentNullException(nameof(partnerOfferUpdate));
-            }
+            partnerOfferUpdate.AssertNotNull(nameof(partnerOfferUpdate));
 
             IList<PartnerOffer> allPartnerOffers = new List<PartnerOffer>(await RetrieveAsync().ConfigureAwait(false));
             new PartnerOfferNormalizer().Normalize(partnerOfferUpdate);
 
-            PartnerOffer existingPartnerOffer = allPartnerOffers.Where(offer => offer.Id == partnerOfferUpdate.Id).FirstOrDefault();
+            PartnerOffer existingPartnerOffer = allPartnerOffers.FirstOrDefault(offer => offer.Id == partnerOfferUpdate.Id);
 
             if (existingPartnerOffer == null)
             {
@@ -234,7 +231,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
             ICollection<PartnerOffer> allPartnerOffers = new List<PartnerOffer>(await RetrieveAsync().ConfigureAwait(false));
 
             // mark the provided offers are deleted
-            IEnumerable<PartnerOffer> matchedOffers = allPartnerOffers.Where(offer => partnerOffersToDelete.Where(offerToDelete => offerToDelete.Id == offer.Id).FirstOrDefault() != null);
+            IEnumerable<PartnerOffer> matchedOffers = allPartnerOffers.Where(offer => partnerOffersToDelete.FirstOrDefault(offerToDelete => offerToDelete.Id == offer.Id) != null);
 
             foreach (PartnerOffer offerToDelete in matchedOffers)
             {

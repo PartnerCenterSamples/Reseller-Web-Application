@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.ContentPanel = function (webPortal) {
+﻿Microsoft.WebPortal.Core.ContentPanel = function (webPortal) {
     /// <summary>
     /// The content panel class manages the main content panel to which presenters can render their content. It provides methods
     /// to render, clear and append content to the panel.

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.TitleSection = function (webPortal) {
+﻿Microsoft.WebPortal.Services.TitleSection = function (webPortal) {
     /// <summary>
     /// A header bar section that renders the product log, title, active feature and a drop down primary navigation.
     /// </summary>
@@ -18,7 +16,7 @@ Microsoft.WebPortal.Services.TitleSection = function (webPortal) {
 
         // go to the default feature of the default tile
         this.webPortal.Journey.start(Microsoft.WebPortal.Feature[this.webPortal.defaultTile().DefaultFeature]);
-    }
+    };
 
     this.onActiveTileClicked = function () {
         /// <summary>
@@ -28,7 +26,7 @@ Microsoft.WebPortal.Services.TitleSection = function (webPortal) {
 
         // load the default tile feature
         this.webPortal.Journey.start(Microsoft.WebPortal.Feature[this.webPortal.activeTile().DefaultFeature]);
-    }
+    };
 
     this.onTileSelectorClicked = function () {
         /// <summary>
@@ -41,20 +39,20 @@ Microsoft.WebPortal.Services.TitleSection = function (webPortal) {
         } else {
             this.webPortal.Diagnostics.warning("HeaderBar.TileSection: Primary navigation service is not running. Toggling disabled.");
         }
-    }
+    };
 
     this.onHover = function (elementId, model) {
         $(elementId).css("background-color", model.webPortal.activeTile().AlternateColor);
-    }
+    };
 
     this.onUnhover = function (elementId, model) {
         $(elementId).css("background-color", "");
-    }
+    };
 
     this.onPrimaryNavigationShowChange = function (eventId, isShown, broadcaster) {
         // rotate the tile selector arrow according to the new state of the primary navigation
         this.tileSelectorDirection(isShown ? "rotate(180deg)" : "rotate(0deg)");
-    }
+    };
 
     this.featureActivated = function (eventId, context, broadcaster) {
         /// <summary>
@@ -80,8 +78,8 @@ Microsoft.WebPortal.Services.TitleSection = function (webPortal) {
                 });
             }
         }
-    }
-}
+    };
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.TitleSection, Microsoft.WebPortal.Services.HeaderBarSection);
 
@@ -96,7 +94,7 @@ Microsoft.WebPortal.Services.TitleSection.prototype.initialize = function () {
 
     // we are interested in knowing when a feature has been activated
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.FeatureActivated, this.featureActivated, this);
-}
+};
 
 Microsoft.WebPortal.Services.TitleSection.prototype.destroy = function () {
     /// <summary>
@@ -106,6 +104,6 @@ Microsoft.WebPortal.Services.TitleSection.prototype.destroy = function () {
     // stop listening to events
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.PrimaryNavigationShowing, this.onPrimaryNavigationShowChange, this);
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.FeatureActivated, this.featureActivated, this);
-}
+};
 
 //@ sourceURL=TitleSection.js

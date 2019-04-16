@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.Presenter = function (webPortal, feature, title) {
+﻿Microsoft.WebPortal.Core.Presenter = function (webPortal, feature, title) {
     /// <summary>
     /// The presenter class is the base class all presenter must ultimately extend. Presenters can be activated, deactivated and destroyed.
     /// When a presenter is activated, it owns the UI and it can use the different portal services to render its feature. A presenter can

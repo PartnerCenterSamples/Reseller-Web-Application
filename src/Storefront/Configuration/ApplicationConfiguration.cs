@@ -73,7 +73,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration
         /// <summary>
         /// A lazy reference to client configuration.
         /// </summary>
-        private static Lazy<IDictionary<string, dynamic>> clientConfiguration = new Lazy<IDictionary<string, dynamic>>(
+        private static readonly Lazy<IDictionary<string, dynamic>> clientConfiguration = new Lazy<IDictionary<string, dynamic>>(
             () => WebPortalConfigurationManager.GenerateConfigurationDictionary());
 
         /// <summary>

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Utilities.Throttler = function (throttlingPeriod, resourceName) {
+﻿Microsoft.WebPortal.Utilities.Throttler = function (throttlingPeriod, resourceName) {
     /// <summary>
     /// Throttles access to resources based on a given period. Any incoming requests within the throttling period since the last request
     /// will be denied.
@@ -12,7 +10,7 @@ Microsoft.WebPortal.Utilities.Throttler = function (throttlingPeriod, resourceNa
 
     this.throttlingPeriod = throttlingPeriod || $WebPortal.Configuration.DefaultThrottlingDuration;
     this.resourceName = resourceName || "Unknown resource";
-}
+};
 
 Microsoft.WebPortal.Utilities.Throttler.prototype.throttle = function (callbackFunction, callbackObject) {
     /// <summary>
@@ -38,7 +36,7 @@ Microsoft.WebPortal.Utilities.Throttler.prototype.throttle = function (callbackF
         // call the function and pass the rest of the arguments to it
         return callbackFunction.call(callbackObject, args.slice(2));
     }
-}
+};
 
 Microsoft.WebPortal.Utilities.Throttler.prototype.reset = function () {
     /// <summary>
@@ -47,6 +45,6 @@ Microsoft.WebPortal.Utilities.Throttler.prototype.reset = function () {
 
     // reset the time stamp of the last request accepted
     this.lastProcessedRequestTimeStamp = new Date(1983, 8, 8);
-}
+};
 
 //@ sourceURL=Throttler.js

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.UserSection = function (webPortal, loggedInUser) {
+﻿Microsoft.WebPortal.Services.UserSection = function (webPortal, loggedInUser) {
     /// <summary>
     /// Renders the user information section in the header bar. Displays the user name and avatar icon and manages the user menu.
     /// </summary>
@@ -13,7 +11,7 @@ Microsoft.WebPortal.Services.UserSection = function (webPortal, loggedInUser) {
     // create and register the actions service
     this.userMenuSevice = ko.observable(null);
     //this.webPortal.registerPortalService(this.userMenuSevice);
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.UserSection, Microsoft.WebPortal.Services.HeaderBarSection);
 
@@ -25,7 +23,7 @@ Microsoft.WebPortal.Services.UserSection.prototype.initialize = function () {
     var service = new Microsoft.WebPortal.Services.UserMenuService(this.webPortal, "#UserInfoSection");
     this.userMenuSevice(service);
     this.webPortal.registerPortalService(service);
-}
+};
 
 Microsoft.WebPortal.Services.UserSection.prototype.destroy = function () {
     /// <summary>
@@ -33,7 +31,6 @@ Microsoft.WebPortal.Services.UserSection.prototype.destroy = function () {
     /// </summary>
 
     this.webPortal.deregisterPortalService(this.userMenuSevice());
-}
-
+};
 
 //@ sourceURL=UserSection.js

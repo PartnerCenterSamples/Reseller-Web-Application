@@ -25,11 +25,11 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Filters.WebApi
         /// <param name="context">The authentication context.</param>
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A task.</returns>
-        public async Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
+        public Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
         {
             context.Principal = new CustomerPortalPrincipal(HttpContext.Current.User as System.Security.Claims.ClaimsPrincipal);
 
-            await Task.CompletedTask.ConfigureAwait(false);
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -38,10 +38,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Filters.WebApi
         /// <param name="context">The authentication context.</param>
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A task.</returns>
-        public async Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
+        public Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
         {
             // Do nothing
-            await Task.CompletedTask.ConfigureAwait(false);
+            return Task.CompletedTask;
         }
     }
 }

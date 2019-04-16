@@ -54,7 +54,7 @@
 
   <Target Name="_CopyOutputToArtifactStagingDirectory">
     <Copy SourceFiles="@(DeploymentProjectContentOutput)" DestinationFiles="$(ArtifactStagingDirectory)\$(MSBuildProjectName)%(RelativePath)" />
-    <Copy SourceFiles="@(BuildProjectReferencesOutput)" DestinationFiles="$(ArtifactStagingDirectory)%(ProjectName)\%(RecursiveDir)%(FileName)%(Extension)" />
+    <Copy SourceFiles="@(BuildProjectReferencesOutput)" DestinationFiles="$(ArtifactStagingDirectory)\$(MSBuildProjectName)\%(ProjectName)\%(RecursiveDir)%(FileName)%(Extension)" />
   </Target>
 
   <Target Name="_GetDeploymentProjectContent">
@@ -86,7 +86,7 @@
       <ArtifactStagingDirectory Condition=" '$(ArtifactStagingDirectory)'=='' ">$(OutputPath)</ArtifactStagingDirectory>
       <ArtifactStagingDirectory Condition=" !HasTrailingSlash('$(ArtifactStagingDirectory)') ">$(ArtifactStagingDirectory)\</ArtifactStagingDirectory>
       <ArtifactStagingDirectory>$(ArtifactStagingDirectory)staging\</ArtifactStagingDirectory>
-      <ArtifactStagingDirectory Condition=" '$(TF_Build)' == 'True' ">$(Build_StagingDirectory)</ArtifactStagingDirectory>
+      <ArtifactStagingDirectory Condition=" '$(Build_StagingDirectory)'!='' AND '$(TF_Build)'=='True' ">$(Build_StagingDirectory)</ArtifactStagingDirectory>
     </PropertyGroup>
   </Target>
 

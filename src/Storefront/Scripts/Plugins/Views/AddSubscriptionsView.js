@@ -120,8 +120,7 @@ Microsoft.WebPortal.Views.AddSubscriptionsView.prototype.onShowing = function (i
 
     if (isShowing) {
         this.subscriptionsList.show();
-    }
-    else {
+    } else {
         this.subscriptionsList.hide();
     }
 };

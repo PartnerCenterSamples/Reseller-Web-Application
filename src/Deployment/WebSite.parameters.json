@@ -1,0 +1,50 @@
+{
+  "azureStorageConnectionEndpointSuffix": {
+    "value": "core.windows.net"
+  },
+  "hostingPlanName": {
+    "value": "Free"
+  },
+  "partnerCenterApplicationId": {
+    "value": ""
+  },
+  "partnerCenterApplicationSecret": {
+    "value": ""
+  },
+  "partnerCenterAadTenantId": {
+    "value": ""
+  },
+  "webPortalClientId": {
+    "value": ""
+  },
+  "webPortalClientSecret": {
+    "value": ""
+  },
+  "webPortalAadTenantId": {
+    "value": ""
+  },
+  "siteName": {
+    "value": ""
+  },
+  "repoUrl": {
+    "value": "https://github.com/Microsoft/Partner-Center-Storefront"
+  },
+  "branch": {
+    "value": "master"
+  },
+  "aadAuthorityEndpoint": {
+    "value": "https://login.microsoftonline.com/"
+  },
+  "graphEndpoint": {
+    "value": "https://graph.windows.net"
+  },
+  "partnerCenterApiEndPoint": {
+    "value": "https://api.partnercenter.microsoft.com"
+  },
+  "skuName": {
+    "value": "F1"
+  },
+  "skuCapacity": {
+    "value": 1
+  }
+}

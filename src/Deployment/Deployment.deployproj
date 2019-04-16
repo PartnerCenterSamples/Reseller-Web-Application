@@ -11,12 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>d0359f86-1aa6-4646-87a0-4ba66a5d35fd</ProjectGuid>
+    <ProjectGuid>0b962fe3-e103-4c00-bfad-cd35f22a2c19</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkIdentifier>Deployment</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
     <PrepareForBuildDependsOn>
     </PrepareForBuildDependsOn>
   </PropertyGroup>
@@ -26,17 +26,13 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
-    <Folder Include="Scripts\" />
-    <Folder Include="Templates\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
-    <Content Include="Scripts\Deploy-AzureResourceGroup.ps1" />
-    <Content Include="Templates\WebSite.json" />
-    <Content Include="Templates\WebSite.parameters.json" />
+    <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <Content Include="WebSite.json" />
+    <Content Include="WebSite.parameters.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Storefront\Storefront.csproj">

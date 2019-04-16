@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.NotificationsManager = function (webPortal, animation, notificationsPanelTemplate) {
+﻿Microsoft.WebPortal.Services.NotificationsManager = function (webPortal, animation, notificationsPanelTemplate) {
     /// <summary>
     /// Manages notifications and their rendering. Provides methods to show or hide the notification panel and to add or remove
     /// notifications to/from it.
@@ -32,7 +30,7 @@ Microsoft.WebPortal.Services.NotificationsManager = function (webPortal, animati
     // we will serialize notification manipulation functions since they use animations, we want to make sure the whole async operation is complete before
     // the next requests are executed
     this.serializer = new Microsoft.WebPortal.Utilities.AsyncOperationSerializer();
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.NotificationsManager, Microsoft.WebPortal.Core.PortalService);
 
@@ -46,14 +44,14 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype._runService = functi
 
     this.onHideMenus = function (eventId, context, broadcaster) {
         // hide the notifications panel in response to the hide menus event
-        if (broadcaster != this && this.isShown()) {
+        if (broadcaster !== this && this.isShown()) {
             this.hide();
         }
-    }
+    };
 
     // the notification panel will hide upon a hide menus event
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.HideMenus, this.onHideMenus, this);
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype._stopService = function () {
     /// <summary>
@@ -72,7 +70,7 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype._stopService = funct
 
         taskProgress.resolve();
     });
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype.show = function (showProgress) {
     /// <summary>
@@ -93,7 +91,7 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype.show = function (sho
     } else {
         showProgress.resolve();
     }
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype.hide = function (hideProgress) {
     /// <summary>
@@ -111,7 +109,7 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype.hide = function (hid
     } else {
         hideProgress.resolve();
     }
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype.add = function (notification) {
     /// <summary>
@@ -153,7 +151,7 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype.add = function (noti
             });
         }
     });
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype.remove = function (notification) {
     /// <summary>
@@ -197,8 +195,7 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype.remove = function (n
             taskProgress.resolve();
         }
     });
-    
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype.clear = function () {
     /// <summary>
@@ -219,7 +216,7 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype.clear = function () 
             taskProgress.resolve();
         });
     });
-}
+};
 
 Microsoft.WebPortal.Services.NotificationsManager.prototype.onClearAllNotificationsClicked = function () {
     /// <summary>
@@ -227,7 +224,6 @@ Microsoft.WebPortal.Services.NotificationsManager.prototype.onClearAllNotificati
     /// </summary>
 
     this.clear();
-}
-
+};
 
 //@ sourceURL=Notifications.js

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-/*
+﻿/*
     define the namespace of the web portal.
 */
 var Microsoft = {

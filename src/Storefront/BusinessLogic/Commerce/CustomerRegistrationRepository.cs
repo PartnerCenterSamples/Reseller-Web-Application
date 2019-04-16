@@ -19,16 +19,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
     public class CustomerRegistrationRepository : DomainObject
     {
         /// <summary>
-        /// The partner customer key in the cache.
-        /// </summary>
-        private const string PartnerCustomerCacheKey = "PartnerCustomers";
-
-        /// <summary>
-        /// The Azure BLOB name for the partner customer details.
-        /// </summary>
-        private const string PartnerCustomerBlobName = "partnercustomers";
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="CustomerRegistrationRepository"/> class.
         /// </summary>
         /// <param name="applicationDomain">An instance of the application domain.</param>

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Views.List = function (webPortal, elementSelector, listener, isShown, animation) {
+﻿Microsoft.WebPortal.Views.List = function (webPortal, elementSelector, listener, isShown, animation) {
     /// <summary>
     /// A view that renders a list of items. You can specify columns, sorting, clicking, row selection options as well as list rendering styles
     /// such as paged or infinite scrolling. The list will communicate the events back to the associated listener which can handle the events.
@@ -62,7 +60,7 @@ Microsoft.WebPortal.Views.List = function (webPortal, elementSelector, listener,
 
     // internal flag which specifies if a vertical scrollbar is displayed or not, this is used to align the header cells correctly
     this.scrollBarVisible = ko.observable(false);
-    
+
     this.drawTopBorder = function (index) {
         /// <summary>
         /// Determines whether the row at the given index is selected and the entity on top of it is NOT selected. This is used
@@ -71,7 +69,7 @@ Microsoft.WebPortal.Views.List = function (webPortal, elementSelector, listener,
         /// <param name="index">The entity's index.</param>
         /// <returns type="Boolean">true or false.</returns>
         return this.isSelectable() && this.rows()[index].isSelected() && (index === 0 || !this.rows()[index - 1].isSelected());
-    }
+    };
 
     this.rows.subscribe(function (changes) {
         window.setTimeout(function (self) {
@@ -84,7 +82,7 @@ Microsoft.WebPortal.Views.List = function (webPortal, elementSelector, listener,
             }
         }, 0, this);
     }, this, "arrayChange");
-}
+};
 
 // extend the base view
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Views.List, Microsoft.WebPortal.Core.View);
@@ -109,7 +107,7 @@ Microsoft.WebPortal.Views.List.prototype.set = function (rows) {
     if (!this.supressSelectEvent && this.listener && this.listener.onSelectionChanged) {
         this.listener.onSelectionChanged(this.selectedRows());
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.append = function (rows) {
     /// <summary>
@@ -119,7 +117,7 @@ Microsoft.WebPortal.Views.List.prototype.append = function (rows) {
 
     this._mutateToSelectable(rows);
     this.rows.push.apply(this.rows, rows);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.remove = function (row) {
     /// <summary>
@@ -133,7 +131,7 @@ Microsoft.WebPortal.Views.List.prototype.remove = function (row) {
             break;
         }
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.clear = function () {
     /// <summary>
@@ -153,7 +151,7 @@ Microsoft.WebPortal.Views.List.prototype.clear = function () {
     if (!this.supressSelectEvent && this.listener && this.listener.onSelectionChanged) {
         this.listener.onSelectionChanged(this.selectedRows());
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setColumns = function (columns) {
     /// <summary>
@@ -163,7 +161,7 @@ Microsoft.WebPortal.Views.List.prototype.setColumns = function (columns) {
 
     this.webPortal.Helpers.throwIfNotSet(columns, "columns", "Microsoft.WebPortal.Views.List.setColumns");
     this.columns(columns);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setComplete = function (isComplete) {
     /// <summary>
@@ -172,7 +170,7 @@ Microsoft.WebPortal.Views.List.prototype.setComplete = function (isComplete) {
     /// <param name="isComplete">True if the list has all the data, false if not.</param>
 
     this.isComplete(isComplete === true);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setPageSize = function (pageSize) {
     /// <summary>
@@ -182,7 +180,7 @@ Microsoft.WebPortal.Views.List.prototype.setPageSize = function (pageSize) {
     /// <param name="pageSize">The new page size.</param>
 
     this.pageSize(pageSize || this.webPortal.Configuration.List.PageSize);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setSelectionMode = function (selectionMode) {
     /// <summary>
@@ -210,7 +208,7 @@ Microsoft.WebPortal.Views.List.prototype.setSelectionMode = function (selectionM
     }
 
     this.selectMode(selectionMode);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setSorting = function (sortField, sortDirection, refreshData) {
     /// <summary>
@@ -244,7 +242,7 @@ Microsoft.WebPortal.Views.List.prototype.setSorting = function (sortField, sortD
     } else {
         this.webPortal.Diagnostics.warning("Microsoft.WebPortal.Views.List.setSorting: " + sortField + " field not found.");
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setRenderer = function (rendererClass) {
     /// <summary>
@@ -264,7 +262,7 @@ Microsoft.WebPortal.Views.List.prototype.setRenderer = function (rendererClass) 
     // resize the list to correctly fit the new renderer
     this._resizeBody(Microsoft.WebPortal.Event.OnWindowResizing);
     this._resizeBody();
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.enableStatusBar = function (isEnabled) {
     /// <summary>
@@ -274,7 +272,7 @@ Microsoft.WebPortal.Views.List.prototype.enableStatusBar = function (isEnabled) 
     /// <param name="isEnabled">True to enable, otherwise to disable.</param>
 
     this.isStatusBarEnabled(isEnabled === true);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.setEmptyListUI = function (viewModel, template) {
     /// <summary>
@@ -285,7 +283,7 @@ Microsoft.WebPortal.Views.List.prototype.setEmptyListUI = function (viewModel, t
 
     this.emptyListTemplate(template || this.webPortal.Settings.List.DefaultEmptyListTemplate);
     this.emptyListViewModel(viewModel || this.webPortal.Resources.Strings.EmptyListMessage);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.getSelectedRows = function () {
     /// <summary>
@@ -293,7 +291,7 @@ Microsoft.WebPortal.Views.List.prototype.getSelectedRows = function () {
     /// </summary>
     /// <returns type="Array">An array of selected rows.</returns>
     return this.selectedRows();
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.onRender = function () {
     /// <summary>
@@ -306,7 +304,7 @@ Microsoft.WebPortal.Views.List.prototype.onRender = function () {
 
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.OnWindowResizing, this._resizeBody, this);
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.OnWindowResized, this._resizeBody, this);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.onShown = function (isShown) {
     if (isShown) {
@@ -314,7 +312,7 @@ Microsoft.WebPortal.Views.List.prototype.onShown = function (isShown) {
         this._resizeBody();
         this.renderer().ensureOccupancy();
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype.onDestroy = function () {
     /// <summary>
@@ -329,7 +327,7 @@ Microsoft.WebPortal.Views.List.prototype.onDestroy = function () {
 
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.OnWindowResizing, this._resizeBody, this);
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.OnWindowResized, this._resizeBody, this);
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype._resizeBody = function (eventId) {
     var listBodySelector = this.elementSelector + this.webPortal.Settings.List.ListBodySelector;
@@ -354,7 +352,7 @@ Microsoft.WebPortal.Views.List.prototype._resizeBody = function (eventId) {
             this._updateScrollBarStatus();
             break;
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype._mutateToSelectable = function (entities) {
     /// <summary>
@@ -387,7 +385,7 @@ Microsoft.WebPortal.Views.List.prototype._mutateToSelectable = function (entitie
                 // remove the row from the selected entities list
                 var index = self.selectedRows.indexOf(this);
 
-                if (index != -1) {
+                if (index !== -1) {
                     self.selectedRows.splice(index, 1);
                 }
 
@@ -403,7 +401,7 @@ Microsoft.WebPortal.Views.List.prototype._mutateToSelectable = function (entitie
             }
         }, entities[i]);
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype._silentDeselectAll = function () {
     /// <summary>
@@ -419,7 +417,7 @@ Microsoft.WebPortal.Views.List.prototype._silentDeselectAll = function () {
     }
 
     this.supressSelectEvent = oldSupressSelectEvent;
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype._silentClearSelectAll = function () {
     /// <summary>
@@ -430,7 +428,7 @@ Microsoft.WebPortal.Views.List.prototype._silentClearSelectAll = function () {
     this.supressSelectEvent = true;
     this.isAllSelected(false);
     this.supressSelectEvent = oldSupressSelectEvent;
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype._configureSelection = function () {
     // define the list selection mode and default it to none
@@ -481,7 +479,7 @@ Microsoft.WebPortal.Views.List.prototype._configureSelection = function () {
     // a flag to control whether to fire select change events or not.
     // this is used when the select all is clicked to prevent emitting messages for each entity.
     this.supressSelectEvent = false;
-}
+};
 
 Microsoft.WebPortal.Views.List.prototype._configureSorting = function () {
     // list sort information
@@ -520,38 +518,38 @@ Microsoft.WebPortal.Views.List.prototype._configureSorting = function () {
             // notify the listener
             self.listener.onSortChanged(self.sortField(), self.sortDirection());
         }
-    }
-}
+    };
+};
 
 Microsoft.WebPortal.Views.List.prototype._configureClicking = function () {
-    this.onCellClicked = function (self, row, column ) {
+    this.onCellClicked = function (self, row, column) {
         /// <summary>
         /// Called when the user clicks on a cell.
         /// </summary>
         /// <param name="self">The list object.</param>
         /// <param name="row">The row clicked.</param>
         /// <param name="column">The column this cell belongs to.</param>
-        
+
         if (self.listener && self.listener.onCellClicked) {
             self.listener.onCellClicked(column, row);
         }
-    }
-}
+    };
+};
 
 Microsoft.WebPortal.Views.List.prototype._updateScrollBarStatus = function () {
     var listBodySelector = this.elementSelector + this.webPortal.Settings.List.ListBodySelector;
     this.scrollBarVisible($(listBodySelector).get(0) ? $(listBodySelector).get(0).scrollHeight > $(listBodySelector).height() : false);
-}
+};
 
 Microsoft.WebPortal.Views.List.SortDirection = {
     Ascending: "Ascending",
     Descending: "Descending"
-}
-
+};
+    
 Microsoft.WebPortal.Views.List.SelectionMode = {
     None: "None",
     Single: "Single",
     Multiple: "Multiple"
-}
+};
 
 //@ sourceURL=List.js

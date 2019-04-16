@@ -1,0 +1,218 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webSiteName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "webPortalClientId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "webPortalClientSecret": {
+      "type": "string",
+      "minLength": 1
+    },
+    "webPortalAadTenantId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partnerCenterApplicationId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partnerCenterApplicationSecret": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partnerCenterAadTenantId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aadAuthorityEndpoint": {
+      "type": "string",
+      "defaultValue": "https://login.microsoftonline.com/"
+    },
+    "graphEndpoint": {
+      "type": "string",
+      "defaultValue": "https://graph.windows.net"
+    },
+    "azureStorageConnectionEndpointSuffix": {
+      "type": "string",
+      "defaultValue": "core.windows.net"
+    },
+    "partnercenterApiEndpoint": {
+      "type": "string",
+      "defaultValue": "https://api.partnercenter.microsoft.com"
+    },
+    "hostingPlanName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skuName": {
+      "type": "string",
+      "defaultValue": "F1",
+      "allowedValues": [
+        "F1",
+        "D1",
+        "B1",
+        "B2",
+        "B3",
+        "S1",
+        "S2",
+        "S3",
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "metadata": {
+        "description": "Describes plan's pricing tier and instance size. Check details at https://azure.microsoft.com/en-us/pricing/details/app-service/"
+      }
+    },
+    "skuCapacity": {
+      "type": "int",
+      "defaultValue": 1,
+      "minValue": 1,
+      "metadata": {
+        "description": "Describes plan's instance count"
+      }
+    },
+    "_artifactsLocation": {
+      "type": "string"
+    },
+    "_artifactsLocationSasToken": {
+      "type": "securestring"
+    },
+    "CustomerPortalPackageFolder": {
+      "type": "string",
+      "minLength": 1,
+      "metadata": {
+        "description": "WebDeploy package location. This path is relative to the _artifactsLocation parameter"
+      }
+    },
+    "CustomerPortalPackageFileName": {
+      "type": "string",
+      "minLength": 1,
+      "metadata": {
+        "description": "Name of the webdeploy package"
+      }
+    },
+    "CustomerPortalStorageAccountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_ZRS",
+        "Standard_GRS",
+        "Standard_RAGRS",
+        "Premium_LRS"
+      ]
+    }
+  },
+  "variables": {
+    "CustomerPortalStorageAccountName": "[concat('storage', uniqueString(resourceGroup().id))]"
+  },
+  "resources": [
+    {
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('hostingPlanName')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "displayName": "HostingPlan"
+      },
+      "sku": {
+        "name": "[parameters('skuName')]",
+        "capacity": "[parameters('skuCapacity')]"
+      },
+      "properties": {
+        "name": "[parameters('hostingPlanName')]"
+      }
+    },
+    {
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('webSiteName')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource",
+        "displayName": "Website"
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+      ],
+      "properties": {
+        "name": "[parameters('webSiteName')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+      },
+      "resources": [
+        {
+          "name": "MSDeploy",
+          "type": "extensions",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2015-08-01",
+          "dependsOn": [
+            "[concat('Microsoft.Web/sites/', parameters('webSiteName'))]",
+            "[concat('Microsoft.Web/Sites/', parameters('webSiteName'), '/config/appsettings')]"
+          ],
+          "tags": {
+            "displayName": "CustomerPortal"
+          },
+          "properties": {
+            "packageUri": "[concat(parameters('_artifactsLocation'), '/', parameters('CustomerPortalPackageFolder'), '/', parameters('CustomerPortalPackageFileName'), parameters('_artifactsLocationSasToken'))]",
+            "dbType": "None",
+            "Parameters": {
+              "IIS Web Application Name": "[parameters('webSiteName')]"
+            }
+          }
+        },
+        {
+          "name": "appsettings",
+          "type": "config",
+          "apiVersion": "2015-08-01",
+          "dependsOn": [
+            "[concat('Microsoft.Web/sites/', parameters('webSiteName'))]"
+          ],
+          "tags": {
+            "displayName": "ApplicationSettings"
+          },
+          "properties": {
+            "webPortal.clientId": "[parameters('webPortalClientId')]",
+            "webPortal.clientSecret": "[parameters('webPortalClientSecret')]",
+            "webPortal.AadTenantId": "[parameters('webPortalAadTenantId')]",
+            "aadEndpoint": "[parameters('aadAuthorityEndpoint')]",
+            "aadGraphEndpoint": "[parameters('graphEndpoint')]",
+            "partnerCenter.apiEndPoint": "[parameters('partnercenterApiEndpoint')]",
+            "partnerCenter.applicationId": "[parameters('partnerCenterApplicationId')]",
+            "partnerCenter.applicationSecret": "[parameters('partnerCenterApplicationSecret')]",
+            "partnerCenter.AadTenantId": "[parameters('partnerCenterAadTenantId')]",
+            "webPortal.azureStorageConnectionString": "[Concat('DefaultEndpointsProtocol=https;AccountName=',variables('CustomerPortalStorageAccountName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('CustomerPortalStorageAccountName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value)]",
+            "webPortal.azureStorageConnectionEndpointSuffix": "[parameters('azureStorageConnectionEndpointSuffix')]",
+            "webPortal.cacheConnectionString": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "[variables('CustomerPortalStorageAccountName')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-06-15",
+      "dependsOn": [],
+      "tags": {
+        "displayName": "CustomerPortalStorageAccount"
+      },
+      "properties": {
+        "accountType": "[parameters('CustomerPortalStorageAccountType')]"
+      }
+    }
+  ],
+  "outputs": {
+    "WebsiteUrl": {
+      "type": "string",
+      "value": "[concat('https://',reference(resourceId('Microsoft.Web/sites', parameters('webSiteName'))).hostNames[0])]"
+    }
+  }
+}

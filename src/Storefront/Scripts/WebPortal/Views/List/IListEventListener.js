@@ -1,10 +1,8 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Views.List.IListEventListener = function () {
+﻿Microsoft.WebPortal.Views.List.IListEventListener = function () {
     /// <summary>
     /// Specifies the contract a list event listener must implement.
     /// </summary>
-}
+};
 
 Microsoft.WebPortal.Views.List.IListEventListener.prototype.onMoreDataNeeded = function (taskProgress, index, count) {
     /// <summary>
@@ -13,14 +11,14 @@ Microsoft.WebPortal.Views.List.IListEventListener.prototype.onMoreDataNeeded = f
     /// <param name="taskProgress">A JQuery deferred object which should be resolved with the data or rejected if the list has the entire data set.</param>
     /// <param name="index">The starting index of the data.</param>
     /// <param name="count">The number of rows needed.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.IListEventListener.prototype.onSelectionChanged = function (selectedRows) {
     /// <summary>
     /// Handles list selection changes.
     /// </summary>
     /// <param name="selectedRows">An array of selected rows.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.IListEventListener.prototype.onSortChanged = function (sortColumn, sortDirection) {
     /// <summary>
@@ -28,7 +26,7 @@ Microsoft.WebPortal.Views.List.IListEventListener.prototype.onSortChanged = func
     /// </summary>
     /// <param name="sortColumn">The new sort column.</param>
     /// <param name="sortDirection">The new sort direction.</param>
-}
+};
 
 Microsoft.WebPortal.Views.List.IListEventListener.prototype.onCellClicked = function (column, row) {
     /// <summary>
@@ -36,6 +34,6 @@ Microsoft.WebPortal.Views.List.IListEventListener.prototype.onCellClicked = func
     /// </summary>
     /// <param name="column">The cell's column.</param>
     /// <param name="row">The rows which had the cell that was clicked.</param>
-}
+};
 
 //@ sourceURL=ListEventListener.js

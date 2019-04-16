@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.PrimaryNavigation = function (webPortal, animation, primaryNavigationTemplate) {
+﻿Microsoft.WebPortal.Services.PrimaryNavigation = function (webPortal, animation, primaryNavigationTemplate) {
     /// <summary>
     /// The primary navigation service.
     /// </summary>
@@ -16,7 +14,7 @@ Microsoft.WebPortal.Services.PrimaryNavigation = function (webPortal, animation,
 
     // primary navigation will be togglable
     Microsoft.WebPortal.Utilities.Toggler.injectToggling(this, this.show, this.hide, false);
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.PrimaryNavigation, Microsoft.WebPortal.Core.PortalService);
 
@@ -28,14 +26,14 @@ Microsoft.WebPortal.Services.PrimaryNavigation.prototype._runService = function 
     this.onHideMenus = function (eventId, context, broadcaster) {
         // hide the primary navigation in response to the hide menus event
 
-        if (broadcaster != this && this.isShown()) {
+        if (broadcaster !== this && this.isShown()) {
             this.hide();
         }
-    }
+    };
 
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.HideMenus, this.onHideMenus, this);
     ko.applyBindings(this, $(this.webPortal.Settings.Ids.PrimaryNavigation)[0]);
-}
+};
 
 Microsoft.WebPortal.Services.PrimaryNavigation.prototype._stopService = function () {
     /// <summary>
@@ -49,7 +47,7 @@ Microsoft.WebPortal.Services.PrimaryNavigation.prototype._stopService = function
         ko.cleanNode($(self.webPortal.Settings.Ids.PrimaryNavigation)[0]);
         $(self.webPortal.Settings.Ids.PrimaryNavigation).empty();
     });
-}
+};
 
 Microsoft.WebPortal.Services.PrimaryNavigation.prototype.show = function (showProgress) {
     /// <summary>
@@ -72,7 +70,7 @@ Microsoft.WebPortal.Services.PrimaryNavigation.prototype.show = function (showPr
     this.animation.show(this.webPortal.Settings.Ids.PrimaryNavigation).always(function () {
         showProgress.resolve();
     });
-}
+};
 
 Microsoft.WebPortal.Services.PrimaryNavigation.prototype.hide = function (hideProgress) {
     /// <summary>
@@ -92,7 +90,7 @@ Microsoft.WebPortal.Services.PrimaryNavigation.prototype.hide = function (hidePr
     this.animation.hide(this.webPortal.Settings.Ids.PrimaryNavigation).always(function () {
         hideProgress.resolve();
     });
-}
+};
 
 Microsoft.WebPortal.Services.PrimaryNavigation.prototype.tileSelected = function (primaryNavigationInstance, selectedTile) {
     /// <summary>
@@ -104,7 +102,7 @@ Microsoft.WebPortal.Services.PrimaryNavigation.prototype.tileSelected = function
     if (selectedTile.Name !== primaryNavigationInstance.webPortal.activeTile().Name) {
         primaryNavigationInstance.webPortal.Journey.start(Microsoft.WebPortal.Feature[Microsoft.WebPortal.Tile[selectedTile.Name].DefaultFeature]);
     }
-}
+};
 
 Microsoft.WebPortal.Services.PrimaryNavigation.prototype.setTemplate = function (primaryNavigationTemplate) {
     /// <summary>
@@ -114,7 +112,6 @@ Microsoft.WebPortal.Services.PrimaryNavigation.prototype.setTemplate = function 
 
     this.webPortal.Helpers.throwIfNotSet(primaryNavigationTemplate, "primaryNavigationTemplate", "Microsoft.WebPortal.Services.PrimaryNavigation.Constructor.");
     this.template(primaryNavigationTemplate);
-}
-
+};
 
 //@ sourceURL=PrimaryNavigation.js

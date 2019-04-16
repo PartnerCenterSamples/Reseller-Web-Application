@@ -11,7 +11,7 @@
 
     this.onLoginClicked = function () {
         webPortal.Services.Login.login();
-    }
+    };
 
     var self = this;
 
@@ -27,13 +27,13 @@
                     emailLink: "mailto:" + contactUs.email,
                     email: contactUs.email,
                     phone: contactUs.phone,
-                    phoneLink: "tel:" + contactUs.phone,
+                    phoneLink: "tel:" + contactUs.phone
                 },
                 contactSales: {
                     emailLink: "mailto:" + contactSales.email,
                     email: contactSales.email,
                     phone: contactSales.phone,
-                    phoneLink: "tel:" + contactSales.phone,
+                    phoneLink: "tel:" + contactSales.phone
                 }
             }, [okButton]);
         }

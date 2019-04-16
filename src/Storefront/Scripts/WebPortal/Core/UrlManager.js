@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.UrlManager = function (webPortal) {
+﻿Microsoft.WebPortal.Core.UrlManager = function (webPortal) {
     /// <summary>
     /// This class manages relative URLs assigned to features. When a feature is activated, this class updates the url with the feature name
     /// and any context that was sent to that feature. This class also handles browser back and forward buttons and applies the correct journey action.

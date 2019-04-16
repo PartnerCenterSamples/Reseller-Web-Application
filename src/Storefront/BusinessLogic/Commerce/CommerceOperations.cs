@@ -289,7 +289,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
                     throw new ArgumentException("a line item is null");
                 }
 
-                PartnerOffer offerToPurchase = allPartnerOffers.Where(offer => offer.Id == lineItem.PartnerOfferId).FirstOrDefault();
+                PartnerOffer offerToPurchase = allPartnerOffers.FirstOrDefault(offer => offer.Id == lineItem.PartnerOfferId);
 
                 // associate the line item with the partner offer
                 lineItemToOfferAssociations.Add(new PurchaseLineItemWithOffer(lineItem, offerToPurchase));

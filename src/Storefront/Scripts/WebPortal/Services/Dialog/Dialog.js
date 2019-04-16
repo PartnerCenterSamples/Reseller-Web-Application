@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.Dialog = function (webPortal, animation, dialogTemplate, cssClass) {
+﻿Microsoft.WebPortal.Services.Dialog = function (webPortal, animation, dialogTemplate, cssClass) {
     /// <summary>
     /// The dialog service. Provides a pop up dialog which can render KO templates and show a set of standard buttons.
     /// </summary>
@@ -28,7 +26,7 @@ Microsoft.WebPortal.Services.Dialog = function (webPortal, animation, dialogTemp
 
     // dialog will be togglable
     Microsoft.WebPortal.Utilities.Toggler.injectToggling(this, this.show, this.hide, false);
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.Dialog, Microsoft.WebPortal.Core.PortalService);
 
@@ -46,7 +44,7 @@ Microsoft.WebPortal.Services.Dialog.prototype._runService = function () {
     ko.applyBindings(this, $(this.webPortal.Settings.Ids.DialogShader)[0]);
     ko.applyBindings(this, $(this.webPortal.Settings.Ids.DialogBackgroundOverlay)[0]);
     ko.applyBindings(this, $(this.webPortal.Settings.Ids.DialogProgressIndicator)[0]);
-}
+};
 
 Microsoft.WebPortal.Services.Dialog.prototype._stopService = function () {
     /// <summary>
@@ -69,7 +67,7 @@ Microsoft.WebPortal.Services.Dialog.prototype._stopService = function () {
     // stop listening to window resize events
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.OnWindowResizing, this.resize, this);
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.OnWindowResized, this.resize, this);
-}
+};
 
 Microsoft.WebPortal.Services.Dialog.prototype.show = function (showProgress, contentTemplate, contentViewModel, dialogButtons) {
     /// <summary>
@@ -86,7 +84,7 @@ Microsoft.WebPortal.Services.Dialog.prototype.show = function (showProgress, con
         return;
     }
 
-    if(!contentTemplate) {
+    if (!contentTemplate) {
         this.webPortal.Diagnostics.error("Microsoft.WebPortal.Services.Dialog.show: Please provide a content template.");
         showProgress.reject();
         return;
@@ -108,7 +106,7 @@ Microsoft.WebPortal.Services.Dialog.prototype.show = function (showProgress, con
     // clear the old template and view model
     this.contentTemplate(null);
     this.contentViewModel(null);
-    
+
     // set the new ones
     this.contentViewModel(contentViewModel);
     this.contentTemplate(contentTemplate);
@@ -119,14 +117,14 @@ Microsoft.WebPortal.Services.Dialog.prototype.show = function (showProgress, con
     this.isShown(true);
 
     this.animation.show(this.webPortal.Settings.Ids.Dialog).always(function () {
-        self.maxHeight(($("#DialogContentContainer").height() - 65) + "px");
+        self.maxHeight($("#DialogContentContainer").height() - 65 + "px");
 
         // fire a dialog shown event
         self.webPortal.EventSystem.broadcast(Microsoft.WebPortal.Event.DialogShown, true, self);
 
         showProgress.resolve();
     });
-}
+};
 
 Microsoft.WebPortal.Services.Dialog.prototype.hide = function (hideProgress) {
     /// <summary>
@@ -154,7 +152,7 @@ Microsoft.WebPortal.Services.Dialog.prototype.hide = function (hideProgress) {
 
         hideProgress.resolve();
     });
-}
+};
 
 Microsoft.WebPortal.Services.Dialog.prototype.showProgress = function () {
     /// <summary>
@@ -165,10 +163,10 @@ Microsoft.WebPortal.Services.Dialog.prototype.showProgress = function () {
         return;
     }
 
-    if(this.isShown()) {
+    if (this.isShown()) {
         this.isProgressShown(true);
     }
-}
+};
 
 Microsoft.WebPortal.Services.Dialog.prototype.hideProgress = function () {
     /// <summary>
@@ -180,7 +178,7 @@ Microsoft.WebPortal.Services.Dialog.prototype.hideProgress = function () {
     }
 
     this.isProgressShown(false);
-}
+};
 
 
 Microsoft.WebPortal.Services.Dialog.prototype.setTemplate = function (dialogTemplate, cssClass) {
@@ -194,7 +192,7 @@ Microsoft.WebPortal.Services.Dialog.prototype.setTemplate = function (dialogTemp
     this.webPortal.Helpers.throwIfNotSet(cssClass, "cssClass", "Microsoft.WebPortal.Services.Dialog.Constructor.");
     this.template(dialogTemplate);
     this.cssClass(cssClass);
-}
+};
 
 Microsoft.WebPortal.Services.Dialog.prototype.resize = function (eventId) {
     /// <summary>
@@ -219,7 +217,7 @@ Microsoft.WebPortal.Services.Dialog.prototype.resize = function (eventId) {
         this.width(overlayWidth);
         this.height(overlayHeight);
     }
-}
+};
 
 
 //@ sourceURL=Dialog.js

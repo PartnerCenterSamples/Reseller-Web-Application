@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Infrastructure.KoExtensions = {
+﻿Microsoft.WebPortal.Infrastructure.KoExtensions = {
     apply: function (webPortal) {
         /// <summary>
         /// Adds Knock out binding extensions useful to the portal features.
@@ -88,7 +86,7 @@ Microsoft.WebPortal.Infrastructure.KoExtensions = {
                     Microsoft.WebPortal.Infrastructure.KoExtensions._animationDoneCallback(allBindings, false);
                 });
             }
-        }
+        };
 
         /*
             A custom Knockout binding used to throttle updates to an HTML input field to a given interval. Pass it a callback function in your
@@ -116,7 +114,7 @@ Microsoft.WebPortal.Infrastructure.KoExtensions = {
                     element.throttlingFunction();
                 }
             }
-        }
+        };
 
         /*
             This is very useful in case of averlapped KO bindings. Sometimes we want to bind nested HTML elements to different view models.
@@ -143,4 +141,4 @@ Microsoft.WebPortal.Infrastructure.KoExtensions = {
             allBindings().onAnimationDone(isShown);
         }
     }
-}
+};

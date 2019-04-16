@@ -7,6 +7,7 @@
 namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 {
     using System.Configuration;
+    using System.Security;
     using System.Threading.Tasks;
     using Commerce;
     using Configuration;
@@ -108,9 +109,13 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         {
             if (Instance == null)
             {
-                Instance = new ApplicationDomain();
-                Instance.PartnerCenterClient = await AcquirePartnerCenterAccessAsync().ConfigureAwait(false);
+                Instance = new ApplicationDomain
+                {
+                    PartnerCenterClient = await AcquirePartnerCenterAccessAsync().ConfigureAwait(false), 
+                };
+
                 Instance.PortalLocalization = new PortalLocalization(Instance);
+
                 await Instance.PortalLocalization.InitializeAsync().ConfigureAwait(false);
             }
         }
@@ -147,9 +152,9 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         private static async Task<IAggregatePartner> AcquirePartnerCenterAccessAsync()
         {
             PartnerService.Instance.ApiRootUrl = ConfigurationManager.AppSettings["partnerCenter.apiEndPoint"];
-            PartnerService.Instance.ApplicationName = "Web Store Front V1.4";
+            PartnerService.Instance.ApplicationName = "Web Store Front V1.6";
 
-            var credentials = await PartnerCredentials.Instance.GenerateByApplicationCredentialsAsync(
+            IPartnerCredentials credentials = await PartnerCredentials.Instance.GenerateByApplicationCredentialsAsync(
                 ConfigurationManager.AppSettings["partnercenter.applicationId"],
                 ConfigurationManager.AppSettings["partnercenter.applicationSecret"],
                 ConfigurationManager.AppSettings["partnercenter.AadTenantId"],

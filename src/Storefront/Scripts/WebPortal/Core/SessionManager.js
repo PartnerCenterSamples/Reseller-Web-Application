@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.SessionManager = function (webPortal) {
+﻿Microsoft.WebPortal.Core.SessionManager = function (webPortal) {
     /// <summary>
     /// Stores session information.
     /// </summary>
@@ -24,9 +22,6 @@ Microsoft.WebPortal.Core.SessionManager.prototype.initialize = function (eventId
     /// <param name="eventId"></param>
     /// <param name="context"></param>
     /// <param name="broadcaster"></param>
-
-    // prefetch Microsoft offers
-    this.fetchMicrosoftOffers($.Deferred());
 
     // prefetch Portal offers
     this.fetchPortalOffers($.Deferred());

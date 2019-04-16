@@ -55,8 +55,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
         /// <summary>
         /// validate payment configuration.
         /// </summary>
-        /// <param name="paymentConfiguration">The paymentConfiguration contains all the payment configuration data.</param>
-        void ValidateConfiguration(PaymentConfiguration paymentConfiguration);
+        /// <param name="paymentConfig">Contains all the payment configuration data.</param>
+        void ValidateConfiguration(PaymentConfiguration paymentConfig);
 
         /// <summary>
         /// creates web experience profile.

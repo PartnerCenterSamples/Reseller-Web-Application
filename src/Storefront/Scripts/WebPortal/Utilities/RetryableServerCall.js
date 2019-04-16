@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, retryPolicy) {
+﻿Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, retryPolicy) {
     /// <summary>
     /// Retries server AJAX calls according to the configured retry policy.
     /// </summary>
@@ -20,7 +18,7 @@ Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, r
         this.currentRetry = 0;
         this.deferred = $.Deferred();
         this.ajaxHandler = null;
-    }
+    };
 
     this.name = name || "Unidentified";
     this.operation = operation;
@@ -76,7 +74,7 @@ Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, r
             // return a new deferred object since the current one is still in use
             return deferred;
         }
-    }
+    };
 
     this.cancel = function () {
         /// <summary>
@@ -107,7 +105,7 @@ Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, r
             this.retryTimer = null;
             $WebPortal.Diagnostics.information("RetryableServerCall(" + this.name + ").cancel: Cleared retry timeout.");
         }
-    }
+    };
 
     this._execute = function () {
         /// <summary>
@@ -142,14 +140,14 @@ Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, r
         }).fail(function (result, status, error) {
 
             // handling errors over SSL for IIS6+.             
-            if (error.length == 0) {
+            if (error.length === 0) {
                 error = result.responseText;
             }
 
             self.state = Microsoft.WebPortal.Utilities.RetryableServerCall.State.ProcessingResults;
             $WebPortal.Diagnostics.information("RetryableServerCall(" + self.name + ".fail().");
             $WebPortal.Diagnostics.information("RetryableServerCall(" + self.name + ").state: ProcessingResults");
-            
+
             if (result.status === 0) {
                 switch (status) {
                     case "error":
@@ -170,7 +168,7 @@ Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, r
 
             var exceededMaximumRetries = self.currentRetry >= self.retryPolicy.length;
 
-            if (exceededMaximumRetries || Microsoft.WebPortal.Utilities.RetryableServerCall.NonRetryableHttpErrorCodes.indexOf(result.status) != -1) {
+            if (exceededMaximumRetries || Microsoft.WebPortal.Utilities.RetryableServerCall.NonRetryableHttpErrorCodes.indexOf(result.status) !== -1) {
                 // we have exceeded the retry policy, this is a failure
                 $WebPortal.Diagnostics.error("RetryableServerCall(" + self.name + ")._execute: Rejecting call. Retry: " +
                     self.currentRetry + ". " + (exceededMaximumRetries ? "Exceeded max retry policy." : "Non retryable Http error code."));
@@ -198,8 +196,8 @@ Microsoft.WebPortal.Utilities.RetryableServerCall = function (operation, name, r
 
             self.operationComplete.notifySubscribers();
         });
-    }
-}
+    };
+};
 
 // the default retry policy is 2 retries with progressive back off
 Microsoft.WebPortal.Utilities.RetryableServerCall.DefaultRetryPolicy = [100, 300];
@@ -215,6 +213,6 @@ Microsoft.WebPortal.Utilities.RetryableServerCall.State = {
     InProgress: 2,
     // got a response from the server, processing it and invoking callbacks
     ProcessingResults: 3
-}
+};
 
 //@ sourceURL=RetryableServerCall.js

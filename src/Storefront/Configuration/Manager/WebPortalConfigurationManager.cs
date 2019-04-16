@@ -33,8 +33,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Configuration.Manager
             using (StreamReader configReader = new StreamReader(configurationFilePath))
             {
                 // read and process the configuration
-                Configuration = JsonConvert.DeserializeObject<WebPortalConfiguration>(configReader.ReadToEnd());
-                Configuration.Process();
+                this.Configuration = JsonConvert.DeserializeObject<WebPortalConfiguration>(configReader.ReadToEnd());
+                this.Configuration.Process();
             }
         }
 

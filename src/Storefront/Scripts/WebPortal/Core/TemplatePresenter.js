@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.TemplatePresenter = function (webPortal, feature, title, templateUrl, templateErrorMessage, templateProgressMessage) {
+﻿Microsoft.WebPortal.Core.TemplatePresenter = function (webPortal, feature, title, templateUrl, templateErrorMessage, templateProgressMessage) {
     /// <summary>
     /// The template presenter provides functionality that retrieve and render an HTML template from the server using the given template URL.
     /// HTML templates will be cached for performance improvement if the presenter is loaded again in the future.

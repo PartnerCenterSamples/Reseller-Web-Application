@@ -22,12 +22,12 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
         /// <summary>
         /// The customer subscriptions repository used for accessing persistence.
         /// </summary>
-        private CustomerSubscriptionsRepository repository;
+        private readonly CustomerSubscriptionsRepository repository;
 
         /// <summary>
         /// The required updates to the subscription.
         /// </summary>
-        private CustomerSubscriptionEntity desiredSubscriptionUpdates;
+        private readonly CustomerSubscriptionEntity desiredSubscriptionUpdates;
 
         /// <summary>
         /// The subscription state before our update.
@@ -61,7 +61,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
         {
             // retrieve the subscription
             System.Collections.Generic.IEnumerable<CustomerSubscriptionEntity> customerSubscriptions = await repository.RetrieveAsync(desiredSubscriptionUpdates.CustomerId).ConfigureAwait(false);
-            originalSubscriptionState = customerSubscriptions.Where(subscription => subscription.SubscriptionId == desiredSubscriptionUpdates.SubscriptionId).FirstOrDefault();
+            originalSubscriptionState = customerSubscriptions.FirstOrDefault(subscription => subscription.SubscriptionId == desiredSubscriptionUpdates.SubscriptionId);
 
             if (originalSubscriptionState == null)
             {

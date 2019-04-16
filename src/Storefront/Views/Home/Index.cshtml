@@ -1,75 +1,71 @@
 ﻿@{
-    Layout = null;
+	Layout = null;
 }
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
-    <meta http-equiv="content-language" content="@Resources.Culture.Name" />
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="description" content="@ViewBag.OrganizationName" />
-    <title>@ViewBag.OrganizationName</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+	<meta http-equiv="content-language" content="@Resources.Culture.Name" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="description" content="@ViewBag.OrganizationName" />
+	<title>@ViewBag.OrganizationName</title>
 
-    <script type="text/javascript">
-        var pageLoadTimeStart = Date.now();
-        var isAuthenticated = @ViewBag.IsAuthenticated;
-        var userName = '@ViewBag.UserName';
+	<script type="text/javascript">
+		var pageLoadTimeStart = Date.now();
+		var isAuthenticated = @ViewBag.IsAuthenticated;
+		var userName = '@ViewBag.UserName';
 		var userEmail = '@ViewBag.Email';
 		var paymentId = '@ViewBag.paymentId';
 		var txnId = '@ViewBag.txnId';
-    </script>
+	</script>
 
-    @* Generate the framework configuration and resources *@
-    @Html.Partial("~/Views/Framework/Configuration.cshtml", (object)@ViewBag.Configuratrion)
-    @Html.Partial("~/Views/Framework/Resources.cshtml")
+	@* Generate the framework configuration and resources *@
+	@Html.Partial("~/Views/Framework/Configuration.cshtml", (object)@ViewBag.Configuratrion)
+	@Html.Partial("~/Views/Framework/Resources.cshtml")
 
-    @* Render the style sheets used in the portal boot up *@
-    @Styles.Render("~/StartupStyles/")
+	@* Render the style sheets used in the portal boot up *@
+	@Styles.Render("~/StartupStyles/")
 
-    @* Render the classes needed to start up the portal *@
-    @Scripts.Render("~/StartupClasses/")    
+	@* Render the classes needed to start up the portal *@
+	@Scripts.Render("~/StartupClasses/")    
 
-    <script type="text/javascript" src="@ViewBag.ValidatorMessagesSrc"></script>
+	<script type="text/javascript" src="@ViewBag.ValidatorMessagesSrc"></script>
 
-    <!-- pick up jQuery Globalize from CDN. -->
-    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.js"></script>
-    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.cultures.js"></script>    
-    <!-- https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js -->        
+	<!-- pick up jQuery Globalize from CDN. -->
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.js"></script>
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.cultures.js"></script>    
+	<!-- https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js -->        
 </head>
 <body>
-    <div id="SplashScreen" data-bind="template: { name: SplashScreen.template, data: SplashScreen }">
-    </div>
+	<div id="SplashScreen" data-bind="template: { name: SplashScreen.template, data: SplashScreen }">
+	</div>
 
-    <div id="PortalContent" data-bind="html: portalContent"></div>
+	<div id="PortalContent" data-bind="html: portalContent"></div>
 
-    @foreach(string template in ViewBag.Templates)
-    {
-        Html.RenderPartial(template);
-    }
+	@foreach(string template in ViewBag.Templates)
+	{
+		Html.RenderPartial(template);
+	}
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // load the portal!
-            $WebPortal.load();
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// load the portal!
+			$WebPortal.load();
 
-            $WebPortal.Diagnostics.information("Time until DOM ready: " + (Date.now() - pageLoadTimeStart));
-        });
+			$WebPortal.Diagnostics.information("Time until DOM ready: " + (Date.now() - pageLoadTimeStart));
+		});
+	</script>
 
-        $(window).load(function () {
-            $WebPortal.Diagnostics.information("Time until everything loaded: " + (Date.now() - pageLoadTimeStart));
-        });
-    </script>
+	@* Render web portal styles *@
+	@Styles.Render("~/WebPortalStyles/")
 
-    @* Render web portal styles *@
-    @Styles.Render("~/WebPortalStyles/")
-
-    @if (HttpContext.Current.IsDebuggingEnabled)
-    {
-        @* Render the Web portal framework scripts here to make them show in the browser debugger and ease debugging them *@
-        @Scripts.Render("~/WebPortalClasses/")
-    }
-    </body>
+	@if (HttpContext.Current.IsDebuggingEnabled)
+	{
+		@* Render the Web portal framework scripts here to make them show in the browser debugger and ease debugging them *@
+		@Scripts.Render("~/WebPortalClasses/")
+	}
+	</body>
 </html>

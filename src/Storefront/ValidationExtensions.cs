@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Extensions.cs" company="Microsoft">
+// <copyright file="ValidationExtensions.cs" company="Microsoft">
 //      Copyright (c) Microsoft Corporation. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -16,7 +16,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
     /// <summary>
     /// Groups useful extension methods.
     /// </summary>
-    public static class Extensions
+    public static class ValidationExtensions
     {
         /// <summary>
         /// Ensures that a given object is not null. Throws an exception otherwise.
@@ -40,7 +40,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
         {
             if (string.IsNullOrWhiteSpace(nonEmptyString))
             {
-                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertStringNotEmptyInvalidError, caption ?? Resources.AssertStringNotEmptyInvalidPrefix)); 
+                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertStringNotEmptyInvalidError, caption ?? Resources.AssertStringNotEmptyInvalidPrefix));
             }
         }
 
@@ -53,7 +53,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
         {
             if (number <= 0)
             {
-                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertNumberPositiveInvalidError, caption ?? Resources.AssertNumberPositiveInvalidPrefix)); 
+                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertNumberPositiveInvalidError, caption ?? Resources.AssertNumberPositiveInvalidPrefix));
             }
         }
 
@@ -66,7 +66,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
         {
             if (number <= 0)
             {
-                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertNumberPositiveInvalidError, caption ?? Resources.AssertNumberPositiveInvalidPrefix));                
+                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertNumberPositiveInvalidError, caption ?? Resources.AssertNumberPositiveInvalidPrefix));
             }
         }
 
@@ -110,7 +110,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
         {
             if (!new HttpResponseMessage((HttpStatusCode)httpStatusCode).IsSuccessStatusCode)
             {
-                var formattedErrorMessage = string.Format(
+                string formattedErrorMessage = string.Format(
                     CultureInfo.InvariantCulture,
                     "{0}. Response code: {1}. Response body: {2}.",
                     errorMessage,

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.Journey = function (webPortal) {
+﻿Microsoft.WebPortal.Core.Journey = function (webPortal) {
     /// <summary>
     /// This class manages the sequence of features the users engage with in the portal. The user can go back to previous
     /// steps he was in or start a whole new journey.

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.UserMenuService = function (webPortal, elementSelector) {
+﻿Microsoft.WebPortal.Services.UserMenuService = function (webPortal, elementSelector) {
     /// <summary>
     /// Implements the user menu service which manages the user information (avatar and user name) and displays a menu of user related actions.
     /// </summary>
@@ -19,7 +17,7 @@ Microsoft.WebPortal.Services.UserMenuService = function (webPortal, elementSelec
         this.destroyed = false;
         this.actionsManager.add(this.userMenu);
     }, this);
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.UserMenuService, Microsoft.WebPortal.Core.PortalService);
 
@@ -33,7 +31,7 @@ Microsoft.WebPortal.Services.UserMenuService.prototype._runService = function ()
     }
 
     this.actionsManager.render();
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype._stopService = function () {
     /// <summary>
@@ -42,7 +40,7 @@ Microsoft.WebPortal.Services.UserMenuService.prototype._stopService = function (
 
     this.actionsManager.destroy();
     this.destroyed = true;
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype.add = function (action) {
     /// <summary>
@@ -56,7 +54,7 @@ Microsoft.WebPortal.Services.UserMenuService.prototype.add = function (action) {
     }
 
     this.userMenu.children.push(action);
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype.remove = function (action) {
     /// <summary>
@@ -70,12 +68,12 @@ Microsoft.WebPortal.Services.UserMenuService.prototype.remove = function (action
     }
 
     for (var i in this.userMenu.children()) {
-        if (this.userMenu.children()[i] == action) {
+        if (this.userMenu.children()[i] === action) {
             this.userMenu.children.remove(action);
             break;
         }
     }
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype.removeById = function (actionId) {
     /// <summary>
@@ -89,12 +87,12 @@ Microsoft.WebPortal.Services.UserMenuService.prototype.removeById = function (ac
     }
 
     for (var i in this.userMenu.children()) {
-        if (this.userMenu.children()[i].id() == actionId) {
+        if (this.userMenu.children()[i].id() === actionId) {
             this.userMenu.children.remove(this.userMenu.children()[i]);
             break;
         }
     }
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype.clear = function () {
     /// <summary>
@@ -107,7 +105,7 @@ Microsoft.WebPortal.Services.UserMenuService.prototype.clear = function () {
     }
 
     this.userMenu.children([]);
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype.show = function (showProgress) {
     /// <summary>
@@ -122,7 +120,7 @@ Microsoft.WebPortal.Services.UserMenuService.prototype.show = function (showProg
         this.userMenu.onClick(this.userMenu);
         showProgress.resolve();
     }
-}
+};
 
 Microsoft.WebPortal.Services.UserMenuService.prototype.hide = function (hideProgress) {
     /// <summary>
@@ -137,6 +135,6 @@ Microsoft.WebPortal.Services.UserMenuService.prototype.hide = function (hideProg
         this.userMenu.onClick(this.userMenu);
         hideProgress.resolve();
     }
-}
+};
 
 //@ sourceURL=UserMenuService.js

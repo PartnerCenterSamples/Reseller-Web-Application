@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Infrastructure.Helpers = function (webPortal) {
+﻿Microsoft.WebPortal.Infrastructure.Helpers = function (webPortal) {
     /// <summary>
     /// Contains common functionality used across the web portal.
     /// </summary>
@@ -11,7 +9,7 @@ Microsoft.WebPortal.Infrastructure.Helpers = function (webPortal) {
     }
 
     this.webPortal = webPortal;
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.throwIfNotSet = function (argument, argumentName, fullyQualifiedMethod) {
     /// <summary>
@@ -28,7 +26,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.throwIfNotSet = function (a
         this.webPortal.Diagnostics.error(fullyQualifiedMethod + ": " + argumentName + " is not set.");
         throw new Error(argumentName + " must be set.");
     }
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.displayRetryCancelErrorNotification = function (notification, errorMessage, retryMessage, retryCallback, cancelCallback) {
     /// <summary>
@@ -53,7 +51,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.displayRetryCancelErrorNoti
                 event.stopPropagation();
             }
 
-            retryCallback(notification)
+            retryCallback(notification);
         });
 
     var cancelButton = Microsoft.WebPortal.Services.Button.create(
@@ -70,7 +68,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.displayRetryCancelErrorNoti
     if (!notification) {
         // create a new notification if this is the first failure
         notification = new Microsoft.WebPortal.Services.Notification(
-            Microsoft.WebPortal.Services.Notification.NotificationType.Error, errorMessage, [retryButton, cancelButton])
+            Microsoft.WebPortal.Services.Notification.NotificationType.Error, errorMessage, [retryButton, cancelButton]);
 
         this.webPortal.Services.Notifications.add(notification);
     } else {
@@ -79,7 +77,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.displayRetryCancelErrorNoti
         notification.message(errorMessage);
         notification.buttons([retryButton, cancelButton]);
     }
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.random = function (min, max) {
     /// <summary>
@@ -93,7 +91,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.random = function (min, max
     max = max || 100000000;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.getBaseUri = function () {
     /// <summary>
@@ -106,7 +104,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.getBaseUri = function () {
     }
 
     return window.location.href;
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.inherit = function (subclass, baseClass) {
     /// <summary>
@@ -118,7 +116,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.inherit = function (subclas
     subclass.prototype = Object.create(baseClass.prototype);
     subclass.prototype.constructor = subclass;
     subclass.prototype.base = baseClass.prototype;
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.throttle = function (targetFunction, threshold, scope) {
     /// <summary>
@@ -139,7 +137,7 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.throttle = function (target
             targetFunction.apply(context, arguments);
         }, threshold);
     };
-}
+};
 
 Microsoft.WebPortal.Infrastructure.Helpers.prototype.ajaxCall = function (url, method, data, contentType, timeout) {
     /// <summary>
@@ -186,11 +184,11 @@ Microsoft.WebPortal.Infrastructure.Helpers.prototype.ajaxCall = function (url, m
 
     if (data) {
         // set the data if provided, automatically serialize it to JSON if the content type was JSON
-        ajaxRequest.data = (contentType === Microsoft.WebPortal.ContentType.Json) ? JSON.stringify(data) : data;
+        ajaxRequest.data = contentType === Microsoft.WebPortal.ContentType.Json ? JSON.stringify(data) : data;
     }
 
     // return a function that when invoked, issues the configured AJAX request
     return function () {
         return $.ajax(ajaxRequest);
-    }
-}
+    };
+};

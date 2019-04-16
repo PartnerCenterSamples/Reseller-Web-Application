@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.Button = function (id, displayName, icon, handler) {
+﻿Microsoft.WebPortal.Services.Button = function (id, displayName, icon, handler) {
     /// <summary>
     /// Represents a button that performs an action on a notification or a dialog wizard. Use this constructor to create
     /// generic buttons. To use the standard set of buttons (YES, NO, OK, CANCEL, RETRY, BACK, NEXT), call the static create method 
@@ -38,8 +36,8 @@ Microsoft.WebPortal.Services.Button = function (id, displayName, icon, handler) 
             // call the associated handler and pass it the the button and the owner of the button
             this.handler(this, this.owner, arguments[2]);
         }
-    }
-}
+    };
+};
 
 Microsoft.WebPortal.Services.Button.create = function (standardButton, id, handler) {
     /// <summary>
@@ -52,7 +50,7 @@ Microsoft.WebPortal.Services.Button.create = function (standardButton, id, handl
 
     $WebPortal.Helpers.throwIfNotSet(standardButton, "standardButton", "Microsoft.WebPortal.Services.Button.create");
     return new Microsoft.WebPortal.Services.Button(id, standardButton.name, standardButton.icon, handler);
-}
+};
 
 /*
     Standard buttons.
@@ -92,6 +90,6 @@ Microsoft.WebPortal.Services.Button.StandardButtons = {
         name: $WebPortal.Resources.Strings.Back,
         icon: $WebPortal.Resources.Images.BackwardArrow
     }
-}
+};
 
 //@ sourceURL=Button.js

@@ -23,10 +23,9 @@
         Summary: ko.observableArray([]),
         Logo: ko.observable(this.isNewOffer ? "" : existingOffer.LogoUri),
         Thumbnail: ko.observable(this.isNewOffer ? "" : existingOffer.ThumbnailUri)
-    }
+    };
 
-    if (!this.isNewOffer)
-    {
+    if (!this.isNewOffer) {
         this.viewModel.Features(ko.utils.arrayMap(existingOffer.Features, function (feature) {
             return ko.observable(feature);
         }));
@@ -39,7 +38,7 @@
     this.viewModel.IsOfferAutoRenewableCaption = ko.computed(function () {
         if (this.viewModel.MicrosoftOffer()) {
             return this.viewModel.MicrosoftOffer().Offer.IsAutoRenewable ?
-                this.webPortal.Resources.Strings.Plugins.AdminOfferConfiguration.OfferAutomaticallyRenewable:
+                this.webPortal.Resources.Strings.Plugins.AdminOfferConfiguration.OfferAutomaticallyRenewable :
                 this.webPortal.Resources.Strings.Plugins.AdminOfferConfiguration.OfferManuallyRenewable;
         } else {
             return "";
@@ -49,7 +48,7 @@
     this.viewModel.IsAvailableForPurchaseCaption = ko.computed(function () {
         if (this.viewModel.MicrosoftOffer()) {
             return this.viewModel.MicrosoftOffer().Offer.IsAvailableForPurchase ?
-                this.webPortal.Resources.Strings.Plugins.AdminOfferConfiguration.OfferAvailableForPurchase:
+                this.webPortal.Resources.Strings.Plugins.AdminOfferConfiguration.OfferAvailableForPurchase :
                 this.webPortal.Resources.Strings.Plugins.AdminOfferConfiguration.OfferUnavailableForPurchase;
         } else {
             return "";
@@ -66,7 +65,7 @@
             return "";
         }
     }, this);
-}
+};
 
 // inherit TemplatePresenter
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.AddOrUpdateOfferPresenter, Microsoft.WebPortal.Core.TemplatePresenter);
@@ -95,7 +94,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onRender = function () {
     }, "/Content/Images/Plugins/action-save.png", this.webPortal.Resources.Strings.Plugins.AddOrUpdateOffer.SaveOfferCaption, null, !self.isNewOffer);
 
     this.webPortal.Services.Actions.add(this.saveOfferAction);
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.GetMicrosoftOffers = function () {
     /// <summary>
@@ -125,8 +124,8 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.GetMicrosoftOffers = fun
                 Name: baseOffer.Offer.Name,
                 Description: baseOffer.Offer.Description,
                 Category: baseOffer.Offer.Category.Name,
-                ThumbnailUri: baseOffer.ThumbnailUri            
-            }
+                ThumbnailUri: baseOffer.ThumbnailUri
+            };
         });
 
         self.viewModel.IsSet(true);
@@ -149,7 +148,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.GetMicrosoftOffers = fun
     }).always(function () {
         self.viewModel.ShowProgress(false);
     });
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onAddNewOfferFeature = function (index, self) {
     /// <summary>
@@ -159,7 +158,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onAddNewOfferFeature = f
     /// <param name="self">A reference to the presetner class.</param>
 
     self.viewModel.Features.splice(index + 1, 0, ko.observable(""));
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onRemoveOfferFeature = function (index, self) {
     /// <summary>
@@ -168,7 +167,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onRemoveOfferFeature = f
     /// <param name="index">The index at which to remove the feature.</param>
     /// <param name="self">A reference to the presetner class.</param>
     self.viewModel.Features.splice(index, 1);
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onAddNewOfferSummary = function (index, self) {
     /// <summary>
@@ -178,7 +177,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onAddNewOfferSummary = f
     /// <param name="self">A reference to the presetner class.</param>
 
     self.viewModel.Summary.splice(index + 1, 0, ko.observable(""));
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onRemoveOfferSummary = function (index, self) {
     /// <summary>
@@ -188,7 +187,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onRemoveOfferSummary = f
     /// <param name="self">A reference to the presetner class.</param>
 
     self.viewModel.Summary.splice(index, 1);
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function () {
     /// <summary>
@@ -205,7 +204,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
         Title: this.viewModel.Title(),
         Subtitle: this.viewModel.SubTitle(),
         Price: 0.0
-    }
+    };
 
     // Only save the culture neutral value for price in the backend. 
     Globalize.culture(this.webPortal.Resources.Strings.CurrentLocale);
@@ -213,11 +212,11 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
 
     offerPayload.Features = ko.utils.arrayMap(this.viewModel.Features(), function (feature) {
         return feature();
-    })
+    });
 
     offerPayload.Summary = ko.utils.arrayMap(this.viewModel.Summary(), function (summary) {
         return summary();
-    })
+    });
 
     var saveOfferServerCall = null;
     var saveNotificationMessage = "";
@@ -267,7 +266,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
     };
 
     saveOfferOperation();
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = function () {
     /// <summary>
@@ -304,7 +303,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
         });
 
         this.OfferSelectionWizardViewModel.offerList.set(sortedOffers);
-    }
+    };
 
     this.OfferSelectionWizardViewModel = {
         offerList: new Microsoft.WebPortal.Views.List(self.webPortal, "#offerList", self),
@@ -318,19 +317,19 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
             this.offerList.renderer();
         }
 
- 
+
     };
     this.OfferSelectionWizardViewModel.filteredItems = ko.computed(function () {
         var filter = this.searchTerm().toLowerCase();
         if (!filter) {
-           return this.Offers();          
+            return this.Offers();
         } else {
             return ko.utils.arrayFilter(this.Offers(), function (item) {
                 return item.Name.toLowerCase().indexOf(filter) !== -1;
             });
         }
     }, this.OfferSelectionWizardViewModel);
-  
+
     // TODO: In later iterations, we will support sorting and filtering
     this.OfferSelectionWizardViewModel.offerList.setColumns([
         new Microsoft.WebPortal.Views.List.Column("Name", "min-width: 300px; width: 300px; white-space: normal;", true, false,
@@ -342,7 +341,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
     this.OfferSelectionWizardViewModel.offerList.setEmptyListUI(self.webPortal.Resources.Strings.Plugins.AddOrUpdateOffer.EmptyMicrosoftOfferListMessage);
     this.OfferSelectionWizardViewModel.offerList.enableStatusBar(false);
     this.OfferSelectionWizardViewModel.offerList.setSelectionMode(Microsoft.WebPortal.Views.List.SelectionMode.Single);
-    this.OfferSelectionWizardViewModel.offerList.setSorting("Name", Microsoft.WebPortal.Views.List.SortDirection.Ascending , true);
+    this.OfferSelectionWizardViewModel.offerList.setSorting("Name", Microsoft.WebPortal.Views.List.SortDirection.Ascending, true);
     this.OfferSelectionWizardViewModel.offerList.set(this.OfferSelectionWizardViewModel.filteredItems());
     this.OfferSelectionWizardViewModel.offerList.setComplete(true);
 
@@ -350,7 +349,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
 
     this.webPortal.Services.Dialog.show("offerPicker-template", this.OfferSelectionWizardViewModel, [selectOfferButton, cancelButton]);
     this.webPortal.Services.Dialog.showProgress();
-}
+};
 
 Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOfferWizardShown = function (eventId, isShown) {
     /// <summary>
@@ -367,7 +366,6 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOfferWizardS
 
     // stop listening to dialog box events
     this.webPortal.EventSystem.unsubscribe(Microsoft.WebPortal.Event.DialogShown, this.onSelectBaseOfferWizardShown, this);
-}
-
+};
 
 //@ sourceURL=AddOrUpdateOfferPresenter.js

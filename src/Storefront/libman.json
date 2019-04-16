@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "cdnjs",
+      "library": "jquery@2.2.4",
+      "destination": "Scripts/WebPortal/Dependencies/",
+      "files": [
+        "jquery.min.js",
+        "jquery.js"
+      ]
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "Scripts/WebPortal/Dependencies/",
+      "files": [
+        "jquery-ui.min.js",
+        "jquery-ui.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "knockout@3.4.2",
+      "destination": "Scripts/WebPortal/Dependencies/"
+    }
+  ]
+}

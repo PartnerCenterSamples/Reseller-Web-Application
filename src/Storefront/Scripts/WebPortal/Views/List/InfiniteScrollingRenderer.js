@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer = function (list) {
+﻿Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer = function (list) {
     /// <summary>
     /// Renders an infinite scrolling list. As the user reaches the bottom of the list, new rows will be requested from the listener.
     /// </summary>
@@ -30,7 +28,7 @@ Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer = function (list) {
             }
         }
     };
-}
+};
 
 // inherit ListRenderer
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer, Microsoft.WebPortal.Views.List.ListRenderer);
@@ -48,7 +46,7 @@ Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer.prototype.onListScrolle
         return;
     }
 
-    if (verticalScroll != self.verticalScroll) {
+    if (verticalScroll !== self.verticalScroll) {
         var totalHeight = $(listBodySelector)[0].scrollHeight;
         var currentScroll = verticalScroll + $(listBodySelector).height();
         self.verticalScroll = verticalScroll;
@@ -59,7 +57,7 @@ Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer.prototype.onListScrolle
             self.requestMoreRows(self.rows().length, self.pageSize());
         }
     }
-}
+};
 
 Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer.prototype.ensureOccupancy = function () {
     /// <summary>
@@ -96,7 +94,7 @@ Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer.prototype.ensureOccupan
 
     // fetch the needed number of entities
     this.requestMoreRows(this.rows().length, totalRowNumberNeeded);
-}
+};
 
 Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer.prototype.destroy = function () {
     /// <summary>
@@ -108,6 +106,6 @@ Microsoft.WebPortal.Views.List.InfiniteScrollingRenderer.prototype.destroy = fun
         this.rowsChangeSubscription.dispose();
         this.rowsChangeSubscription = null;
     }
-}
+};
 
 //@ sourceURL=InfiniteScrollingRenderer.js

@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
+﻿Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
     /// <summary>
     /// A base class for animations. Relies on sub classes to implement actual animation behavior.
     /// All animations must extend from this base class.
@@ -18,7 +16,7 @@ Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
 
         var animationProgress = $.Deferred();
 
-        if ($(elementSelector)[0] == undefined) {
+        if ($(elementSelector)[0] === undefined) {
             $WebPortal.Diagnostics.warning("Microsoft.WebPortal.Utilities.BaseAnimation.animate: elementSelector does not point to HTML element. Resolving.");
 
             // the HTML element is no longer there, complete the animation
@@ -29,7 +27,7 @@ Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
         }
 
         return animationProgress;
-    }
+    };
 
     Microsoft.WebPortal.Utilities.BaseAnimation.prototype.show = function (elementSelector) {
         /// <summary>
@@ -40,7 +38,7 @@ Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
 
         var animationProgress = $.Deferred();
 
-        if ($(elementSelector)[0] == undefined) {
+        if ($(elementSelector)[0] === undefined) {
             $WebPortal.Diagnostics.warning("Microsoft.WebPortal.Utilities.BaseAnimation.show: elementSelector does not point to HTML element. Resolving.");
 
             // the HTML element is no longer there, complete the animation
@@ -51,7 +49,7 @@ Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
         }
 
         return animationProgress;
-    }
+    };
 
     Microsoft.WebPortal.Utilities.BaseAnimation.prototype.hide = function (elementSelector) {
         /// <summary>
@@ -62,7 +60,7 @@ Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
 
         var animationProgress = $.Deferred();
 
-        if ($(elementSelector)[0] == undefined) {
+        if ($(elementSelector)[0] === undefined) {
             $WebPortal.Diagnostics.warning("Microsoft.WebPortal.Utilities.BaseAnimation.hide: elementSelector does not point to HTML element. Resolving.");
 
             // the HTML element is no longer there, complete the animation
@@ -73,8 +71,8 @@ Microsoft.WebPortal.Utilities.BaseAnimation = function (duration) {
         }
 
         return animationProgress;
-    }
-}
+    };
+};
 
 Microsoft.WebPortal.Utilities.Animation = function (effect, duration) {
     /// <summary>
@@ -96,7 +94,7 @@ Microsoft.WebPortal.Utilities.Animation = function (effect, duration) {
         $(elementSelector).effect(this.effect.Name, this.effect.ShowOptions, this.animationDuration, function () {
             animationProgress.resolve();
         });
-    }
+    };
 
     this.performShowAnimation = function (elementSelector, animationProgress) {
         /// <summary>
@@ -108,7 +106,7 @@ Microsoft.WebPortal.Utilities.Animation = function (effect, duration) {
         $(elementSelector).show(this.effect.Name, this.effect.ShowOptions, this.animationDuration, function () {
             animationProgress.resolve();
         });
-    }
+    };
 
     this.performHideAnimation = function (elementSelector, animationProgress) {
         /// <summary>
@@ -120,8 +118,8 @@ Microsoft.WebPortal.Utilities.Animation = function (effect, duration) {
         $(elementSelector).hide(this.effect.Name, this.effect.HideOptions, this.animationDuration, function () {
             animationProgress.resolve();
         });
-    }
-}
+    };
+};
 
 // Animation inherits from BaseAnimation
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Utilities.Animation, Microsoft.WebPortal.Utilities.BaseAnimation);
@@ -145,7 +143,7 @@ Microsoft.WebPortal.Utilities.VerticalSlideAnimation = function (duration) {
 
         // this is not applicable here, do nothing
         animationProgress.resolve();
-    }
+    };
 
     this.performShowAnimation = function (elementSelector, animationProgress) {
         /// <summary>
@@ -157,7 +155,7 @@ Microsoft.WebPortal.Utilities.VerticalSlideAnimation = function (duration) {
         $(elementSelector).slideDown(this.animationDuration, function () {
             animationProgress.resolve();
         });
-    }
+    };
 
     this.performHideAnimation = function (elementSelector, animationProgress) {
         /// <summary>
@@ -169,8 +167,8 @@ Microsoft.WebPortal.Utilities.VerticalSlideAnimation = function (duration) {
         $(elementSelector).slideUp(this.animationDuration, function () {
             animationProgress.resolve();
         });
-    }
-}
+    };
+};
 
 // Vertical slide animation inherits from BaseAnimation
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Utilities.VerticalSlideAnimation, Microsoft.WebPortal.Utilities.BaseAnimation);
@@ -181,7 +179,7 @@ Microsoft.WebPortal.Utilities.NoAnimation = function () {
     /// </summary>
 
     this.base.constructor.call(this, Microsoft.WebPortal.Effects.Fade, 0);
-}
+};
 
 // NoAnimation inherits from Animation
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Utilities.NoAnimation, Microsoft.WebPortal.Utilities.Animation);

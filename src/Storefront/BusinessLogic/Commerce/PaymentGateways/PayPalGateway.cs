@@ -45,16 +45,16 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         public PayPalGateway(ApplicationDomain applicationDomain, string description) : base(applicationDomain)
         {
             description.AssertNotEmpty(nameof(description));
-            this.paymentDescription = description;
+            paymentDescription = description;
 
-            this.payerId = string.Empty;
-            this.paymentId = string.Empty;
+            payerId = string.Empty;
+            paymentId = string.Empty;
         }
 
         /// <summary>
         /// Validates payment configuration. 
         /// </summary>
-        /// <param name="paymentConfig">The Payment configuration.</param>
+        /// <param name="paymentConfig">The payment configuration.</param>
         public void ValidateConfiguration(PaymentConfiguration paymentConfig)
         {
             string[] supportedPaymentModes = { "sandbox", "live" };
@@ -81,7 +81,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
                 };
 
                 string accessToken = new OAuthTokenCredential(configMap).GetAccessToken();
-                APIContext apiContext = new APIContext(accessToken);
             }
             catch (PayPalException paypalException)
             {
@@ -284,12 +283,12 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         /// <returns>Capture string id.</returns>
         public async Task<string> ExecutePaymentAsync()
         {
-            APIContext apiContext = await this.GetAPIContextAsync().ConfigureAwait(false);
+            APIContext apiContext = await GetAPIContextAsync().ConfigureAwait(false);
 
             try
             {
                 Payment payment = new Payment() { id = paymentId };
-                PaymentExecution paymentExecution = new PaymentExecution() { payer_id = this.payerId };
+                PaymentExecution paymentExecution = new PaymentExecution() { payer_id = payerId };
                 Payment paymentResult = payment.Execute(apiContext, paymentExecution);
 
                 if (paymentResult.state.Equals("approved", StringComparison.InvariantCultureIgnoreCase))
@@ -300,7 +299,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
             }
             catch (PayPalException ex)
             {
-                this.ParsePayPalException(ex);
+                ParsePayPalException(ex);
             }
 
             return string.Empty;
@@ -401,10 +400,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
             try
             {
                 // the get will retrieve the payment information. iterate the items in the transaction collection to extract details.            
-                Payment paymentDetails = Payment.Get(apiContext, paymentId);
-
+                Payment paymentDetails = Payment.Get(apiContext, this.paymentId);
                 orderFromPayment = new OrderViewModel();
-
                 List<OrderSubscriptionItemViewModel> orderSubscriptions = new List<OrderSubscriptionItemViewModel>();
 
                 if (paymentDetails.transactions.Count > 0)
@@ -484,7 +481,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
 
                 // Get the details of this exception with ex.Details and format the error message in the form of "We are unable to process your payment –  {Errormessage} :: [err1, err2, .., errN]".                
                 StringBuilder errorString = new StringBuilder();
-
                 errorString.Append(Resources.PaymentGatewayErrorPrefix);
 
                 // build error string for errors returned from financial institutions.
@@ -514,7 +510,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
                                 errorField = errorField.Replace("payer.funding_instruments[0].", string.Empty).ToString(CultureInfo.InvariantCulture);
                             }
 
-                            errorString.AppendFormat("{0} - {1},", errorField, errorDetails.issue);
+                            errorString.AppendFormat(CultureInfo.CurrentCulture, "{0} - {1},", errorField, errorDetails.issue);
                         }
 
                         errorString.Replace(',', ']', errorString.Length - 2, 2); // remove the last comma and replace it with ]. 

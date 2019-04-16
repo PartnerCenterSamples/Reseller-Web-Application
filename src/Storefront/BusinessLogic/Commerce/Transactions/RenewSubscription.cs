@@ -24,7 +24,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
         /// <summary>
         /// The existing subscription.
         /// </summary>
-        private Subscription existingSubscription;
+        private readonly Subscription existingSubscription;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RenewSubscription"/> class.
@@ -36,7 +36,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
             subscriptionOperations.AssertNotNull(nameof(subscriptionOperations));
             existingSubscription.AssertNotNull(nameof(existingSubscription));
 
-            this.SubscriptionOperations = subscriptionOperations;
+            SubscriptionOperations = subscriptionOperations;
             this.existingSubscription = existingSubscription;
         }
 

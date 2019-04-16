@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.Shell = function () {
+﻿Microsoft.WebPortal.Core.Shell = function () {
     /// <summary>
     /// The web portal shell is the main portal core which manages tiles and features and their assigned presenters. The shell controls the web portal as whole.
     /// It defines the available services such as actions and notifications management as well as other framework services such as journeys, eventing system, wizards, etc...

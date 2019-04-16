@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Core.ServerCallManager = function (webPortal) {
+﻿Microsoft.WebPortal.Core.ServerCallManager = function (webPortal) {
     /// <summary>
     /// Manages the creation and destruction of retryable server calls. This class will automically cancel any pending AJAX calls
     /// if their features (presenters) are no longer active. Developers should use this class instead of manually creating 
@@ -11,7 +9,7 @@ Microsoft.WebPortal.Core.ServerCallManager = function (webPortal) {
     /// </summary>
     /// <param name="webPortal">The web portal instance.</param>
 
-    if(!webPortal) {
+    if (!webPortal) {
         throw new Error("Microsoft.WebPortal.Core.ServerCallManager.Constructor: Invalid web portal instance.");
     }
 
@@ -23,7 +21,7 @@ Microsoft.WebPortal.Core.ServerCallManager = function (webPortal) {
     // listen to feature deactivate and destroy events so that we cancel their pending AJAX calls
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.FeatureDeactivated, this._onFeatureDeactivated, this);
     this.webPortal.EventSystem.subscribe(Microsoft.WebPortal.Event.FeatureDestroyed, this._onFeatureDestroyed, this);
-}
+};
 
 Microsoft.WebPortal.Core.ServerCallManager.prototype.create = function (feature, operation, name, retryPolicy) {
     /// <summary>
@@ -52,7 +50,7 @@ Microsoft.WebPortal.Core.ServerCallManager.prototype.create = function (feature,
     this.webPortal.Diagnostics.information("ServerCallManager: created server operation for: " + feature.name + "." + serverOperation.name);
 
     return serverOperation;
-}
+};
 
 Microsoft.WebPortal.Core.ServerCallManager.prototype.cleanup = function () {
     /// <summary>
@@ -62,9 +60,9 @@ Microsoft.WebPortal.Core.ServerCallManager.prototype.cleanup = function () {
     for (feature in this.featureServerOperations) {
         this._cancelFeatureRequests(feature, true);
     }
-}
+};
 
-Microsoft.WebPortal.Core.ServerCallManager.prototype._onFeatureDeactivated = function(eventId, context, broadcaster) {
+Microsoft.WebPortal.Core.ServerCallManager.prototype._onFeatureDeactivated = function (eventId, context, broadcaster) {
     /// <summary>
     /// Called when a feature has been deactivated.
     /// </summary>
@@ -80,9 +78,9 @@ Microsoft.WebPortal.Core.ServerCallManager.prototype._onFeatureDeactivated = fun
     } else {
         this.webPortal.Diagnostics.warning("Microsoft.WebPortal.Core.ServerCallManager._onFeatureDeactivated: received a null feature. Doing nothing.");
     }
-}
+};
 
-Microsoft.WebPortal.Core.ServerCallManager.prototype._onFeatureDestroyed = function(eventId, context, broadcaster) {
+Microsoft.WebPortal.Core.ServerCallManager.prototype._onFeatureDestroyed = function (eventId, context, broadcaster) {
     /// <summary>
     /// Called when a feature has been destroyed.
     /// </summary>
@@ -98,7 +96,7 @@ Microsoft.WebPortal.Core.ServerCallManager.prototype._onFeatureDestroyed = funct
     } else {
         this.webPortal.Diagnostics.warning("Microsoft.WebPortal.Core.ServerCallManager._onFeatureDestroyed: received a null feature. Doing nothing.");
     }
-}
+};
 
 Microsoft.WebPortal.Core.ServerCallManager.prototype._cancelFeatureRequests = function (feature, cleanUp) {
     /// <summary>
@@ -106,7 +104,7 @@ Microsoft.WebPortal.Core.ServerCallManager.prototype._cancelFeatureRequests = fu
     /// </summary>
     /// <param name="feature">The feature to cancel its pending server calls.</param>
     /// <param name="cleanUp">Optional. Defaults to false. Specify true to remove the server calls from the feature's cache. i.e. unmanage them.</param>
-    
+
     if (this.featureServerOperations[feature]) {
         // cancel all the feature's server calls
         for (var i = 0; i < this.featureServerOperations[feature].length; ++i) {
@@ -118,6 +116,6 @@ Microsoft.WebPortal.Core.ServerCallManager.prototype._cancelFeatureRequests = fu
             this.featureServerOperations[feature].length = 0;
         }
     }
-}
+};
 
 //@ sourceURL=ServerCallManager.js

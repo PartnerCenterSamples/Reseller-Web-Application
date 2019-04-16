@@ -1,6 +1,4 @@
-﻿/// <reference path="~/Scripts/_references.js" />
-
-Microsoft.WebPortal.Services.Login = function (webPortal) {
+﻿Microsoft.WebPortal.Services.Login = function (webPortal) {
     /// <summary>
     /// The Login service. Maintains the login state and broadcasts user login events.
     /// </summary>
@@ -14,7 +12,7 @@ Microsoft.WebPortal.Services.Login = function (webPortal) {
     this.userName = ko.observable("");
     this.password = ko.observable("");
     this.rememberMe = ko.observable(false);
-}
+};
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.Login, Microsoft.WebPortal.Core.PortalService);
 
@@ -22,19 +20,19 @@ Microsoft.WebPortal.Services.Login.prototype._runService = function () {
     /// <summary>
     /// Runs the Login service.
     /// </summary>
-  
+
     if (isAuthenticated) {
         this.isLoggedIn(true);
         this.userName(userName);
         this.webPortal.EventSystem.broadcast(Microsoft.WebPortal.Event.UserLoggedIn, true);
     }
-}
+};
 
 Microsoft.WebPortal.Services.Login.prototype._stopService = function () {
     /// <summary>
     /// Stops the Login service.
     /// </summary>   
-}
+};
 
 Microsoft.WebPortal.Services.Login.prototype.login = function () {
     /// <summary>
@@ -42,7 +40,7 @@ Microsoft.WebPortal.Services.Login.prototype.login = function () {
     /// </summary>
 
     window.location = "Account/Login";
-}
+};
 
 Microsoft.WebPortal.Services.Login.prototype.logout = function () {
     /// <summary>
@@ -50,7 +48,6 @@ Microsoft.WebPortal.Services.Login.prototype.logout = function () {
     /// </summary>
 
     window.location = "Account/SignOut";
-}
-
+};
 
 //@ sourceURL=Login.js
