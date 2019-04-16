@@ -2,7 +2,7 @@
 
 ![Build status](https://dev.azure.com/ms/Partner-Center-Storefront/_apis/build/status/Partner-Center-Storefront)
 
-[![GitHub issues](https://img.shields.io/github/issues/PartnerCenterSamples/Partner-Center-Storefront.svg)](https://github.com/PartnerCenterSamples/Reseller-Web-Application/issues/) [![GitHub pull-requests](https://img.shields.io/github/issues-pr/PartnerCenterSamples/Reseller-Web-Application.svg)](https://gitHub.com/PartnerCenterSamples/Reseller-Web-Application/pull/)
+[![GitHub issues](https://img.shields.io/github/issues/PartnerCenterSamples/Reseller-Web-Application.svg)](https://github.com/PartnerCenterSamples/Reseller-Web-Application/issues/) [![GitHub pull-requests](https://img.shields.io/github/issues-pr/PartnerCenterSamples/Reseller-Web-Application.svg)](https://gitHub.com/PartnerCenterSamples/Reseller-Web-Application/pull/)
 
 ## Overview
 
