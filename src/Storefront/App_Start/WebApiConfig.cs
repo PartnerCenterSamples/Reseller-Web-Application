@@ -22,8 +22,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront
         public static void Register(HttpConfiguration configuration)
         {
             configuration.MapHttpAttributeRoutes();
-            
-            DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(ExpiryDateInTenYearsAttribute), typeof(RangeAttributeAdapter));            
+
+            DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(ExpiryDateInTenYearsAttribute), typeof(RangeAttributeAdapter));
 
             configuration.Routes.MapHttpRoute(
                 name: "DefaultApi",

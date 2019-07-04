@@ -132,7 +132,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.InvalidContactUsEmailAddress).AddDetail("Field", "ContactUs.Email");
             }
-            
+
             try
             {
                 brandingConfiguration.ContactUs.Phone.AssertNotEmpty("ContactUs.Phone");
@@ -141,7 +141,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             {
                 throw new PartnerDomainException(ErrorCode.InvalidInput, Resources.InvalidContactUsPhoneExceptionMessage).AddDetail("Field", "ContactUs.Phone");
             }
-            
+
             if (brandingConfiguration.ContactSales == null)
             {
                 // default the contact sales to the contact us information
@@ -174,7 +174,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                     brandingConfiguration.ContactSales.Phone = brandingConfiguration.ContactUs.Phone;
                 }
                 else
-                {                    
+                {
                     try
                     {
                         brandingConfiguration.ContactSales.Phone.AssertNotEmpty("ContactSales.Phone");

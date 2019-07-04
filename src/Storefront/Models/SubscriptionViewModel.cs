@@ -67,5 +67,5 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models
         /// Gets or sets the subscription's order history.
         /// </summary>
         public IEnumerable<SubscriptionHistory> SubscriptionOrderHistory { get; set; }
-    }    
+    }
 }

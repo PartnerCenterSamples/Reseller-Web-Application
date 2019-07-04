@@ -30,7 +30,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Filters.Mvc
         /// Gets or sets the user role which is allowed access.
         /// </summary>
         public UserRole UserRole { get; set; }
-        
+
         /// <summary>
         /// Authorizes an incoming request based on the user role.
         /// </summary>

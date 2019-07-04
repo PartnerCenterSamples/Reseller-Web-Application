@@ -64,7 +64,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             {
                 return !string.IsNullOrEmpty(PartnerCenterCustomerId);
             }
-        } 
+        }
 
         /// <summary>
         /// Gets the Partner Center customer ID associated with the sign in user (if any).

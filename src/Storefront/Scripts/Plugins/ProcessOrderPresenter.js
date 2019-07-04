@@ -49,12 +49,12 @@
     var existingCustomerOrderUrl = "api/Order/Process" + "?paymentId=" + self.viewModel.paymentId + "&payerId=" + self.viewModel.PayerID + "&orderId=" + self.viewModel.orderId;
     var newCustomerOrderUrl = "api/Order/NewCustomerProcessOrder" + "?customerId=" + self.viewModel.customerId + "&paymentId=" + self.viewModel.paymentId + "&payerId=" + self.viewModel.PayerID;
 
-    if (self.viewModel.customerId !== null) {
-        self.apiUrl = newCustomerOrderUrl;
-        self.viewModel.nextJourney = Microsoft.WebPortal.Feature.Home;
-    } else {
+    if (self.viewModel.customerId === null || self.viewModel.customerId === undefined) {
         self.apiUrl = existingCustomerOrderUrl;
         self.viewModel.nextJourney = Microsoft.WebPortal.Feature.CustomerAccount;
+    } else {
+        self.apiUrl = newCustomerOrderUrl;
+        self.viewModel.nextJourney = Microsoft.WebPortal.Feature.Home;
     }
 
     this.onDoneClicked = function () {
@@ -107,7 +107,10 @@ Microsoft.WebPortal.ProcessOrderPresenter.prototype.onRender = function () {
                     // hand it off to the subscriptions page.        
                     thisNotification.dismiss();
 
-                    if (self.viewModel.customerId !== null) {
+                    if (self.viewModel.customerId === null || self.viewModel.customerId === undefined) {
+                        // all processed so push to subscriptions page. 
+                        self.webPortal.Journey.start(self.viewModel.nextJourney);
+                    } else {
                         self.viewModel.showDoneButton(true);
                         self.viewModel.showSubscriptions(true);
                         self.viewModel.Subscriptions(result.Subscriptions);
@@ -133,10 +136,6 @@ Microsoft.WebPortal.ProcessOrderPresenter.prototype.onRender = function () {
 
                         self.viewModel.Address(AddressInfo);
                         self.viewModel.ContactInformation(ContactInfo);
-
-                    } else {
-                        // all processed so push to subscriptions page. 
-                        self.webPortal.Journey.start(self.viewModel.nextJourney);
                     }
                 })
                 .fail(function (result, status, error) {

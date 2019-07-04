@@ -7,7 +7,6 @@
 namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 {
     using System.Configuration;
-    using System.Security;
     using System.Threading.Tasks;
     using Commerce;
     using Configuration;
@@ -111,7 +110,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             {
                 Instance = new ApplicationDomain
                 {
-                    PartnerCenterClient = await AcquirePartnerCenterAccessAsync().ConfigureAwait(false), 
+                    PartnerCenterClient = await AcquirePartnerCenterAccessAsync().ConfigureAwait(false),
                 };
 
                 Instance.PortalLocalization = new PortalLocalization(Instance);

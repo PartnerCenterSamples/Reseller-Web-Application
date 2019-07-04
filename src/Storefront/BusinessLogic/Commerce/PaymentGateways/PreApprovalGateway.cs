@@ -114,7 +114,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         /// <param name="paymentConfig">The Payment configuration.</param>
         public void ValidateConfiguration(PaymentConfiguration paymentConfig)
         {
-            ////No need to implement this method
+            // No need to implement this method
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Paymen
         /// <returns>The created web experience profile id.</returns>
         public string CreateWebExperienceProfile(PaymentConfiguration paymentConfig, BrandingConfiguration brandConfig, string countryIso2Code)
         {
-            ////no need to implement this method
+            // No need to implement this method
             return string.Empty;
         }
     }

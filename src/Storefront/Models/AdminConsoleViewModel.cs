@@ -25,5 +25,5 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models
         /// Gets or sets a value indicating whether the website's payment options have been configured or not.
         /// </summary>
         public bool IsPaymentConfigured { get; set; }
-    }    
+    }
 }

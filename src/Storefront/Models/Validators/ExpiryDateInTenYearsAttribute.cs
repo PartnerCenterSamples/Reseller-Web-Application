@@ -19,7 +19,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models.Validators
         /// Initializes a new instance of the <see cref="ExpiryDateInTenYearsAttribute" /> class.
         /// </summary>
         public ExpiryDateInTenYearsAttribute() : base(DateTime.Now.Year, DateTime.Now.Year + 10)
-        {            
+        {
         }
     }
 }
