@@ -18,7 +18,7 @@
 
     // journey operations will be throttled in order to protect it from excessive navigation requests due to double clicking for instance
     this.throttler = new Microsoft.WebPortal.Utilities.Throttler(700, "Journey");
-}
+};
 
 Microsoft.WebPortal.Core.Journey.prototype.start = function (feature, context) {
     /// <summary>
@@ -58,7 +58,7 @@ Microsoft.WebPortal.Core.Journey.prototype.start = function (feature, context) {
             presenter.activate(context);
         }));
     }, this);
-}
+};
 
 Microsoft.WebPortal.Core.Journey.prototype.advance = function (feature, context) {
     /// <summary>
@@ -92,7 +92,7 @@ Microsoft.WebPortal.Core.Journey.prototype.advance = function (feature, context)
             }));
         }
     }, this);
-}
+};
 
 Microsoft.WebPortal.Core.Journey.prototype.retract = function (index, context) {
     /// <summary>
@@ -132,6 +132,6 @@ Microsoft.WebPortal.Core.Journey.prototype.retract = function (index, context) {
 
         return true;
     }, this);
-}
+};
 
 //@ sourceURL=Journey.js
