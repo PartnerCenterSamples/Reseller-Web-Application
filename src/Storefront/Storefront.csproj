@@ -603,9 +603,6 @@
     <Content Include="Views\Shared\UpdateCompanyInformation.cshtml" />
     <Content Include="Views\Shared\CustomerManagementSetup.cshtml" />
     <Content Include="Views\Shared\PayUPaymentSetup.cshtml" />
-    <None Include="Properties\PublishProfiles\pcsfdbg01 - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\psfdb05 - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\storefront-test - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\AdminConsole.cshtml" />
