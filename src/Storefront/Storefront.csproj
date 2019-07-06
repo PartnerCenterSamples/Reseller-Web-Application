@@ -494,7 +494,6 @@
     <Content Include="Configuration\WebPortalConfigurationPayU.json" />
     <Content Include="libman.json" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\partnercenterstorefront - Web Deploy.pubxml" />
     <Content Include="Scripts\Plugins\BrandingSetupPresenter.js" />
     <Content Include="Scripts\Plugins\CustomerAccountPresenter.js" />
     <Content Include="Scripts\Plugins\ErrorCode.js" />
@@ -606,6 +605,7 @@
     <Content Include="Views\Shared\PayUPaymentSetup.cshtml" />
     <None Include="Properties\PublishProfiles\pcsfdbg01 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\psfdb05 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\storefront-test - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\AdminConsole.cshtml" />

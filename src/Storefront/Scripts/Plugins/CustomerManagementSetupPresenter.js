@@ -15,18 +15,17 @@
         searchButtonClicked: function () {
             this.viewModel.preApprovedCustomersList(this.preChangePreApprovedCustomersDetails.Items.filter(customerfilter.bind(null, this.viewModel.searchTerm().toLowerCase())));
         }
-    }
-    var preChangePreApprovedCustomersDetails = null;
-    var preChangePreApprovedCustomerIds = null;
+    };
+
     function customerfilter(searchTerm, value, index, array) {
 
         if (searchTerm) {
-            return (array[index].CompanyName.toLowerCase().indexOf(searchTerm) !== -1 || array[index].Domain.toLowerCase().indexOf(searchTerm) !== -1);
+            return array[index].CompanyName.toLowerCase().indexOf(searchTerm) !== -1 || array[index].Domain.toLowerCase().indexOf(searchTerm) !== -1;
         }
         else
             return array[index];
     }
-}
+};
 
 // inherit TemplatePresenter
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.CustomerManagementSetupPresenter, Microsoft.WebPortal.Core.TemplatePresenter);
@@ -42,9 +41,9 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onRender = functi
     if (!this.preChangePreApprovedCustomersDetails) {
         self.webPortal.ContentPanel.showProgress();
         function customerfilter(searchTerm, value, index, array) {
-         
-            if (searchTerm) { 
-                return (array[index].CompanyName.toLowerCase().indexOf(searchTerm().toLowerCase()) !== -1 || array[index].Domain.toLowerCase().indexOf(searchTerm().toLowerCase()) !== -1);
+
+            if (searchTerm) {
+                return array[index].CompanyName.toLowerCase().indexOf(searchTerm().toLowerCase()) !== -1 || array[index].Domain.toLowerCase().indexOf(searchTerm().toLowerCase()) !== -1;
             }
             else
                 return array[index];
@@ -90,15 +89,15 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onRender = functi
                 // stop showing progress
                 self.webPortal.ContentPanel.hideProgress();
             });
-        }
+        };
 
         acquirePreApprovedCustomerDetails();
     }
-    else {        
+    else {
         self._setupActions();
         self.viewModel.IsSet(true);
     }
-}
+};
 
 Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onSaveConfiguration = function () {
     /// <summary>
@@ -108,12 +107,12 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onSaveConfigurati
     var savePreApprovedCustomersCall = this.webPortal.ServerCallManager.create(this.feature,
         this.webPortal.Helpers.ajaxCall("api/AdminConsole/PreApprovedCustomers", Microsoft.WebPortal.HttpMethod.Put, {
             IsEveryCustomerPreApproved: self.viewModel.IsEveryonePreApproved(),
-            CustomerIds: self.viewModel.preApprovedCustomerIds()            
+            CustomerIds: self.viewModel.preApprovedCustomerIds()
         }), "Saving pre-approved customers configuration");
 
     var saveNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress,
         this.webPortal.Resources.Strings.Plugins.CustomerManagementConfiguration.UpdatePreApprovedCustomersProgressMessage);
-    this.webPortal.Services.Notifications.add(saveNotification);    
+    this.webPortal.Services.Notifications.add(saveNotification);
 
     var saveConfiguration = function () {
 
@@ -143,7 +142,7 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onSaveConfigurati
             self.savePreApprovedCustomersAction.enabled(false);
             self.resetPreApprovedCustomersAction.enabled(false);
         }).fail(function (result, status, error) {
-            var errorPayload = JSON.parse(result.responseText);            
+            var errorPayload = JSON.parse(result.responseText);
 
             if (errorPayload) {
                 // notify the user of the error and give them the ability to retry
@@ -152,23 +151,23 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype.onSaveConfigurati
                     self.webPortal.Resources.Strings.Plugins.CustomerManagementConfiguration.UpdatePreApprovedCustomersProgressMessage, saveConfiguration, function () {
                         // self.viewModel.ClientId.notifySubscribers();
                     });
-            }            
+            }
         });
-    }
+    };
 
     saveConfiguration();
-}
+};
 
 Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setupCustomerIds = function (preApprovedCustomerItems) {
     // for perf reasons we will operate with an alternative array instead of the observable array. 
     var newArray = [];
-    for (var i in preApprovedCustomerItems.Items) {        
+    for (var i in preApprovedCustomerItems.Items) {
         if (preApprovedCustomerItems.Items[i].IsPreApproved) {
-            newArray.push(preApprovedCustomerItems.Items[i].TenantId);            
+            newArray.push(preApprovedCustomerItems.Items[i].TenantId);
         }
     }
-    this.viewModel.preApprovedCustomerIds(newArray);    
-}
+    this.viewModel.preApprovedCustomerIds(newArray);
+};
 
 Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setupActions = function () {
     /// <summary>
@@ -188,12 +187,12 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setupActions = f
         self.viewModel.preApprovedCustomersList(self.preChangePreApprovedCustomersDetails.Items);
         self.viewModel.searchTerm("");
         self._setupCustomerIds(self.preChangePreApprovedCustomersDetails);
-        self.preChangePreApprovedCustomerIds = self.preChangePreApprovedCustomersDetails.CustomerIds;        
+        self.preChangePreApprovedCustomerIds = self.preChangePreApprovedCustomersDetails.CustomerIds;
     }, "/Content/Images/Plugins/action-undo.png", this.webPortal.Resources.Strings.Undo, null, false);
-    this.webPortal.Services.Actions.add(this.resetPreApprovedCustomersAction);    
-}
+    this.webPortal.Services.Actions.add(this.resetPreApprovedCustomersAction);
+};
 
-Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setActionButtons = function () {    
+Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setActionButtons = function () {
     var isFormUpdated = false;
     var isCustomersListUpdated = false;
 
@@ -203,13 +202,13 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setActionButtons
     if (this.preChangePreApprovedCustomerIds) {
         preChangeLength = this.preChangePreApprovedCustomerIds.length;
     }
-    
+
     isCustomersListUpdated = preChangeLength !== this.viewModel.preApprovedCustomerIds().length;
 
-    if (!isCustomersListUpdated) {        
+    if (!isCustomersListUpdated) {
         // sort the arrays. 
-        var array1 = ko.utils.arrayMap(this.preChangePreApprovedCustomerIds, function (i) { return i }).sort();
-        var array2 = ko.utils.arrayMap(this.viewModel.preApprovedCustomerIds(), function (i) { return i }).sort();
+        var array1 = ko.utils.arrayMap(this.preChangePreApprovedCustomerIds, function (i) { return i; }).sort();
+        var array2 = ko.utils.arrayMap(this.viewModel.preApprovedCustomerIds(), function (i) { return i; }).sort();
 
         var x = ko.utils.compareArrays(array1, array2);
         isCustomersListUpdated = x.length !== preChangeLength;
@@ -220,5 +219,6 @@ Microsoft.WebPortal.CustomerManagementSetupPresenter.prototype._setActionButtons
 
     this.savePreApprovedCustomersAction.enabled(isFormUpdated);
     this.resetPreApprovedCustomersAction.enabled(isFormUpdated);
-}
+};
+
 //@ sourceURL=CustomerManagementSetupPresenter.js

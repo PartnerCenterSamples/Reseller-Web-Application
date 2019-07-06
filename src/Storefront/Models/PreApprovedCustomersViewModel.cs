@@ -18,7 +18,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models
         /// </summary>
         public PreApprovedCustomersViewModel()
         {
-            CustomerIds = new List<string>();
         }
 
         /// <summary>
@@ -34,6 +33,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models
         /// <summary>
         /// Gets or sets a list of customer identifiers which need to be preapproved. 
         /// </summary>
-        public List<string> CustomerIds { get; }
+        public List<string> CustomerIds { get; set; }
     }
 }

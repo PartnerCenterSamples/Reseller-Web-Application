@@ -12,6 +12,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
     using System.Threading.Tasks;
     using Models;
     using Newtonsoft.Json;
+    using PartnerCenter.Enumerators;
+    using PartnerCenter.Models;
     using PartnerCenter.Models.Customers;
     using PartnerCenter.Models.Query;
     using WindowsAzure.Storage.Blob;
@@ -50,7 +52,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             List<Customer> allCustomers = new List<Customer>();
 
             // create a customer enumerator which will aid us in traversing the customer pages
-            Enumerators.IResourceCollectionEnumerator<PartnerCenter.Models.SeekBasedResourceCollection<Customer>> customersEnumerator = sdkClient.Enumerators.Customers.Create(sdkClient.Customers.Query(QueryFactory.Instance.BuildIndexedQuery(100)));
+            IResourceCollectionEnumerator<SeekBasedResourceCollection<Customer>> customersEnumerator = sdkClient.Enumerators.Customers.Create(sdkClient.Customers.Query(QueryFactory.Instance.BuildIndexedQuery(100)));
+
             while (customersEnumerator.HasValue)
             {
                 foreach (Customer c in customersEnumerator.Current.Items)
@@ -58,12 +61,13 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                     allCustomers.Add(c);
                 }
 
-                customersEnumerator.Next();
+                await customersEnumerator.NextAsync().ConfigureAwait(false);
             }
 
             // if all customers are preapproved then every customer's IsPreApproved is true. 
             bool allCustomersPreApproved = false;
             PreApprovedCustomersList currentPreApprovedCustomers = await RetrieveAsync().ConfigureAwait(false);
+
             if (currentPreApprovedCustomers.CustomerIds != null)
             {
                 // Find if the all customers approved entry is present. 
@@ -105,6 +109,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 
             if (!allCustomersPreApproved && currentPreApprovedCustomers.CustomerIds != null)
             {
+                viewModel.CustomerIds = new List<string>();
                 viewModel.CustomerIds.AddRange(currentPreApprovedCustomers.CustomerIds.ToList());
             }
 
@@ -121,6 +126,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
             preApprovedCustomers.AssertNotNull(nameof(preApprovedCustomers));
 
             PreApprovedCustomersList customerList = new PreApprovedCustomersList();
+
             if (preApprovedCustomers.IsEveryCustomerPreApproved)
             {
                 string[] ids = new string[] { Guid.Empty.ToString() };
