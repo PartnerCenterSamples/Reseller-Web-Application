@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>Aftur</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Kaupa núna</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Afturkalla</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Hreinsa allt</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Hafðu samband við okkur</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Höfundarréttur 2019</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>Engir aðilar fundust</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>Ekki tókst að fá gáttarefni</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Fyrsta</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>Gáttarskilgreining virðist ógild</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Síðasta</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Hleðsla</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Tenging</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>Fleiri aðgerðir...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>Fara aftur til:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Næsta</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>Virkar tilkynningar</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>nýjar tilkynningar</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Ókei</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Lykilorð</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>Samskipun Portal fannst ekki</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Mundu eftir mér</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>Reyna</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Skrá út</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>Ekki tókst að fá eiginleika efnisins</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>Fá eiginleika efni</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>Notandanafn:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>Skoða flísar</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Já</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>Velja þarf a.m.k. eitt tilboð til kaups.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>Heildarupphæð</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>Fjarlægja úr körfu</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Aðsetur</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>Notandareikningur admin</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Staðfesting</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Þakka þér. Viðskiptavinurinn var stofnaður og pöntunin þín var unnin.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Upplýsingar um viðskiptavin</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Gert</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Upplýsingar um viðskiptavin</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Áskrift</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Áskriftir</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Samtals</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>Bæta við áskriftum</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Halda áfram að greiða</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>Ég samþykki skilmála og skilyrði</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>Færa skal inn gilt lénforskeyti</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>AUÐKENNI áskriftar:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>Uppfæra Fyrirtækjaupplýsingar</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>Byggja Mælaborð þitt</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>Veldu hvaða tilboð á að selja</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>Bæta við greiðslumáta</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>Velkomin</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>til þín vefverslun byggir!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>undirstaða innheimtu</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>Samantekt:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>Bæta við</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Customization</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>Lögun:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>Veldu Microsoft tilboð:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Leita eftir tilboði</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>Árlegt verð:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>Tilboðstexti:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>Heiti tilboða:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>Bæta við tilboðsaðgerðum</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>Bæta við tilboðsaðgerð eftir þetta</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>Bæta við tilboðsúttektarpunktum</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>Bæta við tilboðssamantekt eftir þetta</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Smellið á til að samskipa vörumerki fyrirtækisins.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>Lýsa eiginleikum þetta tilboð gefur</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>Smelltu til að stilla tilboð þitt</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>Skrifa Yfirlit tilboða</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>Smelltu til að stilla greiðsluvalkosti þína</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>Verð:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>Fjarlægja tilboðseiginleikann</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>Fjarlægja tilboðsyfirlit</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>Stilla</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>Þarfnast skilgreiningar</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>Ekki tókst að sækja upplýsingar um Mælaborð</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>Sérsníða síðuna þína áður en þú byrjar að selja</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>Þú ert Dugleg að fara og byrja að selja!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>Bæta við nýju tilboði</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Tegund</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>Customization</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eyða</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>Eyða tilboði (s)</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>Eyðir tilboðum</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Lýsing</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Engin tilboð fundust</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>Þú hefur engin tilboð skilgreind. Smelltu á Bæta við tilboð hér að ofan til að byrja að bæta tilboðum þínum.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>Microsoft býður</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>Ekki tókst að sækja Microsoft tilboð</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Tilboð</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>Sjálfvirk endurnýjanleg</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>Laus við kaup</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>Tilboðum hefur verið eytt</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>Ekki tókst að eyða tilboðinu</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>Handvirkt endurnýjanleg</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>Ekki var hægt að vista tilboðið</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>Tilboð tókst vistað!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>Ekki tókst að sækja tilboð</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>Sækja um tilboð</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>Ekki tiltækt fyrir innkaup</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Vista</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>Sparaðu tilboð</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>Sparnaður tilboð</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>Sæti</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>Vinsamlegast veldu tilboð</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Til</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>Uppfærsla tilboða</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>Nafn fyrirtækis þíns</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Afturkalla</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>Ekki tókst að sækja vörumerki samstarfsaðila</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>Sækja um félagavörumerki</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>Samskipa vefverslun</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>Veita fyrirtækinu upplýsingar sem verða sýnilegar í haus og fæti á öllum síðum</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>Ekki var hægt að vista vörumerki</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>Uppfærir upplýsingar um vörumerki</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>Branding bjargaði. Smelltu á hnappinn Endurhlaða í hauststikunni til að sjá breytingarnar</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>Sölutengiliður:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>Stuðningur við tengilið:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>Stuðningur netfang</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>Fyrirsögn myndar:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>Sýndar efst á heimasíðunni. (. jpg,. JPEG,. img,. gif). Hlaða upp skrá eða Sláðu inn gilt VEFSLÓÐ myndar</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>Velja Hausmyndaskrá úr tölvunni</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>Merki:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>Sýnt er í haus hverrar blaðsíðu, myndir af stærðinni 32 af 32 virka best. Hlaða upp skrá eða Sláðu inn gilt VEFSLÓÐ myndar</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>Velja fyrirtækismerki myndskrá úr tölvunni</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>Heiti:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>Lögbundnu heiti fyrirtækisins, sem sýnt er á haus hverrar blaðsíðu</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>Símanúmeri</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>Endurhlaða Portal</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>Endurheimtu gáttina til að sjá breytingarnar</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>Afturkalla staðbundnar vörumerki breytingar</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>Ekki tókst að sækja greiðsluupplýsingar</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>Sækja um greiðsluupplýsingar</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>Lifandi reikningur</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>Gefðu upp PayPal Pro reikningsstillingarnar þínar</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>til að búa til nýjan Pro reikning ef þú ert ekki með einn.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Til að taka á móti greiðslum frá viðskiptavinum þínum ættirðu að nota PayPal Pro reikning, vinsamlegast heimsækja:</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>PayPal reikningagerð:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>Hægt er að velja gerð prófunarlykils til að prófa færslurnar. Þegar þú vinnur getur þú skipt yfir í lifandi reikningsgerð til að byrja að þýða</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>AUÐKENNI PayPal biðlara:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>Sláðu inn AUÐKENNI PayPal biðlarann</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>PayPal viðskiptavinur leyndarmál:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>Sláðu inn þinn PayPal viðskiptavinur leyndarmál</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>Sandbox reikningur</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>Afturkalla Óvistaðar greiðslubreytingar</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>Ekki tókst að vista greiðsluupplýsingar</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>Uppfærsla greiðsluupplýsinga</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>Greiðsluupplýsingar uppfærðar</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>Heimilisfang lína 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>Heimilisfang lína 2</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>Upplýsingar um fyrirtæki</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>Upplýsingar um tengilið</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Lénið þitt birtist eftir @ í netfangi lénsins þíns. Það verður að vera einstakt og það getur ekki innihaldið nein greinareinkenni. Dæmi: fyrirtækið.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>Forskeyti léns</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>Netfang</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>Gakktu úr skugga um að þú slærð inn gilt netfang. Það verður aðalatriðið að hafa samband til að senda þér mikilvægar upplýsingar til að koma þér af stað og setja upp greiðslugögnin þín.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>Fornafn</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>Eftirnafn</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Þetta mun vera notandakennið sem þú notar með Office 365 reikningnum þínum.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>Ríki/hérað</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>Póstnúmer</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-Ógreidd</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>Stilltu vefsvæðið þitt</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>Þessi vefsíða er enn í smíðum. Vinsamlegast heimsækja síðar.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>Ekki tókst að sækja tilboð</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>Upphæð greidd á</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>Verð greitt</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>Hlutfall</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>Endurnýja</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>Bættum sætum</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Keypt</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>Endurnýjun</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>Ekki tókst að skrá viðskiptavininn. Reyna skal síðar.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>Skráning viðskiptavina...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Pöntun undirbúin og framseld til greiðslugáttar...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>Villa við skráningu pantana</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>Kaupa fleiri áskriftir</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>Leyfisveitandi</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>Pro-Einkunn</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>Velja eitt eða fleiri tilboð</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>Þú hefur ekki réttindi sem þarf til að komast á þetta svæði</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>Villa í uppfærslu pöntunar</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>Innsláttarvilla fannst. Athuga skal inntak og reyna aftur.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>Lénið er ekki tiltækt. Færa skal inn annað lénforskeyti</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>Valdar myndir eru of stórar. Vinsamlegast tilgreindu smærri myndir eða senda eitt í einu</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>Vinsamlegast tilgreindu gilt heimilisfang</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Velja skal gilda myndaskrá til að hlaða upp</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>Viltu örugglega eyða völdum tilboðum? Ef viðskiptavinir þínir hafa þegar keypt þessi tilboð verða innkeyptar áskriftir enn heiðraðar en verða ekki endurnýjanlegar.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>Vinsamlegast Afritaðu admin notandareikninginn og lykilorðið og vistaðu á öruggum stað. Þú munt ekki geta sótt það eftir að þú hefur yfirgefið þessa síðu.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>rennur út á</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>Verð greitt er birt Atvinnumaður eftir því sem við á.</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>Árlegt verð</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>Vinsamlegast bættu við áskrift</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Heimasíða</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>Birta tengiliðsupplýsingar</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>Ekki er heimilt að skrá sig inn hjá félagi sem ekki er viðurkenndur.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>Hafa samband við sölu</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>Sími:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>Leiðrétta skal ógilt inntak:</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>Við getum ekki unnið beiðnina þína á þessum tíma. Vinsamlegast reyndu síðar eða Hafðu samband við okkur í tölvupósti. Upplýsingar um villu-</value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>Aðeins er hægt að uppfæri eina undirgagnrýni.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>Pöntun undirbúin og framseld til greiðslugáttar...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>Villa við að bæta við áskriftum.</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>Við erum ófær um að vinna úr greiðslunni –</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>Ekki tókst að ræsa gáttina</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>Greiðsluskilgreining er ógild.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>Ekki er hægt að vinna úr greiðslunni á þessum tíma. Vinsamlegast hafðu samband við okkur með tölvupósti.</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>Ógild fyrirsögn mynd URI. Gæta skal þess að URI sé gildur.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Vandamál kom upp á einum af þeim reitum sem færðir voru inn:</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>Ógilt fyrirtækismerki URI. Gæta skal þess að URI sé gildur.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>Ógilt næði URI. Gæta skal þess að URI sé gildur.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>Næði</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>Persónuvernd tengill:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>Þú getur tilgreint tengil sem sýnir persónuverndarhugtök fyrir viðskiptavini þína hér sem birtast á heimasíðu síðufót</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Skoða þessa vefsíðu persónuverndarskilmála</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>Ekki tókst að sækja reikninginn. Reyna skal aftur síðar.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>Ekki tókst að sækja áskriftirnar þínar. Reyna skal aftur síðar.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>Sölu netfang</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>Endurnýja áskrift</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>Heiti fyrirtækis</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>Aðaltengiliður</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>Ekki tókst að sækja upplýsingar um tilboð. Reyna skal aftur síðar.</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>Eitt eða fleiri svæði eru ógild. Vinsamlegast Leiðréttið þær og síðan senda.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>Setja pöntunina</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>Árlegur Heildarafli</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>Tína tilboð</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>Tína tilboð sem þú vilt selja</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>Eitt eða fleiri tilboð sem þú ert að reyna að bæta við er þegar til. Hægt er að bæta fleiri leyfum við áskriftir sem fyrir eru.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>notandi/ár</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>Vinsamlegast sláðu inn gildan tengilið sölusíma</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>Vinsamlegast sláðu inn gildan tengiliðsstuðning í síma</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Greiðsluupplýsingar sem safnað er, Stofna viðskiptavin og vinnslupöntun...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Greiðsluupplýsingar sem safnað er, nú vinnslupöntun...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>Bæta sætum í áskrift.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>Bæta við áskriftum.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>Endurnýjun áskriftar.</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>Villa við vinnslu pöntunar. Reyndu aftur síðar.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Bilun í vinnslupöntun. Vinsamlegast smelltu á Done og reyndu aftur.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>Bilun í móttöku greiðsluupplýsinga. Vinsamlegast smelltu á lokið til að reyna aftur.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>Greiðsluupplýsingar hafa verið mótteknar. Úrvinnsla pantana...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Staðfesting</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>Unnið hefur verið úr skráningarpöntuninni.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>Bilun í móttöku greiðsluupplýsinga. Skráðu þig inn og bættu við áskriftum.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>Við getum ekki unnið úr greiðslunni.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>Sýnt er í kaflanum samband við okkur í haus</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} AUGLÝSINGALYKILL er þegar skráður í Partner-miðstöð viðskiptavinar: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>Númer</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} verður að vera stærra en núll</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>Streng</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} er ekki stillt</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>Endurnýjun áskrift. ExecuteAsync () mistókst: {0}, Áskriftarptionid: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>Gefa upp myndskrárgerð fyrir fyrirtækimerkið</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>Ógilt fyrirtækismerki URI hlaðið upp</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>Gefa myndskrárgerð fyrir haustmynd</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>Ógild fyrirsögn myndar URI hlaðið upp</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>Ógildur persónuverndarsamningur URI hlaðið upp</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>Villa kom upp við vinnslu beiðninnar.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>Villa</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>Ógild aðgerð er framkvæmd.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>Pöntun skal hafa a.m.k. eina áskriftarvöru.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>Greiðsluháttur er ekki studdur</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>Tilboðsverð skal vera meira en núll</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>Setja verður MicrosoftOfferId</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>Kenni verður að vera gilt GUID</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>Ekki tókst að uppfæra félagsuppboðið varanleiki</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>Ekki er leyfilegt að uppfæri Microsoft tilboð. Búðu til nýtt tilboð í staðinn.</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>Tilboð fundust ekki</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>Kaflinn ContactUs fannst ekki í stillingum Portal Branding</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>Ótækt að hafa samband við okkur tölvupóstfang</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>Ótækt að hafa samband við okkur Sími</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>Ógilt tölvupóstfang tengiliðar</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>Ógildur tengiliður sölusíma</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>Bæta við fleiri leyfum</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>Ekki tókst að skrá viðskiptavin í nýjan Partner-miðstöð</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>Heim</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Vefverslun smiðjur</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>Uppsetning vörumerkin</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>Býður upp á uppsetningu</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>Uppsetning greiðslu</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Panta sögu</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Stjórna áskriftum</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>Fara á heimasíðuna</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>Heiti fyrirtækis er nauðsynlegt.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>Lands er krafist.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>Krafist er aðseturslínu 1.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>Borgar er krafist.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>Reiturinn tölvupóstur er ekki gilt tölvupóstfang.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>Forskeyti léns er áskilið.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>Fornafn er nauðsynlegt.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>Eftirnafn er áskilið.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Símanúmeri er krafist.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Skrá út frá umsókn</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>Virk</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>Eytt</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>Enginn</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>Frestaðar</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>Dagsetning stofnunar</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>Heiti</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>Magn</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>Stöðu</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Viðskiptavinir Stýrðu áskriftum</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Áskriftir stýri áskrift</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Pantanir</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentation Key:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Hægt er að tilgreina hugbúnaðarinnsýn tækjabúnaði lykil til að grípa gögn Telemetry úr Portal.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Áskriftir sem byggja á notkun</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Fyrirfram samþykktir Viðskiptavinir</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Stjórna viðskiptavinum fyrir fyrirframsamþykktar færslur.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"Velja allt" mun merkja alla núverandi og framtíðar viðskiptavini sem fyrirfram samþykkt að Transact í versluninni að framan.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Velja allt</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Fyrirfram samþykkt</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Nafn viðskiptavinar</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Aðal lén</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Ekki tókst að sækja upplýsingar um fyrirfram samþykkta viðskiptavini.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Uppfærir upplýsingar um fyrirfram samþykkta viðskiptavini</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Fyrirframsamþykktar upplýsingar um viðskiptavin uppfærðar</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Ekki var hægt að vista upplýsingar fyrirfram samþykktra viðskiptamanna</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Þessi færsla er fyrirfram samþykkt. Úrvinnsla pantana...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Leita eftir nafni fyrirtækis eða léni</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>Gerð PayU reiknings:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>Hægt er að velja gerð prófunarlykils til að prófa færslurnar. Þegar þú vinnur getur þú skipt yfir í lifandi reikningsgerð til að byrja að þýða</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>PayU Merchant lykill:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>Sláðu inn PayU kaupið þitt salt</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU Merchant salt:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>Sláðu inn lykil PayU söluaðila</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>Heimild frá PayU</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>Sláðu inn Greiðsluheimild þína</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>Gefðu upp reikningsstillingar fyrir PayUMoney söluaðila</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>til að stofna nýjan söluaðilalykil ef þú ert ekki með einn.</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Til að fá greiðslur frá viðskiptavinum þínum, ættir þú að nota PayUMoney söluaðila reikning, vinsamlegast heimsækja:</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>NOTANDAKENNI samnings:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>Kenni notandans frá samstarfsaðila sem tengja á við samþykki Microsoft Cloud samningsins.</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>Ógilt notandakenni.</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>Ég sætti mig við</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>Þjónustuskilmálar</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>Andorra</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>Sameinuðu Arabísku Furstadæmin</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>Afganistan</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>Antígva og Barbúda</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>Angvilla</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>Albanía</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>Armenía</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>Hollensku Antillaeyjar</value>
+  </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>Angóla</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>Antarctica</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>Argentína</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>Bandaríska Samóa</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>Austurríki</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>Ástralía</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>Álandseyjar</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>Aserbaísjan</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>Bosnía og Hersegóvína</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>Bangladesh</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>Belgía</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>Búrkína Fasó</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>Búlgaría</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>Barein</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>Búrúndí</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>Benín</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>Saint-Barthélemy</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>Brúnei</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>Bólivía</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>Bonaire</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brasilía</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>Bahamas</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>Bútan</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>Bouvet Island</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>Botsvana</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>Hvíta Rússland</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>Belís</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>Kanada</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>Cocos (Keeling) Islands</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>Kongó (DRC)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>Mið-Afríkulýðveldið</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>Kongó</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>Sviss</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>Côte d ' Ivoire</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>Cook Islands</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>Síle</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>Kamerún</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>Kína</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>Kólumbía</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>Kosta Ríka</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>Cabo Verde</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>Curaçao</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>Jólaeyjan</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>Kýpur</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>Tékkland ()</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>Þýskaland</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>Djibouti</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>Danmörk</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>Dóminíka</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>Dómíníska lýðveldið</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>Alsír</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>Ekvador</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>Eistland</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>Egyptaland</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>Erítreu</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>Spánn</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>Eþíópíu</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>Finnland</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>Fiji</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>Falklandseyjar</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>Míkrónesía</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>Færeyjar</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>Frakkland</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>Bretland</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>Georgía</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>Frönsku Gvæjana</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>Guernsey</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>Gíbraltar</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>Grænland</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>Gambíu</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>Gínea</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>Equatorial Guinea</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>Grikkland</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>Suður-Georgía og Suður-Sandwich Islands</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>Gvatemala</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>Gínea-Bissá</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>Gvæjana</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>Hong Kong SAR</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>Heard Island og McDonald Islands</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>Hondúras</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>Króatía</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>Haítí</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>Ungverjaland</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>Indónesía</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>Írland</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>Ísrael</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>Mötuneyti man</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>Indland</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>Breska indverska Hafsvæðið</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>Írak</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>Ísland</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>Ítalía</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>Jersey</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>Jamaíka</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>Jórdanía</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>Kenía</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>Kirgistan</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>Kambódía</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>Kíribatí</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>Kómoreyjum</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>Sankti Kristófer og Nevis</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>Kórea</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>Kúveit</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>Caymaneyjar</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>Kasakstan</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>Laos</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>Líbanon</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>Sankti Lúsía</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>Liechtenstein</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>Liberia</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>Lesótó</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>Litháen</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>Lúxemborg</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>Lettland</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>Líbía</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>Marokkó</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>Mónakó</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>Moldavía</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>Svartfjallaland</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>Saint Martin</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>Madagaskar</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>Marshall Islands</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>Makedónía</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>Mjanmar</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>Mongólía</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>Macao SAR</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>Norður-Maríanaeyjar</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>Martiník</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>Máritanía</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>Máritíus</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>Maldíveyjar</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>Malaví</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>Mexíkó</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>Malasía</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>Mósambík</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>Namibía</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>Nýja-Kaledónía</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>Náttfari</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>Norfolk Island</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>Nígería</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>Níkaragva</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>Holland</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>Noregur</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>Nárú</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>Nýja Sjáland</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>Óman</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>Perú</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>Franska Pólýnesía</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>Papúa Nýja-Gínea</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>Filippseyjar</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>Pólland</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>Sankti Pierre og Miquelon</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>Pitcairn Islands</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>Púertó Ríkó</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>Palestínuyfirvöld</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>Portúgal</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>Paragvæ</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>Katar</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>Réunion</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>Rúmenía</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>Serbía</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>Rússland</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>Rúanda</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>Suður Arabía</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>Salómonseyjar</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>Seychelles</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>Svíþjóð</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>Singapúr</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>Sankti Helena</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>Slóvenía</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>Svalbarði</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>Slóvakía</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>Síerra Leóne</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>San Marínó</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>Sómalía</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>Súrínam</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>Suður-Súdan</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>Saó Tóme og Prinsípe</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>El Salvador</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>Turks-og Caicoseyjar</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>Chad</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>Franski Suðurskautslandið</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>Taíland</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>Tadsjikistan</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>Tímasetning-Leste</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>Túrkmenistan</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>Túnis</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>Tyrkland</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>Trinidad og Tóbagó</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>Taívan</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>Tansanía</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>Úkraína</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>Úganda</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>Bandarískar Útivistareyjar</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>Bandaríkin</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>Úrúgvæ</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>Úsbekistan</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>Vatican City</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>Sankti Vinsent og Grenadíneyjar</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>Venesúela</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>Bresku Jómfrúaeyjar</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>Bandarísku Jómfrúaeyjar</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>Víetnam</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>Vanúatú</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>Wallis og Futuna</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>Samóa</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>Sint Eustatius</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>Jan Mayen</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>Kosovo</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>Saba</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>Jemen</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>Suður Afríka</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>Sambía</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>Zimbabwe</value>
+  </data>
+</root>

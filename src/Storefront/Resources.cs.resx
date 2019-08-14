@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>Zpět</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Koupit teď</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Vymazat vše</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Kontaktujte nás</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2019</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>Žádné entity nalezeno</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>Nelze získat obsah portálu</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>První</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>Konfigurace portálu se zdá být neplatná</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Poslední</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Načítání</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Přihlášení</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>Další akce...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>Vraťte se do:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Další</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>Aktivní oznámení</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>nové oznámení</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>Portálu configuation nebyl nalezen</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Pamatuj si mě</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>Opakovat</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Odhlásit se</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>Nelze získat obsah funkce</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>Získávání obsah funkce</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>Uživatelské jméno:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>Zobrazit tašky</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>Je třeba vybrat alespoň jednu nabídku na koupi.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>Celková částka</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>Odebrat z košíku</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>Uživatelský účet správce</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Potvrzení</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Děkuju. Byl vytvořen zákazník a vaše objednávka byla úspěšně zpracována.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Informace o zákaznících</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Hotovo</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Podrobnosti o zákazníkovi</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Odběr</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Předplatné</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Celkem</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>Přidání předplatného</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Přejít k platbě</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>Přijímám podmínky</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>Prosím zadejte platnou předponu</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>ID odběru:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>Aktualizovat informace o vaší společnosti</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>Vytvoření řídicího panelu</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>Zvolte, které nabízí k prodeji</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>Přidání způsobu platby</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>Vítej</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>na váš Web Store Builder!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>na základě fakturace</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>Shrnutí:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Vlastní nastavení</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>Vlastnosti:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>Vyberte nabídku společnosti Microsoft:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Hledat dle nabídky</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>Roční cena:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>Nabídku titulků:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>Jméno nabídky:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>Přidat nabídku funkcí</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>Přidat nabídku funkce po tomto</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>Přidat nabídku Souhrn bodů</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>Přidat nabídku Souhrn po tomto</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Klepnutím nakonfigurujete vaší firmy, značky.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>Popis funkce, kterou tato nabídka umožňuje</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>Po klepnutí můžete nakonfigurovat vaše nabídky</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>Napište nabídku Souhrn</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>Klepnutím nakonfigurujete možnosti platby</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>Cena:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>Odebrat nabídku</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>Odebrat nabídku Souhrn</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>Nakonfigurován</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>Potřebuje konfiguraci</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>Nelze načíst informace o řídicím panelu</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>Přizpůsobení webu dříve, než začnete prodávat</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>Jste dobré jít a začít prodávat!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>Přidat novou nabídku</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>Vlastní nastavení</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Odstranit</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>Odstranit tyto nabídky</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>Odstranění nabídky</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Popis</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Žádné nabídky</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>Nemáte žádné nabídky nakonfigurován. Klepněte na tlačítko Přidat nabídnout výše uvedené začít přidávat vaše nabídky.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>Nabídky společnosti Microsoft</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>Nelze načíst Microsoft nabízí</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Nabídka</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>Mlčky</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>K dispozici pro nákup</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>Nabídky byly odstraněny</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>Nelze odstranit nabídek</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>Ručně obnovitelné</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>Nelze uložit nabídku</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>Nabídka úspěšně uložen!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>Nemohu získat nabídky</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>Načítání nabídky</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>K dispozici pro nákup</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>Uložit nabídku</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>Uložit nabídku</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>sedačky</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>Prosím vyberte si nabídku</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>Aktualizace nabídky</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>Název organizace</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Zpět:</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>Nemohu získat partnera značky</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>Načítání partnera značky</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>Nakonfigurovat váš internetový obchod</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>Poskytnout vaše informace o organizaci, která bude zobrazena v záhlaví a zápatí na všech stránkách</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>Nelze uložit značky</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>Aktualizace informací o výrobci</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>Uloženo v značky. Klepněte na tlačítko obnovit v panelu záhlaví zobrazíte změny</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>Kontaktní osoba:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>Kontakt na podporu:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>Podpora e-mailu</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>Obrázek hlavičky:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>Zobrazen v horní části domovské stránky. (.jpg, .jpeg, .img, GIF). Uložení souboru nebo zadejte platný obrázek URL</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>Vyberte soubor s obrázkem záhlaví z počítače</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>Zobrazí v záhlaví každé stránky fungují nejlépe představy o velikosti 32 × 32. Uložení souboru nebo zadejte platný obrázek URL</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>Vyberte soubor s obrázkem loga organizace z počítače</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>Jméno:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>Právní název vaší společnosti, vám v hlavičce každé stránky</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>Telefonní číslo</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>Obnovit portál</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>Znovu načíst portálu zobrazit změny</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>Vrátit zpět místní změny údajů výrobce</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>Nelze získat informace o platbě</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>Načítání informací o platbě</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>Reálný účet</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>Poskytnout váš PayPal Pro nastavení účtu</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>Chcete-li vytvořit nový účet pro, pokud nemáte jeden.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Přijímat platby od zákazníků, by měla použít pro účet PayPal, navštivte:</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>Typ účtu PayPal:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>Můžete vybrat typ účtu test k testování vašich transakcí. Jakmile práci, můžete se přepnout do živého účtu typ začít provádět transakce</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>PayPal ID klienta:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>Zadejte ID klienta vaší PayPal</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>Tajný klíč klienta PayPal:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>Zadejte tajný klíč klienta PayPal</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>Pískoviště účet</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>Vrátit zpět změny neuložené platby</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>Nelze uložit informace o platbě</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>Aktualizace informací o platební</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>Byly aktualizovány informace o platbě</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>1. řádek adresy</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>2. řádek adresy</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>Město</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>Země</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>Informace o společnosti</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>Kontaktní informace</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Po se zobrazí vaše doména prefix @ vaší e-mailovou adresu domény. To musí být jedinečný a nesmí obsahovat žádné interpunkční znaménka. Příklad: společnost.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>Doména prefix</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>E-mailová adresa</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>Přesvědčte se, zda že jste zadali platnou e-mailovou adresu. To bude hlavním bodem kontaktu k zasílání důležitých informací, které vám pomohou začít a nastavit vaše platební údaje.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>Křestní jméno</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>Příjmení</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>To bude id uživatele, který budete používat s účtem služeb Office 365.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>Uživatelské jméno</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>Stát/provincie</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>Zip / PSČ:</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-Neplacené</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>Konfigurace webového serveru</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>Tato webová stránka je stále ve výstavbě. Navštivte prosím později.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>Nemohu získat nabídky</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>Částka zaplacená na</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>Zaplacená cena</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>Míra</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>Obnovit</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>Přidaná místa</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Zakoupit</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>Obnovení</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>Nelze zaregistrovat zákazníka. Zkuste to prosím později.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>Registrace zákazníka...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Příprava objednávek a přesměrování na platební bránu...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>Chyba registrace objednávky</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>Koupit více odběry</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>Licence</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>Poměrně</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>Vyberte jednu nebo více nabídek</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>Máte práva potřebná k přístupu k této oblasti</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>Chyba při aktualizaci objednávky</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>Tam byl vstupní došlo k chybě. Prosím zkontrolujte vstupy a opakujte akci.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>Doména není k dispozici. Zadejte prosím jiný prefix domény</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>Vybrané obrazy jsou příliš velké. Zadejte menší obrázky nebo nahrát jeden po druhém</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>Zadejte prosím platnou adresu</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Prosím vyberte soubor platný obrázek k odeslání</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>Opravdu že chcete odstranit vybrané nabídky? Pokud vaši zákazníci již zakoupili tyto nabídky, zakoupené předplatné budou stále akceptována, ale nelze prodloužit.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>Prosím zkopírujte uživatelský účet správce a heslo a uložte na bezpečném místě. Nebude možné je obnovit poté, co opustíte tuto stránku.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>končí na</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>Zobrazí se cena zaplacená poměrně podle potřeby.</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>Roční cena</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>Prosím, přidejte odběr</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Domovská stránka</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>Zobrazit kontaktní údaje</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>Partnera bez admins nemáte oprávnění k přihlášení.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>Kontakt na oddělení prodeje</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>E-mail:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>Telefon:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>Prosím opravte neplatný vstup:</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>Nejsme schopni zpracovat váš požadavek v tomto okamžiku. Prosím zkuste to později nebo nás kontaktujte prostřednictvím e-mailu. Podrobnosti o chybě-</value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>Lze aktualizovat pouze jeden subcription.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>Příprava objednávek a přesměrování na platební bránu...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>Při přidání předplatného došlo k chybě.</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>Nejsme schopni zpracovat vaši platbu –</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>By po spuštění portálu</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>Platební konfigurace je neplatná.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>V současné době nelze zpracovat vaši platbu. Kontaktujte nás prostřednictvím e-mailu.</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>Neplatné záhlaví obrázek Uri. Přesvědčte se, zda že je platný identifikátor Uri.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Došlo k potížím v jednom z polí, které jste zadali:</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>Neplatná organizace logo Uri. Přesvědčte se, zda že je platný identifikátor Uri.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>Neplatný soukromí Uri. Přesvědčte se, zda že je platný identifikátor Uri.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>Soukromí</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>Odkaz na soukromí:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>Můžete určit odkaz, který ukazuje soukromí svým zákazníkům, které se zobrazí v zápatí domovské stránky</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Zobrazit tuto webovou stránku soukromí podmínek</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>Nemohu získat váš účet. Opakujte akci později.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>Nelze načíst vaše odběry. Opakujte akci později.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>Prodej e-mail</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>Obnovit předplatné</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>Název organizace</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>Primární kontakt</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>Nelze načíst podrobnosti o nabídce. Opakujte akci později.</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>Jedno nebo více polí jsou neplatné. Opravte je a potom odeslat.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>Vaše objednávky</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>Roční</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>Vybrat nabídku</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>Vyberte nabídku, kterou chcete prodat</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>Jedna nebo více nabídek, které se pokoušíte přidat, již existuje. Můžete přidat další licence k existující odběry.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>uživatel/rok</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>Zadejte prosím platné kontaktní telefon prodej</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>Zadejte prosím platné kontaktní podporu telefon</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Platební údaje shromážděny, vytváření odběratele a pořadí zpracování...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Platební údaje shromažďovány, nyní pořadí zpracování...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>Přidání míst k odběru.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>Přidání předplatného.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>Obnovení předplatného.</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>Při zpracování objednávky došlo k chybě. Opakujte akci později.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Chyba v pořadí zpracování. Klepněte na tlačítko Hotovo a opakujte akci.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>Selhání v přijímání platebních informací. Prosím klikněte na tlačítko Hotovo k akci opakujte.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>Úspěšně přijaté platební údaje. Pořadí zpracování...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Potvrzení</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>Vaše objednávka registrační byl úspěšně zpracován.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>Selhání v přijímání platebních informací. Přihlaste se prosím a přidejte odběry.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>Nejsme schopni zpracovat vaši platbu.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>Uvedeno v kontaktu nás sekce záhlaví</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} AD nájemce je již registrován pro partnerské Centrum zákazníka: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>číslo</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} musí být větší než nula</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>řetězec</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} není nastavena</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() se nezdařilo: {0}, SubscriptionId: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>Stanovit typ souboru obrázku loga organizace</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>Loga organizace Neplatný URI odeslány</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>Poskytnout typ souboru obrázku pro obrázek záhlaví</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>Neplatná hlavička snímek URI</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>Dohoda neplatná soukromí URI odeslány</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>Při zpracování vašeho požadavku došlo k chybě.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>Neplatná operace prováděny.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>Objednávka by měla mít alespoň jednu položku předplatné.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>Platební režim není podporován</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>Nabídková cena by měla být větší než nula</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>MicrosoftOfferId musí být nastavena</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>ID musí být platný identifikátor GUID</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>Nepodařilo se aktualizovat trvalé nabídky partnera</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>Nabídka společnosti Microsoft není dovoleno být aktualizovány. Místo toho vytvořte novou nabídku.</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>Nabídka nenalezena</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>Kontaktujte nás oddíl nebyl nalezen v konfiguraci konfigurace portálu</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>Neplatná kontakt nám emailovou adresu</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>Neplatný nás kontaktujte, telefon</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>Neplatná kontaktní prodej e-mailová adresa</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>Neplatné telefonní prodej</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>Přidat další licence</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>Nelze zaregistrovat nového zákazníka partnerské Centrum</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>Domů</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Internetový obchod Tvůrce</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>Vlastní nastavení</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>Nabídky nastavení</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>Nastavení plateb</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Historie objednávek</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Správa odběrů</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>Přejít na domovskou stránku</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>Je požadován název organizace.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>Je třeba zadat zemi.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>1. řádek adresy je vyžadován.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>Je třeba zadat město.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>Pole e-mailu není platná e-mailová adresa.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>Je vyžadována předpona domény.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>Křestní jméno je požadováno.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>Příjmení je povinné.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Telefonní číslo je povinné.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Odhlásit se z aplikace</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>Aktivní</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>Odstraněno</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>Žádný</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>Pozastaveno</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>Datum vytvoření</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>Jméno</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>Množství</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Odběry řízené zákazníkem</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partnera spravovat odběry</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Objednávky</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Klíč služby WMI:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Můžete zadat klíč instrumentation Application Insights chycení telemetrická data z portálu.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Podle způsobu využití odběry</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Předem schválené zákazníci</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Správa zákazníků pro pre-schválené transakce.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"Vybrat vše" si připomeneme všechny současné i budoucí zákazníky jako pre-schválené v obchodě na frontě.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Vybrat vše</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Předem schválené</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Jméno zákazníka</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Název primární domény</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Nelze načíst podrobnosti o předschválený zákazníkovi.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Aktualizace informací o předschválený zákazníky</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Aktualizovány informace o předschválený zákazníkovi</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Nelze uložit předem schválených zákazníkům informace</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Tato transakce je předem schválené. Pořadí zpracování...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Hledat podle názvu společnosti nebo doména</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>PayU typ účtu:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>Můžete vybrat typ účtu test k testování vašich transakcí. Jakmile práci, můžete se přepnout do živého účtu typ začít provádět transakce</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>Klíč obchodníka PayU:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>Zadejte své PayU kupec soli</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU obchodní sůl:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>Zadejte váš klíč obchodníka PayU</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>PayU autorizace</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>Zadejte vaše autorizace PayU</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>Poskytnout PayUMoney obchodník nastavení účtu</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>Chcete-li vytvořit nový obchodní účet, pokud nemáte jeden.</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Přijímat platby od zákazníků, by měla použít PayUMoney obchodní účet, navštivte:</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>Dohoda ID uživatele:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>Identifikátor uživatele od partnera být spojena s přijetím dohody Microsoft Cloud.</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>Uživatel neplatný identifikátor.</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>Přijímám</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>podmínky služby</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>Andorra</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>Spojené arabské emiráty</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>Afghánistán</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>Antigua a Barbuda</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>Anguilla</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>Albánie</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>Arménie</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>Nizozemské Antily</value>
+  </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>Antarktida</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>Americká Samoa</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>Rakousko</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>Austrálie</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>Alandské ostrovy</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>Ázerbájdžán</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>Bosna a Hercegovina</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>Bangladéš</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>Belgie</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>Bulharsko</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>Bahrajn</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>Saint-Barthélemy</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>Bermudy</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>Brunej</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>Bolívie</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>Bonaire</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazílie</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>Bahamy</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>Bhútán</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>Bouvetův ostrov</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>Botswana</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>Bělorusko</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>Kanada</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>Kokosové (Keelingovy) ostrovy</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>Kongo (DRC)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>Středoafrická republika</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>Kongo</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>Švýcarsko</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>Pobřeží slonoviny</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>Cookovy ostrovy</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>Kamerun</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>Čína</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>Kolumbie</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>Kostarika</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>Cabo Verde</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>Curaçao</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>Vánoční ostrov</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>Kypr</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>Česko</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>Německo</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>Džibutsko</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>Dánsko</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>Dominika</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>Dominikánská republika</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>Alžírsko</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>Ekvádor</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>Estonsko</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>Egypt</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>Eritrea</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>Španělsko</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>Etiopie</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>Finsko</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>Fidži</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>Falklandské ostrovy</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>Mikronésie</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>Faerské ostrovy</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>Francie</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>Spojené království</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>Gruzie</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>Francouzská Guyana</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>Guernsey</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>Grónsko</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>Gambie</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>Guinea</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>Rovníková Guinea</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>Řecko</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>Jižní Georgie a Jižní Sandwichovy ostrovy</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>Guatemala</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>Guinea-Bissau</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>Guayana</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>Hongkong SAR</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>Heardův ostrov a MacDonaldovy ostrovy</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>Chorvatsko</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>Maďarsko</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>Indonésie</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>Irsko</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>Izrael</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>Isle of Man</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>Indie</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>Britské území v Indickém oceánu</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>Irák</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>Island</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>Itálie</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>Jersey</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>Jamajka</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>Jordánsko</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>Japonsko</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>Keňa</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>Kyrgyzstán</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>Kambodža</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>Komory</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>Svatý Kryštof a Nevis</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>Korea</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>Kuvajt</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>Kajmanské ostrovy</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>Kazachstán</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>Laos</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>Libanon</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>Svatá Lucie</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>Lichtenštejnsko</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>Srí Lanka</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>Libérie</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>Lesotho</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>Litva</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>Lucembursko</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>Lotyšsko</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>Libye</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>Maroko</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>Monako</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>Moldavsko</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>Černá Hora</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>Svatý Martin</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>Madagaskar</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>Marshallovy ostrovy</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>Makedonie</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>Mongolsko</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>Macao SAR</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>Severní Mariánské ostrovy</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>Martinik</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>Mauretánie</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>Mauricius</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>Maledivy</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>Malawi</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>Mexiko</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>Malajsie</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>Mosambik</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>Namibie</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>Nová Kaledonie</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>Ostrov Norfolk</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>Nigérie</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>Nikaragua</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>Nizozemsko</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>Norsko</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>Nepál</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>Nový Zéland</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>Omán</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>Francouzská Polynésie</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>Papua-Nová Guinea</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>Filipíny</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>Pákistán</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>Polsko</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>Saint Pierre a Miquelon</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>Pitcairnovy ostrovy</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>Portoriko</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>Palestinská samospráva</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>Portugalsko</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>Katar</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>Réunion</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>Rumunsko</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>Srbsko</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>Rusko</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>Rwanda</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>Saúdská Arábie</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>Šalamounovy ostrovy</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>Seychely</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>Švédsko</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>Singapur</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>Svatá Helena</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>Slovinsko</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>Svalbard</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>Slovensko</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>Sierra Leone</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>Somálsko</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>Surinam</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>Jižní Súdán</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>Svatý Tomáš a Princův ostrov</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>Salvador</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>Ostrovy Turks a Caicos</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>Čad</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>Francouzská jižní území</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>Thajsko</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>Tádžikistán</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>Timor-Leste</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>Turkmenistán</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>Tunisko</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>Turecko</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>Trinidad a Tobago</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>Tchaj-wan</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>Tanzanie</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>Ukrajina</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>Odlehlé ostrovy USA</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>Spojené státy americké</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>Uzbekistán</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>Vatikánský městský stát</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>Svatý Vincenc a Grenadiny</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>Britské Panenské ostrovy</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>Americké Panenské ostrovy</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>Vietnam</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>Wallis a Futuna</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>Svatý Eustach</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>Jan Mayen</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>Kosovo</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>Saba</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>Jemen</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>Jihoafrická republika</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>Zambie</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>Zimbabwe</value>
+  </data>
+</root>

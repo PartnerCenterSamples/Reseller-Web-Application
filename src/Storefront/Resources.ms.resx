@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>Belakang</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Beli sekarang</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Kosongkan Semua</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Hubungi kami</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Hakcipta Terpelihara 2019</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>Tiada entiti yang ditemui</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>Tidak boleh mendapatkan kandungan portal</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Pertama</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>Portal konfigurasi seolah-olah tidak sah</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Lepas</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Memuatkan</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log masuk</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>Lebih banyak tindakan...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>Kembali ke:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Seterusnya</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>tidak</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>Pemberitahuan yang aktif</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>pemberitahuan baru</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ok</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Kata laluan</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>Portal configuation tidak dijumpai</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Ingat saya</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>Cuba semula</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Daftar keluar</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>Tidak boleh mendapatkan kandungan ciri-ciri</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>Semakin kandungan ciri-ciri</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>Nama pengguna:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>Lihat jubin</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ya</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>Awda mesti memilih sekurang-kurangnya satu tawaran untuk membeli.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>Jumlah amaun</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>Keluarkn troli</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Alamat</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>Akaun pengguna pentadbir</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Pengesahan</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>terima kasih. Pelanggan telah dicipta dan pesanan anda berjaya diproses.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Maklumat pelanggan</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Dilakukan</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Maklumat pelanggan</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Langganan</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Langganan</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Jumlah keseluruhan</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>Tambah langganan</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Meneruskan bayaran</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>Saya Terima terma dan syarat</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>Sila masukkan awalan domain yang sah</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>ID langganan:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>Mengemaskini maklumat Syarikat</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>Bangunan papan pemuka anda</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>Pilih yang menawarkan untuk menjual</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>Menambah kaedah pembayaran</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>Mengalu-alukan</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>kepada anda Web Builder kedai!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>berdasarkan bil</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>Summary:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>Tambah</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Penyesuaian</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>Ciri-ciri:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>Pilih tawaran Microsoft:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Cari mengikut tawaran</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>Harga tahunan:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>Menawarkan sari kata:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>Nama tawaran:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>Menambah ciri-ciri tawaran</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>Menambah ciri-ciri tawaran selepas ini</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>Tambah mata ringkasan tawaran</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>Tambah ringkasan tawaran selepas ini</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Klik untuk mengkonfigurasi penjenamaan Syarikat anda.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>Huraikan ciri-ciri yang memberikan tawaran ini</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>Klik untuk mengkonfigurasi menawarkan anda</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>Tulis sebuah ringkasan tawaran</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>Klik untuk mengkonfigurasi opsyen pembayaran anda</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>Harga:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>Alih keluar sifat tawaran</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>Mengalih keluar ringkasan tawaran</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>Dikonfigurasikan</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>Keperluan konfigurasi</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula maklumat papan pemuka</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>Memperibadikan halaman anda sebelum anda mula menjual</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>Anda sangat baik untuk pergi dan mula menjual!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>Tambah satu tawaran baru</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>Penyesuaian</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Hapus</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>Menghapuskan tawaran</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>Menghapuskan menawarkan</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description/kawalan</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Tiada tawaran yang ditemui</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>Anda tidak mempunyai mana-mana tawaran yang dikonfigurasikan. Klik Tambah tawaran di atas mula menambah tawaran anda.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>Microsoft menawarkan</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula tawaran Microsoft</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Tawaran</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>Boleh diperbaharui secara automatik</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>Boleh dibeli</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>Tawaran telah dihapuskan</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>Tidak dapat menghapuskan tawaran yang</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>Secara manual boleh diperbaharui</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>Tidak dapat menyimpan tawaran</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>Tawaran yang berjaya diselamatkan!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula tawaran</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>Mendapatkan semula tawaran</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>Tersedia untuk pembelian</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Simpan</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>Simpan tawaran</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>Tawaran penjimatan</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>tempat duduk</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>Sila pilih tawaran</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>untuk</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>Mengemaskini tawaran</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>Nama organisasi anda</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Buat asal</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula rakan kongsi jenama</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>Mendapatkan semula rakan penjenamaan</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>Mengkonfigurasi kedai web anda</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>Berikan maklumat organisasi anda yang boleh dilihat dalam pengepala dan pengaki di semua muka surat</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>Tidak dapat menyimpan penjenamaan</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>Mengemaskini maklumat penjenamaan</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>Penjenamaan disimpan. Klik butang Muat semula bar tajuk untuk melihat perubahan anda</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>Jualan hubungi:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>Hubungi sokongan:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>E-mel sokongan</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>Header Image:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>Ditunjukkan di bahagian atas halaman rumah. (.jpg, .jpeg, .img, .gif). Meng-upload file atau masukkan URL imej yang sah</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>Pilih fail imej Header dari komputer anda</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>Ditunjukkan dalam pengepala setiap halaman, imej saiz 32 oleh 32 kerja terbaik. Meng-upload file atau masukkan URL imej yang sah</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>Pilih fail imej logo organisasi dari komputer anda</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>Nama:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>Nama undang-undang Syarikat, ditunjukkan pada pengepala halaman setiap</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>Nombor telefon</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>Portal tambah nilai</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>Portal ini untuk melihat perubahan anda reload</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>Buat asal perubahan penjenamaan tempatan</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula maklumat pembayaran</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>Mendapatkan semula maklumat pembayaran</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>Akaun Live</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>Menyediakan PayPal Pro anda seting akaun</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>untuk membuat akaun pro baru jika anda tidak mempunyai satu.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Untuk menerima bayaran daripada pelanggan-pelanggan anda, anda perlu menggunakan akaun pro PayPal, sila lawati:</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>Jenis akaun PayPal:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>Anda boleh memilih jenis akaun ujian untuk menguji transaksi anda. Setelah bekerja, anda boleh menukar kepada sejenis akaun live untuk mula menjalankan</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>PayPal ID pelanggan:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>Sila masukkan ID pelanggan PayPal anda</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>Rahsia pelanggan PayPal:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>Masukkan rahsia klien PayPal anda</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>Akaun Sandbox</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>Buat asal perubahan pembayaran tidak disimpan</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>Tidak dapat menyimpan maklumat pembayaran</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>Pengemaskinian maklumat pembayaran</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>Maklumat pembayaran yang dikemaskini</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>Alamat baris 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>Alamat baris 2</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>Bandar</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>Negara</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>Maklumat syarikat</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>Maklumat untuk dihubungi</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Awalan domain anda akan muncul selepas itu @ alamat e-mel domain anda. Mestilah unik dan ia tidak boleh mengandungi apa-apa punctuations. Contoh: yourcompany.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>Awalan domain</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>Alamat e-mel</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>Sila pastikan anda masukkan alamat email yang sah. Ia akan menjadi tujuan utama perhubungan untuk menghantar maklumat yang penting untuk anda bermula dan untuk menyediakan data-data pembayaran anda.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>Nama pertama</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>Nama bapa/keluarga</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Ini akan menjadi id pengguna anda akan menggunakan dengan akaun Office 365.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>Nama pengguna</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>Negeri/Wilayah</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>Zip / Poskod</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-Tidak dibayar</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>Konfigurasi Laman web anda</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>Laman web ini yang masih dalam pembinaan. Sila layari kemudian.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula tawaran</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>Jumlah yang dibayar pada</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>Harga yang dibayar</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>Kadar</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>Memperbaharui</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>Tambahan kerusi</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Dibeli</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>Pembaharuan</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>Tidak boleh mendaftar pelanggan. Sila cuba nanti.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>Mendaftarkan pelanggan...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Menyediakan perintah dan mengarah ke pintu gerbang pembayaran...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>Kesilapan pendaftaran perintah</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>Membeli lebih banyak langganan</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>Lesen-lesen</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>Pro-rata</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>Pilih satu atau lebih tawaran</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>Anda tidak mempunyai hak yang diperlukan untuk memasuki kawasan ini</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>Ralat pengemaskinian perintah</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>Jadilah satu ralat input yang dihadapi. Sila semak input dan cuba lagi.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>Domain tidak disediakan. Sila masukkan satu lagi domain awalan</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>Imej-imej yang dipilih adalah terlalu besar. Sila tentukan gambar yang lebih kecil atau muat naik satu persatu</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>Sila nyatakan alamat yang sah</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Sila pilih fail imej yang sah untuk meng-upload</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>Adakah anda pasti anda mahu menghapus tawaran terpilih? Jika pelanggan anda telah membeli tawaran ini, langganan yang dibeli masih akan dilayan tetapi tidak akan diperbaharui.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>Sila Salin akaun pengguna pentadbir dan kata laluan dan simpan di tempat yang selamat. Anda tidak akan mampu mendapatkannya setelah anda meninggalkan Laman ini.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>tamat tempoh pada</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>Harga yang dibayar akan dipaparkan pro-rata seperti yang berkenaan.</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>Harga tahunan</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>Sila tambah langganan</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Laman Utama</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>Paparan maklumat</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>Rakan kongsi bebas pentadbir tidak dibenarkan untuk mendaftar masuk.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>Hubungi jualan</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>E-mel:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>Telefon:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>Sila betulkan input tidak sah:</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>Kami tidak dapat memproses permintaan anda pada masa ini. Sila cuba nanti atau hubungi kami melalui e-mel. Butiran ralat-</value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>Subcription hanya satu boleh dikemaskini.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>Menyediakan perintah dan mengarah ke pintu gerbang pembayaran...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>Ralat semasa menambah langganan.</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>Kami tidak dapat memproses pembayaran anda –</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>Boleh tidak permulaan portal ini</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>Konfigurasi pembayaran tidak sah.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>Pembayaran anda akan diproses pada masa ini. Sila hubungi kami melalui e-mel.</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>Tidak sah pengepala imej Uri. Sila pastikan Uri tersebut adalah sah.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Jadilah satu masalah dalam salah satu bidang yang anda masukkan:</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>Logo Pertubuhan tidak sah Uri. Sila pastikan Uri tersebut adalah sah.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>Privasi yang tidak sah Uri. Sila pastikan Uri tersebut adalah sah.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>Privasi</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>Pautan privasi:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>Anda boleh menentukan pautan yang menunjukkan Privasi Terma kepada pelanggan-pelanggan anda di sini yang akan muncul dalam pengaki halaman rumah</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Lihat terma-terma privasi laman web ini</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula akaun anda. Sila cuba lagi nanti.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula langganan anda. Sila cuba lagi nanti.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>Jualan e-mel</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>Memperbaharui langganan</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>Nama organisasi</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>Hubungan utama</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula maklumat tawaran. Sila cuba lagi nanti.</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>Satu atau lebih bidang adalah tidak sah. Sila betulkan mereka dan kemudian hantar.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>Membuat tempahan</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>Jumlah Tahunan</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>Memilih tawaran</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>Memilih tawaran yang anda ingin menjual</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>Menawarkan satu atau lebih yang anda cuba tambah telah pun wujud. Anda boleh menambah lebih banyak lesen langganan sedia ada.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>pengguna/tahun</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>Sila masukkan hubungan telefon jualan yang sah</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>Sila masukkan telefon sokongan perhubungan yang sah</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Maklumat pembayaran yang dikumpul, mewujudkan pelanggan dan pemprosesan pesanan...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Maklumat pembayaran dikumpul, kini pemprosesan pesanan...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>Menambah tempat duduk untuk langganan.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>Menambah langganan.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>Memperbaharui langganan.</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>Ralat memproses perintah. Sila cuba semula kemudian.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Kegagalan dalam pemprosesan pesanan. Sila klik selesai dan cuba lagi.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>Kegagalan dalam menerima maklumat pembayaran. Klik selesai untuk mencuba lagi.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>Berjaya menerima maklumat pembayaran. Pemprosesan pesanan...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Pengesahan</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>Arahan pendaftaran anda telah berjaya diproses.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>Kegagalan dalam menerima maklumat pembayaran. Sila login dan tambah langganan.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>Kami tidak dapat memproses pembayaran anda.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>Ditunjukkan dalam kenalan kami seksyen pengepala</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} AD penyewa sudah berdaftar kepada pelanggan Pusat rakan kongsi: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>nombor</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} mesti lebih besar dari sifar</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>rentetan</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} tidak ditetapkan</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() gagal: {0}, SubscriptionId: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>Menyediakan jenis fail imej untuk logo organisasi</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>Logo Pertubuhan tidak sah URI naik</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>Menyediakan jenis fail imej untuk imej header</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>Upload gambar tajuk tidak sah URI</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>Perjanjian tidak sah privasi URI naik</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>Satu ralat berlaku semasa memproses permintaan anda.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>Ralat</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>Operasi tidak sah dilakukan.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>Perintah perlu mempunyai sekurang-kurangnya satu item langganan.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>Cara bayaran tidak disokong</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>Harga tawaran hendaklah lebih daripada sifar</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>MicrosoftOfferId mesti disetkan</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>ID mesti GUID sah</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>Gagal untuk mengemaskini pengekalan menawarkan rakan kongsi</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>Tawaran Microsoft tidak dibenarkan dikemaskini. Membuat tawaran yang baru sebagai ganti.</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>Tawaran yang tidak dijumpai</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>Seksyen ContactUs yang tidak dijumpai dalam konfigurasi penjenamaan portal</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>Hubungan yang tidak sah kami alamat e-mel</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>Tidak sah hubungi telefon</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>Tidak sah jualan hubungi alamat e-mel</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>Telefon jualan hubungan yang tidak sah</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>Menambah lebih banyak lesen</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>Tidak boleh mendaftar pelanggan Pusat rakan kongsi baru</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>Rumah</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Kedai web Builder</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>Persediaan penjenamaan</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>Persediaan menawarkan</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>Bayaran persediaan</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Sejarah perintah</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Menguruskan langganan</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>Pergi ke Laman Utama</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>Nama organisasi adalah diperlukan.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>Negara ini diperlukan.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>Alamat baris 1 adalah diperlukan.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>Bandar adalah diperlukan.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>Dalam bidang e-mel bukanlah satu alamat e-mel yang sah.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>Awalan domain adalah diperlukan.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>Nama pertama adalah diperlukan.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>Nama bapa/keluarga yang diperlukan.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Nombor telefon yang diperlukan.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Daftar keluar dari permohonan</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>Dihapuskan</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>Tiada seorang pun</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>Digantung</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>Tarikh dicipta</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>Nama</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>Kuantiti</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Langganan pelanggan yang berjaya</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Rakan kongsi diuruskan langganan</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Perintah-perintah</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Kekunci peralatan:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Anda boleh menentukan suatu wawasan permohonan peralatan utama untuk menawan data telemetry dari portal ini.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Penggunaan berasaskan langganan</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Pelanggan yang diluluskan terlebih dahulu</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Menguruskan pelanggan untuk transaksi yang diluluskan terlebih dahulu.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"Pilih semua" akan tandakan semua semasa dan masa depan pelanggan sebagaimana yang diluluskan terlebih dahulu untuk membincangkan di hadapan kedai.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Pilih semua</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Pra-lulus</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Nama pelanggan</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Nama domain primer</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Tidak dapat mendapatkan semula maklumat pelanggan yang diluluskan terlebih dahulu.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Mengemaskini maklumat pelanggan yang diluluskan terlebih dahulu</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Diluluskan terlebih dahulu Baca maklumat yang kemas kini</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Tidak dapat menyimpan pelanggan yang diluluskan terlebih dahulu maklumat</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Urus niaga ini adalah pra-lulus. Pemprosesan pesanan...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Carian nama Syarikat atau domain</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>Jenis akaun PayU:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>Anda boleh memilih jenis akaun ujian untuk menguji transaksi anda. Setelah bekerja, anda boleh menukar kepada sejenis akaun live untuk mula menjalankan</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>Saudagar PayU kekunci:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>Masukkan anda PayU Saudagar garam</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU Saudagar garam:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>Masukkan kunci Saudagar PayU</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>Kebenaran PayU</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>Masukkan kebenaran PayU anda</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>Menyediakan peniaga PayUMoney seting akaun</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>untuk membuat akaun Saudagar yang baru jika anda tidak mempunyai satu.</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Untuk menerima bayaran daripada pelanggan-pelanggan anda, anda perlu menggunakan akaun Saudagar PayUMoney, sila lawati:</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>ID pengguna Perjanjian:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>Pengecam pengguna daripada rakan kongsi tidak dikaitkan dengan penerimaan perjanjian awan Microsoft.</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>Pengenal pasti pengguna yang tidak sah.</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>Saya terima di</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>syarat-syarat Perkhidmatan</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>Andorra</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>Emiriah Arab Bersatu</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>Afghanistan</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>Antigua dan Barbuda</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>Anguilla</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>Albania</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>Armenia</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>Antillen Belanda iaitu</value>
+  </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>Antartika</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>Amerika Syarikat</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>Åland Islands</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>Azerbaijan</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>Bosnia dan Herzegovina</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>Bangladesh</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>Bulgaria</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>Bahrain</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>Saint-Barthélemy</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>Brunei</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>Bolivia</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>Bonaire</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>Bahamas</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>Bhutan</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>Bouvet Island</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>Botswana</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>Belarus</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>Kanada</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>Kepulauan Cocos (Keeling)</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>Congo (di DRC)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>Republik Afrika tengah</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>Congo</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>Côte d'Ivoire</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>Kepulauan Cook</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>Cameroon</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>Colombia</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>Costa Rica</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>Cabo Verde</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>Curaçao</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>Pulau Krismas</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>Cyprus</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>Czechia</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>Jerman</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>Djibouti</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>Dominica</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>Republik Dominika</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>Algeria</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>Ecuador</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>Estonia</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>Mesir</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>Eritrea</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>Sepanyol</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>Habsyah</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>Fiji</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>Kepulauan Falkland</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>Micronesia</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>Kepulauan Faroe</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>Perancis</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>Guiana Perancis</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>Guernsey</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>Greenland</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>Gambia</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>Guinea</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>Emiriah Arab Bersatu</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>Greece</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>Georgia Selatan dan Pulau-pulau Selatan Sandwich</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>Guatemala</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>Guinea-Bissau</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>Negara Guyana</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>Hong Kong SAR</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>Heard Pulau dan Pulau-pulau McDonald</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>Croatia</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>Hungary</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>Indonesia</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>Israel</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>Isle of Man</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>Wilayah Lautan India British</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>Iraq</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>Iceland</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>Itali</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>Jersi</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>Jamaica</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>Jordan</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>Jepun</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>Kenya</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>Kyrgyzstan</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>Kemboja</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>Comoros</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>Saint Kitts and Nevis</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>Korea</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>Kuwait</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>Cayman Islands</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>Kazakhstan</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>Laos</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>Lubnan</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>Saint Lucia</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>Liechtenstein</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>Liberia</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>Lesotho</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>Lithuania</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>Luxembourg</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>Latvia</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>Libya</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>Maghribi</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>Monaco</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>Moldova</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>Montenegro</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>Saint Martin</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>Madagascar</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>Kepulauan Marshall</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>Amerika Syarikat</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>Mongolia</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>SAR Macau</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>Kepulauan Mariana Utara</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>Martinique</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>Mauritania</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>Mauritius</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>Maldives</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>Malawi</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>Malaysia</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>Mozambique</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>Namibia</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>New Caledonia</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>Pulau Norfolk</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>Arab Saudi</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>Nicaragua</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>Belanda</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>Oman</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>Papua New Guinea</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>Filipina</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>Saint Pierre dan Miquelon</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>Pulau Pitcairn</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>Puerto Rico</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>Pihak Berkuasa Palestin</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>Qatar</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>Réunion</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>Romania</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>Serbia</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>Rusia</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>Rwanda</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>Arab Saudi</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>Kepulauan Solomon</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>Seychelles</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>Singapura</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>Saint Helena</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>Slovenia</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>Svalbard</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>Slovakia</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>Sierra Leone</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>Somalia</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>Suriname</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>Sudan Selatan</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>São Tomé dan Príncipe</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>El Salvador</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>Kaum Turk dan Pulau-pulau Caicos</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>Chad</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>Wilayah Selatan Perancis</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>Tajikistan</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>Timor-gerak</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>Turkmenistan</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>Tunisia</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>Turki</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>Trinidad dan Tobago</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>Taiwan</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>Tanzania</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>Ukraine</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>Pulau-pulau yang Syarikat di Amerika Syarikat</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>Amerika Syarikat</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>Uzbekistan</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>Vatican City</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>Saint Vincent and the Grenadines</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>Kepulauan Virgin British</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>Kepulauan Virgin Amerika Syarikat</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>Vietnam</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>Alatan peribadi</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>Sint Eustatius</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>Jan Mayen</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>Kosovo</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>Saba</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>Yaman</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>Afrika Selatan</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>Zambia</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>Zimbabwe</value>
+  </data>
+</root>
