@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>Atpakaļ</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Pirkt tagad</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Atcelt</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Notīrīt visus</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Sazinieties ar mums</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Autortiesības © 2019</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>Nav atrasts entītiju</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>Nevarēja saņemt portāla saturs</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Pirmais</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>Portāla konfigurācija, šķiet, ir nederīgs</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Pēdējais</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Ielāde</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Pieteikšanās</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>Citas darbības...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>Doties atpakaļ uz:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Nākamo</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>nē</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>Aktīvā paziņojumus</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>jaunu paziņojumu</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>labi</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Parole</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>Nevar atrast portāla configuation</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Atcerēties mani</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>Mēģināt vēlreiz</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Izrakstīties</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>Nevar iegūt satura elements</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>Līdzeklis satura iegūšana</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>Lietotāja vārds:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>Mozaīkas skatā</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>jā</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>Ir jāatlasa vismaz viens piedāvājums iegādāties.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>Kopējā summa</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>Noņemt no ratiem</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adrese</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>Admin lietotāja kontu</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Apstiprinājums</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>paldies. Klientam tika izveidota un jūsu pasūtījums ir veiksmīgi apstrādāta.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Klientu informāciju</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Darīts</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Informāciju par klientiem</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Abonements</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Abonementi</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Kopā</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>Pievienot abonentu</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Doties uz maksājumu</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>Es piekrītu noteikumiem un nosacījumiem</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>Lūdzu, ievadiet derīgu domēna prefiksa</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>Abonementa ID:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>Atjaunināt jūsu uzņēmuma informāciju</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>Veidojot savu informācijas paneli</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>Izvēlēties, kuras piedāvā pārdot</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>Pievienotu maksāšanas metodei</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>laipni lūdzam</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>lai jūsu Web Store celtnieks!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>pamatojoties norēķinu</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>Kopsavilkums:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>Pievienot</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Pielāgošanas</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>Iezīmes:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>Atlasiet Microsoft piedāvā:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Pārmeklēt, piedāvājums</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>Gada cenu:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>Piedāvāju apakšvirsrakstu:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>Piedāvājuma nosaukums:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>Pievienot piedāvājumu funkcijas</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>Pievienot piedāvājumu funkciju pēc šī</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>Pievienot piedāvājumu kopsavilkuma punkti</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>Pievienot pēc šā piedāvājuma kopsavilkums</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Noklikšķiniet uz konfigurēt jūsu uzņēmuma zīmolu.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>Šis piedāvājums dod iespēju aprakstīt</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>Noklikšķiniet uz konfigurēt jūsu piedāvājumus</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>Rakstīt kopsavilkumu par piedāvājumu</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>Noklikšķiniet uz konfigurēt maksāšanas iespējas</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>Cena:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>Noņemt piedāvāt līdzekli</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>Noņemt piedāvājuma kopsavilkums</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>Konfigurēts</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>Nepieciešami konfigurācijas</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>Nevarēja izgūt informāciju vadības paneli</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>Personalizēt jūsu vietni, pirms jūs sākat pārdot</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>Jums ir labi iet un sākt pārdot!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>Pievienot jaunu piedāvājumu</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>Pielāgošanas</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Dzēst</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>Dzēst Offer(s)</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>Piedāvājumu dzēšana</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Apraksts</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Nevienu piedāvājumu, atrada</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>Jums nav jebkuru piedāvājumu konfigurēta. Noklikšķiniet uz Pievienot piedāvāt iepriekš sākt pievienojot jūsu piedāvājumus.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>Microsoft piedāvā</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>Nevarēja izgūt Microsoft piedāvā</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Piedāvājums</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>Automātiski atjaunojamu</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>Var iegādāties</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>Piedāvājumi ir izdzēsts</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>Nevarēja dzēst offer(s)</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>Manuāli atjaunot</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>Nevarēja saglabāt šo piedāvājumu</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>Veiksmīgi saglabāta piedāvājumu!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>Nevarēja izgūt piedāvājumi</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>Izgūstot piedāvājumi</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>Nav pieejams iegādei</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Saglabāt</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>Saglabāt piedāvājumā</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>Saglabājot piedāvājums</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>sēdekļi</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>Lūdzu, izvēlieties kādu no piedāvājumiem</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>lai</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>Piedāvājumu atjaunināšana</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>Organizācijas nosaukums</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Atsaukt</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>Nevarēja izgūt partnera zīmolu</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>Izgūstot partnera zīmolu</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>Konfigurēt interneta veikalā</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>Nodrošināt jūsu uzņēmuma informāciju, kas būs redzamas galvenes un kājenes visās lappusēs</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>Nevarēja saglabāt zīmolu</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>Brendings informācijas atjaunināšana</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>Brendings saglabāt. Noklikšķiniet uz pogas pārlādēt, galvenes joslā, lai redzētu veiktās izmaiņas</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>Pārdošanas Kontaktpersona:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>Atbalstīt kontaktpersona:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>Atbalstu e-pastu</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>Header Image:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>Parādīta mājas lapas augšdaļā. (. jpg,. JPEG, IMG,. gif). Augšupielādēt failu, vai ievadiet derīgu attēlu URL</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>Atlasiet virsraksta attēla failu no datora</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>Parādīta katras lappuses galvenē, attēlu izmērs 32, 32 darbojas vislabāk. Augšupielādēt failu, vai ievadiet derīgu attēlu URL</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>Atlasiet organizācijas logo attēla failu no datora</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>vārds:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>Uzņēmuma juridiskais nosaukums, liecina par katras lappuses galvenē</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>Tālruņa numurs</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>Pārlādēt portāls</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>Lai redzētu veiktās izmaiņas portāla pārlādēt</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>Atsaukt vietējā zīmola izmaiņas</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>Nevarēja izgūt maksājumu informācija</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>Izgūstot maksājumu informācija</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>Live kontu</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>Nodrošināt jūsu PayPal Pro kontu iestatījumi</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>lai izveidotu jaunu pro kontu, ja jums tāda vēl nav.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>No saviem klientiem saņemt maksājumus, būtu izmantot PayPal pro kontu, lūdzu apmeklējiet:</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>PayPal konta tips:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>Var izvēlēties testa konta tipu, lai pārbaudītu jūsu veiktās darbības. Kad strādā, jūs varat pārslēgties uz dzīvot kontu tipa sākt transakcijas</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>PayPal klienta ID:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>Ievadiet jūsu PayPal klienta ID</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>PayPal klienta noslēpumu:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>Ievadiet jūsu PayPal klienta noslēpums</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>Smilšu kastes kontu</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>Nesaglabātu maksājumu izmaiņu atsaukšana</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>Nevarēja saglabāt maksājumu informācija</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>Maksājuma informācijas atjaunināšana</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>Atjaunināta informācija par maksājumu</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>Adreses rindiņa 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>Adreses rindiņa 2</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>Pilsēta</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>Valsts</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>Saites Company Information</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>Kontaktinformācija</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Pēc parādīsies jūsu domēna prefiksa @ savu domēna e-pasta adresi. Tam ir jābūt unikālam un tas nevar ietvert jebkuru pieturzīmes. Piemērs: yourcompany.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>Domēna prefiksa</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>E-pasta adresi</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>Pārliecinieties, ka ievadāt derīgu e-pasta adresi. Tas būs galvenais kontaktpunkts, lai nosūtītu jums svarīgu informāciju, lai tu sāktu un lai iestatītu maksājuma datus.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>Vārds</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>Uzvārds</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Tas būs izmantojat Office 365 konta lietotāja id.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>Lietotājvārds</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>Štats/Province</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>Zip / pasta indekss</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-Nomaksas</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>Konfigurēt jūsu mājas lapā</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>Šī mājas lapa ir vēl tapšanas stadijā. Lūdzu, apmeklējiet vēlāk.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>Nevarēja izgūt piedāvājumi</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>Summa, kas samaksāta par</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>Cena, kas samaksāta</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>Likme</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>Atjaunot</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>Papildu sēdvietas</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Pērk</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>Atjaunošana</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>Nevarēja reģistrēt klientu. Lūdzu, mēģiniet vēlāk.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>Reģistrējot klientu...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Sagatavot rīkojumu un novirzot maksājumu vārteja...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>Rīkojumu reģistrācijas kļūda</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>Iegādāties papildu abonementus</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>Licences</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>Pro-rated</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>Atlasiet vienu vai vairākus piedāvājumus</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>Jums nav tiesību, kas nepieciešama, lai piekļūtu šajā jomā</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>Pasūtījumu atjaunināšanas kļūda</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>Tur bija ievades kļūda radusies. Lūdzu, pārbaudiet datus un mēģiniet vēlreiz.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>Domēns nav pieejams. Lūdzu, ievadiet citu domēna prefiksa</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>Izvēlētie attēli ir pārāk lieli. Lūdzu, norādiet mazākus attēlus vai augšupielādēt vienu pēc otra</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>Lūdzu, norādiet derīgu adresi</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Lūdzu, atlasiet derīgu attēlu failu augšupielādei</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>Vai tiešām vēlaties izdzēst atlasīto piedāvājumu? Ja jūsu klienti ir iegādājušies jau šie piedāvājumi, nopirkto abonementu būs cienījams, bet nav pagarināms.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>Lūdzu nokopējiet Admin lietotāja kontu un paroli un saglabājiet drošā vietā. Nevarēs izgūt to pēc tam, kad jūs atstāt šo lapu.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>derīgums beidzas</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>Samaksātā cena tiek rādīts pro-rated vir.</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>Gada cenu</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>Abonementu, lūdzu, pievienojiet</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Mājas lapa</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>Parādīt kontaktinformāciju</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>Partneris nav admins nav atļauts pierakstīties.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>Sazinieties ar pārdošanas</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>E-pasts:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>Tālrunis:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>Lūdzu, izlabojiet nederīga ievade:</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>Mēs nevaram apstrādāt jūsu pieprasījumu šajā laikā. Lūdzu, mēģiniet vēlāk vai sazinieties ar mums pa e-pastu. Kļūdas detaļas-</value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>Var atjaunināt tikai vienu subcription.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>Sagatavot rīkojumu un novirzot maksājumu vārteja...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>Kļūda laikā pievienojot abonementus.</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>Mēs nevaram apstrādāt jūsu maksājumu-</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>Nevarēja ne starta portāls</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>Maksājumu konfigurācija nav derīga.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>Šobrīd nevar apstrādāt jūsu maksājumu. Lūdzu, sazinieties ar mums pa e-pastu.</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>Nederīgs iesākuma attēlu Uri. Lūdzu, pārliecinieties, vai ir derīga Uri.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Tur bija problēma vienā no laukiem ievadītā:</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>Nederīgs organizācijas logo Uri. Lūdzu, pārliecinieties, vai ir derīga Uri.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>Nederīga konfidencialitātes Uri. Lūdzu, pārliecinieties, vai ir derīga Uri.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>Konfidencialitāte</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>Privātuma saite:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>Var norādīt saites, kas parāda konfidencialitātes nosacījumi klientiem šeit, kas parādīsies mājas lappuses kājenē</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Skatītu šīs vietnes konfidencialitātes nosacījumi</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>Nevarēja izgūt jūsu kontā. Lūdzu, vēlāk mēģiniet vēlreiz.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>Nevarēja izgūt savus abonementus. Lūdzu, vēlāk mēģiniet vēlreiz.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>Sales e-pasts</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>Atjaunot abonementu</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>Organizācijas nosaukums</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>Galvenā kontaktpersona</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>Nevarēja izgūt piedāvājuma detaļas. Lūdzu, vēlāk mēģiniet vēlreiz.</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>Vienā vai vairākos laukos ir nederīga. Lūdzu, novērsiet tās un pēc tam iesniegt.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>Vieta jūsu pasūtījumu</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>Gada kopsumma</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>Izvēlēties piedāvājumu</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>Izvēlēties piedāvājumu jūs vēlētos pārdot</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>Vienu vai vairākus piedāvājumus, jūs mēģināt pievienot jau pastāv. Esošo abonementu var pievienot vairākas licences.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>lietotāja/gadā</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>Lūdzu, ievadiet derīgu kontaktpersonu tālruņa pārdošanas</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>Lūdzu, ievadiet derīgu kontaktpersonu atbalsta tālruņa numuru</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Maksājumu informācija apkopota, veidojot klientu un apstrādes kārtību...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Maksājuma Informācija savākta, tagad apstrādes secību...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>Abonementa pievienošana sēdvietas.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>Pievienot abonentu.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>Atjaunojot abonementu.</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>Apstrādes secību, radās kļūda. Lūdzu, mēģiniet vēlreiz vēlāk.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Pasūtījumu apstrādes kļūme. Lūdzu, noklikšķiniet uz gatavs, un mēģiniet vēlreiz.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>Kļūme procesā saņem maksājuma informāciju. Lūdzu, noklikšķiniet uz gatavs, lai mēģinātu vēlreiz.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>Sekmīgi saņemtie maksājuma informāciju. Apstrādes secību...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Apstiprinājums</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>Reģistrācijas secībā tika veiksmīgi apstrādāti.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>Kļūme procesā saņem maksājuma informāciju. Lūdzu, piesakieties un pievienot abonementu.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>Mēs nevaram apstrādāt jūsu maksājumu.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>Parādīja mums kontaktu sadaļu galvenes</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} AD īrnieks jau ir reģistrēts partneris centrs klientu: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>numurs</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} jābūt lielākam par nulli</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>virkne</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} nav iestatīts</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() neizdevās: {0}, SubscriptionId: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>Attēla faila tipa paredz uzņēmuma logotipu</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>Nederīgs organizācijas logo URI augšupielādēts</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>Attēla faila tipa paredzēt header image</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>Nederīgs iesākuma attēlu URI augšupielādēts</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>Nederīga konfidencialitātes līgumu URI augšupielādēts</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>Apstrādājot jūsu pieprasījumu, radās kļūda.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>Kļūda</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>Nederīga operācija tiek veikta.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>Pasūtījumu vajadzētu būt vismaz viena abonementa krājumu.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>Maksāšanas režīms netiek atbalstīts</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>Piedāvājuma cena ir lielāka par nulli</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>MicrosoftOfferId, jānosaka</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>ID jābūt derīgu GUID</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>Neizdevās atjaunināt partneru piedāvājumi noturība</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>Microsoft piedāvājumu atjaunināšana nav atļauta. Tā vietā izveidot jaunu piedāvājumu.</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>Piedāvājums nav atrasts</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>ContactUs sadaļa portāla zīmolu konfigurācijā nav atrasts</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>Nederīgi kontakta mums e-pasta adresi</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>Nederīgs kontaktinformācija tālruņa</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>Nederīgi kontakta pārdošanas e-pasta adresi</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>Nederīgs kontaktpersonas tālruņa pārdošanas</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>Pievienot vairākas licences</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>Nevarēja reģistrēt jaunu partneru centra klientu</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>Mājas</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Web Store celtnieks</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>Brendings Setup</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>Piedāvā uzstādīšanas</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>Maksājuma iestatījumu</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Pasūtījumu vēsture</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Pārvaldītu abonementus</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>Doties uz sākumlapu</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>Organizācijas nosaukums ir obligāts.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>Valstij ir vajadzīga.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>Ir vajadzīga adreses rinda 1.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>Pilsēta ir nepieciešama.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>E-pasta jomā nav derīga e-pasta adrese.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>Domēna prefiksam nav nepieciešama.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>Pirmais nosaukums ir obligāts.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>Pēdējais nosaukums ir obligāts.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Ir jānorāda tālruņa numurs.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Izrakstieties no programmas</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>Aktīvs</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>Dzēsts</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>Neviens</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>Suspendētie</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>Izveidotās datumu</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>vārds</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>Daudzums</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>Statuss</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Pārvaldīts debitors abonementi</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partneri, kas pārvalda abonementi</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Pasūtījumi</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentācijas taustiņš:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Pieteikums atziņas instrumentācijas atslēgu var norādīt, lai attēlotu telemetrijas datus no portāla.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Lietojuma pamatā abonementi</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Iepriekš apstiprināti klienti</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Pārvaldīt debitorus pēc iepriekš apstiprinātas darbības.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"Atzīmējiet visas" iezīmēs visas pašreizējās un nākotnes klientiem kā iepriekš apstiprinātās noslēgt veikala priekšā.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Atlasīt visu</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Iepriekš apstiprinātas</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Debitora nosaukums</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Primāro domēnu</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Nevarēja izgūt informāciju iepriekš apstiprināto klientu.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Iepriekš apstiprinātās klientu informācijas atjaunināšana</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Iepriekš apstiprinātās klientu Informācija atjaunināta</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Nevarēja saglabāt iepriekš apstiprināto klientu informāciju</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Šī darbība ir iepriekš apstiprināti. Apstrādes secību...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Meklēt pēc uzņēmuma nosaukumā vai domēnu</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>PayU konta tips:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>Var izvēlēties testa konta tipu, lai pārbaudītu jūsu veiktās darbības. Kad strādā, jūs varat pārslēgties uz dzīvot kontu tipa sākt transakcijas</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>PayU Merchant taustiņš:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>Ievadiet jūsu PayU Merchant sāls</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU komersanta sāls:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>Ievadiet atslēgu PayU Merchant</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>PayU autorizācija</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>Ievadiet PayU autorizācija</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>Nodrošināt PayUMoney tirgotāja konta iestatījumus</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>izveidot jaunu tirgotāja kontu, ja jums tāda vēl nav.</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Saņemt maksājumus no saviem klientiem, būtu izmantot PayUMoney tirgotāja kontu, lūdzu apmeklējiet:</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>Līguma lietotāja ID:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>No partnera ar Microsoft mākonis līguma pieņemšanu saistāmie lietotāja identifikatoru.</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>Nederīgs lietotāja identifikatoru.</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>Es piekrītu</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>pakalpojumu sniegšanas noteikumi</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>Andora</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>Apvienotie Arābu Emirāti</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>Afganistāna</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>Antigva un Barbuda</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>Angviļa (Āfrika)</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>Albānija</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>Armēnija</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>Nīderlandes Antiļas</value>
+  </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>Antarktīda</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>Argentīna</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>Amerikāņu Samoa</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>Austrija</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>Austrālija</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>Olandes salas</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>Azerbaidžāna</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>Bosnija un Hercegovina</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>Barbadosa</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>Bangladeša</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>Beļģija</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>Burkinafaso</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>Bulgārija</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>Bahreina</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>Benina</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>Senbartelmī</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>Bermudu salas</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>Bruneja</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>Bolīvija</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>Bonaire</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazīlija</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>Bahamu salas</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>Butāna</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>Buvē sala</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>Botsvāna</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>Baltkrievija</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>Beliza</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>Kanāda</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>Kokosu (Kīlinga) salas</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>Congo (DRC)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>Centrālāfrikas Republika</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>Kongo</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>Šveice</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>Ziloņkaula krasts</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>Kuka salas</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>Čīle</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>Kamerūna</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>Ķīna</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>Kolumbija</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>Kostarika</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>Cabo Verde</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>Kirasao</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>Ziemassvētku sala</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>Kipra</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>Czechia</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>Vācija</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>Djibouti</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>Dānija</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>Dominika</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>Dominikāna</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>Alžīrija</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>Ekvadora</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>Igaunija</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>Ēģipte</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>Eritreja</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>Spānija</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>Etiopija</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>Somija</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>Fidži</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>Folklenda salas</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>Micronesia</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>Fēru salas</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>Francija</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>Gabona</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>Lielbritānija</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>Grenāda</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>Gruzija</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>Franču Gviāna</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>Gērnsija</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>Gana</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>Gibraltārs</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>Grenlande</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>Gambija</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>Gvineja</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>Gvadelupa</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>Ekvatoriālā Gvineja</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>Grieķija</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>Dienviddžordžija un Dienvidsendviču salas</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>Gvatemala</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>Guama</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>Gvineja-Bisava</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>Gajāna</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>Honkongas īpašās pārvaldes apgabals</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>Heard Island un McDonald Islands</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>Hondurasa</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>Horvātija</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>Ungārija</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>Indonēzija</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>Īrija</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>Izraēla</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>Menas sala</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>Indija</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>Britu Indijas okeāna teritorija</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>Irāka</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>Islande</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>Itālija</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>Jersey</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>Jamaika</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>Jordānija</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>Japāna</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>Kenija</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>Kirgīzija</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>Kambodža</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>Komoru salas</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>Sentkitsa un Nevisa</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>Koreja</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>Kuveita</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>Kaimanu salas</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>Kazahstāna</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>Laosa</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>Libāna</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>Sentlūsija</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>Lihtenšteina</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>Libērija</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>Lesoto</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>Lietuva</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>Luksemburga</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>Latvija</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>Lībija</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>Maroka</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>Monako</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>Moldova</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>Melnkalne</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>Senmartēna</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>Madagaskara</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>Māršala salas</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>Maķedonija</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>Mjanma</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>Mongolija</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>Makao</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>Ziemeļu Marianas salas</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>Martinika</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>Mauritānija</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>Montserrata</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>Maurīcija</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>Maldīvija</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>Malāvija</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>Meksika</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>Malaizija</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>Mozambika</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>Namībija</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>New Caledonia</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>Norfolkas sala</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>Nigērija</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>Nikaragva</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>Nīderlande</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>Norvēģija</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>Nepāla</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>Jaunzēlande</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>Omāna</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>Franču Polinēzija</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>Papua-Jaungvineja</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>Filipīnas</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>Pakistāna</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>Polija</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>Senpjēra un Mikelona</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>Pitkērnas salas</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>Puertoriko</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>Palestīniešu pašpārvalde</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>Portugāle</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>Paragvaja</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>Katara</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>Réunion</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>Rumānija</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>Serbija</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>Krievija</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>Ruanda</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>Saūda Arābija</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>Zālamana salas</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>Seišelu salas</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>Zviedrija</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>Singapūra</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>Sv. Helēnas sala</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>Slovēnija</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>Svalbāra</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>Slovākija</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>Sierra Leone</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>Senegāla</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>Somālija</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>Surinama</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>South Sudāna</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>Santomes un Prinsipi</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>Salvadora</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>Tērksas un Kaikosas salas</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>Čada</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>Francijas dienvidjūru teritorija</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>Taizeme</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>Tadžikistāna</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>Timor-Leste</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>Turkmenistāna</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>Tunisija</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>Turcija</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>Trinidāda un Tobāgo</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>Taivāna</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>Tanzānija</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>Ukraina</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>ASV aizjūras salas</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>Amerikas Savienotās Valstis</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>Urugvaja</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>Uzbekistāna</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>Vatikāns</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>Sentvinsenta un Grenadīnas</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>Venecuēla</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>Britu Virdžīnu salas</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>ASV Virdžīnu salas</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>Vjetnama</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>Volisa un Futuna</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>Sint Eustatius</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>Jan Mayen</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>Kosova</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>Saba</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>Jemena</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>Majota</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>Dienvidāfrikas Republika</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>Zambija</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>Zimbabve</value>
+  </data>
+</root>

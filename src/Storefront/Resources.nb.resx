@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>Tilbake</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Kjøp nå</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Fjern alle</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Kontakt oss</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2019</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>Ingen enheter funnet</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>Kan ikke hente portalinnhold</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Første</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>Portal configuration synes å være ugyldig</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Siste</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Lasting</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Logg inn</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>Flere handlinger...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>Gå tilbake til:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Neste</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>nei</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>Aktive varsler</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>nye meldinger</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ok</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Passord</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>Finner ikke Portal configuation</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Husk meg</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>Prøv på nytt</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Logg</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>Kan ikke hente funksjonen innholdet</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>Få funksjon innhold</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>Brukernavn:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>Vis fliser</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>ja</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>Du må velge minst ett tilbud om å kjøpe.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>Totalbeløp</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>Fjern fra kurv</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>Brukerkontoen</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Bekreftelse</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>takk. Kunden ble opprettet og bestillingen ble behandlet.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Kundeinformasjon</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Gjort</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>Kundeinformasjon</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Abonnement</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>Abonnementer</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Totalt</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>Legge til abonnementer</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Fortsett til betaling</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>Jeg godtar vilkårene</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>Angi et gyldig domene prefiks</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>Abonnements-ID:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>Oppdatere firmainformasjonen</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>Bygge dashbordet</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>Velg som tilbyr å selge</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>Legger til en betalingsmåte</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>velkommen</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>din Web-butikk Builder!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>basert fakturering</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>Sammendrag:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>Legge til</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Tilpasning</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>Funksjoner:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>Velg en Microsoft-tilbud:</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>Søk etter tilbud</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>Årlig pris:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>Tilby undertittel:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>Tilbud navn:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>Legge til tilbud funksjoner</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>Legge tilbud funksjonen etter dette</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>Legge tilbud Sammendrag poeng</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>Legge til tilbudet Sammendrag etter dette</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Klikk for å konfigurere din bedrift merkevarebygging.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>Beskriv en funksjon dette tilbudet gir</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>Klikk for å konfigurere din tilbud</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>Skriv et tilbud Sammendrag</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>Klikk for å konfigurere betalingsalternativene</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>Pris:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>Fjerne tilbud funksjon</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>Fjerne tilbud Sammendrag</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>Konfigurert</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>Trenger konfigurasjon</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>Kan ikke hente instrumentbord-informasjon</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>Tilpasse webområdet før du selger</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>Du er god til å gå og begynne å selge!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>Legge til et nytt tilbud</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>Tilpasning</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Slette</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>Slette Offer(s)</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>Slette tilbud</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>Ingen tilbud funnet</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>Du har ikke noen tilbud konfigurert. Klikk Legg tilbyr over å begynne å legge dine tilbud.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>Microsoft-tilbud</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>Kan ikke hente Microsoft tilbyr</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Tilbud</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>Automatisk fornybar</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>Tilgjengelig for kjøp</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>Tilbud er slettet</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>Kan ikke slette offer(s)</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>Manuelt fornybar</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>Kan ikke lagre tilbudet</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>Tilbud lagret!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>Kan ikke hente tilbud</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>Hente tilbud</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>Tilgjengelig for kjøp</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Lagre</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>Lagre tilbud</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>Lagre tilbud</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>seter</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>Velg et tilbud</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>til</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>Oppdatere tilbud</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>Navnet på organisasjonen</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Angre</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>Kan ikke hente partner merkevarebygging</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>Henting partner merkevarebygging</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>Konfigurere din nettbutikk</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>Angi organisasjonsinformasjonen som vises i toppteksten og bunnteksten på alle sider</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>Kan ikke lagre merkevarebygging</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>Oppdatere merkeinformasjon</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>Merkevarebygging lagret. Klikk Oppdater i topptekstfeltet å se endringer</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>Salg kontakt:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>Støtte kontakt:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>Støtte epost</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>Header Image:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>Vises øverst på hjemmesiden. (.jpg, .jpeg, .img, GIF). Laste opp en fil, eller skriv inn en gyldig bilde-URL</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>Velge Header image arkiv fra datamaskinen</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>Vises i toppteksten på hver side, bilder av størrelse 32 av 32 fungerer best. Laste opp en fil, eller skriv inn en gyldig bilde-URL</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>Velge organisasjon logo image arkiv fra datamaskinen</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>navn:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>Selskapets juridiske navn, vises i hodet på hver side</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>Telefonnummer</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>Last portal</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>Laste portalen for å se endringene</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>Angre lokale branding endringer</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>Kan ikke hente betalingsinformasjon</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>Hente betalingsinformasjon</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>Live-kontoen</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>Gi din PayPal Pro Kontoinnstillinger</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>opprette en ny pro-konto hvis du ikke har en.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>For å motta betalinger fra kunder, bør du bruke en PayPal pro-konto, vennligst besøk:</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>PayPal Kontotype:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>Du kan velge en test kontotype teste dine transaksjoner. Når fungerer, kan du bytte til en live-konto å starte transacting</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>PayPal klient-ID:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>Angi PayPal klient-IDen</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>PayPal klient Secret:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>Angi din PayPal klient hemmelige</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>Sandbox-konto</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>Angre ulagrede utbetaling endringer</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>Kan ikke lagre betalingsinformasjon</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>Oppdatere betalingsinformasjonen</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>Betalingsinformasjon oppdatert</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>Adresselinje 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>Adresselinje 2</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>Byen</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>Firmainformasjon</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>Kontaktinformasjon</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Ditt domene prefiks vises etter den @ emailadressen domene. Det må være unikt, og det kan ikke inneholde noen punctuations. Eksempel: yourcompany.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>Domene prefiks</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>E-postadresse</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>Kontroller at du skriver inn en gyldig epostadresse. Det vil være det viktigste punktet av kontakt for å sende viktig informasjon til komme i gang og angi betalingsinformasjon.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>Fornavn</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>Etternavn</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Dette vil være IDen du vil bruke med Office 365-kontoen.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>Brukernavn</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>Område</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>Zip-/ postnummer</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-Ubetalte</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>Konfigurere webområdet</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>Dette nettstedet er fortsatt under bygging. Vennligst besøk senere.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>Kan ikke hente tilbud</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>Beløp betalt på</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>Kjøpesummen</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>Fornye</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>Ekstra sete</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Kjøpt</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>Fornyelse</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>Kan ikke registrere kunden. Prøv senere.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>Registrerer kunden...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>Forbereder ordre og omdirigere til betaling gateway...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>Bestill registreringsfeil</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>Kjøpe flere abonnementer</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>Lisenser</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>Forutbestemt</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>Velg ett eller flere tilbud</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>Du har ikke de nødvendige rettighetene til dette området</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>For Update-feil</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>Det var en inngang feil. Kontroller inndataene, og prøv på nytt.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>Domenet er ikke tilgjengelig. Angi et annet domene prefiks</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>De valgte bildene er for store. Angi mindre bilder eller laste opp en etter en</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>Angi en gyldig adresse</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Velg en gyldig bildefil laste opp</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte tilbudene? Hvis kundene allerede har kjøpt disse tilbudene, kjøpte abonnementene vil fortsatt være en ære, men vil ikke være fornybar.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>Vennligst kopier brukerkontoen og passordet, og lagre på et sikkert sted. Du vil ikke kunne hente den etter at du forlater denne siden.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>utløper</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>Kjøpesummen vises forutbestemt gjelder.</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>Årlig pris</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>Legg til et abonnement</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Startsiden</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>Vis kontaktinformasjon</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>Partner ikke administratorer har ikke tilgang til å logge på.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>Kontakt salg</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>Epost:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>Telefon:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>Korriger den ugyldige inndata:</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>Vi er ikke behandle forespørselen på dette tidspunktet. Prøv senere eller kontakt oss via e-post. Feildetaljer-</value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>Bare én abonnementet kan oppdateres.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>Forbereder ordre og omdirigere til betaling gateway...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>Feil under legge til abonnementer.</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>Kan ikke behandle betalingen-</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>Kunne ikke oppstart portalen</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>Betaling er ugyldig.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>Betalingen kan ikke behandles nå. Kontakt oss via e-post.</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>Ugyldig samlerøravbilde Uri. Kontroller at URIen er ugyldig.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Det oppstod et problem i ett av feltene du har angitt:</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>Ugyldig organisasjon logo Uri. Kontroller at URIen er ugyldig.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>Ugyldig personvern Uri. Kontroller at URIen er ugyldig.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>Personvern</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>Personvernkoblingen:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>Du kan angi en kobling som viser personvern kunder her som vises i bunnteksten på hjemmesiden</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Se dette nettstedet personvern Vilkår</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>Kan ikke hente kontoen. Prøv igjen senere.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>Kan ikke hente abonnementene. Prøv igjen senere.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>Salg Epost</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>Fornye abonnementet</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>Organisasjonens navn</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>Primær kontakt</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>Kan ikke hente tilbudsdetaljene. Prøv igjen senere.</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>Ett eller flere felt er ugyldig. Rett dem og deretter sende.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>Bestille</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>Årlig totalt</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>Velg tilbudet</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>Velg tilbudet du ønsker å selge</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>Ett eller flere tilbud du prøver å legge allerede finnes. Du kan legge til flere lisenser eksisterende abonnementer.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>bruker per år</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>Angi en gyldig salg kontakttelefonnummer</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>Angi en gyldig kontakt kundestøtte-telefon</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>Betalingsinformasjon samlet, opprette kunde og behandlingsrekkefølgen...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>Informasjon samlet, nå behandlingsrekkefølgen...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>Legger til seter i abonnementet.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>Legge til abonnementer.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>Fornye abonnement.</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>Feil under behandlingsrekkefølgen. Prøv på nytt senere.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>Feil i behandlingsrekkefølgen. Klikk Fullfør, og prøv på nytt.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>Feil i å få betalingsinformasjon. Klikk ferdig å prøve på nytt.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>Mottatt betalingsinformasjonen. Behandlingsrekkefølge...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>Bekreftelse</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>Bestillingen registrering ble behandlet.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>Feil i å få betalingsinformasjon. Logg inn og legge til abonnementer.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>Vi er ikke behandle betalingen.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>Vist i kontakt oss delen av toppteksten</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} AD leietaker er allerede registrert Partner Center kunden: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>nummer</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0} må være større enn null</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>streng</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} er ikke angitt</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() mislyktes: {0} SubscriptionId: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>Gi en image arkiv type organisasjon logoen</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>Ugyldig organisasjon logo URI lastet opp</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>Gi en image arkiv type header image</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>Ugyldig samlerøravbilde URI lastet opp</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>Ugyldig personvernerklæringen URI lastet opp</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>Det oppstod en feil under behandling av forespørselen.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>Feil</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>Ugyldig operasjon utføres.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>Bestilling bør ha minst ett abonnement element.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>Betaling modus støttes ikke</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>Prisen skal være større enn null</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>MicrosoftOfferId må angis</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>IDen må være en gyldig GUID</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>Kan ikke oppdatere partner tilbyr utholdenhet</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>Microsoft tilbyr kan ikke oppdateres. Opprette et nytt tilbud i stedet.</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>Tilby ikke funnet</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>ContactUs-delen ikke funnet i portalen branding konfigurasjon</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>Ugyldig kontakt oss e-postadressen</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>Ugyldig kontakt telefon</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>Ugyldig salg e-postadresse</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>Ugyldig telefonnummer for kontakt salg</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>Legge til flere lisenser</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>Kan ikke registrere ny Partner Center kunde</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>Hjem</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Web-butikk Builder</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>Merkevarebygging oppsett</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>Tilbyr oppsett</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>Betaling oppsett</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>Ordrehistorikk</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>Administrere abonnementer</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>Gå til hjemmesiden</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>Organisasjonsnavnet er nødvendig.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>Landet er nødvendig.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>Adresselinje 1 kreves.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>Byen er nødvendig.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>E-feltet er ikke en gyldig e-postadresse.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>Domene prefiks er nødvendig.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>Fornavn er nødvendig.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>Etternavn er nødvendig.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Telefonnummeret er nødvendig.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Logg deg av programmet</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>Slettet</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>Suspendert</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>Opprettet dato</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>navn</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>Antall</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Kunden klarte abonnementer</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>Partner klarte abonnementer</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Bestillinger</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentering nøkkel:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Du kan angi en søknad innsikt instrumentering for å fange telemetri data fra portalen.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Bruk basert abonnement</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Forhåndsgodkjente kunder</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Administrere kunder for forhåndsgodkjente transaksjoner.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"Select all" vil markere alle nåværende og fremtidige kunder som pre-godkjent å handle i butikken front.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Velg alle</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Pre-godkjent</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Kundenavn</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Primære domenenavn</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Kan ikke hente forhåndsgodkjente kundedetaljene.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Oppdatere forhåndsgodkjente kundene informasjon</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Forhåndsgodkjente kundeinformasjon oppdatert</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Kan ikke lagre forhåndsgodkjente kundene informasjon</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Denne transaksjonen er pre-godkjent. Behandlingsrekkefølge...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>Søke etter firmanavnet eller domene</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>PayU Kontotype:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>Du kan velge en test kontotype teste dine transaksjoner. Når fungerer, kan du bytte til en live-konto å starte transacting</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>PayU selgernøkkelen:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>Angi din PayU kjøpmann Salt</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU kjøpmann Salt:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>Angi selgernøkkelen PayU</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>PayU tillatelse</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>Angi din PayU autorisasjon</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>Gi din PayUMoney kjøpmann Kontoinnstillinger</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>opprette en ny kjøpmann konto hvis du ikke har en.</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>For å motta betalinger fra kunder, bør du bruke en PayUMoney kjøpmann konto, kan du gå:</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>Avtalen bruker-ID:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>Identifikator for brukere partneren knyttes aksept av Microsoft Cloud avtalen.</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>Ugyldig bruker-ID.</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>Jeg godtar den</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>vilkår for bruk</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>Andorra</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>De forente arabiske emirater</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>Afghanistan</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>Antigua og Barbuda</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>Anguilla</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>Albania</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>Armenia</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>De nederlandske Antillene</value>
+  </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>Antarktis</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>Amerikansk Samoa</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>Østerrike</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>Åland-øyene</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>Aserbajdsjan</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>Bosnia-Hercegovina</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>Bangladesh</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>Belgia</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>Bulgaria</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>Bahrain</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>Saint-Barthélemy</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>Brunei</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>Bolivia</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>Bonaire</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brasil</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>Bahamas</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>Bhutan</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>Bouvetøya</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>Botswana</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>Hviterussland</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>Cocos-(Keeling) øyene</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>Kongo (DRC)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>Den sentralafrikanske republikk</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>Kongo</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>Sveits</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>Elfenbenskysten</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>Cookøyene</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>Kamerun</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>Kina</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>Colombia</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>Costa Rica</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>Cabo Verde</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>Curaçao</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>Christmasøya</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>Kypros</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>Tsjekkia</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>Tyskland</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>Djibouti</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>Danmark</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>Dominica</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>Dominikanske republikk</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>Algerie</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>Ecuador</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>Estland</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>Egypt</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>Eritrea</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>Spania</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>Etiopia</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>Fiji</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>Falklandsøyene</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>Mikronesia</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>Færøyene</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>Frankrike</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>Storbritannia</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>Fransk Guyana</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>Guernsey</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>Grønland</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>Gambia</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>Guinea</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>Ekvatorial-Guinea</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>Hellas</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>Sør-Georgia og Sør-Sandwichøyene</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>Guatemala</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>Guinea-Bissau</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>Guyana</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>Hongkong</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>Heard- og McDonaldøyene</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>Kroatia</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>Ungarn</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>Indonesia</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>Norge</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>Israel</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>Isle of Man</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>Britiske jomfruøyer</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>Irak</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>Island</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>Italia</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>Jersey</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>Jamaica</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>Jordan</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>Kenya</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>Kirgisistan</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>Kambodsja</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>Komorene</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>Saint Kitts og Nevis</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>Korea</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>Kuwait</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>Caymanøyene</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>Kasakhstan</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>Laos</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>Libanon</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>Saint Lucia</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>Liechtenstein</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>Liberia</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>Lesotho</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>Litauen</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>Luxembourg</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>Latvia</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>Libya</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>Marokko</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>Monaco</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>Moldova</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>Montenegro</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>Saint Martin</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>Madagaskar</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>Marshalløyene</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>Makedonia</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>Mongolia</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>Macao SAR</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>Nord-Marianene</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>Martinique</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>Mauritania</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>Mauritius</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>Maldivene</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>Malawi</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>Malaysia</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>Mosambik</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>Namibia</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>Ny-Caledonia</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>Norfolkøya</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>Nigeria</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>Nicaragua</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>Nederland</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>Norge</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>Oman</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>Fransk Polynesia</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>Papua Ny-Guinea</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>Filippinene</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>Saint-Pierre og Miquelons</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>Pitcairnøyene</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>Puerto Rico</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>Palestinske myndigheter</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>Qatar</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>Réunions</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>Romania</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>Serbia</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>Russland</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>Rwanda</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>Saudi-Arabia</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>Salomonøyene</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>Seychellene</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>Sverige</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>Singapore</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>Sankthelenske</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>Slovenia</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>Svalbard</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>Slovakia</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>Sierra Leone</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>Somalia</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>Surinam</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>Sør-Sudan</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>São Tomé og Príncipe</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>El Salvador</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>Turks-og Caicosøyene</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>Tsjad</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>Franske sørterritorier</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>Tadsjikistan</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>Øst-Timor</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>Turkmenistan</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>Tunisia</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>Tyrkia</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>Trinidad og Tobago</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>Taiwan</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>Tanzania</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>Ukraina</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>Amerikanske øyer</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>USA</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>Usbekistan</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>Vatikanet</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>Saint Vincent og Grenadinene</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>Jomfruøyene</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>De amerikanske jomfruøyene</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>Vietnam</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>Wallis- og Futunaøyene</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>Sint Eustatius</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>Jan Mayen</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>Kosovo</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>Saba</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>Jemen</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>Sør-Afrika</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>Zambia</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>Zimbabwe</value>
+  </data>
+</root>

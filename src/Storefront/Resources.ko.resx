@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Back" xml:space="preserve">
+    <value>뒤로</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>지금 구매</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>모두 지우기</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>저희에 게 연락</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>저작권 2019</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>없는 엔터티를 발견</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>포털 콘텐츠를 가져올 수 없습니다.</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>첫 번째</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>포털 구성 유효 하지 않을 것합니다</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>마지막</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>로드</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>더 많은 작업...</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>돌아가기:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>액티브 알림</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>새로운 알림</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>그래</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>암호</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>포털 구성을 찾을 수 없습니다.</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>나를 기억합니다</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>다시 시도</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>로그 아웃</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>기능 콘텐츠를 가져올 수 없습니다.</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>기능 콘텐츠 얻기</value>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>사용자 이름:</value>
+  </data>
+  <data name="ViewTilesTooltip" xml:space="preserve">
+    <value>보기 타일</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="EmptyOffersErrorMessage" xml:space="preserve">
+    <value>구입을 하나 이상 제공을 선택 해야 합니다.</value>
+  </data>
+  <data name="TotalAmountCaption" xml:space="preserve">
+    <value>총 금액</value>
+  </data>
+  <data name="RemoveFromCart" xml:space="preserve">
+    <value>장바구니에서 제거</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>주소</value>
+  </data>
+  <data name="AdminUserAccount" xml:space="preserve">
+    <value>관리자 사용자 계정</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>감사합니다. 고객 창조 되 고 주문이 성공적으로 처리 했다.</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>고객 정보</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="SetupInformation" xml:space="preserve">
+    <value>고객 세부 정보</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>구독</value>
+  </data>
+  <data name="Subscriptions" xml:space="preserve">
+    <value>구독</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>총</value>
+  </data>
+  <data name="AddSubscriptions" xml:space="preserve">
+    <value>구독 추가</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>결제를 진행</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>약관 동의</value>
+  </data>
+  <data name="DomainPrefixValidationMessage" xml:space="preserve">
+    <value>유효한 도메인 접두사를 입력 하십시오</value>
+  </data>
+  <data name="SubscriptionIDLabel" xml:space="preserve">
+    <value>등록 ID:</value>
+  </data>
+  <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
+    <value>회사 정보 업데이트</value>
+  </data>
+  <data name="DashboardBuildingProgressMessage" xml:space="preserve">
+    <value>대시보드 구축</value>
+  </data>
+  <data name="OffersConfigurationCaption" xml:space="preserve">
+    <value>제공 하는 판매를 선택합니다</value>
+  </data>
+  <data name="PaymentConfigurationCaption" xml:space="preserve">
+    <value>결제 방법 추가</value>
+  </data>
+  <data name="WelcomeCaptionPrefix" xml:space="preserve">
+    <value>환영 합니다</value>
+  </data>
+  <data name="WelcomeCaptionSuffix" xml:space="preserve">
+    <value>웹 저장소 빌더!</value>
+  </data>
+  <data name="BillingTypeListRowCaption" xml:space="preserve">
+    <value>기반으로 결제</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="Dash" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SummaryListRowCaption" xml:space="preserve">
+    <value>요약:</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>사용자 지정</value>
+  </data>
+  <data name="FeaturesCaption" xml:space="preserve">
+    <value>특징:</value>
+  </data>
+  <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
+    <value>Microsoft 제공을 선택 합니다.</value>
+  </data>
+  <data name="SelectSearchByOffersPlaceholder" xml:space="preserve">
+    <value>제공 하 여 검색</value>
+  </data>
+  <data name="YourAnnualPriceCaption" xml:space="preserve">
+    <value>연간 가격:</value>
+  </data>
+  <data name="YourOfferingSubtitleCaption" xml:space="preserve">
+    <value>자막 제공:</value>
+  </data>
+  <data name="YourOfferingTitleCaption" xml:space="preserve">
+    <value>상품 이름:</value>
+  </data>
+  <data name="AddOfferFeaturesTooltip" xml:space="preserve">
+    <value>제공 기능 추가</value>
+  </data>
+  <data name="AddOfferFeatureTooltip" xml:space="preserve">
+    <value>이 후 제공 기능 추가</value>
+  </data>
+  <data name="AddSummaryPointsTooltip" xml:space="preserve">
+    <value>제안 요약 포인트 추가</value>
+  </data>
+  <data name="AddSummaryPointTooltip" xml:space="preserve">
+    <value>이 후 제공 요약 추가</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>브랜딩 회사를 구성 하려면 클릭 합니다.</value>
+  </data>
+  <data name="OfferFeaturePlaceHolder" xml:space="preserve">
+    <value>이 제안을 제공 하는 기능 설명</value>
+  </data>
+  <data name="OffersSectionTooltip" xml:space="preserve">
+    <value>귀하의 제공을 구성 하려면 클릭</value>
+  </data>
+  <data name="OfferSummaryPlaceHolder" xml:space="preserve">
+    <value>제안 요약 작성</value>
+  </data>
+  <data name="PaymentSectionTooltip" xml:space="preserve">
+    <value>지불 옵션을 구성 하려면 클릭</value>
+  </data>
+  <data name="PriceHeader" xml:space="preserve">
+    <value>가격:</value>
+  </data>
+  <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
+    <value>제공 기능 제거</value>
+  </data>
+  <data name="RemoveSummaryPointTooltip" xml:space="preserve">
+    <value>제안 요약 제거</value>
+  </data>
+  <data name="DashboardItemConfigured" xml:space="preserve">
+    <value>구성</value>
+  </data>
+  <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
+    <value>요구 구성</value>
+  </data>
+  <data name="DashboardLoadingError" xml:space="preserve">
+    <value>대시보드 정보를 검색 하지 못했습니다.</value>
+  </data>
+  <data name="DashboardStatusNotOk" xml:space="preserve">
+    <value>판매를 시작 하기 전에 귀하의 사이트를 개인 설정</value>
+  </data>
+  <data name="DashboardStatusOk" xml:space="preserve">
+    <value>당신은 좋은 판매를 시작 하는!</value>
+  </data>
+  <data name="AddOfferCaption" xml:space="preserve">
+    <value>새로운 제공을 추가</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
+    <value>사용자 지정</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="DeleteOffersCaption" xml:space="preserve">
+    <value>Offer(s) 삭제</value>
+  </data>
+  <data name="DeletingOfferMessage" xml:space="preserve">
+    <value>제공 삭제</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
+    <value>아니 제공 발견</value>
+  </data>
+  <data name="EmptyOfferListMessage" xml:space="preserve">
+    <value>구성 하는 어떤 제안 든 지 필요가 없습니다. 귀하의 제공을 추가 하려면 위의 제공 추가 클릭 합니다.</value>
+  </data>
+  <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
+    <value>마이크로소프트 제공</value>
+  </data>
+  <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
+    <value>마이크로 소프트 행사를 검색 하지 못했습니다.</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>제공</value>
+  </data>
+  <data name="OfferAutomaticallyRenewable" xml:space="preserve">
+    <value>자동으로 재생</value>
+  </data>
+  <data name="OfferAvailableForPurchase" xml:space="preserve">
+    <value>구입 가능</value>
+  </data>
+  <data name="OfferDeletionConfirmation" xml:space="preserve">
+    <value>제공 삭제 되었습니다.</value>
+  </data>
+  <data name="OfferDeletionFailure" xml:space="preserve">
+    <value>offer(s)를 삭제할 수 없습니다.</value>
+  </data>
+  <data name="OfferManuallyRenewable" xml:space="preserve">
+    <value>수동으로 재생</value>
+  </data>
+  <data name="OfferSaveErrorMessage" xml:space="preserve">
+    <value>제공을 저장 하지 못했습니다.</value>
+  </data>
+  <data name="OfferSaveSuccessMessage" xml:space="preserve">
+    <value>제안을 성공적으로 저장!</value>
+  </data>
+  <data name="OffersFetchFailure" xml:space="preserve">
+    <value>제공을 검색 하지 못했습니다.</value>
+  </data>
+  <data name="OffersFetchProgress" xml:space="preserve">
+    <value>검색 제공</value>
+  </data>
+  <data name="OfferUnavailableForPurchase" xml:space="preserve">
+    <value>구매에 사용할 수</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="SaveOfferCaption" xml:space="preserve">
+    <value>저장 제공</value>
+  </data>
+  <data name="SavingOfferMessage" xml:space="preserve">
+    <value>저장 제공</value>
+  </data>
+  <data name="Seats" xml:space="preserve">
+    <value>좌석</value>
+  </data>
+  <data name="SelectOfferErrorMessage" xml:space="preserve">
+    <value>제안을 선택 하십시오</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>받는 사람</value>
+  </data>
+  <data name="UpdatingOfferMessage" xml:space="preserve">
+    <value>업데이트 제공</value>
+  </data>
+  <data name="DefaultOrganizationName" xml:space="preserve">
+    <value>조직 이름</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>실행 취소</value>
+  </data>
+  <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
+    <value>브랜딩 파트너를 검색 하지 못했습니다.</value>
+  </data>
+  <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
+    <value>브랜드 검색 파트너</value>
+  </data>
+  <data name="BrandingSetupPromptMessage" xml:space="preserve">
+    <value>웹 저장소 구성</value>
+  </data>
+  <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
+    <value>머리글 및 바닥글에 모든 페이지에서 볼 수 있는 조직 정보 제공</value>
+  </data>
+  <data name="BrandingUpdateErrorMessage" xml:space="preserve">
+    <value>브랜딩 저장 하지 못했습니다.</value>
+  </data>
+  <data name="BrandingUpdateProgressMessage" xml:space="preserve">
+    <value>브랜딩 정보 업데이트</value>
+  </data>
+  <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
+    <value>브랜딩 저장. 변경 사항을 보려면 머리글 표시줄에서 다시 로드 버튼을 클릭</value>
+  </data>
+  <data name="ContactSalesHeader" xml:space="preserve">
+    <value>영업 담당자:</value>
+  </data>
+  <data name="ContactUsFieldHeader" xml:space="preserve">
+    <value>지원 연락처:</value>
+  </data>
+  <data name="SupportEmailAddressHeader" xml:space="preserve">
+    <value>이메일 지원</value>
+  </data>
+  <data name="HeaderImageFieldHeader" xml:space="preserve">
+    <value>헤더 이미지:</value>
+  </data>
+  <data name="HeaderImageSubText" xml:space="preserve">
+    <value>홈 페이지의 상단에 표시입니다. (.jpg,.jpeg,.img,.gif). 파일 업로드 또는 유효한 이미지의 URL을 입력</value>
+  </data>
+  <data name="HeaderImageUploadTooltip" xml:space="preserve">
+    <value>컴퓨터에서 헤더 이미지 파일 선택</value>
+  </data>
+  <data name="OrganizationLogoFieldHeader" xml:space="preserve">
+    <value>로고:</value>
+  </data>
+  <data name="OrganizationLogoSubText" xml:space="preserve">
+    <value>모든 페이지의 헤더에 표시, 이미지 크기 32에서 32의 최고의 작품. 파일 업로드 또는 유효한 이미지의 URL을 입력</value>
+  </data>
+  <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
+    <value>컴퓨터에서 조직 로고 이미지 파일을 선택</value>
+  </data>
+  <data name="OrganizationNameFieldHeader" xml:space="preserve">
+    <value>이름:</value>
+  </data>
+  <data name="OrganizationNameFieldSubText" xml:space="preserve">
+    <value>회사의 법적 이름, 각 페이지의 머리글에 표시</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>전화 번호</value>
+  </data>
+  <data name="ReloadPortalButtonCaption" xml:space="preserve">
+    <value>다시 로드 포털</value>
+  </data>
+  <data name="ReloadPortalButtonTooltip" xml:space="preserve">
+    <value>변경 사항을 보려면 포털을 다시 로드</value>
+  </data>
+  <data name="UndoBrandingChangesTooltip" xml:space="preserve">
+    <value>로컬 브랜드 변경 실행 취소</value>
+  </data>
+  <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
+    <value>결제 정보를 검색 하지 못했습니다.</value>
+  </data>
+  <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
+    <value>지불 정보 검색</value>
+  </data>
+  <data name="LiveAccountTypeCaption" xml:space="preserve">
+    <value>라이브 계정</value>
+  </data>
+  <data name="PaymentConfigurationHeader" xml:space="preserve">
+    <value>제공 페이팔 프로 계정 설정</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>당신이 하나도 없는 경우 새 프로 계정을 만들려면.</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>고객 으로부터 지불을 받을, 페이팔 프로 계정을 사용 해야 합니다, 그리고 방문 하시기 바랍니다.</value>
+  </data>
+  <data name="PayPalAccountTypeCaption" xml:space="preserve">
+    <value>페이팔 계정 유형:</value>
+  </data>
+  <data name="PayPalAccountTypeSubText" xml:space="preserve">
+    <value>귀하의 거래를 테스트 하려면 테스트 계정 유형을 선택할 수 있습니다. 거래를 시작 하는 라이브 계정 유형으로 전환할 수 있습니다.</value>
+  </data>
+  <data name="PayPalClientIdCaption" xml:space="preserve">
+    <value>페이팔 클라이언트 ID:</value>
+  </data>
+  <data name="PayPalClientIdSubText" xml:space="preserve">
+    <value>귀하의 페이팔 클라이언트 ID 입력</value>
+  </data>
+  <data name="PayPalClientSecretCaption" xml:space="preserve">
+    <value>페이팔 클라이언트 비밀:</value>
+  </data>
+  <data name="PayPalClientSecretSubText" xml:space="preserve">
+    <value>입력 페이팔 클라이언트 비밀</value>
+  </data>
+  <data name="SandboxAccountTypeCaption" xml:space="preserve">
+    <value>샌드 박스 계정</value>
+  </data>
+  <data name="UndoUnsavedChanges" xml:space="preserve">
+    <value>저장 되지 않은 지불 변경 실행 취소</value>
+  </data>
+  <data name="UpdatePaymentErrorMessage" xml:space="preserve">
+    <value>결제 정보를 저장 하지 못했습니다.</value>
+  </data>
+  <data name="UpdatePaymentProgressMessage" xml:space="preserve">
+    <value>결제 정보 업데이트</value>
+  </data>
+  <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
+    <value>결제 정보 업데이트</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
+    <value>주소 입력란 1</value>
+  </data>
+  <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
+    <value>주소 입력란 2</value>
+  </data>
+  <data name="CustomerProfileCityCaption" xml:space="preserve">
+    <value>도시</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
+    <value>국가</value>
+  </data>
+  <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
+    <value>회사 정보</value>
+  </data>
+  <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
+    <value>연락처 정보</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>도메인 접두사 후 나타납니다는 @ 귀하의 도메인 이메일 주소에서. 그것은 고유 하 고 그것은 모든 문장 부호를 포함할 수 없습니다. 예: yourcompany.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
+    <value>도메인 접두사</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
+    <value>이메일 주소</value>
+  </data>
+  <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
+    <value>확인 유효한 이메일 주소를 입력 합니다. 그것은 시작 하 고 결제 데이터를 설정 하는 중요 한 정보를 보내 연락의 주요 포인트 것입니다.</value>
+  </data>
+  <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="CustomerProfileLastNameCaption" xml:space="preserve">
+    <value>마지막 이름</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>이 Office 365 계정으로 사용할 사용자 id 될 것입니다.</value>
+  </data>
+  <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
+    <value>사용자 이름</value>
+  </data>
+  <data name="CustomerProfileStateCaption" xml:space="preserve">
+    <value>시/도</value>
+  </data>
+  <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
+    <value>우편 / 우편 코드</value>
+  </data>
+  <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
+    <value>-무 급</value>
+  </data>
+  <data name="ConfigurePortalMessage" xml:space="preserve">
+    <value>귀하의 웹사이트를 구성</value>
+  </data>
+  <data name="PortalNotConfiguredYet" xml:space="preserve">
+    <value>이 웹사이트는 아직 공사중입니다. 나중에 방문 하시기 바랍니다.</value>
+  </data>
+  <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
+    <value>제공을 검색 하지 못했습니다.</value>
+  </data>
+  <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
+    <value>에 지불 하는 금액</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
+    <value>지불한 가격</value>
+  </data>
+  <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
+    <value>속도</value>
+  </data>
+  <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
+    <value>갱신</value>
+  </data>
+  <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
+    <value>추가 좌석</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>구입</value>
+  </data>
+  <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
+    <value>갱신</value>
+  </data>
+  <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
+    <value>고객을 등록할 수 없습니다. 나중에 시도 하십시오.</value>
+  </data>
+  <data name="CustomerRegistrationMessage" xml:space="preserve">
+    <value>고객 등록...</value>
+  </data>
+  <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
+    <value>순서를 준비 하 고 지불 게이트웨이를 리디렉션...</value>
+  </data>
+  <data name="OrderRegistrationFailureMessage" xml:space="preserve">
+    <value>주문 등록 오류</value>
+  </data>
+  <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
+    <value>더 많은 구독 구입</value>
+  </data>
+  <data name="UserLicencesCaption" xml:space="preserve">
+    <value>라이센스</value>
+  </data>
+  <data name="ProratedPaymentTotal" xml:space="preserve">
+    <value>추천</value>
+  </data>
+  <data name="SelectPortalOfferCaption" xml:space="preserve">
+    <value>하나 이상의 제공 선택</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>이 영역에 액세스 하는 데 필요한 권한 없습니다</value>
+  </data>
+  <data name="OrderUpdateFailureMessage" xml:space="preserve">
+    <value>주문 업데이트 오류</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>입력된 오류가 발생 했습니다. 입력을 확인 하 고 다시 시도 하십시오.</value>
+  </data>
+  <data name="DomainNotAvailable" xml:space="preserve">
+    <value>도메인은 사용할 수 없습니다. 다른 도메인 접두사를 입력 하십시오</value>
+  </data>
+  <data name="ImagesTooLarge" xml:space="preserve">
+    <value>선택 된 이미지는 너무 큽니다. 제발 작은 이미지를 지정 하거나 하나를 업로드</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>유효한 주소를 지정 하십시오</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>유효한 이미지 업로드할 파일을 선택 하십시오</value>
+  </data>
+  <data name="DeleteOffersPromptMessage" xml:space="preserve">
+    <value>당신은 선택한 제공을 삭제 하 시겠습니까? 고객이 이미 이러한 제공 구매, 경우 구입한 구독 영광 여전히 하지만 재생 되지 않습니다.</value>
+  </data>
+  <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
+    <value>Admin 사용자 계정 및 암호를 복사 하 고 안전한 위치에 저장 하십시오. 후에이 페이지를 검색할 수 없습니다.</value>
+  </data>
+  <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
+    <value>에 만료</value>
+  </data>
+  <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
+    <value>지불한 가격 프로 등급 적용으로 표시 됩니다.</value>
+  </data>
+  <data name="AnnualPriceCaption" xml:space="preserve">
+    <value>연간 가격</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>구독을 추가 하시기 바랍니다</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>홈 페이지</value>
+  </data>
+  <data name="ContactUsTooltip" xml:space="preserve">
+    <value>연락처</value>
+  </data>
+  <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
+    <value>파트너 비 관리자에 로그인 할 권한이 없습니다.</value>
+  </data>
+  <data name="ContactSales" xml:space="preserve">
+    <value>판매 문의</value>
+  </data>
+  <data name="ContactUsEmailCaption" xml:space="preserve">
+    <value>메일 주소:</value>
+  </data>
+  <data name="ContactUsPhoneCaption" xml:space="preserve">
+    <value>전화 번호:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>잘못 된 입력을 수정 하시기 바랍니다.</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>우리는이 시간에 귀하의 요청을 처리할 수 없습니다. 제발 나중에 시도 하거나 이메일을 통해 저희에 게 연락 합니다. 오류 세부 정보-</value>
+  </data>
+  <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
+    <value>하나만 상이나 업데이트할 수 있습니다.</value>
+  </data>
+  <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
+    <value>순서를 준비 하 고 지불 게이트웨이를 리디렉션...</value>
+  </data>
+  <data name="OrderAddFailureMessage" xml:space="preserve">
+    <value>구독을 추가 하는 동안 오류가 발생 했습니다.</value>
+  </data>
+  <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
+    <value>우리는 귀하의 지불-처리할 수 없습니다.</value>
+  </data>
+  <data name="PortalStartupFailure" xml:space="preserve">
+    <value>포털 시작 하지 수</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
+    <value>지불 구성 유효 하지 않습니다.</value>
+  </data>
+  <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
+    <value>이 시간에 귀하의 지불을 처리할 수 없습니다. 이메일로 문의 하시기 바랍니다.</value>
+  </data>
+  <data name="InvalidHeaderImageUri" xml:space="preserve">
+    <value>잘못 된 헤더 이미지 Uri입니다. Uri는 유효한 다는 것을 확인 하십시오.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>입력 한 필드 중 하나에 문제가 발생 했습니다.</value>
+  </data>
+  <data name="InvalidOrganizationLogoUri" xml:space="preserve">
+    <value>잘못 된 조직 로고 Uri입니다. Uri는 유효한 다는 것을 확인 하십시오.</value>
+  </data>
+  <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
+    <value>잘못 된 개인 정보 보호 Uri입니다. Uri는 유효한 다는 것을 확인 하십시오.</value>
+  </data>
+  <data name="PrivacyAgreement" xml:space="preserve">
+    <value>개인 정보 보호</value>
+  </data>
+  <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
+    <value>개인 정보 링크:</value>
+  </data>
+  <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
+    <value>여기 홈 페이지 바닥글에 표시 됩니다 있는 고객에 게 개인 정보 보호 측면을 보여 주는 링크를 지정할 수 있습니다.</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>이 웹사이트 개인 정보 보호 약관 보기</value>
+  </data>
+  <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
+    <value>귀하의 계정을 검색 하지 못했습니다. 나중에 다시 시도 하십시오.</value>
+  </data>
+  <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
+    <value>구독을 검색 하지 못했습니다. 나중에 다시 시도 하십시오.</value>
+  </data>
+  <data name="SalesEmailAddressHeader" xml:space="preserve">
+    <value>판매 이메일</value>
+  </data>
+  <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
+    <value>구독을 갱신</value>
+  </data>
+  <data name="CustomerOrganizationNameCaption" xml:space="preserve">
+    <value>조직 이름</value>
+  </data>
+  <data name="CustomerPrimaryContactCaption" xml:space="preserve">
+    <value>기본 연락처</value>
+  </data>
+  <data name="CouldNotRetrieveOffer" xml:space="preserve">
+    <value>제공 세부 정보를 검색 하지 못했습니다. 나중에 다시 시도 하십시오.</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>하나 이상의 필드가 유효 하지 않습니다. 제발 그들을 수정 하 고.</value>
+  </data>
+  <data name="PlaceOrderCaption" xml:space="preserve">
+    <value>주문</value>
+  </data>
+  <data name="AnnualTotalCaption" xml:space="preserve">
+    <value>연간 총</value>
+  </data>
+  <data name="PickOfferCaption" xml:space="preserve">
+    <value>선택 제공</value>
+  </data>
+  <data name="PickOfferTooltip" xml:space="preserve">
+    <value>당신이 판매 하려는 상품을 선택</value>
+  </data>
+  <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
+    <value>하나 이상의 제공 이미 추가 하려는 존재 합니다. 기존 구독에 더 많은 라이센스를 추가할 수 있습니다.</value>
+  </data>
+  <data name="UserPerYear" xml:space="preserve">
+    <value>사용자/년</value>
+  </data>
+  <data name="InvalidContactSalesPhone" xml:space="preserve">
+    <value>유효한 연락처 판매 전화를 입력 해 주시기 바랍니다</value>
+  </data>
+  <data name="InvalidContactUsPhone" xml:space="preserve">
+    <value>유효한 연락처 지원 전화 번호를 입력 해 주시기 바랍니다</value>
+  </data>
+  <data name="ProcessingOrderMessage" xml:space="preserve">
+    <value>결제 정보 수집, 고객 및 처리 순서를 만드는...</value>
+  </data>
+  <data name="ExistingCustomerProcessingOrderMessage" xml:space="preserve">
+    <value>지불 정보를 수집, 처리 순서 지금...</value>
+  </data>
+  <data name="AddSeatsOperationCaption" xml:space="preserve">
+    <value>구독에 추가 좌석.</value>
+  </data>
+  <data name="NewPurchaseOperationCaption" xml:space="preserve">
+    <value>구독을 추가합니다.</value>
+  </data>
+  <data name="RenewOperationCaption" xml:space="preserve">
+    <value>가입 갱신</value>
+  </data>
+  <data name="OrderFailureMessage" xml:space="preserve">
+    <value>처리 순서는 동안 오류가 발생 했습니다. 제발 나중에 다시 시도 합니다.</value>
+  </data>
+  <data name="OrderProcessingFailureNotification" xml:space="preserve">
+    <value>처리 순서에 실패입니다. 완료를 클릭 하 고 다시 시도 하십시오.</value>
+  </data>
+  <data name="PaymentReceiptFailureNotification" xml:space="preserve">
+    <value>결제 정보를 수신에 실패입니다. 다시 시도 하려면 완료를 클릭 하십시오.</value>
+  </data>
+  <data name="ProcessingOrderNotification" xml:space="preserve">
+    <value>성공적으로 수신된 지불 정보입니다. 처리 순서...</value>
+  </data>
+  <data name="ProcessOrderPageCaption" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
+    <value>등록 주문이 성공적으로 처리 했다.</value>
+  </data>
+  <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
+    <value>결제 정보를 수신에 실패입니다. 로그인 하 고 구독을 추가 합니다.</value>
+  </data>
+  <data name="PayPalUnableToProcessPayment" xml:space="preserve">
+    <value>우리는 당신의 지불을 처리할 수 없습니다.</value>
+  </data>
+  <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
+    <value>우리 섹션 헤더의 연락처에 표시</value>
+  </data>
+  <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
+    <value>{0} 광고 거주자 이미 파트너 센터 고객 등록: {1}</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
+    <value>번호</value>
+  </data>
+  <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
+    <value>{0}는 0 보다 커야 합니다.</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
+    <value>문자열</value>
+  </data>
+  <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
+    <value>{0} 설정 하지</value>
+  </data>
+  <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
+    <value>RenewSubscription.ExecuteAsync() 실패: {0} SubscriptionId: {1}</value>
+  </data>
+  <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
+    <value>조직 로고에 대 한 이미지 파일 형식 제공</value>
+  </data>
+  <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
+    <value>잘못 된 조직 로고 URI 업로드</value>
+  </data>
+  <data name="InvalidHeaderImageMessage" xml:space="preserve">
+    <value>헤더 이미지에 대 한 이미지 파일 형식 제공</value>
+  </data>
+  <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
+    <value>잘못 된 헤더 이미지 URI 업로드</value>
+  </data>
+  <data name="InvalidPrivacyUriMessage" xml:space="preserve">
+    <value>잘못 된 개인 정보 보호 계약 URI 업로드</value>
+  </data>
+  <data name="ErrorPageDetailsCaption" xml:space="preserve">
+    <value>귀하의 요청을 처리 하는 동안 오류가 발생 했습니다.</value>
+  </data>
+  <data name="ErrorPageTitleCaption" xml:space="preserve">
+    <value>오류</value>
+  </data>
+  <data name="InvalidOperationForOrderMessage" xml:space="preserve">
+    <value>잘못 된 연산 수행 되 고입니다.</value>
+  </data>
+  <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
+    <value>순서는 구독 항목을 하나 이상 있어야 합니다.</value>
+  </data>
+  <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
+    <value>지불 모드는 지원 되지 않습니다.</value>
+  </data>
+  <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
+    <value>제안 가격 보다 더 0 이어야 한다</value>
+  </data>
+  <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
+    <value>MicrosoftOfferId는 설정 해야 합니다.</value>
+  </data>
+  <data name="IdMustBeAValidGUID" xml:space="preserve">
+    <value>Id는 유효한 GUID 여야 합니다.</value>
+  </data>
+  <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
+    <value>파트너 제공 지 속성을 업데이트 하지 못했습니다.</value>
+  </data>
+  <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
+    <value>Microsoft 제공 업데이트할 수 없습니다. 새 제안 만들기</value>
+  </data>
+  <data name="OfferNotFound" xml:space="preserve">
+    <value>제공 하는 찾을 수 없습니다</value>
+  </data>
+  <data name="ContactUsSectionNotFound" xml:space="preserve">
+    <value>ContactUs 섹션 포털 브랜드 구성에서 찾을 수 없습니다</value>
+  </data>
+  <data name="InvalidContactUsEmailAddress" xml:space="preserve">
+    <value>잘못 된 접촉 우리 이메일 주소</value>
+  </data>
+  <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
+    <value>잘못 된 문의 전화</value>
+  </data>
+  <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
+    <value>잘못 된 연락처 판매 이메일 주소</value>
+  </data>
+  <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
+    <value>잘못 된 연락처 판매 전화</value>
+  </data>
+  <data name="AddMoreLicensesCaption" xml:space="preserve">
+    <value>더 많은 라이선스를 추가</value>
+  </data>
+  <data name="PayPalWebsiteCaption" xml:space="preserve">
+    <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>새로운 파트너 센터 고객 등록 하지 수 없습니다.</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>홈</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>웹 상점 건축 업자</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>브랜딩 설치</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>제공 설치</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>결제 설정</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>주문 내역</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>구독 관리</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>홈 페이지로 이동</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>조직 이름은 필수입니다.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>국가 필요 합니다.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>주소 라인 1이 필요 합니다.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>시가 필요 합니다.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>이메일 필드는 유효한 전자 메일 주소가 없습니다.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>도메인 접두사는 필수입니다.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>이름이 필요 합니다.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>성이 필요 합니다.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>전화 번호는 필요 합니다.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>응용 프로그램에서 로그 아웃</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>활성</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>일시 중단</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>만든된 날짜</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>수량</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>고객 관리 구독</value>
+  </data>
+  <data name="PartnerManagedSubscriptionsCaption" xml:space="preserve">
+    <value>파트너 관리 구독</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>주문</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>계측 키:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>포털에서 원격 데이터를 캡처하기 위해 응용 통찰력 계측 키를 지정할 수 있습니다.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>사용 기반 구독</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>사전 승인 된 고객</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>사전 승인 된 거래에 대 한 고객 관리.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>"모두 선택" 하 게 앞에서 사전 승인으로 모든 현재와 미래의 고객을 표시 합니다.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>모두 선택</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>사전 승인</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>고객 이름</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>주 도메인 이름</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>사전 승인 된 고객 세부 정보를 검색 하지 못했습니다.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>사전 승인 된 고객 정보 업데이트</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>사전 승인 된 고객 정보 업데이트</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>사전 승인 된 고객 정보를 저장 하지 못했습니다.</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>이 거래는 사전 승인 된. 처리 순서...</value>
+  </data>
+  <data name="SelectSearchbyNameDomainPlaceholder" xml:space="preserve">
+    <value>회사 이름 또는 도메인 검색</value>
+  </data>
+  <data name="PayUAccountTypeCaption" xml:space="preserve">
+    <value>PayU 계정 유형:</value>
+  </data>
+  <data name="PayUAccountTypeSubText" xml:space="preserve">
+    <value>귀하의 거래를 테스트 하려면 테스트 계정 유형을 선택할 수 있습니다. 거래를 시작 하는 라이브 계정 유형으로 전환할 수 있습니다.</value>
+  </data>
+  <data name="PayUMerchantKeyCaption" xml:space="preserve">
+    <value>PayU 상인 키:</value>
+  </data>
+  <data name="PayUMerchantSaltSubText" xml:space="preserve">
+    <value>PayU 상인 소금 입력</value>
+  </data>
+  <data name="PayUSaltCaption" xml:space="preserve">
+    <value>PayU 상인 소금:</value>
+  </data>
+  <data name="PayUMerchantKeySubText" xml:space="preserve">
+    <value>PayU 상인 키 입력</value>
+  </data>
+  <data name="PayUAuthorizationCaption" xml:space="preserve">
+    <value>PayU 권한 부여</value>
+  </data>
+  <data name="PayUAuthSubText" xml:space="preserve">
+    <value>PayU 권한 부여 입력</value>
+  </data>
+  <data name="PayUPaymentConfigurationHeader" xml:space="preserve">
+    <value>PayUMoney 상인 계정 설정 제공</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPostfix" xml:space="preserve">
+    <value>당신이 하나도 없는 경우 새로운 상인 계정을 만들려면.</value>
+  </data>
+  <data name="PayUPaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>고객 으로부터 지불을 받을, PayUMoney 상인 계정을 사용 해야 합니다, 그리고 방문 하시기 바랍니다.</value>
+  </data>
+  <data name="PayUWebsiteCaption" xml:space="preserve">
+    <value>payumoney.com</value>
+  </data>
+  <data name="AgreementUserIdFieldHeader" xml:space="preserve">
+    <value>계약 사용자 ID:</value>
+  </data>
+  <data name="AgreementUserIdSubText" xml:space="preserve">
+    <value>Microsoft 클라우드 계약의 수용에 연관 파트너에서 사용자의 식별자입니다.</value>
+  </data>
+  <data name="InvalidAgreementUserId" xml:space="preserve">
+    <value>잘못 된 사용자 식별자입니다.</value>
+  </data>
+  <data name="AcceptPhrase" xml:space="preserve">
+    <value>동의</value>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>서비스 약관</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>안도라</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>아랍 에미리트 연합국</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>아프가니스탄</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>안티구아와 발부 다</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>앵귈라</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>알바니아</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>아르메니아</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>네덜란드 앤틸리스 제도</value>
+  </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>앙골라</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>남극 대륙</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>아르헨티나</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>미국령 사모아</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>오스트리아</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>오스트레일리아</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>아루바</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>올란드 제도</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>아제르바이잔</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>보스니아 헤르체고비나</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>바베이도스</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>방글라데시</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>벨기에</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>부르키나파소</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>불가리아</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>바레인</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>부룬디</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>베냉</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>생바르텔레미</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>버뮤다</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>브루나이</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>볼리비아</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>보네르 섬</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>브라질</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>바하마</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>부탄</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>부베 섬</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>보츠와나</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>벨로루시</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>벨리즈</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>캐나다</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>코코스 (킬 링) 제도</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>콩고 (DRC)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>중앙 아프리카 공화국</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>콩고</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>스위스</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>코트 디 부 아 르</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>쿡 제도</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>칠레</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>카메룬</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>중국</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>콜롬비아</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>코스타리카</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>카보 베르데</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>쿠라사오 섬</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>크리스마스 섬</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>사이 프 러 스</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>체코</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>독일</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>지부티</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>덴마크</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>도미니카</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>도미니카 공화국</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>알제리</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>에콰도르</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>에스토니아</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>이집트</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>에리트레아</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>스페인</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>에티오피아</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>핀란드</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>피지</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>포클랜드 제도</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>미크로네시아</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>페로 제도</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>프랑스</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>가봉</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>영국</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>그레나다</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>그루지야</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>프랑스령 기아나</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>건지</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>가 나</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>지브롤터</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>그린란드</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>감비아</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>기니</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>과들루프</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>적도 기니</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>그리스</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>사우스 조지아 및 사우스 샌드위치 제도</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>과테말라</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>괌</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>기니 비사우</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>가이아나</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>홍콩 특별 행정구</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>허드 섬 및 맥도날드 군도</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>온두라스</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>크로아티아</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>아이티</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>헝가리</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>인도네시아</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>아일랜드</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>이스라엘</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>아일 오브 맨</value>
+  </data>
+  <data name="CountryNameIN" xml:space="preserve">
+    <value>인도</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>영국령 인도양 지역</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>이라크</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>아이슬란드</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>이탈리아</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>저지</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>자메이카</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>요르단</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>일본</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>케냐</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>키르기스스탄</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>캄보디아</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>키리바시</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>코모로</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>세인트 키츠 네비스</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>대한민국</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>쿠웨이트</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>케이맨 제도</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>카자흐스탄</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>라오스</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>레바논</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>세인트 루시아</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>리히텐슈타인</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>스리랑카</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>라이베리아</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>레소토</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>리투아니아</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>룩셈부르크</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>라트비아</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>리비아</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>모로코</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>모나코</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>몰도바</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>몬테네그로</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>세인트 마틴</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>마다 가스 카 르</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>마샬 군도</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>마케도니아</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>말리</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>미얀마</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>몽골</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>마카오 특별 행정구</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>북마리아나 제도</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>마르티니크</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>모리타니</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>몬트세라트</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>몰타</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>모리셔스</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>몰디브</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>말라위</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>멕시코</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>말레이시아</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>모잠비크</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>나미비아</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>뉴 칼레도니아</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>니제르</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>노퍽 섬</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>나이지리아</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>니카라과</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>네덜란드</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>노르웨이</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>네팔어</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>나우루</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>니우</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>뉴질랜드</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>오만</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>파나마</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>페루</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>프랑스령 폴리네시아</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>파푸아 뉴 기니</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>필리핀</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>파키스탄</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>폴란드</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>세인트 피에르 미켈론</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>핏케언 제도</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>푸에르토리코</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>팔레스타인 자치 정부</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>포르투갈</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>팔라우</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>파라과이</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>카타르</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>레위니옹</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>루마니아</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>세르비아</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>러시아</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>르완다</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>사우디아라비아</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>솔로몬 제도</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>세이셸</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>스웨덴</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>싱가포르</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>세인트 헬레나</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>슬로베니아</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>스 발 바르</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>슬로바키아</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>시에라 리온</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>샌 마 리노</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>세네갈</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>소말리아</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>수리남</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>남쪽 수단</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>상투메 프린시페</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>엘살바도르</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>신 트 마 르 텐</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>터크스 케이커스 제도</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>차드</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>프랑스 남부 지역</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>토고</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>태국</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>타지 키스탄</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>토켈라우</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>-티모르</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>투르크메니스탄</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>튀니지</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>통가 왕국</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>터키</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>트리니다드 토바고</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>투발루</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>대만</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>탄자니아</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>우크라이나</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>우간다</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>미국 외진 섬</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>미국</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>우루과이</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>우즈베키스탄</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>바티칸 시티</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>세인트 빈센트 그레나딘</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>베네수엘라</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>영국령 버진 아일랜드</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>미국령 버진 아일랜드</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>베트남</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>바누아투</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>월리스 푸투나</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>사모아</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>신 유 스타 티 유스</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>얀마옌 섬</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>코소보</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>사바</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>예멘</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>마요트</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>남아프리카 공화국</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>잠비아</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>짐바브웨</value>
+  </data>
+</root>
