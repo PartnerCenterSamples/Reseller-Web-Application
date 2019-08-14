@@ -1281,4 +1281,7 @@
   <data name="TermsOfService" xml:space="preserve">
     <value>modalités de service</value>
   </data>
+  <data name="CountryNameAO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
 </root>
