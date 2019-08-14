@@ -133,7 +133,7 @@
     <value>お問い合わせ</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
-    <value>著作権 2018</value>
+    <value>著作権 2019</value>
   </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>.</value>
@@ -169,7 +169,7 @@
     <value>次に</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>違います</value>
+    <value>いいえ</value>
   </data>
   <data name="NotificationSectionTooltip" xml:space="preserve">
     <value>アクティブな通知</value>
@@ -208,7 +208,7 @@
     <value>表示タイル</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>うん</value>
+    <value>はい</value>
   </data>
   <data name="EmptyOffersErrorMessage" xml:space="preserve">
     <value>少なくとも 1 つの提供を購入するを選択してください。</value>
@@ -748,7 +748,7 @@
     <value>無効な入力を修正してください。</value>
   </data>
   <data name="DownstreamErrorPrefix" xml:space="preserve">
-    <value>この時点であなたの要求を処理できておりません。後で試すか、メールでお問い合わせください。エラーの詳細-   </value>
+    <value>この時点であなたの要求を処理できておりません。後で試すか、メールでお問い合わせください。エラーの詳細-</value>
   </data>
   <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
     <value>1 つだけ subcription を更新できます。</value>
@@ -1083,9 +1083,6 @@
   <data name="CountryNameNO" xml:space="preserve">
     <value>ノルウェー</value>
   </data>
-  <data name="CountryNamePO" xml:space="preserve">
-    <value>ポーランド</value>
-  </data>
   <data name="CountryNamePT" xml:space="preserve">
     <value>ポルトガル</value>
   </data>
@@ -1096,7 +1093,7 @@
     <value>スロバキア</value>
   </data>
   <data name="CountryNameSL" xml:space="preserve">
-    <value>スロベニア</value>
+    <value>シエラレオネ</value>
   </data>
   <data name="CountryNameES" xml:space="preserve">
     <value>スペイン</value>
@@ -1283,5 +1280,632 @@
   </data>
   <data name="CountryNameAO" xml:space="preserve">
     <value>アンゴラ</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>アンドラ</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>アラブ首長国連邦</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>アフガニスタン</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>アンティグア ・ バーブーダ</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>アンギラ</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>アルバニア</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>アルメニア</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>オランダ領アンティル諸島</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>南極大陸</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>アルゼンチン</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>アメリカ領サモア</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>アルバ</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>オーランド諸島</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>アゼルバイジャン</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>ボスニア・ヘルツェゴビナ</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>バルバドス</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>バングラデシュ</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>ブルキナ ・ ファソ</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>バーレーン</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>ブルンジ</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>ベナン</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>サン ・ バルテルミー島</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>バミューダ</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>ブルネイ</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>ボリビア</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>ボネール島</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>ブラジル</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>バハマ</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>ブータン</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>ブーベ島</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>ボツワナ</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>ベラルーシ</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>ベリーズ</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>ココス (キーリング) 諸島</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>コンゴ (コンゴ民主共和国)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>中央アフリカ共和国</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>コンゴ</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>コートジボワール</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>クック諸島</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>チリ</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>カメルーン</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>中国</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>コロンビア</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>コスタリカ</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>カーボベルデ</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>キュラソー島</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>クリスマス島</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>ジブチ</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>ドミニカ国</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>ドミニカ共和国</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>アルジェリア</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>エクアドル</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>エジプト</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>エリトリア</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>エチオピア</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>フィジー</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>フォークランド諸島</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>ミクロネシア</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>フェロー諸島</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>ガボン</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>グレナダ</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>グルジア</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>フランス領ギアナ</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>ガーンジー島</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>ガーナ</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>ジブラルタル</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>グリーンランド</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>ガンビア</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>ギニア</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>グアドループ (仏領)</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>赤道ギニア</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>南ジョージア島・南サンドイッチ諸島</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>グアテマラ</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>グアム</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>ギニア-ビサウ</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>ガイアナ</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>香港特別行政区</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>ハード島とマクドナルド諸島</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>ホンジュラス</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>ハイチ</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>インドネシア</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>イスラエル</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>マン島</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>英領インド洋地域</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>イラク</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>ジャージー</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>ジャマイカ</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>ヨルダン</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>ケニア</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>キルギス</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>カンボジア</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>キリバス</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>コモロ</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>セントクリストファー ・ ネイビス</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>韓国</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>クウェート</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>ケイマン諸島</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>カザフスタン</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>ラオス</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>レバノン</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>セントルシア</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>スリランカ</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>リベリア</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>レソト</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>リビア</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>モロッコ</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>モルドバ</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>モンテネグロ</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>セント ・ マーチン島</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>マダガスカル</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>マーシャル諸島</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>マケドニア</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>マリ</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>ミャンマー</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>モンゴル国</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>マカオ特別行政区</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>北マリアナ諸島</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>マルティニーク島</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>モーリタニア</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>モントセラト</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>モーリシャス</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>モルディブ</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>マラウイ</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>メキシコ</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>マレーシア</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>モザンビーク</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>ナミビア</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>ニューカレドニア</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>ニジェール</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>ノーフォーク島</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>ナイジェリア</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>ニカラグア</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>ネパール</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>ナウル</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>ニウエ島</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>オマーン</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>パナマ</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>ペルー</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>フランス領ポリネシア</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>パプア ニューギニア独立国</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>フィリピン</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>パキスタン</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>ポーランド</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>サンピエール ・ ミクロン</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>ピトケアン諸島</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>プエルトリコ</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>パレスチナ自治政府</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>パラオ</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>パラグアイ</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>カタール</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>レユニオン</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>セルビア</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>ロシア</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>ルワンダ</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>サウジアラビア</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>ソロモン諸島</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>セイシェル</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>シンガポール</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>セントヘレナ</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>スロベニア</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>スバールバル諸島</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>サンマリノ</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>セネガル</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>ソマリア</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>スリナム</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>南スーダン</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>サントメ ・ プリンシペ</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>エルサルバドル</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>シント ・ マールテン島</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>タークス ・ カイコス諸島</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>チャド</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>フランス領極南諸島</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>トーゴ</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>タイ</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>タジキスタン</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>トケラウ諸島</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>東ティモール</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>トルクメニスタン</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>チュニジア</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>トンガ</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>トルコ</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>トリニダード・トバゴ</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>ツバル</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>台湾</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>タンザニア</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>ウクライナ</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>ウガンダ</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>アメリカ合衆国外諸島</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>ウルグアイ</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>ウズベキスタン</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>バチカン市国</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>セントビン セントおよびグレナディーン諸島</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>ベネズエラ</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>イギリス領ヴァージン諸島</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>米領バージン諸島</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>ベトナム</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>バヌアツ</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>ウォリス ・ フツナ</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>サモア</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>シント ・ ユースタティウス島</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>ヤンマイエン島</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>コソボ</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>サバ</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>イエメン</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>マヨット島</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>南アフリカ</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>ザンビア</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>ジンバブエ</value>
   </data>
 </root>

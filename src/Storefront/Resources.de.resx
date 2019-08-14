@@ -130,10 +130,10 @@
     <value>Alle löschen</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
-    <value>So erreichen Sie uns</value>
+    <value>kontaktieren Sie uns</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
-    <value>Copyright © 2018</value>
+    <value>Copyright-2019</value>
   </data>
   <data name="Ellipsis" xml:space="preserve">
     <value>...</value>
@@ -151,22 +151,22 @@
     <value>Portal-Konfiguration scheint ungültig zu sein</value>
   </data>
   <data name="Last" xml:space="preserve">
-    <value>Letzten</value>
+    <value>letzte</value>
   </data>
   <data name="Loading" xml:space="preserve">
     <value>Laden</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>einloggen</value>
   </data>
   <data name="MoreActionsTooltip" xml:space="preserve">
     <value>Weitere Aktionen...</value>
   </data>
   <data name="NavigateBackTo" xml:space="preserve">
-    <value>Zurück zu: </value>
+    <value>Zurück zu:</value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Nächste</value>
+    <value>nächster</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>Nein</value>
@@ -175,7 +175,7 @@
     <value>Aktive Benachrichtigungen</value>
   </data>
   <data name="NotificationsSummary" xml:space="preserve">
-    <value> neue Benachrichtigungen</value>
+    <value>neue Benachrichtigungen</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>Okay</value>
@@ -187,7 +187,7 @@
     <value>Portal-Konfiguration konnte nicht gefunden werden</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Erinnere dich an mich</value>
+    <value>erinnern Sie sich an mich</value>
   </data>
   <data name="RetryCapital" xml:space="preserve">
     <value>Wiederholen Sie</value>
@@ -235,7 +235,7 @@
     <value>Kundeninformationen</value>
   </data>
   <data name="Done" xml:space="preserve">
-    <value>Fertig</value>
+    <value>fertig</value>
   </data>
   <data name="MicrosoftId" xml:space="preserve">
     <value>Microsoft-ID</value>
@@ -250,7 +250,7 @@
     <value>Abonnements</value>
   </data>
   <data name="Total" xml:space="preserve">
-    <value>Insgesamt</value>
+    <value>gesamt</value>
   </data>
   <data name="AddSubscriptions" xml:space="preserve">
     <value>Abonnements hinzufügen</value>
@@ -304,7 +304,7 @@
     <value>Anpassung</value>
   </data>
   <data name="FeaturesCaption" xml:space="preserve">
-    <value>Merkmale:</value>
+    <value>Funktionen:</value>
   </data>
   <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
     <value>Wählen Sie ein Microsoft-Angebot:</value>
@@ -397,7 +397,7 @@
     <value>Keine Angebote gefunden</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
-    <value>Sie müssen keine Angebote konfiguriert. Klicken Sie auf Hinzufügen, damit beginnen, Ihre Angebote oben bieten.</value>
+    <value>Sie müssen keine Angebote konfiguriert. Klicken Sie auf hinzufügen, damit beginnen, Ihre Angebote oben bieten.</value>
   </data>
   <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
     <value>Microsoft-Angebot</value>
@@ -448,13 +448,13 @@
     <value>Angebot speichern</value>
   </data>
   <data name="Seats" xml:space="preserve">
-    <value> Sitze</value>
+    <value>Sitze</value>
   </data>
   <data name="SelectOfferErrorMessage" xml:space="preserve">
     <value>Bitte wählen Sie ein Angebot</value>
   </data>
   <data name="To" xml:space="preserve">
-    <value> An </value>
+    <value>An</value>
   </data>
   <data name="UpdatingOfferMessage" xml:space="preserve">
     <value>Angebot aktualisiert</value>
@@ -463,7 +463,7 @@
     <value>Den Namen Ihrer Organisation</value>
   </data>
   <data name="Undo" xml:space="preserve">
-    <value>Rückgängig</value>
+    <value>"Rückgängig"</value>
   </data>
   <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
     <value>Branding-Partner konnte nicht abgerufen werden.</value>
@@ -622,7 +622,7 @@
     <value>Dies werden die Benutzer-Id, die Sie mit Ihrem Office 365-Konto verwenden möchten.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
-    <value>Benutzername</value>
+    <value>Nutzername</value>
   </data>
   <data name="CustomerProfileStateCaption" xml:space="preserve">
     <value>Bundesland/Kanton</value>
@@ -718,7 +718,7 @@
     <value>endet am</value>
   </data>
   <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
-    <value>Gezahlten Preis erscheint gegebenenfalls anteilig. </value>
+    <value>Gezahlten Preis erscheint gegebenenfalls anteilig.</value>
   </data>
   <data name="AnnualPriceCaption" xml:space="preserve">
     <value>Preis pro Jahr</value>
@@ -748,7 +748,7 @@
     <value>Bitte korrigieren Sie die ungültige Eingabe:</value>
   </data>
   <data name="DownstreamErrorPrefix" xml:space="preserve">
-    <value>Wir sind nicht in der Lage, Ihre Anfrage zu verarbeiten. Bitte versuchen Sie es später oder kontaktieren Sie uns per e-Mail. Fehler-Details-    </value>
+    <value>Wir sind nicht in der Lage, Ihre Anfrage zu verarbeiten. Bitte versuchen Sie es später oder kontaktieren Sie uns per e-Mail. Fehler-Details-</value>
   </data>
   <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
     <value>Nur ein Abo kann aktualisiert werden.</value>
@@ -757,10 +757,10 @@
     <value>Bestellung vorbereitet und umleiten auf Zahlungs-Gateway...</value>
   </data>
   <data name="OrderAddFailureMessage" xml:space="preserve">
-    <value>Fehler beim Hinzufügen von Abonnements. </value>
+    <value>Fehler beim Hinzufügen von Abonnements.</value>
   </data>
   <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
-    <value>Wir sind nicht in der Lage, Ihre Zahlung zu verarbeiten – </value>
+    <value>Wir sind nicht in der Lage, Ihre Zahlung zu verarbeiten –</value>
   </data>
   <data name="PortalStartupFailure" xml:space="preserve">
     <value>Könnte nicht das Portal Start</value>
@@ -769,13 +769,13 @@
     <value>Zahlung-Konfiguration ist ungültig.</value>
   </data>
   <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
-    <value>Ihre Zahlung kann zu diesem Zeitpunkt verarbeitet werden. Bitte kontaktieren Sie uns per e-Mail. </value>
+    <value>Ihre Zahlung kann zu diesem Zeitpunkt verarbeitet werden. Bitte kontaktieren Sie uns per e-Mail.</value>
   </data>
   <data name="InvalidHeaderImageUri" xml:space="preserve">
     <value>Ungültige Headerbild Uri. Bitte stellen Sie sicher, dass der Uri gültig ist.</value>
   </data>
   <data name="InvalidInput" xml:space="preserve">
-    <value>Es gab ein Problem in eines der Felder, die Sie eingegeben: </value>
+    <value>Es gab ein Problem in eines der Felder, die Sie eingegeben:</value>
   </data>
   <data name="InvalidOrganizationLogoUri" xml:space="preserve">
     <value>Ungültige Organisation Logo Uri. Bitte stellen Sie sicher, dass der Uri gültig ist.</value>
@@ -814,7 +814,7 @@
     <value>Hauptansprechpartner</value>
   </data>
   <data name="CouldNotRetrieveOffer" xml:space="preserve">
-    <value>Angebotsdetails konnte nicht abgerufen werden. Bitte versuchen Sie es später erneut. </value>
+    <value>Angebotsdetails konnte nicht abgerufen werden. Bitte versuchen Sie es später erneut.</value>
   </data>
   <data name="InvalidInputInFormCaption" xml:space="preserve">
     <value>Ein oder mehrere Felder sind ungültig. Bitte korrigieren und dann einreichen.</value>
@@ -862,10 +862,10 @@
     <value>Fehler beim Verarbeitungsreihenfolge. Versuchen Sie später erneut.</value>
   </data>
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Fehler beim Verarbeitungsreihenfolge. Bitte klicken Sie auf Fertig, und versuchen Sie es erneut.</value>
+    <value>Fehler beim Verarbeitungsreihenfolge. Bitte klicken Sie auf fertig, und versuchen Sie es erneut.</value>
   </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
-    <value>Fehler beim Empfangen von Zahlungsinformationen. Bitte klicken Sie auf Fertig, um noch einmal zu versuchen.</value>
+    <value>Fehler beim Empfangen von Zahlungsinformationen. Bitte klicken Sie auf fertig, um noch einmal zu versuchen.</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
     <value>Zahlungsinformationen erhalten. Verarbeitungsreihenfolge...</value>
@@ -892,10 +892,10 @@
     <value>Anzahl</value>
   </data>
   <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
-    <value>{0} muss größer als NULL sein.</value>
+    <value>{0} muss größer als Null sein.</value>
   </data>
   <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
-    <value>Zeichenfolge</value>
+    <value>Schnur</value>
   </data>
   <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
     <value>{0} ist nicht festgelegt.</value>
@@ -934,7 +934,7 @@
     <value>Zahlung-Modus wird nicht unterstützt</value>
   </data>
   <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
-    <value>Angebotspreis sollte größer als NULL sein.</value>
+    <value>Angebotspreis sollte größer als Null sein.</value>
   </data>
   <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
     <value>MicrosoftOfferId muss eingestellt werden</value>
@@ -1021,7 +1021,7 @@
     <value>Zypern</value>
   </data>
   <data name="CountryNameCZ" xml:space="preserve">
-    <value>Tschechische Republik</value>
+    <value>Tschechien</value>
   </data>
   <data name="CountryNameDK" xml:space="preserve">
     <value>Dänemark</value>
@@ -1083,9 +1083,6 @@
   <data name="CountryNameNO" xml:space="preserve">
     <value>Norwegen</value>
   </data>
-  <data name="CountryNamePO" xml:space="preserve">
-    <value>Polen</value>
-  </data>
   <data name="CountryNamePT" xml:space="preserve">
     <value>Portugal</value>
   </data>
@@ -1096,7 +1093,7 @@
     <value>Slowakei</value>
   </data>
   <data name="CountryNameSL" xml:space="preserve">
-    <value>Slowenien</value>
+    <value>Sierra Leone</value>
   </data>
   <data name="CountryNameES" xml:space="preserve">
     <value>Spanien</value>
@@ -1144,13 +1141,13 @@
     <value>Melden Sie sich bei der Anwendung</value>
   </data>
   <data name="SubscriptionStatusTypeActive" xml:space="preserve">
-    <value>Aktiv</value>
+    <value>aktiv</value>
   </data>
   <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
     <value>Gelöscht</value>
   </data>
   <data name="SubscriptionStatusTypeNone" xml:space="preserve">
-    <value>Keine</value>
+    <value>nichts</value>
   </data>
   <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
     <value>Ausgesetzt</value>
@@ -1180,7 +1177,7 @@
     <value>Instrumentationsschlüssel:</value>
   </data>
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
-    <value>Sie können eine Application Insights instrumentationsschlüssel angeben, um die Telemetrie-Daten aus dem Portal zu erfassen.</value>
+    <value>Sie können eine Application Insights Instrumentationsschlüssel angeben, um die Telemetrie-Daten aus dem Portal zu erfassen.</value>
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Nutzung-Abonnements</value>
@@ -1283,5 +1280,632 @@
   </data>
   <data name="CountryNameAO" xml:space="preserve">
     <value>Angola</value>
+  </data>
+  <data name="CountryNameAD" xml:space="preserve">
+    <value>Andorra</value>
+  </data>
+  <data name="CountryNameAE" xml:space="preserve">
+    <value>Vereinigte Arabische Emirate</value>
+  </data>
+  <data name="CountryNameAF" xml:space="preserve">
+    <value>Afghanistan</value>
+  </data>
+  <data name="CountryNameAG" xml:space="preserve">
+    <value>Antigua und Barbuda</value>
+  </data>
+  <data name="CountryNameAI" xml:space="preserve">
+    <value>Anguilla</value>
+  </data>
+  <data name="CountryNameAL" xml:space="preserve">
+    <value>Albanien</value>
+  </data>
+  <data name="CountryNameAM" xml:space="preserve">
+    <value>Armenien</value>
+  </data>
+  <data name="CountryNameAN" xml:space="preserve">
+    <value>Niederländische Antillen</value>
+  </data>
+  <data name="CountryNameAQ" xml:space="preserve">
+    <value>Antarktis</value>
+  </data>
+  <data name="CountryNameAR" xml:space="preserve">
+    <value>Argentinien</value>
+  </data>
+  <data name="CountryNameAS" xml:space="preserve">
+    <value>Amerikanisch-Samoa</value>
+  </data>
+  <data name="CountryNameAW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="CountryNameAX" xml:space="preserve">
+    <value>Åland-Inseln</value>
+  </data>
+  <data name="CountryNameAZ" xml:space="preserve">
+    <value>Aserbaidschan</value>
+  </data>
+  <data name="CountryNameBA" xml:space="preserve">
+    <value>Bosnien und Herzegowina</value>
+  </data>
+  <data name="CountryNameBB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="CountryNameBD" xml:space="preserve">
+    <value>Bangladesch</value>
+  </data>
+  <data name="CountryNameBF" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="CountryNameBH" xml:space="preserve">
+    <value>Bahrain</value>
+  </data>
+  <data name="CountryNameBI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="CountryNameBJ" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="CountryNameBL" xml:space="preserve">
+    <value>Saint-Barthélemy</value>
+  </data>
+  <data name="CountryNameBM" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="CountryNameBN" xml:space="preserve">
+    <value>Brunei</value>
+  </data>
+  <data name="CountryNameBO" xml:space="preserve">
+    <value>Bolivien</value>
+  </data>
+  <data name="CountryNameBQ" xml:space="preserve">
+    <value>Bonaire</value>
+  </data>
+  <data name="CountryNameBR" xml:space="preserve">
+    <value>Brazilien</value>
+  </data>
+  <data name="CountryNameBS" xml:space="preserve">
+    <value>Bahamas</value>
+  </data>
+  <data name="CountryNameBT" xml:space="preserve">
+    <value>Bhutan</value>
+  </data>
+  <data name="CountryNameBV" xml:space="preserve">
+    <value>Bouvet Island</value>
+  </data>
+  <data name="CountryNameBW" xml:space="preserve">
+    <value>Botswana</value>
+  </data>
+  <data name="CountryNameBY" xml:space="preserve">
+    <value>Belarus</value>
+  </data>
+  <data name="CountryNameBZ" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="CountryNameCC" xml:space="preserve">
+    <value>Cocos (Keeling) Inseln</value>
+  </data>
+  <data name="CountryNameCD" xml:space="preserve">
+    <value>Kongo (DRK)</value>
+  </data>
+  <data name="CountryNameCF" xml:space="preserve">
+    <value>Zentralafrikanische Republik</value>
+  </data>
+  <data name="CountryNameCG" xml:space="preserve">
+    <value>Kongo</value>
+  </data>
+  <data name="CountryNameCI" xml:space="preserve">
+    <value>Côte d ' Ivoire</value>
+  </data>
+  <data name="CountryNameCK" xml:space="preserve">
+    <value>Cook-Inseln</value>
+  </data>
+  <data name="CountryNameCL" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="CountryNameCM" xml:space="preserve">
+    <value>Kamerun</value>
+  </data>
+  <data name="CountryNameCN" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="CountryNameCO" xml:space="preserve">
+    <value>Kolumbien</value>
+  </data>
+  <data name="CountryNameCR" xml:space="preserve">
+    <value>Costa Rica</value>
+  </data>
+  <data name="CountryNameCV" xml:space="preserve">
+    <value>Cabo Verde</value>
+  </data>
+  <data name="CountryNameCW" xml:space="preserve">
+    <value>Curaçao</value>
+  </data>
+  <data name="CountryNameCX" xml:space="preserve">
+    <value>Weihnachtsinsel</value>
+  </data>
+  <data name="CountryNameDJ" xml:space="preserve">
+    <value>Dschibuti</value>
+  </data>
+  <data name="CountryNameDM" xml:space="preserve">
+    <value>Dominica</value>
+  </data>
+  <data name="CountryNameDO" xml:space="preserve">
+    <value>Dominikanische Republik</value>
+  </data>
+  <data name="CountryNameDZ" xml:space="preserve">
+    <value>Algerien</value>
+  </data>
+  <data name="CountryNameEC" xml:space="preserve">
+    <value>Ecuador</value>
+  </data>
+  <data name="CountryNameEG" xml:space="preserve">
+    <value>Ägypten</value>
+  </data>
+  <data name="CountryNameER" xml:space="preserve">
+    <value>Eritrea</value>
+  </data>
+  <data name="CountryNameET" xml:space="preserve">
+    <value>Äthiopien</value>
+  </data>
+  <data name="CountryNameFJ" xml:space="preserve">
+    <value>Fidschi-Inseln</value>
+  </data>
+  <data name="CountryNameFK" xml:space="preserve">
+    <value>Falkland-Inseln</value>
+  </data>
+  <data name="CountryNameFM" xml:space="preserve">
+    <value>Mikronesien</value>
+  </data>
+  <data name="CountryNameFO" xml:space="preserve">
+    <value>Färöer Inseln</value>
+  </data>
+  <data name="CountryNameGA" xml:space="preserve">
+    <value>Gabun</value>
+  </data>
+  <data name="CountryNameGD" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="CountryNameGE" xml:space="preserve">
+    <value>Georgien</value>
+  </data>
+  <data name="CountryNameGF" xml:space="preserve">
+    <value>Französisch-Guayana</value>
+  </data>
+  <data name="CountryNameGG" xml:space="preserve">
+    <value>Guernsey</value>
+  </data>
+  <data name="CountryNameGH" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="CountryNameGI" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="CountryNameGL" xml:space="preserve">
+    <value>Grönland</value>
+  </data>
+  <data name="CountryNameGM" xml:space="preserve">
+    <value>Gambia</value>
+  </data>
+  <data name="CountryNameGN" xml:space="preserve">
+    <value>Guinea</value>
+  </data>
+  <data name="CountryNameGP" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="CountryNameGQ" xml:space="preserve">
+    <value>Äquatorial-Guinea</value>
+  </data>
+  <data name="CountryNameGS" xml:space="preserve">
+    <value>Südgeorgien und die Südlichen Sandwichinseln</value>
+  </data>
+  <data name="CountryNameGT" xml:space="preserve">
+    <value>Guatemala</value>
+  </data>
+  <data name="CountryNameGU" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="CountryNameGW" xml:space="preserve">
+    <value>Guinea-Bissau</value>
+  </data>
+  <data name="CountryNameGY" xml:space="preserve">
+    <value>Guyana</value>
+  </data>
+  <data name="CountryNameHK" xml:space="preserve">
+    <value>Hong Kong SAR</value>
+  </data>
+  <data name="CountryNameHM" xml:space="preserve">
+    <value>Heard Insel und McDonald Inseln</value>
+  </data>
+  <data name="CountryNameHN" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="CountryNameHT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="CountryNameID" xml:space="preserve">
+    <value>Indonesien</value>
+  </data>
+  <data name="CountryNameIL" xml:space="preserve">
+    <value>Israel</value>
+  </data>
+  <data name="CountryNameIM" xml:space="preserve">
+    <value>Isle Of Man</value>
+  </data>
+  <data name="CountryNameIO" xml:space="preserve">
+    <value>Britisches Territorium im Indischen Ozean</value>
+  </data>
+  <data name="CountryNameIQ" xml:space="preserve">
+    <value>Irak</value>
+  </data>
+  <data name="CountryNameJE" xml:space="preserve">
+    <value>Jersey</value>
+  </data>
+  <data name="CountryNameJM" xml:space="preserve">
+    <value>Jamaika</value>
+  </data>
+  <data name="CountryNameJO" xml:space="preserve">
+    <value>Jordanien</value>
+  </data>
+  <data name="CountryNameKE" xml:space="preserve">
+    <value>Kenia</value>
+  </data>
+  <data name="CountryNameKG" xml:space="preserve">
+    <value>Kirgistan</value>
+  </data>
+  <data name="CountryNameKH" xml:space="preserve">
+    <value>Kambodscha</value>
+  </data>
+  <data name="CountryNameKI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="CountryNameKM" xml:space="preserve">
+    <value>Komoren</value>
+  </data>
+  <data name="CountryNameKN" xml:space="preserve">
+    <value>St. Kitts und Nevis</value>
+  </data>
+  <data name="CountryNameKR" xml:space="preserve">
+    <value>Korea</value>
+  </data>
+  <data name="CountryNameKW" xml:space="preserve">
+    <value>Kuwait</value>
+  </data>
+  <data name="CountryNameKY" xml:space="preserve">
+    <value>Cayman-Inseln</value>
+  </data>
+  <data name="CountryNameKZ" xml:space="preserve">
+    <value>Kasachstan</value>
+  </data>
+  <data name="CountryNameLA" xml:space="preserve">
+    <value>Laos</value>
+  </data>
+  <data name="CountryNameLB" xml:space="preserve">
+    <value>Libanon</value>
+  </data>
+  <data name="CountryNameLC" xml:space="preserve">
+    <value>Saint Lucia</value>
+  </data>
+  <data name="CountryNameLK" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="CountryNameLR" xml:space="preserve">
+    <value>Liberia</value>
+  </data>
+  <data name="CountryNameLS" xml:space="preserve">
+    <value>Lesotho</value>
+  </data>
+  <data name="CountryNameLY" xml:space="preserve">
+    <value>Libyen</value>
+  </data>
+  <data name="CountryNameMA" xml:space="preserve">
+    <value>Marokko</value>
+  </data>
+  <data name="CountryNameMD" xml:space="preserve">
+    <value>Republik Moldau</value>
+  </data>
+  <data name="CountryNameME" xml:space="preserve">
+    <value>Montenegro</value>
+  </data>
+  <data name="CountryNameMF" xml:space="preserve">
+    <value>Saint-Martin</value>
+  </data>
+  <data name="CountryNameMG" xml:space="preserve">
+    <value>Madagaskar</value>
+  </data>
+  <data name="CountryNameMH" xml:space="preserve">
+    <value>Marshall-Inseln</value>
+  </data>
+  <data name="CountryNameMK" xml:space="preserve">
+    <value>Mazedonien</value>
+  </data>
+  <data name="CountryNameML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="CountryNameMM" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="CountryNameMN" xml:space="preserve">
+    <value>Mongolei</value>
+  </data>
+  <data name="CountryNameMO" xml:space="preserve">
+    <value>Macao SAR</value>
+  </data>
+  <data name="CountryNameMP" xml:space="preserve">
+    <value>Nördliche Marianen</value>
+  </data>
+  <data name="CountryNameMQ" xml:space="preserve">
+    <value>Martinique</value>
+  </data>
+  <data name="CountryNameMR" xml:space="preserve">
+    <value>Mauretanien</value>
+  </data>
+  <data name="CountryNameMS" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="CountryNameMU" xml:space="preserve">
+    <value>Mauritius</value>
+  </data>
+  <data name="CountryNameMV" xml:space="preserve">
+    <value>Malediven</value>
+  </data>
+  <data name="CountryNameMW" xml:space="preserve">
+    <value>Malawi</value>
+  </data>
+  <data name="CountryNameMX" xml:space="preserve">
+    <value>Mexiko</value>
+  </data>
+  <data name="CountryNameMY" xml:space="preserve">
+    <value>Malaysien</value>
+  </data>
+  <data name="CountryNameMZ" xml:space="preserve">
+    <value>Mosambik</value>
+  </data>
+  <data name="CountryNameNA" xml:space="preserve">
+    <value>Namibia</value>
+  </data>
+  <data name="CountryNameNC" xml:space="preserve">
+    <value>Neu-Kaledonien</value>
+  </data>
+  <data name="CountryNameNE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="CountryNameNF" xml:space="preserve">
+    <value>Norfolk-Insel</value>
+  </data>
+  <data name="CountryNameNG" xml:space="preserve">
+    <value>Nigeria</value>
+  </data>
+  <data name="CountryNameNI" xml:space="preserve">
+    <value>Nicaragua</value>
+  </data>
+  <data name="CountryNameNP" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="CountryNameNR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="CountryNameNU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="CountryNameOM" xml:space="preserve">
+    <value>Oman</value>
+  </data>
+  <data name="CountryNamePA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="CountryNamePE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="CountryNamePF" xml:space="preserve">
+    <value>Französisch-Polynesien</value>
+  </data>
+  <data name="CountryNamePG" xml:space="preserve">
+    <value>Papua-Neu-Guinea</value>
+  </data>
+  <data name="CountryNamePH" xml:space="preserve">
+    <value>Philippinen</value>
+  </data>
+  <data name="CountryNamePK" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="CountryNamePL" xml:space="preserve">
+    <value>Polen</value>
+  </data>
+  <data name="CountryNamePM" xml:space="preserve">
+    <value>Saint-Pierre und Miquelon</value>
+  </data>
+  <data name="CountryNamePN" xml:space="preserve">
+    <value>Pitcairn Inseln</value>
+  </data>
+  <data name="CountryNamePR" xml:space="preserve">
+    <value>Puerto Rico</value>
+  </data>
+  <data name="CountryNamePS" xml:space="preserve">
+    <value>Palästinensische Autonomiebehörde</value>
+  </data>
+  <data name="CountryNamePW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="CountryNamePY" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="CountryNameQA" xml:space="preserve">
+    <value>Katar</value>
+  </data>
+  <data name="CountryNameRE" xml:space="preserve">
+    <value>Réunion</value>
+  </data>
+  <data name="CountryNameRS" xml:space="preserve">
+    <value>Serbien</value>
+  </data>
+  <data name="CountryNameRU" xml:space="preserve">
+    <value>Russland</value>
+  </data>
+  <data name="CountryNameRW" xml:space="preserve">
+    <value>Ruanda</value>
+  </data>
+  <data name="CountryNameSA" xml:space="preserve">
+    <value>Saudi-Arabien</value>
+  </data>
+  <data name="CountryNameSB" xml:space="preserve">
+    <value>Salomon-Inseln</value>
+  </data>
+  <data name="CountryNameSC" xml:space="preserve">
+    <value>Seychellen</value>
+  </data>
+  <data name="CountryNameSG" xml:space="preserve">
+    <value>Singapur</value>
+  </data>
+  <data name="CountryNameSH" xml:space="preserve">
+    <value>Saint Helena</value>
+  </data>
+  <data name="CountryNameSI" xml:space="preserve">
+    <value>Slowenien</value>
+  </data>
+  <data name="CountryNameSJ" xml:space="preserve">
+    <value>Svalbard</value>
+  </data>
+  <data name="CountryNameSM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="CountryNameSN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="CountryNameSO" xml:space="preserve">
+    <value>Somalia</value>
+  </data>
+  <data name="CountryNameSR" xml:space="preserve">
+    <value>Suriname</value>
+  </data>
+  <data name="CountryNameSS" xml:space="preserve">
+    <value>Süd-Sudan</value>
+  </data>
+  <data name="CountryNameST" xml:space="preserve">
+    <value>São Tomé und Príncipe</value>
+  </data>
+  <data name="CountryNameSV" xml:space="preserve">
+    <value>El Salvador</value>
+  </data>
+  <data name="CountryNameSX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="CountryNameSZ" xml:space="preserve">
+    <value>eSwatini</value>
+  </data>
+  <data name="CountryNameTC" xml:space="preserve">
+    <value>Turks And Caicos Islands</value>
+  </data>
+  <data name="CountryNameTD" xml:space="preserve">
+    <value>Tschad</value>
+  </data>
+  <data name="CountryNameTF" xml:space="preserve">
+    <value>Französische Südliche Territorien</value>
+  </data>
+  <data name="CountryNameTG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="CountryNameTH" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="CountryNameTJ" xml:space="preserve">
+    <value>Tadschikistan</value>
+  </data>
+  <data name="CountryNameTK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="CountryNameTL" xml:space="preserve">
+    <value>Timor-Leste</value>
+  </data>
+  <data name="CountryNameTM" xml:space="preserve">
+    <value>Turkmenistan</value>
+  </data>
+  <data name="CountryNameTN" xml:space="preserve">
+    <value>Tunesien</value>
+  </data>
+  <data name="CountryNameTO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="CountryNameTR" xml:space="preserve">
+    <value>Turkei</value>
+  </data>
+  <data name="CountryNameTT" xml:space="preserve">
+    <value>Trinidad und Tobago</value>
+  </data>
+  <data name="CountryNameTV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="CountryNameTW" xml:space="preserve">
+    <value>Taiwan</value>
+  </data>
+  <data name="CountryNameTZ" xml:space="preserve">
+    <value>Tansania</value>
+  </data>
+  <data name="CountryNameUA" xml:space="preserve">
+    <value>Ukraine</value>
+  </data>
+  <data name="CountryNameUG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="CountryNameUM" xml:space="preserve">
+    <value>Vorgelagerten Inseln (USA)</value>
+  </data>
+  <data name="CountryNameUY" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="CountryNameUZ" xml:space="preserve">
+    <value>Usbekistan</value>
+  </data>
+  <data name="CountryNameVA" xml:space="preserve">
+    <value>Vatikanstadt</value>
+  </data>
+  <data name="CountryNameVC" xml:space="preserve">
+    <value>St. Vincent und die Grenadinen</value>
+  </data>
+  <data name="CountryNameVE" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="CountryNameVG" xml:space="preserve">
+    <value>Britische Jungferninseln</value>
+  </data>
+  <data name="CountryNameVI" xml:space="preserve">
+    <value>Jungferninseln (US)</value>
+  </data>
+  <data name="CountryNameVN" xml:space="preserve">
+    <value>Vietnam</value>
+  </data>
+  <data name="CountryNameVU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="CountryNameWF" xml:space="preserve">
+    <value>Wallis und Futuna</value>
+  </data>
+  <data name="CountryNameWS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="CountryNameXE" xml:space="preserve">
+    <value>Sint Eustatius</value>
+  </data>
+  <data name="CountryNameXJ" xml:space="preserve">
+    <value>Jan Mayen</value>
+  </data>
+  <data name="CountryNameXK" xml:space="preserve">
+    <value>Kosovo</value>
+  </data>
+  <data name="CountryNameXS" xml:space="preserve">
+    <value>Saba</value>
+  </data>
+  <data name="CountryNameYE" xml:space="preserve">
+    <value>Jemen</value>
+  </data>
+  <data name="CountryNameYT" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="CountryNameZA" xml:space="preserve">
+    <value>Südafrika</value>
+  </data>
+  <data name="CountryNameZM" xml:space="preserve">
+    <value>Sambia</value>
+  </data>
+  <data name="CountryNameZW" xml:space="preserve">
+    <value>Zimbabwe</value>
   </data>
 </root>

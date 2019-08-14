@@ -592,7 +592,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copyright 2018.
+        ///   Looks up a localized string similar to Copyright 2019.
         /// </summary>
         public static string CopyRight {
             get {
@@ -646,11 +646,110 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Andorra.
+        /// </summary>
+        public static string CountryNameAD {
+            get {
+                return ResourceManager.GetString("CountryNameAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to United Arab Emirates.
+        /// </summary>
+        public static string CountryNameAE {
+            get {
+                return ResourceManager.GetString("CountryNameAE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Afghanistan.
+        /// </summary>
+        public static string CountryNameAF {
+            get {
+                return ResourceManager.GetString("CountryNameAF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Antigua and Barbuda.
+        /// </summary>
+        public static string CountryNameAG {
+            get {
+                return ResourceManager.GetString("CountryNameAG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anguilla.
+        /// </summary>
+        public static string CountryNameAI {
+            get {
+                return ResourceManager.GetString("CountryNameAI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Albania.
+        /// </summary>
+        public static string CountryNameAL {
+            get {
+                return ResourceManager.GetString("CountryNameAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armenia.
+        /// </summary>
+        public static string CountryNameAM {
+            get {
+                return ResourceManager.GetString("CountryNameAM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Netherlands Antilles.
+        /// </summary>
+        public static string CountryNameAN {
+            get {
+                return ResourceManager.GetString("CountryNameAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Angola.
         /// </summary>
         public static string CountryNameAO {
             get {
                 return ResourceManager.GetString("CountryNameAO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Antarctica.
+        /// </summary>
+        public static string CountryNameAQ {
+            get {
+                return ResourceManager.GetString("CountryNameAQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argentina.
+        /// </summary>
+        public static string CountryNameAR {
+            get {
+                return ResourceManager.GetString("CountryNameAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to American Samoa.
+        /// </summary>
+        public static string CountryNameAS {
+            get {
+                return ResourceManager.GetString("CountryNameAS", resourceCulture);
             }
         }
         
@@ -673,11 +772,74 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aruba.
+        /// </summary>
+        public static string CountryNameAW {
+            get {
+                return ResourceManager.GetString("CountryNameAW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Åland Islands.
+        /// </summary>
+        public static string CountryNameAX {
+            get {
+                return ResourceManager.GetString("CountryNameAX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Azerbaijan.
+        /// </summary>
+        public static string CountryNameAZ {
+            get {
+                return ResourceManager.GetString("CountryNameAZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bosnia and Herzegovina.
+        /// </summary>
+        public static string CountryNameBA {
+            get {
+                return ResourceManager.GetString("CountryNameBA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barbados.
+        /// </summary>
+        public static string CountryNameBB {
+            get {
+                return ResourceManager.GetString("CountryNameBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bangladesh.
+        /// </summary>
+        public static string CountryNameBD {
+            get {
+                return ResourceManager.GetString("CountryNameBD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Belgium.
         /// </summary>
         public static string CountryNameBE {
             get {
                 return ResourceManager.GetString("CountryNameBE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burkina Faso.
+        /// </summary>
+        public static string CountryNameBF {
+            get {
+                return ResourceManager.GetString("CountryNameBF", resourceCulture);
             }
         }
         
@@ -691,11 +853,182 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bahrain.
+        /// </summary>
+        public static string CountryNameBH {
+            get {
+                return ResourceManager.GetString("CountryNameBH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burundi.
+        /// </summary>
+        public static string CountryNameBI {
+            get {
+                return ResourceManager.GetString("CountryNameBI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Benin.
+        /// </summary>
+        public static string CountryNameBJ {
+            get {
+                return ResourceManager.GetString("CountryNameBJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint-Barthélemy.
+        /// </summary>
+        public static string CountryNameBL {
+            get {
+                return ResourceManager.GetString("CountryNameBL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bermuda.
+        /// </summary>
+        public static string CountryNameBM {
+            get {
+                return ResourceManager.GetString("CountryNameBM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brunei.
+        /// </summary>
+        public static string CountryNameBN {
+            get {
+                return ResourceManager.GetString("CountryNameBN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bolivia.
+        /// </summary>
+        public static string CountryNameBO {
+            get {
+                return ResourceManager.GetString("CountryNameBO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bonaire.
+        /// </summary>
+        public static string CountryNameBQ {
+            get {
+                return ResourceManager.GetString("CountryNameBQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brazil.
+        /// </summary>
+        public static string CountryNameBR {
+            get {
+                return ResourceManager.GetString("CountryNameBR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bahamas.
+        /// </summary>
+        public static string CountryNameBS {
+            get {
+                return ResourceManager.GetString("CountryNameBS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bhutan.
+        /// </summary>
+        public static string CountryNameBT {
+            get {
+                return ResourceManager.GetString("CountryNameBT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bouvet Island.
+        /// </summary>
+        public static string CountryNameBV {
+            get {
+                return ResourceManager.GetString("CountryNameBV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Botswana.
+        /// </summary>
+        public static string CountryNameBW {
+            get {
+                return ResourceManager.GetString("CountryNameBW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Belarus.
+        /// </summary>
+        public static string CountryNameBY {
+            get {
+                return ResourceManager.GetString("CountryNameBY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Belize.
+        /// </summary>
+        public static string CountryNameBZ {
+            get {
+                return ResourceManager.GetString("CountryNameBZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Canada.
         /// </summary>
         public static string CountryNameCA {
             get {
                 return ResourceManager.GetString("CountryNameCA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cocos (Keeling) Islands.
+        /// </summary>
+        public static string CountryNameCC {
+            get {
+                return ResourceManager.GetString("CountryNameCC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Congo (DRC).
+        /// </summary>
+        public static string CountryNameCD {
+            get {
+                return ResourceManager.GetString("CountryNameCD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Central African Republic.
+        /// </summary>
+        public static string CountryNameCF {
+            get {
+                return ResourceManager.GetString("CountryNameCF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Congo.
+        /// </summary>
+        public static string CountryNameCG {
+            get {
+                return ResourceManager.GetString("CountryNameCG", resourceCulture);
             }
         }
         
@@ -709,6 +1042,96 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Côte d&apos;Ivoire.
+        /// </summary>
+        public static string CountryNameCI {
+            get {
+                return ResourceManager.GetString("CountryNameCI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cook Islands.
+        /// </summary>
+        public static string CountryNameCK {
+            get {
+                return ResourceManager.GetString("CountryNameCK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chile.
+        /// </summary>
+        public static string CountryNameCL {
+            get {
+                return ResourceManager.GetString("CountryNameCL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cameroon.
+        /// </summary>
+        public static string CountryNameCM {
+            get {
+                return ResourceManager.GetString("CountryNameCM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to China.
+        /// </summary>
+        public static string CountryNameCN {
+            get {
+                return ResourceManager.GetString("CountryNameCN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colombia.
+        /// </summary>
+        public static string CountryNameCO {
+            get {
+                return ResourceManager.GetString("CountryNameCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Costa Rica.
+        /// </summary>
+        public static string CountryNameCR {
+            get {
+                return ResourceManager.GetString("CountryNameCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cabo Verde.
+        /// </summary>
+        public static string CountryNameCV {
+            get {
+                return ResourceManager.GetString("CountryNameCV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curaçao.
+        /// </summary>
+        public static string CountryNameCW {
+            get {
+                return ResourceManager.GetString("CountryNameCW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Christmas Island.
+        /// </summary>
+        public static string CountryNameCX {
+            get {
+                return ResourceManager.GetString("CountryNameCX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cyprus.
         /// </summary>
         public static string CountryNameCY {
@@ -718,7 +1141,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Czech Republic.
+        ///   Looks up a localized string similar to Czechia.
         /// </summary>
         public static string CountryNameCZ {
             get {
@@ -736,11 +1159,56 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Djibouti.
+        /// </summary>
+        public static string CountryNameDJ {
+            get {
+                return ResourceManager.GetString("CountryNameDJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Denmark.
         /// </summary>
         public static string CountryNameDK {
             get {
                 return ResourceManager.GetString("CountryNameDK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dominica.
+        /// </summary>
+        public static string CountryNameDM {
+            get {
+                return ResourceManager.GetString("CountryNameDM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dominican Republic.
+        /// </summary>
+        public static string CountryNameDO {
+            get {
+                return ResourceManager.GetString("CountryNameDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Algeria.
+        /// </summary>
+        public static string CountryNameDZ {
+            get {
+                return ResourceManager.GetString("CountryNameDZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ecuador.
+        /// </summary>
+        public static string CountryNameEC {
+            get {
+                return ResourceManager.GetString("CountryNameEC", resourceCulture);
             }
         }
         
@@ -754,11 +1222,38 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Egypt.
+        /// </summary>
+        public static string CountryNameEG {
+            get {
+                return ResourceManager.GetString("CountryNameEG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eritrea.
+        /// </summary>
+        public static string CountryNameER {
+            get {
+                return ResourceManager.GetString("CountryNameER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spain.
         /// </summary>
         public static string CountryNameES {
             get {
                 return ResourceManager.GetString("CountryNameES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ethiopia.
+        /// </summary>
+        public static string CountryNameET {
+            get {
+                return ResourceManager.GetString("CountryNameET", resourceCulture);
             }
         }
         
@@ -772,11 +1267,56 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fiji.
+        /// </summary>
+        public static string CountryNameFJ {
+            get {
+                return ResourceManager.GetString("CountryNameFJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Falkland Islands.
+        /// </summary>
+        public static string CountryNameFK {
+            get {
+                return ResourceManager.GetString("CountryNameFK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Micronesia.
+        /// </summary>
+        public static string CountryNameFM {
+            get {
+                return ResourceManager.GetString("CountryNameFM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faroe Islands.
+        /// </summary>
+        public static string CountryNameFO {
+            get {
+                return ResourceManager.GetString("CountryNameFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to France.
         /// </summary>
         public static string CountryNameFR {
             get {
                 return ResourceManager.GetString("CountryNameFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gabon.
+        /// </summary>
+        public static string CountryNameGA {
+            get {
+                return ResourceManager.GetString("CountryNameGA", resourceCulture);
             }
         }
         
@@ -790,11 +1330,182 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grenada.
+        /// </summary>
+        public static string CountryNameGD {
+            get {
+                return ResourceManager.GetString("CountryNameGD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Georgia.
+        /// </summary>
+        public static string CountryNameGE {
+            get {
+                return ResourceManager.GetString("CountryNameGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to French Guiana.
+        /// </summary>
+        public static string CountryNameGF {
+            get {
+                return ResourceManager.GetString("CountryNameGF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guernsey.
+        /// </summary>
+        public static string CountryNameGG {
+            get {
+                return ResourceManager.GetString("CountryNameGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ghana.
+        /// </summary>
+        public static string CountryNameGH {
+            get {
+                return ResourceManager.GetString("CountryNameGH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gibraltar.
+        /// </summary>
+        public static string CountryNameGI {
+            get {
+                return ResourceManager.GetString("CountryNameGI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Greenland.
+        /// </summary>
+        public static string CountryNameGL {
+            get {
+                return ResourceManager.GetString("CountryNameGL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gambia.
+        /// </summary>
+        public static string CountryNameGM {
+            get {
+                return ResourceManager.GetString("CountryNameGM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guinea.
+        /// </summary>
+        public static string CountryNameGN {
+            get {
+                return ResourceManager.GetString("CountryNameGN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guadeloupe.
+        /// </summary>
+        public static string CountryNameGP {
+            get {
+                return ResourceManager.GetString("CountryNameGP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equatorial Guinea.
+        /// </summary>
+        public static string CountryNameGQ {
+            get {
+                return ResourceManager.GetString("CountryNameGQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Greece.
         /// </summary>
         public static string CountryNameGR {
             get {
                 return ResourceManager.GetString("CountryNameGR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to South Georgia and South Sandwich Islands.
+        /// </summary>
+        public static string CountryNameGS {
+            get {
+                return ResourceManager.GetString("CountryNameGS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guatemala.
+        /// </summary>
+        public static string CountryNameGT {
+            get {
+                return ResourceManager.GetString("CountryNameGT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guam.
+        /// </summary>
+        public static string CountryNameGU {
+            get {
+                return ResourceManager.GetString("CountryNameGU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guinea-Bissau.
+        /// </summary>
+        public static string CountryNameGW {
+            get {
+                return ResourceManager.GetString("CountryNameGW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guyana.
+        /// </summary>
+        public static string CountryNameGY {
+            get {
+                return ResourceManager.GetString("CountryNameGY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hong Kong SAR.
+        /// </summary>
+        public static string CountryNameHK {
+            get {
+                return ResourceManager.GetString("CountryNameHK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heard Island and McDonald Islands.
+        /// </summary>
+        public static string CountryNameHM {
+            get {
+                return ResourceManager.GetString("CountryNameHM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Honduras.
+        /// </summary>
+        public static string CountryNameHN {
+            get {
+                return ResourceManager.GetString("CountryNameHN", resourceCulture);
             }
         }
         
@@ -808,11 +1519,29 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Haiti.
+        /// </summary>
+        public static string CountryNameHT {
+            get {
+                return ResourceManager.GetString("CountryNameHT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hungary.
         /// </summary>
         public static string CountryNameHU {
             get {
                 return ResourceManager.GetString("CountryNameHU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indonesia.
+        /// </summary>
+        public static string CountryNameID {
+            get {
+                return ResourceManager.GetString("CountryNameID", resourceCulture);
             }
         }
         
@@ -826,11 +1555,47 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Israel.
+        /// </summary>
+        public static string CountryNameIL {
+            get {
+                return ResourceManager.GetString("CountryNameIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Isle of Man.
+        /// </summary>
+        public static string CountryNameIM {
+            get {
+                return ResourceManager.GetString("CountryNameIM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to India.
         /// </summary>
         public static string CountryNameIN {
             get {
                 return ResourceManager.GetString("CountryNameIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to British Indian Ocean Territory.
+        /// </summary>
+        public static string CountryNameIO {
+            get {
+                return ResourceManager.GetString("CountryNameIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iraq.
+        /// </summary>
+        public static string CountryNameIQ {
+            get {
+                return ResourceManager.GetString("CountryNameIQ", resourceCulture);
             }
         }
         
@@ -853,6 +1618,33 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Jersey.
+        /// </summary>
+        public static string CountryNameJE {
+            get {
+                return ResourceManager.GetString("CountryNameJE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jamaica.
+        /// </summary>
+        public static string CountryNameJM {
+            get {
+                return ResourceManager.GetString("CountryNameJM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jordan.
+        /// </summary>
+        public static string CountryNameJO {
+            get {
+                return ResourceManager.GetString("CountryNameJO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Japan.
         /// </summary>
         public static string CountryNameJP {
@@ -862,11 +1654,155 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kenya.
+        /// </summary>
+        public static string CountryNameKE {
+            get {
+                return ResourceManager.GetString("CountryNameKE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kyrgyzstan.
+        /// </summary>
+        public static string CountryNameKG {
+            get {
+                return ResourceManager.GetString("CountryNameKG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cambodia.
+        /// </summary>
+        public static string CountryNameKH {
+            get {
+                return ResourceManager.GetString("CountryNameKH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiribati.
+        /// </summary>
+        public static string CountryNameKI {
+            get {
+                return ResourceManager.GetString("CountryNameKI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comoros.
+        /// </summary>
+        public static string CountryNameKM {
+            get {
+                return ResourceManager.GetString("CountryNameKM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint Kitts and Nevis.
+        /// </summary>
+        public static string CountryNameKN {
+            get {
+                return ResourceManager.GetString("CountryNameKN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Korea.
+        /// </summary>
+        public static string CountryNameKR {
+            get {
+                return ResourceManager.GetString("CountryNameKR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kuwait.
+        /// </summary>
+        public static string CountryNameKW {
+            get {
+                return ResourceManager.GetString("CountryNameKW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cayman Islands.
+        /// </summary>
+        public static string CountryNameKY {
+            get {
+                return ResourceManager.GetString("CountryNameKY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kazakhstan.
+        /// </summary>
+        public static string CountryNameKZ {
+            get {
+                return ResourceManager.GetString("CountryNameKZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Laos.
+        /// </summary>
+        public static string CountryNameLA {
+            get {
+                return ResourceManager.GetString("CountryNameLA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lebanon.
+        /// </summary>
+        public static string CountryNameLB {
+            get {
+                return ResourceManager.GetString("CountryNameLB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint Lucia.
+        /// </summary>
+        public static string CountryNameLC {
+            get {
+                return ResourceManager.GetString("CountryNameLC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Liechtenstein.
         /// </summary>
         public static string CountryNameLI {
             get {
                 return ResourceManager.GetString("CountryNameLI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sri Lanka.
+        /// </summary>
+        public static string CountryNameLK {
+            get {
+                return ResourceManager.GetString("CountryNameLK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Liberia.
+        /// </summary>
+        public static string CountryNameLR {
+            get {
+                return ResourceManager.GetString("CountryNameLR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lesotho.
+        /// </summary>
+        public static string CountryNameLS {
+            get {
+                return ResourceManager.GetString("CountryNameLS", resourceCulture);
             }
         }
         
@@ -898,6 +1834,24 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Libya.
+        /// </summary>
+        public static string CountryNameLY {
+            get {
+                return ResourceManager.GetString("CountryNameLY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morocco.
+        /// </summary>
+        public static string CountryNameMA {
+            get {
+                return ResourceManager.GetString("CountryNameMA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monaco.
         /// </summary>
         public static string CountryNameMC {
@@ -907,11 +1861,245 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Moldova.
+        /// </summary>
+        public static string CountryNameMD {
+            get {
+                return ResourceManager.GetString("CountryNameMD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Montenegro.
+        /// </summary>
+        public static string CountryNameME {
+            get {
+                return ResourceManager.GetString("CountryNameME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint Martin.
+        /// </summary>
+        public static string CountryNameMF {
+            get {
+                return ResourceManager.GetString("CountryNameMF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Madagascar.
+        /// </summary>
+        public static string CountryNameMG {
+            get {
+                return ResourceManager.GetString("CountryNameMG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marshall Islands.
+        /// </summary>
+        public static string CountryNameMH {
+            get {
+                return ResourceManager.GetString("CountryNameMH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Macedonia.
+        /// </summary>
+        public static string CountryNameMK {
+            get {
+                return ResourceManager.GetString("CountryNameMK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mali.
+        /// </summary>
+        public static string CountryNameML {
+            get {
+                return ResourceManager.GetString("CountryNameML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Myanmar.
+        /// </summary>
+        public static string CountryNameMM {
+            get {
+                return ResourceManager.GetString("CountryNameMM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mongolia.
+        /// </summary>
+        public static string CountryNameMN {
+            get {
+                return ResourceManager.GetString("CountryNameMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Macao SAR.
+        /// </summary>
+        public static string CountryNameMO {
+            get {
+                return ResourceManager.GetString("CountryNameMO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Northern Mariana Islands.
+        /// </summary>
+        public static string CountryNameMP {
+            get {
+                return ResourceManager.GetString("CountryNameMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Martinique.
+        /// </summary>
+        public static string CountryNameMQ {
+            get {
+                return ResourceManager.GetString("CountryNameMQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mauritania.
+        /// </summary>
+        public static string CountryNameMR {
+            get {
+                return ResourceManager.GetString("CountryNameMR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Montserrat.
+        /// </summary>
+        public static string CountryNameMS {
+            get {
+                return ResourceManager.GetString("CountryNameMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Malta.
         /// </summary>
         public static string CountryNameMT {
             get {
                 return ResourceManager.GetString("CountryNameMT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mauritius.
+        /// </summary>
+        public static string CountryNameMU {
+            get {
+                return ResourceManager.GetString("CountryNameMU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maldives.
+        /// </summary>
+        public static string CountryNameMV {
+            get {
+                return ResourceManager.GetString("CountryNameMV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Malawi.
+        /// </summary>
+        public static string CountryNameMW {
+            get {
+                return ResourceManager.GetString("CountryNameMW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mexico.
+        /// </summary>
+        public static string CountryNameMX {
+            get {
+                return ResourceManager.GetString("CountryNameMX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Malaysia.
+        /// </summary>
+        public static string CountryNameMY {
+            get {
+                return ResourceManager.GetString("CountryNameMY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mozambique.
+        /// </summary>
+        public static string CountryNameMZ {
+            get {
+                return ResourceManager.GetString("CountryNameMZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Namibia.
+        /// </summary>
+        public static string CountryNameNA {
+            get {
+                return ResourceManager.GetString("CountryNameNA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Caledonia.
+        /// </summary>
+        public static string CountryNameNC {
+            get {
+                return ResourceManager.GetString("CountryNameNC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Niger.
+        /// </summary>
+        public static string CountryNameNE {
+            get {
+                return ResourceManager.GetString("CountryNameNE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Norfolk Island.
+        /// </summary>
+        public static string CountryNameNF {
+            get {
+                return ResourceManager.GetString("CountryNameNF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nigeria.
+        /// </summary>
+        public static string CountryNameNG {
+            get {
+                return ResourceManager.GetString("CountryNameNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nicaragua.
+        /// </summary>
+        public static string CountryNameNI {
+            get {
+                return ResourceManager.GetString("CountryNameNI", resourceCulture);
             }
         }
         
@@ -934,6 +2122,33 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nepal.
+        /// </summary>
+        public static string CountryNameNP {
+            get {
+                return ResourceManager.GetString("CountryNameNP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nauru.
+        /// </summary>
+        public static string CountryNameNR {
+            get {
+                return ResourceManager.GetString("CountryNameNR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Niue.
+        /// </summary>
+        public static string CountryNameNU {
+            get {
+                return ResourceManager.GetString("CountryNameNU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New Zealand.
         /// </summary>
         public static string CountryNameNZ {
@@ -943,11 +2158,110 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Oman.
+        /// </summary>
+        public static string CountryNameOM {
+            get {
+                return ResourceManager.GetString("CountryNameOM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Panama.
+        /// </summary>
+        public static string CountryNamePA {
+            get {
+                return ResourceManager.GetString("CountryNamePA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Peru.
+        /// </summary>
+        public static string CountryNamePE {
+            get {
+                return ResourceManager.GetString("CountryNamePE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to French Polynesia.
+        /// </summary>
+        public static string CountryNamePF {
+            get {
+                return ResourceManager.GetString("CountryNamePF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Papua New Guinea.
+        /// </summary>
+        public static string CountryNamePG {
+            get {
+                return ResourceManager.GetString("CountryNamePG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Philippines.
+        /// </summary>
+        public static string CountryNamePH {
+            get {
+                return ResourceManager.GetString("CountryNamePH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pakistan.
+        /// </summary>
+        public static string CountryNamePK {
+            get {
+                return ResourceManager.GetString("CountryNamePK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Poland.
         /// </summary>
-        public static string CountryNamePO {
+        public static string CountryNamePL {
             get {
-                return ResourceManager.GetString("CountryNamePO", resourceCulture);
+                return ResourceManager.GetString("CountryNamePL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint Pierre and Miquelon.
+        /// </summary>
+        public static string CountryNamePM {
+            get {
+                return ResourceManager.GetString("CountryNamePM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pitcairn Islands.
+        /// </summary>
+        public static string CountryNamePN {
+            get {
+                return ResourceManager.GetString("CountryNamePN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Puerto Rico.
+        /// </summary>
+        public static string CountryNamePR {
+            get {
+                return ResourceManager.GetString("CountryNamePR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Palestinian Authority.
+        /// </summary>
+        public static string CountryNamePS {
+            get {
+                return ResourceManager.GetString("CountryNamePS", resourceCulture);
             }
         }
         
@@ -961,11 +2275,101 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Palau.
+        /// </summary>
+        public static string CountryNamePW {
+            get {
+                return ResourceManager.GetString("CountryNamePW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paraguay.
+        /// </summary>
+        public static string CountryNamePY {
+            get {
+                return ResourceManager.GetString("CountryNamePY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qatar.
+        /// </summary>
+        public static string CountryNameQA {
+            get {
+                return ResourceManager.GetString("CountryNameQA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réunion.
+        /// </summary>
+        public static string CountryNameRE {
+            get {
+                return ResourceManager.GetString("CountryNameRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Romania.
         /// </summary>
         public static string CountryNameRO {
             get {
                 return ResourceManager.GetString("CountryNameRO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serbia.
+        /// </summary>
+        public static string CountryNameRS {
+            get {
+                return ResourceManager.GetString("CountryNameRS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Russia.
+        /// </summary>
+        public static string CountryNameRU {
+            get {
+                return ResourceManager.GetString("CountryNameRU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rwanda.
+        /// </summary>
+        public static string CountryNameRW {
+            get {
+                return ResourceManager.GetString("CountryNameRW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saudi Arabia.
+        /// </summary>
+        public static string CountryNameSA {
+            get {
+                return ResourceManager.GetString("CountryNameSA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Solomon Islands.
+        /// </summary>
+        public static string CountryNameSB {
+            get {
+                return ResourceManager.GetString("CountryNameSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seychelles.
+        /// </summary>
+        public static string CountryNameSC {
+            get {
+                return ResourceManager.GetString("CountryNameSC", resourceCulture);
             }
         }
         
@@ -979,6 +2383,42 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Singapore.
+        /// </summary>
+        public static string CountryNameSG {
+            get {
+                return ResourceManager.GetString("CountryNameSG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint Helena.
+        /// </summary>
+        public static string CountryNameSH {
+            get {
+                return ResourceManager.GetString("CountryNameSH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slovenia.
+        /// </summary>
+        public static string CountryNameSI {
+            get {
+                return ResourceManager.GetString("CountryNameSI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Svalbard.
+        /// </summary>
+        public static string CountryNameSJ {
+            get {
+                return ResourceManager.GetString("CountryNameSJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Slovakia.
         /// </summary>
         public static string CountryNameSK {
@@ -988,11 +2428,263 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Slovenia.
+        ///   Looks up a localized string similar to Sierra Leone.
         /// </summary>
         public static string CountryNameSL {
             get {
                 return ResourceManager.GetString("CountryNameSL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to San Marino.
+        /// </summary>
+        public static string CountryNameSM {
+            get {
+                return ResourceManager.GetString("CountryNameSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senegal.
+        /// </summary>
+        public static string CountryNameSN {
+            get {
+                return ResourceManager.GetString("CountryNameSN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Somalia.
+        /// </summary>
+        public static string CountryNameSO {
+            get {
+                return ResourceManager.GetString("CountryNameSO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Suriname.
+        /// </summary>
+        public static string CountryNameSR {
+            get {
+                return ResourceManager.GetString("CountryNameSR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to South Sudan.
+        /// </summary>
+        public static string CountryNameSS {
+            get {
+                return ResourceManager.GetString("CountryNameSS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Tomé and Príncipe.
+        /// </summary>
+        public static string CountryNameST {
+            get {
+                return ResourceManager.GetString("CountryNameST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El Salvador.
+        /// </summary>
+        public static string CountryNameSV {
+            get {
+                return ResourceManager.GetString("CountryNameSV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sint Maarten.
+        /// </summary>
+        public static string CountryNameSX {
+            get {
+                return ResourceManager.GetString("CountryNameSX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to eSwatini.
+        /// </summary>
+        public static string CountryNameSZ {
+            get {
+                return ResourceManager.GetString("CountryNameSZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turks and Caicos Islands.
+        /// </summary>
+        public static string CountryNameTC {
+            get {
+                return ResourceManager.GetString("CountryNameTC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chad.
+        /// </summary>
+        public static string CountryNameTD {
+            get {
+                return ResourceManager.GetString("CountryNameTD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to French Southern Territories.
+        /// </summary>
+        public static string CountryNameTF {
+            get {
+                return ResourceManager.GetString("CountryNameTF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Togo.
+        /// </summary>
+        public static string CountryNameTG {
+            get {
+                return ResourceManager.GetString("CountryNameTG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thailand.
+        /// </summary>
+        public static string CountryNameTH {
+            get {
+                return ResourceManager.GetString("CountryNameTH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tajikistan.
+        /// </summary>
+        public static string CountryNameTJ {
+            get {
+                return ResourceManager.GetString("CountryNameTJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tokelau.
+        /// </summary>
+        public static string CountryNameTK {
+            get {
+                return ResourceManager.GetString("CountryNameTK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timor-Leste.
+        /// </summary>
+        public static string CountryNameTL {
+            get {
+                return ResourceManager.GetString("CountryNameTL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turkmenistan.
+        /// </summary>
+        public static string CountryNameTM {
+            get {
+                return ResourceManager.GetString("CountryNameTM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tunisia.
+        /// </summary>
+        public static string CountryNameTN {
+            get {
+                return ResourceManager.GetString("CountryNameTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tonga.
+        /// </summary>
+        public static string CountryNameTO {
+            get {
+                return ResourceManager.GetString("CountryNameTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turkey.
+        /// </summary>
+        public static string CountryNameTR {
+            get {
+                return ResourceManager.GetString("CountryNameTR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trinidad and Tobago.
+        /// </summary>
+        public static string CountryNameTT {
+            get {
+                return ResourceManager.GetString("CountryNameTT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tuvalu.
+        /// </summary>
+        public static string CountryNameTV {
+            get {
+                return ResourceManager.GetString("CountryNameTV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Taiwan.
+        /// </summary>
+        public static string CountryNameTW {
+            get {
+                return ResourceManager.GetString("CountryNameTW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tanzania.
+        /// </summary>
+        public static string CountryNameTZ {
+            get {
+                return ResourceManager.GetString("CountryNameTZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ukraine.
+        /// </summary>
+        public static string CountryNameUA {
+            get {
+                return ResourceManager.GetString("CountryNameUA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uganda.
+        /// </summary>
+        public static string CountryNameUG {
+            get {
+                return ResourceManager.GetString("CountryNameUG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to U.S. Outlying Islands.
+        /// </summary>
+        public static string CountryNameUM {
+            get {
+                return ResourceManager.GetString("CountryNameUM", resourceCulture);
             }
         }
         
@@ -1002,6 +2694,186 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         public static string CountryNameUS {
             get {
                 return ResourceManager.GetString("CountryNameUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uruguay.
+        /// </summary>
+        public static string CountryNameUY {
+            get {
+                return ResourceManager.GetString("CountryNameUY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uzbekistan.
+        /// </summary>
+        public static string CountryNameUZ {
+            get {
+                return ResourceManager.GetString("CountryNameUZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vatican City.
+        /// </summary>
+        public static string CountryNameVA {
+            get {
+                return ResourceManager.GetString("CountryNameVA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saint Vincent and the Grenadines.
+        /// </summary>
+        public static string CountryNameVC {
+            get {
+                return ResourceManager.GetString("CountryNameVC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venezuela.
+        /// </summary>
+        public static string CountryNameVE {
+            get {
+                return ResourceManager.GetString("CountryNameVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to British Virgin Islands.
+        /// </summary>
+        public static string CountryNameVG {
+            get {
+                return ResourceManager.GetString("CountryNameVG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to U.S. Virgin Islands.
+        /// </summary>
+        public static string CountryNameVI {
+            get {
+                return ResourceManager.GetString("CountryNameVI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vietnam.
+        /// </summary>
+        public static string CountryNameVN {
+            get {
+                return ResourceManager.GetString("CountryNameVN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vanuatu.
+        /// </summary>
+        public static string CountryNameVU {
+            get {
+                return ResourceManager.GetString("CountryNameVU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wallis and Futuna.
+        /// </summary>
+        public static string CountryNameWF {
+            get {
+                return ResourceManager.GetString("CountryNameWF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Samoa.
+        /// </summary>
+        public static string CountryNameWS {
+            get {
+                return ResourceManager.GetString("CountryNameWS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sint Eustatius.
+        /// </summary>
+        public static string CountryNameXE {
+            get {
+                return ResourceManager.GetString("CountryNameXE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jan Mayen.
+        /// </summary>
+        public static string CountryNameXJ {
+            get {
+                return ResourceManager.GetString("CountryNameXJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kosovo.
+        /// </summary>
+        public static string CountryNameXK {
+            get {
+                return ResourceManager.GetString("CountryNameXK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saba.
+        /// </summary>
+        public static string CountryNameXS {
+            get {
+                return ResourceManager.GetString("CountryNameXS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yemen.
+        /// </summary>
+        public static string CountryNameYE {
+            get {
+                return ResourceManager.GetString("CountryNameYE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mayotte.
+        /// </summary>
+        public static string CountryNameYT {
+            get {
+                return ResourceManager.GetString("CountryNameYT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to South Africa.
+        /// </summary>
+        public static string CountryNameZA {
+            get {
+                return ResourceManager.GetString("CountryNameZA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zambia.
+        /// </summary>
+        public static string CountryNameZM {
+            get {
+                return ResourceManager.GetString("CountryNameZM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zimbabwe.
+        /// </summary>
+        public static string CountryNameZW {
+            get {
+                return ResourceManager.GetString("CountryNameZW", resourceCulture);
             }
         }
         
