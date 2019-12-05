@@ -86,58 +86,50 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 
             objectId.AssertNotEmpty(nameof(objectId));
 
-            try
+            executionTime = DateTime.Now;
+
+            directoryGroups = await client.Users[objectId].MemberOf.Request().GetAsync().ConfigureAwait(false);
+            roles = new List<RoleModel>();
+
+            do
             {
-                executionTime = DateTime.Now;
+                directoryRoles = directoryGroups.CurrentPage.OfType<DirectoryRole>().ToList();
 
-                directoryGroups = await client.Users[objectId].MemberOf.Request().GetAsync().ConfigureAwait(false);
-                roles = new List<RoleModel>();
-
-                do
+                if (directoryRoles.Count > 0)
                 {
-                    directoryRoles = directoryGroups.CurrentPage.OfType<DirectoryRole>().ToList();
-
-                    if (directoryRoles.Count > 0)
+                    roles.AddRange(directoryRoles.Select(r => new RoleModel
                     {
-                        roles.AddRange(directoryRoles.Select(r => new RoleModel
-                        {
-                            Description = r.Description,
-                            DisplayName = r.DisplayName
-                        }));
-                    }
-
-                    morePages = directoryGroups.NextPageRequest != null;
-
-                    if (morePages)
-                    {
-                        directoryGroups = await directoryGroups.NextPageRequest.GetAsync().ConfigureAwait(false);
-                    }
+                        Description = r.Description,
+                        DisplayName = r.DisplayName
+                    }));
                 }
-                while (morePages);
 
-                // Capture the request for the customer summary for analysis.
-                eventProperties = new Dictionary<string, string>
+                morePages = directoryGroups.NextPageRequest != null;
+
+                if (morePages)
+                {
+                    directoryGroups = await directoryGroups.NextPageRequest.GetAsync().ConfigureAwait(false);
+                }
+            }
+            while (morePages);
+
+            // Capture the request for the customer summary for analysis.
+            eventProperties = new Dictionary<string, string>
                 {
                     { "CustomerId", customerId },
                     { "ObjectId", objectId }
                 };
 
-                // Track the event measurements for analysis.
-                eventMeasurements = new Dictionary<string, double>
+            // Track the event measurements for analysis.
+            eventMeasurements = new Dictionary<string, double>
                 {
                     { "ElapsedMilliseconds", DateTime.Now.Subtract(executionTime).TotalMilliseconds },
                     { "NumberOfRoles", roles.Count }
                 };
 
-                ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent(nameof(GetDirectoryRolesAsync), eventProperties, eventMeasurements);
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent(nameof(GetDirectoryRolesAsync), eventProperties, eventMeasurements);
 
-                return roles;
-            }
-            catch (Exception ex)
-            {
-                ApplicationDomain.Instance.TelemetryService.Provider.TrackException(ex);
-                return null;
-            }
+            return roles;
         }
     }
 }
