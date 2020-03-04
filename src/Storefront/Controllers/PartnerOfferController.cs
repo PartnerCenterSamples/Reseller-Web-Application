@@ -59,7 +59,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
                     }
                 }
 
-                offerCatalogViewModel.Offers = partnerOffers.Where(offer => !offer.IsInactive);
+                offerCatalogViewModel.Offers = partnerOffers.OrderBy(o => o.DisplayIndex).Where(offer => !offer.IsInactive);
             }
 
             return offerCatalogViewModel;

@@ -26,7 +26,7 @@
                         <label class="monthly-fee">@Resources.SubscriptionSummaryRateCaption</label>
                     </td>
                     <td class="right-aligned">
-                        <label class="monthly-fee">@Resources.AnnualTotalCaption</label>
+                        <label class="monthly-fee">@(ViewBag.BillingCycle == Microsoft.Store.PartnerCenter.Storefront.Models.BillingCycleType.Annual ? Resources.AnnualTotalCaption : Resources.MonthlyTotalCaption)</label>
                     </td>
                 </tr>
                 <tr>

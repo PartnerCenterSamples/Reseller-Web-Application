@@ -63,5 +63,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models
         /// Gets or sets a privacy link for using the portal.
         /// </summary>
         public Uri PrivacyAgreement { get; set; }
+
+        /// <summary>
+        /// Gets or sets the configured billing cycle for the portal.
+        /// </summary>
+        public BillingCycleType BillingCycle { get; set; }
     }
 }

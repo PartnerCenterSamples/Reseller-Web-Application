@@ -1908,4 +1908,34 @@
   <data name="CountryNameZW" xml:space="preserve">
     <value>Zimbabwe</value>
   </data>
+  <data name="UserPerMonth" xml:space="preserve">
+    <value>user/month</value>
+  </data>
+  <data name="BillingCycleFieldHeader" xml:space="preserve">
+    <value>Billing cycle:</value>
+  </data>
+  <data name="BillingCycleFieldSubText" xml:space="preserve">
+    <value>You can choose between Monthly or Annual billing for offers. Note that changing the billing cycle will not update pricing for any existing offers.</value>
+  </data>
+  <data name="DisplayIndexHeader" xml:space="preserve">
+    <value>Display index:</value>
+  </data>
+  <data name="MonthlyPriceCaption" xml:space="preserve">
+    <value>Monthly price</value>
+  </data>
+  <data name="MonthlyTotalCaption" xml:space="preserve">
+    <value>Monthly total</value>
+  </data>
+  <data name="SubscriptionSummaryMonthlyCommitmentExpiryCaption" xml:space="preserve">
+    <value>expires on</value>
+  </data>
+  <data name="SubscriptionSummaryMonthlyPricePrefixCaption" xml:space="preserve">
+    <value>Price Paid</value>
+  </data>
+  <data name="YourDisplayIndexCaption" xml:space="preserve">
+    <value>Display index:</value>
+  </data>
+  <data name="YourMonthlyPriceCaption" xml:space="preserve">
+    <value>Monthly price:</value>
+  </data>
 </root>

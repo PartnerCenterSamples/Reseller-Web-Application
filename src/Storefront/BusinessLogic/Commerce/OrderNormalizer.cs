@@ -222,8 +222,13 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
                 throw new PartnerDomainException(ErrorCode.SubscriptionExpired);
             }
 
-            decimal proratedSeatCharge = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscriptionToAugment.ExpiryDate, partnerOffer.Price), Resources.Culture.NumberFormat.CurrencyDecimalDigits);
-            decimal totalCharge = Math.Round(proratedSeatCharge * seatsToPurchase, Resources.Culture.NumberFormat.CurrencyDecimalDigits);
+            BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
+
+            decimal proratedSeatCharge = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscriptionToAugment.ExpiryDate,
+                                                                                                   partnerOffer.Price, 
+                                                                                                   portalBranding.BillingCycle), 
+                                                    Resources.Culture.NumberFormat.CurrencyDecimalDigits);
+            //decimal totalCharge = Math.Round(proratedSeatCharge * seatsToPurchase, Resources.Culture.NumberFormat.CurrencyDecimalDigits);
 
             List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>
             {

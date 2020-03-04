@@ -25,7 +25,9 @@
         InstrumentationKey: ko.observable(""),
         OrganizationLogo: ko.observable(""),
         OrganizationName: ko.observable(""),
-        PrivacyAgreement: ko.observable("")
+        PrivacyAgreement: ko.observable(""),
+        BillingCycle: ko.observable(),
+        AvailableBillingCycleTypes: ko.observableArray([{ name: 'Annual', id: 0 }, { name: 'Monthly', id: 1 }])
     };
 };
 
@@ -152,6 +154,8 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype.onSaveBranding = function (
     formData.append("HeaderImage", this.viewModel.HeaderImage());
     formData.append("InstrumentationKey", this.viewModel.InstrumentationKey());
     formData.append("PrivacyAgreement", this.viewModel.PrivacyAgreement());
+
+    formData.append("BillingCycle", this.viewModel.BillingCycle());
 
     var saveBrandingServerCall = this.webPortal.ServerCallManager.create(this.feature,
         function () {
@@ -320,6 +324,7 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._updateViewModel = function
     this.viewModel.HeaderImage(this.existingBrandingConfiguration.HeaderImage);
     this.viewModel.InstrumentationKey(this.existingBrandingConfiguration.InstrumentationKey);
     this.viewModel.PrivacyAgreement(this.existingBrandingConfiguration.PrivacyAgreement);
+    this.viewModel.BillingCycle(this.existingBrandingConfiguration.BillingCycle.toString());
 };
 
 
@@ -354,7 +359,8 @@ Microsoft.WebPortal.BrandingSetupPresenter.prototype._setupActions = function ()
             this.viewModel.OrganizationLogo() !== this.existingBrandingConfiguration.OrganizationLogo |
             this.viewModel.HeaderImage() !== this.existingBrandingConfiguration.HeaderImage |
             this.viewModel.InstrumentationKey() !== this.existingBrandingConfiguration.InstrumentationKey |
-            this.viewModel.PrivacyAgreement() !== this.existingBrandingConfiguration.PrivacyAgreement;
+            this.viewModel.PrivacyAgreement() !== this.existingBrandingConfiguration.PrivacyAgreement |
+            this.viewModel.BillingCycle() !== this.existingBrandingConfiguration.BillingCycle;
 
         isFormUpdated = isFormUpdated | this.viewModel.ContactUs.Email() !== this.existingBrandingConfiguration.ContactUs.Email |
             this.viewModel.ContactUs.Phone() !== this.existingBrandingConfiguration.ContactUs.Phone;

@@ -399,8 +399,13 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
                     isEditable = false;
                 }
 
+                BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
+
                 // Compute the pro rated price per seat for this subcription & return for client side processing during updates. 
-                decimal proratedPerSeatPrice = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscription.ExpiryDate, portalOfferPrice), responseCulture.NumberFormat.CurrencyDecimalDigits);
+                decimal proratedPerSeatPrice = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscription.ExpiryDate,
+                                                                                                         portalOfferPrice,
+                                                                                                         portalBranding.BillingCycle),
+                                                          Resources.Culture.NumberFormat.CurrencyDecimalDigits);
 
                 SubscriptionViewModel subscriptionItem = new SubscriptionViewModel()
                 {

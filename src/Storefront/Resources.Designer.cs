@@ -295,6 +295,24 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Billing cycle:.
+        /// </summary>
+        public static string BillingCycleFieldHeader {
+            get {
+                return ResourceManager.GetString("BillingCycleFieldHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can choose between Monthly or Annual billing for offers. Note that changing the billing cycle will not update pricing for any existing offers..
+        /// </summary>
+        public static string BillingCycleFieldSubText {
+            get {
+                return ResourceManager.GetString("BillingCycleFieldSubText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to based billing.
         /// </summary>
         public static string BillingTypeListRowCaption {
@@ -3346,6 +3364,15 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Display index:.
+        /// </summary>
+        public static string DisplayIndexHeader {
+            get {
+                return ResourceManager.GetString("DisplayIndexHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The domain is not available. Please enter another domain prefix.
         /// </summary>
         public static string DomainNotAvailable {
@@ -3945,6 +3972,24 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         public static string MicrosoftOfferRetrievalErrorMessage {
             get {
                 return ResourceManager.GetString("MicrosoftOfferRetrievalErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly price.
+        /// </summary>
+        public static string MonthlyPriceCaption {
+            get {
+                return ResourceManager.GetString("MonthlyPriceCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly total.
+        /// </summary>
+        public static string MonthlyTotalCaption {
+            get {
+                return ResourceManager.GetString("MonthlyTotalCaption", resourceCulture);
             }
         }
         
@@ -5137,6 +5182,24 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to expires on.
+        /// </summary>
+        public static string SubscriptionSummaryMonthlyCommitmentExpiryCaption {
+            get {
+                return ResourceManager.GetString("SubscriptionSummaryMonthlyCommitmentExpiryCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price Paid.
+        /// </summary>
+        public static string SubscriptionSummaryMonthlyPricePrefixCaption {
+            get {
+                return ResourceManager.GetString("SubscriptionSummaryMonthlyPricePrefixCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Price paid is displayed pro-rated as applicable. .
         /// </summary>
         public static string SubscriptionSummaryProratepriceCaption {
@@ -5362,6 +5425,15 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to user/month.
+        /// </summary>
+        public static string UserPerMonth {
+            get {
+                return ResourceManager.GetString("UserPerMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to user/year.
         /// </summary>
         public static string UserPerYear {
@@ -5412,6 +5484,24 @@ namespace Microsoft.Store.PartnerCenter.Storefront {
         public static string YourAnnualPriceCaption {
             get {
                 return ResourceManager.GetString("YourAnnualPriceCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display index:.
+        /// </summary>
+        public static string YourDisplayIndexCaption {
+            get {
+                return ResourceManager.GetString("YourDisplayIndexCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly price:.
+        /// </summary>
+        public static string YourMonthlyPriceCaption {
+            get {
+                return ResourceManager.GetString("YourMonthlyPriceCaption", resourceCulture);
             }
         }
         

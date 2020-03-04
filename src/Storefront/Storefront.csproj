@@ -313,6 +313,7 @@
     <Compile Include="Filters\WebApi\PortalAuthorizeAttribute.cs" />
     <Compile Include="Filters\WebApi\ErrorHandlerAttribute.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Models\BillingCycleType.cs" />
     <Compile Include="Models\CommerceOperationType.cs" />
     <Compile Include="BusinessLogic\Commerce\CustomerPurchasesRepository.cs" />
     <Compile Include="Models\CustomerLicensesModel.cs" />
