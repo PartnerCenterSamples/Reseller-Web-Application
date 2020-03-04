@@ -123,7 +123,8 @@ Microsoft.WebPortal.OfferListPresenter.prototype.onCellClicked = function (colum
         Features: row.PartnerOffer.Features,
         Summary: row.PartnerOffer.Summary,
         Logo: row.PartnerOffer.LogoUri,
-        Thumbnail: row.PartnerOffer.ThumbnailUri
+        Thumbnail: row.PartnerOffer.ThumbnailUri,
+        DisplayIndex: row.PartnerOffer.DisplayIndex
     };
 
     // go to the update offer feature and pass it the clicked offer
@@ -255,6 +256,7 @@ Microsoft.WebPortal.OfferListPresenter.prototype._retrievePartnerOffers = functi
                 var offerToPush = {
                     PartnerOffer: partnerOffers[i],
                     FormattedPrice: Globalize.format(partnerOffers[i].Price, "c"),
+                    DisplayIndex: partnerOffers[i].DisplayIndex,
                     MicrosoftOffer: function () {
                         for (var j in microsoftOffers) {
                             if (partnerOffers[i].MicrosoftOfferId === microsoftOffers[j].Offer.Id) {

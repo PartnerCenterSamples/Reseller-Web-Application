@@ -25,12 +25,13 @@
     <div class="PartnerOfferDetails">
         <label class="Title" data-bind="text: row.PartnerOffer.Title"></label><br />
         @Resources.PriceHeader <label class="SubTitle" data-bind="text: row.FormattedPrice"></label><br />
+        @Resources.DisplayIndexHeader <label class="SubTitle" data-bind="text: row.DisplayIndex"></label><br />
 
         <table cellspacing="0">
             <tr>
                 <!-- ko if: row.PartnerOffer.Summary && row.PartnerOffer.Summary.length > 0 -->
                 <td>
-                    
+
                     @Resources.SummaryListRowCaption
                     <ul>
                         <!-- ko foreach: row.PartnerOffer.Summary -->

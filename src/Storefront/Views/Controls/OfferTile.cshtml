@@ -11,9 +11,9 @@
             </td>
         </tr>
         <tr>
-            <td class="PriceContainer">                
+            <td class="PriceContainer">
                 <label data-bind="text: viewModel.formattedPrice, css: { Hoverable: viewModel.isSelectable() }"></label>
-                <label class="PerYear">@Resources.UserPerYear</label>
+                <label class="PerYear">@(ViewBag.BillingCycle == Microsoft.Store.PartnerCenter.Storefront.Models.BillingCycleType.Annual ? Resources.UserPerYear : Resources.UserPerMonth)</label>
                 <label title="Buy this offer" class="Link BuyNow" data-bind="visible: viewModel.showBuyLink, click: onBuyNowClicked">@Resources.BuyNow</label>
             </td>
         </tr>

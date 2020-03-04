@@ -54,12 +54,22 @@
             </tr>
             <tr class="InlineBlock FullWidth">
                 <td class="CustomizationHeader">
-                    @Resources.YourAnnualPriceCaption <label class="Required"><label>*</label></label>
+                    @(ViewBag.BillingCycle == Microsoft.Store.PartnerCenter.Storefront.Models.BillingCycleType.Annual ? Resources.YourAnnualPriceCaption : Resources.YourMonthlyPriceCaption) <label class="Required"><label>*</label></label>
                 </td>
                 <td>
                     <input id="OfferPrice" name="OfferPrice" class="Price" type="text" data-bind="textInput : viewModel.Price"> <label class="MetroMediumLight">@ViewBag.CurrencySymbol</label>
                 </td>
             </tr>
+
+            <tr class="InlineBlock FullWidth">
+                <td class="CustomizationHeader">
+                    @Resources.YourDisplayIndexCaption <label class="Required"><label>*</label></label>
+                </td>
+                <td>
+                    <input id="OfferDisplayIndex" name="OfferDisplayIndex" class="Price" type="text" data-bind="textInput : viewModel.DisplayIndex">
+                </td>
+            </tr>
+
             <tr class="DetailedFeaturesContainer">
                 <td class="DetailedFeatures">
                     @Resources.FeaturesCaption
@@ -113,7 +123,7 @@
                         <form >
                                 <fieldset class="SearchFieldSet" style="background-color:white;padding-top: 0px;padding-bottom: 0px;border: 0px;" >
                                 <input class="InputSearchField" placeholder="@Resources.SelectSearchByOffersPlaceholder" data-bind="value: searchTerm, valueUpdate: 'afterkeydown' " />
-                                <button class="InputSearchButton" data-bind="click: searchButtonClicked" style="padding-top: 8px;height:30px;padding-bottom: 8px;margin-top: 0px;margin-bottom: 0px;"><img src="/Content/Images/WebPortal/search.png" @*width="25" height="25"*@></button>
+                                <button class="InputSearchButton" data-bind="click: searchButtonClicked" style="padding-top: 8px;height:30px;padding-bottom: 8px;margin-top: 0px;margin-bottom: 0px;"><img src="/Content/Images/WebPortal/search.png"></button>
                                 </fieldset>
                                 </form>  
                         
@@ -154,6 +164,9 @@
                 OfferPrice: {
                     required: true,
                     validateprice:true
+                },
+                OfferDisplayIndex: {
+                    required: true
                 }
             },
             messages: {

@@ -58,5 +58,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Models
         /// Gets or sets the offer's thumbnail image.
         /// </summary>
         public Uri Thumbnail { get; set; }
+
+        /// <summary>
+        /// Gets or sets the offer's display index.
+        /// </summary>
+        public int DisplayIndex { get; set; }
     }
 }

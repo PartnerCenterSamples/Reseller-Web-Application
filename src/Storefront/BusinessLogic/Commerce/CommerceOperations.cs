@@ -49,16 +49,33 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
         /// Calculates the amount to charge for buying an extra additional seat for the remainder of a subscription's lease.
         /// </summary>
         /// <param name="expiryDate">The subscription's expiry date.</param>
-        /// <param name="yearlyRatePerSeat">The subscription's yearly price per seat.</param>
+        /// <param name="ratePerSeat">The subscription's price per seat, either yearly or mothly depending on the billing cycle.</param>
+        /// <param name="billingCycle">The billing cycle.</param>
         /// <returns>The prorated amount to charge for the new extra seat.</returns>
-        public static decimal CalculateProratedSeatCharge(DateTime expiryDate, decimal yearlyRatePerSeat)
+        public static decimal CalculateProratedSeatCharge(DateTime expiryDate, decimal ratePerSeat, BillingCycleType billingCycle)
         {
             DateTime rightNow = DateTime.UtcNow;
             expiryDate = expiryDate.ToUniversalTime();
 
+            // Determine the total yearly price per seat
+            decimal yearlyRatePerSeat;
+
+            switch (billingCycle)
+            {
+                case BillingCycleType.Annual:
+                    yearlyRatePerSeat = ratePerSeat;
+                    break;
+                case BillingCycleType.Monthly:
+                    yearlyRatePerSeat = ratePerSeat * 12m;
+                    break;
+                default:
+                    throw new NotImplementedException($"Billing cycle {billingCycle} is not implemented");
+            }
+
+            // Calculate the daily price per seat
             decimal dailyChargePerSeat = yearlyRatePerSeat / 365m;
 
-            // round up the remaining days in case there was a fraction and ensure it does not exceed 365 days
+            // Round up the remaining days in case there was a fraction and ensure it does not exceed 365 days
             decimal remainingDaysTillExpiry = Math.Ceiling(Convert.ToDecimal((expiryDate - rightNow).TotalDays));
             remainingDaysTillExpiry = Math.Min(remainingDaysTillExpiry, 365);
 
@@ -94,8 +111,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
             AuthorizePayment paymentAuthorization = new AuthorizePayment(PaymentGateway);
             subTransactions.Add(paymentAuthorization);
 
+            BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
+
             // build the Partner Center order and pass it to the place order transaction
-            Order partnerCenterPurchaseOrder = BuildPartnerCenterOrder(lineItemsWithOffers);
+            Order partnerCenterPurchaseOrder = BuildPartnerCenterOrder(lineItemsWithOffers, portalBranding.BillingCycle);
 
             PlaceOrder placeOrder = new PlaceOrder(
                 ApplicationDomain.PartnerCenterClient.Customers.ById(CustomerId),
@@ -217,10 +236,25 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
                 ApplicationDomain.CustomerPurchasesRepository,
                 new CustomerPurchaseEntity(CommerceOperationType.Renewal, Guid.NewGuid().ToString(), CustomerId, subscriptionId, partnerCenterSubscription.Quantity, partnerOfferPrice, rightNow)));
 
-            // extend the expiry date by one year
+            DateTime expirationDate = subscriptionExpiryDate;
+            BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
+
+            switch (portalBranding.BillingCycle)
+            {
+                case BillingCycleType.Annual:
+                    expirationDate = expirationDate.AddYears(1);
+                    break;
+                case BillingCycleType.Monthly:
+                    expirationDate = expirationDate.AddMonths(1);
+                    break;
+                default:
+                    throw new NotImplementedException($"Billing cycle {portalBranding.BillingCycle} is not implemented");
+            }
+
+            // extend the expiry date by one month or one year
             subTransactions.Add(new UpdatePersistedSubscription(
                 ApplicationDomain.CustomerSubscriptionsRepository,
-                new CustomerSubscriptionEntity(CustomerId, subscriptionId, partnerOfferId, subscriptionExpiryDate.AddYears(1))));
+                new CustomerSubscriptionEntity(CustomerId, subscriptionId, partnerOfferId, expirationDate)));
 
             // add a capture payment to the transaction pipeline
             subTransactions.Add(new CapturePayment(PaymentGateway, () => paymentAuthorization.Result));
@@ -302,13 +336,14 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
         /// Builds a Microsoft Partner Center order from a list of purchase line items.
         /// </summary>
         /// <param name="purchaseLineItems">The purchase line items.</param>
+        /// <param name="billingCycle">The order billing cycle.</param>
         /// <returns>The Partner Center Order.</returns>
-        private Order BuildPartnerCenterOrder(IEnumerable<PurchaseLineItemWithOffer> purchaseLineItems)
+        private Order BuildPartnerCenterOrder(IEnumerable<PurchaseLineItemWithOffer> purchaseLineItems, BillingCycleType billingCycle)
         {
             int lineItemNumber = 0;
             ICollection<OrderLineItem> partnerCenterOrderLineItems = new List<OrderLineItem>();
 
-            // build the Partner Center order line items
+            // Build the Partner Center order line items
             foreach (PurchaseLineItemWithOffer lineItem in purchaseLineItems)
             {
                 // add the line items to the partner center order and calculate the price to charge
@@ -320,10 +355,26 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce
                 });
             }
 
-            // bundle the order line items into a partner center order
+            // Get the store billing cycle and update the order
+            PartnerCenter.Models.Offers.BillingCycleType orderBillingCycle;
+
+            switch (billingCycle)
+            {
+                case BillingCycleType.Annual:
+                    orderBillingCycle = PartnerCenter.Models.Offers.BillingCycleType.Annual;
+                    break;
+                case BillingCycleType.Monthly:
+                    orderBillingCycle = PartnerCenter.Models.Offers.BillingCycleType.Monthly;
+                    break;
+                default:
+                    throw new NotImplementedException($"Billing cycle {billingCycle} is not implemented");
+            }
+
+            // Bundle the order line items into a partner center order
             return new Order()
             {
                 ReferenceCustomerId = CustomerId,
+                BillingCycle = orderBillingCycle,
                 LineItems = partnerCenterOrderLineItems
             };
         }

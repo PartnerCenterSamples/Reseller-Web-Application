@@ -90,6 +90,21 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
             ICollection<IBusinessTransaction> persistenceTransactions = new List<IBusinessTransaction>();
 
             DateTime rightNow = DateTime.UtcNow;
+            DateTime expirationDate = rightNow;
+
+            BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
+
+            switch (portalBranding.BillingCycle)
+            {
+                case BillingCycleType.Annual:
+                    expirationDate = expirationDate.AddYears(1);
+                    break;
+                case BillingCycleType.Monthly:
+                    expirationDate = expirationDate.AddMonths(1);
+                    break;
+                default:
+                    throw new NotImplementedException($"Billing cycle {portalBranding.BillingCycle} is not implemented");
+            }
 
             foreach (OrderLineItem orderLineItem in partnerCenterPurchaseOrder.LineItems)
             {
@@ -98,7 +113,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Commerce.Transa
                 // add a record new customer subscription transaction for the current line item
                 persistenceTransactions.Add(new RecordNewCustomerSubscription(
                     CustomerSubscriptionsRepository,
-                    new CustomerSubscriptionEntity(CustomerId, orderLineItem.SubscriptionId, matchingPartnerOffer.Id, rightNow.AddYears(1))));
+                    new CustomerSubscriptionEntity(CustomerId, orderLineItem.SubscriptionId, matchingPartnerOffer.Id, expirationDate)));
 
                 // add a record purchase history for the current line item
                 persistenceTransactions.Add(new RecordPurchase(

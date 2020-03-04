@@ -71,10 +71,28 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic.Offers
                 // Offers.ByCountry is required to pull country / region specific offers. 
                 PartnerCenter.Models.ResourceCollection<PartnerCenter.Models.Offers.Offer> partnerCenterOffers = await localeSpecificPartnerCenterClient.Offers.ByCountry(ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync().ConfigureAwait(false);
 
+                // Get the current billing cycle to filter down the eligible offers
+                BrandingConfiguration portalBranding = await ApplicationDomain.Instance.PortalBranding.RetrieveAsync().ConfigureAwait(false);
+                PartnerCenter.Models.Offers.BillingCycleType offerBillingCycle = PartnerCenter.Models.Offers.BillingCycleType.Unknown;
+
+                switch (portalBranding.BillingCycle)
+                {
+                    case BillingCycleType.Annual:
+                        offerBillingCycle = PartnerCenter.Models.Offers.BillingCycleType.Monthly;
+                        break;
+                    case BillingCycleType.Monthly:
+                        offerBillingCycle = PartnerCenter.Models.Offers.BillingCycleType.Annual;
+                        break;
+                    default:
+                        throw new NotImplementedException($"Billing cycle {portalBranding.BillingCycle} is not implemented");
+                }
+
+                // Get offers which support the desired billing cycle
                 IEnumerable<PartnerCenter.Models.Offers.Offer> eligibleOffers = partnerCenterOffers?.Items.Where(offer =>
                     !offer.IsAddOn &&
                     (offer.PrerequisiteOffers == null || !offer.PrerequisiteOffers.Any())
-                    && offer.IsAvailableForPurchase);
+                    && offer.IsAvailableForPurchase
+                    && offer.SupportedBillingCycles.Contains(offerBillingCycle));
 
                 microsoftOffers = new List<MicrosoftOffer>();
 

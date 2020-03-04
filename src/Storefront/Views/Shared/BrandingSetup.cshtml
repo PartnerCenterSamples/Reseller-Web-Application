@@ -106,7 +106,7 @@
                     @Resources.AgreementUserIdFieldHeader
                 </td>
                 <td class="Subtext">
-                    <input id="InstrumentationKey" name="AgreementUserId" type="text" class="InputField FullWidthInput" data-bind="textinput: viewModel.AgreementUserId" /><br />
+                    <input id="AgreementUserId" name="AgreementUserId" type="text" class="InputField FullWidthInput" data-bind="textinput: viewModel.AgreementUserId" /><br />
                     @Resources.AgreementUserIdSubText
                 </td>
             </tr>
@@ -117,6 +117,15 @@
                 <td class="Subtext">
                     <input id="InstrumentationKey" name="InstrumentationKey" type="text" class="InputField FullWidthInput" data-bind="textinput: viewModel.InstrumentationKey" /><br />
                     @Resources.InstrumentationKeyFieldSubText
+                </td>
+            </tr>
+            <tr>
+                <td class="TitleCell">
+                    @Resources.BillingCycleFieldHeader
+                </td>
+                <td class="Subtext">
+                    <select id="BillingCycle" name="BillingCycle" class="InputField" data-bind="options: viewModel.AvailableBillingCycleTypes, optionsValue: 'id', optionsText: 'name', value: viewModel.BillingCycle"></select><br />
+                    @Resources.BillingCycleFieldSubText
                 </td>
             </tr>
             <tr>

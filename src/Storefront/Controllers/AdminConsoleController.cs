@@ -148,6 +148,12 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
                 brandingConfiguration.InstrumentationKey = HttpContext.Current.Request.Form["InstrumentationKey"];
             }
 
+            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request.Form["BillingCycle"])
+                && Enum.TryParse(HttpContext.Current.Request.Form["BillingCycle"], out BillingCycleType billingCycle))
+            {
+                brandingConfiguration.BillingCycle = billingCycle;
+            }
+
             BrandingConfiguration updatedBrandingConfiguration = await ApplicationDomain.Instance.PortalBranding.UpdateAsync(brandingConfiguration).ConfigureAwait(false);
             bool isPaymentConfigurationSetup = await ApplicationDomain.Instance.PaymentConfigurationRepository.IsConfiguredAsync().ConfigureAwait(false);
 
@@ -170,7 +176,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         [HttpGet]
         public async Task<IEnumerable<PartnerOffer>> GetOffers()
         {
-            return (await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false)).Where(offer => !offer.IsInactive);
+            return (await ApplicationDomain.Instance.OffersRepository.RetrieveAsync().ConfigureAwait(false)).OrderBy(o => o.DisplayIndex).Where(offer => !offer.IsInactive);
         }
 
         /// <summary>

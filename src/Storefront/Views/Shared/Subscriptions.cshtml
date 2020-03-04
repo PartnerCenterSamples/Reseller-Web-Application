@@ -31,7 +31,7 @@
                         @Resources.SubscriptionSummaryRateCaption
                     </td>
                     <td class="right-aligned">
-                        *@Resources.SubscriptionSummaryAnnualPricePrefixCaption
+                        *@(ViewBag.BillingCycle == Microsoft.Store.PartnerCenter.Storefront.Models.BillingCycleType.Annual ? Resources.SubscriptionSummaryAnnualPricePrefixCaption : Resources.SubscriptionSummaryMonthlyPricePrefixCaption)
                     </td>
                     <td />
                     <td />
@@ -41,7 +41,7 @@
                 <tr class="SubscriptionRow">
                     <td>
                         <label class="abovemedium-text" data-bind="text: $data.FriendlyName"></label>
-                        <label> - @Resources.SubscriptionSummaryAnnualCommitmentExpiryCaption </label><label data-bind="text: $data.SubscriptionExpiryDate"></label>
+                        <label> - @(ViewBag.BillingCycle == Microsoft.Store.PartnerCenter.Storefront.Models.BillingCycleType.Annual ? Resources.SubscriptionSummaryAnnualCommitmentExpiryCaption : Resources.SubscriptionSummaryMonthlyCommitmentExpiryCaption) </label><label data-bind="text: $data.SubscriptionExpiryDate"></label>
                     </td>
                     <td class="left-aligned">
                         <label data-bind="text: $data.LicensesTotal"></label>

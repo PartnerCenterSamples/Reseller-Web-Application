@@ -18,6 +18,7 @@
         MicrosoftOffer: ko.observable(this.isNewOffer ? "" : existingOffer.MicrosoftOffer),
         Title: ko.observable(this.isNewOffer ? "" : existingOffer.Title),
         SubTitle: ko.observable(this.isNewOffer ? "" : existingOffer.SubTitle),
+        DisplayIndex: ko.observable(this.isNewOffer ? "" : existingOffer.DisplayIndex),
         Price: ko.observable(this.isNewOffer ? "" : Globalize.format(existingOffer.Price, "n")),
         Features: ko.observableArray([]),
         Summary: ko.observableArray([]),
@@ -203,7 +204,8 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
         MicrosoftOfferId: this.viewModel.MicrosoftOffer().Offer.Id,
         Title: this.viewModel.Title(),
         Subtitle: this.viewModel.SubTitle(),
-        Price: 0.0
+        Price: 0.0,
+        DisplayIndex: this.viewModel.DisplayIndex()
     };
 
     // Only save the culture neutral value for price in the backend. 
@@ -283,6 +285,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSelectBaseOffer = func
 
         self.viewModel.MicrosoftOffer(self.OfferSelectionWizardViewModel.offerList.getSelectedRows()[0].OriginalOffer);
         self.viewModel.Title(self.viewModel.MicrosoftOffer().Offer.Name);
+        self.viewModel.DisplayIndex(0);
         self.webPortal.Services.Dialog.hide();
         self.saveOfferAction.enabled(true);
     });

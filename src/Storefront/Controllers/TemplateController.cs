@@ -55,6 +55,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
 
             ViewBag.OrganizationName = portalBranding.OrganizationName;
             ViewBag.IsPortalAdmin = principal.IsPortalAdmin;
+            ViewBag.BillingCycle = portalBranding.BillingCycle;
 
             return PartialView();
         }
@@ -264,6 +265,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
             ViewBag.ContactSales = portalBranding.ContactSales;
 
             ViewBag.CurrencySymbol = ApplicationDomain.Instance.PortalLocalization.CurrencySymbol;
+            ViewBag.BillingCycle = portalBranding.BillingCycle;
 
             return PartialView();
         }
